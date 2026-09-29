@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RESOURCE_SPEC v4",
+  "description": "Provider, location, budget, capacity, traffic, and data-residency context. Workload topology and placement are intentionally excluded.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "provider",
+    "region",
+    "workloads"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "4"
+    },
+    "workloads": {
+      "const": ["vm"],
+      "description": "EasyDep currently targets Docker-on-VM deployment."
+    },
+    "provider": {
+      "type": "string",
+      "enum": ["aws", "azure", "gcp"],
+      "description": "Cloud provider selected before design starts."
+    },
+    "region": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Resolved provider region code, such as ap-northeast-2."
+    },
+    "regionAsWritten": {
+      "type": "string",
+      "description": "Original region expression supplied by the user."
+    },
+    "deploymentTargets": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "description": "Provider-specific deployment alternatives selected by the user. The compatibility provider and region fields identify the first candidate only; downstream code must not silently discard the remaining alternatives.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["provider", "region", "zones"],
+        "properties": {
+          "provider": {"enum": ["aws", "azure", "gcp"]},
+          "region": {"type": "string", "minLength": 1},
+          "zones": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "monthlyBudgetUSD": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Monthly infrastructure budget normalized to USD."
+    },
+    "minVCpu": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "User- or designer-supplied minimum vCPU floor. It may be collected during requirements feedback."
+    },
+    "minMemoryGiB": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "User- or designer-supplied minimum memory floor in GiB. It may be collected during requirements feedback."
+    },
+    "trafficPattern": {
+      "enum": ["steady", "spiky"],
+      "description": "Optional explicit traffic-shape signal."
+    },
+    "dataResidency": {
+      "type": "string",
+      "description": "Optional user-stated data residency constraint."
+    },
+    "candidateZones": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1},
+      "description": "Optional provider zone candidates. Workload constraints decide whether and how many zones are occupied."
+    },
+    "scale": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "unit": {
+          "enum": ["concurrentUsers", "requestsPerSecond"]
+        }
+      },
+      "description": "Optional expected load magnitude; it does not determine a VM size by itself."
+    }
+  }
+}

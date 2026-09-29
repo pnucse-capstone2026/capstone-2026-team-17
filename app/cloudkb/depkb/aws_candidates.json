@@ -1,0 +1,138 @@
+{
+ "_note": "CFN 스펙에서 뽑은 의존 후보 — name-reference는 휴리스틱(우리 구성)이고 Required는 스펙 실데이터다. **주의: Required는 그 속성 위치의 플래그다** — trail이 중첩이면(예: Volumes.VolumeId) '그 블록을 쓸 때 필수'이지 간선 필수가 아니다. 간선 필수성 판정은 반사실 실험의 몫이다.",
+ "_pin": {
+  "source": "aws-cfn",
+  "version": "258.0.0",
+  "sha256": "cb04ddec8e3e2e87f06a628c1e31b1640f49492e9d86d8cb48d7c2ef527dae63"
+ },
+ "candidates": [
+  {
+   "subject": "firewall",
+   "object": "network",
+   "form": "name-reference",
+   "trail": "VpcId",
+   "cite": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroup/Properties/VpcId",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "firewall",
+   "form": "name-reference",
+   "trail": "SecurityGroups",
+   "cite": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/SecurityGroups",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "subnet",
+   "form": "name-reference",
+   "trail": "SubnetMappings",
+   "cite": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/SubnetMappings",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "subnet",
+   "form": "name-reference",
+   "trail": "Subnets",
+   "cite": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/Subnets",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "firewall",
+   "form": "name-reference",
+   "trail": "GroupSet",
+   "cite": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface/Properties/GroupSet",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "subnet",
+   "form": "name-reference",
+   "trail": "SubnetId",
+   "cite": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface/Properties/SubnetId",
+   "requiredInSchema": true
+  },
+  {
+   "subject": "subnet",
+   "object": "network",
+   "form": "name-reference",
+   "trail": "VpcId",
+   "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/VpcId",
+   "requiredInSchema": true
+  },
+  {
+   "subject": "vm",
+   "object": "disk",
+   "form": "name-reference",
+   "trail": "Volumes.VolumeId",
+   "cite": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.Volume/Properties/VolumeId",
+   "requiredInSchema": true
+  },
+  {
+   "subject": "vm",
+   "object": "firewall",
+   "form": "name-reference",
+   "trail": "NetworkInterfaces.GroupSet",
+   "cite": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/GroupSet",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "firewall",
+   "form": "name-reference",
+   "trail": "SecurityGroupIds",
+   "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroupIds",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "firewall",
+   "form": "name-reference",
+   "trail": "SecurityGroups",
+   "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroups",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "image",
+   "form": "name-reference",
+   "trail": "ImageId",
+   "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/ImageId",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "nic",
+   "form": "name-reference",
+   "trail": "NetworkInterfaces.NetworkInterfaceId",
+   "cite": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/NetworkInterfaceId",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "sshKey",
+   "form": "name-reference",
+   "trail": "KeyName",
+   "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/KeyName",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "subnet",
+   "form": "name-reference",
+   "trail": "NetworkInterfaces.SubnetId",
+   "cite": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/SubnetId",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "subnet",
+   "form": "name-reference",
+   "trail": "SubnetId",
+   "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SubnetId",
+   "requiredInSchema": false
+  }
+ ]
+}

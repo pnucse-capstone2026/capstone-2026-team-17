@@ -1,0 +1,196 @@
+{
+ "_note": "azure 스키마 원문에서 뽑은 의존 **후보**다 — 주장이 아니다. 필연은 스키마가 말하지 않으므로(requiredInSchema가 그 실측이다) 반사실 실험이 판정한다. 인용의 캐시는 cache/azure/manifest.json이 핀 박는다.",
+ "_pin": {
+  "repo": "Azure/azure-rest-api-specs",
+  "commit": "478f542f0e4a8872a8c6e5cde5dd4e44a01bc120"
+ },
+ "_coverage": {
+  "unresolvedExternalRefs": 35
+ },
+ "candidates": [
+  {
+   "subject": "firewall",
+   "object": "nic",
+   "form": "readonly-backlink",
+   "trail": "properties.networkInterfaces",
+   "cite": "network-virtualNetwork.json#/definitions/Common.NetworkSecurityGroupPropertiesFormat/properties/networkInterfaces/items",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "firewall",
+   "object": "subnet",
+   "form": "readonly-backlink",
+   "trail": "properties.subnets",
+   "cite": "network-virtualNetwork.json#/definitions/Common.NetworkSecurityGroupPropertiesFormat/properties/subnets/items",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "publicIp",
+   "form": "input-reference",
+   "trail": "properties.frontendIPConfigurations.properties.publicIPAddress",
+   "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "publicIp",
+   "form": "readonly-backlink",
+   "trail": "properties.backendAddressPools.properties.backendIPConfigurations.properties.publicIPAddress",
+   "cite": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/publicIPAddress",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "subnet",
+   "form": "input-reference",
+   "trail": "properties.frontendIPConfigurations.properties.subnet",
+   "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "subnet",
+   "form": "readonly-backlink",
+   "trail": "properties.backendAddressPools.properties.backendIPConfigurations.properties.subnet",
+   "cite": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/subnet",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "network",
+   "object": "subnet",
+   "form": "input-reference",
+   "trail": "properties.subnets",
+   "cite": "network-virtualNetwork.json#/definitions/Common.VirtualNetworkPropertiesFormat/properties/subnets/items",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "firewall",
+   "form": "input-reference",
+   "trail": "properties.networkSecurityGroup",
+   "cite": "network-virtualNetwork.json#/definitions/Common.NetworkInterfacePropertiesFormat/properties/networkSecurityGroup",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "publicIp",
+   "form": "input-reference",
+   "trail": "properties.privateLinkService.properties.loadBalancerFrontendIpConfigurations.properties.publicIPAddress",
+   "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "publicIp",
+   "form": "input-reference",
+   "trail": "properties.ipConfigurations.properties.publicIPAddress",
+   "cite": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/publicIPAddress",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "subnet",
+   "form": "input-reference",
+   "trail": "properties.privateLinkService.properties.loadBalancerFrontendIpConfigurations.properties.subnet",
+   "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "subnet",
+   "form": "input-reference",
+   "trail": "properties.ipConfigurations.properties.subnet",
+   "cite": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/subnet",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "subnet",
+   "form": "readonly-backlink",
+   "trail": "properties.privateEndpoint.properties.subnet",
+   "cite": "network-virtualNetwork.json#/definitions/Common.PrivateEndpointProperties/properties/subnet",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "subnet",
+   "form": "input-reference",
+   "trail": "properties.privateLinkService.properties.ipConfigurations.properties.subnet",
+   "cite": "network-virtualNetwork.json#/definitions/Common.PrivateLinkServiceIpConfigurationProperties/properties/subnet",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "publicIp",
+   "object": "subnet",
+   "form": "readonly-backlink",
+   "trail": "properties.ipConfiguration.properties.subnet",
+   "cite": "network-virtualNetwork.json#/definitions/Common.IPConfigurationPropertiesFormat/properties/subnet",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "subnet",
+   "object": "firewall",
+   "form": "input-reference",
+   "trail": "properties.networkSecurityGroup",
+   "cite": "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/networkSecurityGroup",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "subnet",
+   "object": "network",
+   "form": "path-nesting",
+   "trail": "",
+   "cite": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "requiredInSchema": true
+  },
+  {
+   "subject": "subnet",
+   "object": "nic",
+   "form": "readonly-backlink",
+   "trail": "properties.privateEndpoints.properties.networkInterfaces",
+   "cite": "network-virtualNetwork.json#/definitions/Common.PrivateEndpointProperties/properties/networkInterfaces/items",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "subnet",
+   "object": "publicIp",
+   "form": "readonly-backlink",
+   "trail": "properties.ipConfigurations.properties.publicIPAddress",
+   "cite": "network-virtualNetwork.json#/definitions/Common.IPConfigurationPropertiesFormat/properties/publicIPAddress",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "disk",
+   "form": "input-reference",
+   "trail": "properties.storageProfile.dataDisks.managedDisk",
+   "cite": "compute-ComputeRP.json#/definitions/DataDisk/properties/managedDisk",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "disk",
+   "form": "input-reference",
+   "trail": "properties.storageProfile.osDisk.managedDisk",
+   "cite": "compute-ComputeRP.json#/definitions/OSDisk/properties/managedDisk",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "image",
+   "form": "input-reference",
+   "trail": "properties.storageProfile.imageReference",
+   "cite": "compute-ComputeRP.json#/definitions/StorageProfile/properties/imageReference",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "nic",
+   "form": "input-reference",
+   "trail": "properties.networkProfile.networkInterfaces",
+   "cite": "compute-ComputeRP.json#/definitions/NetworkProfile/properties/networkInterfaces/items",
+   "requiredInSchema": false
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "_note": "쌍 호환(존) 측정 — P1 거부가 가설, P2 대조군. 인스턴스는 대조군에서만 잠깐 존재.",
+ "ranAt": "2026-08-06T19:45:28+00:00",
+ "project": "cloud-resource-testing",
+ "zones": [
+  "asia-northeast3-a",
+  "asia-northeast3-b"
+ ],
+ "steps": {
+  "G.create-disk-zoneA": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "P1.zone-mismatch-vm-zoneB": {
+   "ok": false,
+   "errorCodes": [
+    "invalid"
+   ],
+   "httpStatus": 400,
+   "excerpt": "{\"error\": {\"code\": 400, \"message\": \"Invalid value for field 'resource.disks[1].source': 'https://compute.googleapis.com/compute/v1/projects/cloud-resource-testing/zones/asia-northeast3-a/disks/depkbg5-disk'. Disk must be in the same zone as the instance.\", \"errors\": [{\"message\": \"Invalid value for field 'resource.disks[1].source': 'https://compute.googleapis.com/compute/v1/projects/cloud-resource-testing/zones/asia-northeast3-a/disks/depkbg5-disk'. Disk must be in the same zone as the instance.\", \"domain\": \"global\", \"reason\": \"invalid\"}]}}"
+  },
+  "P2.same-zone-control": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-disk": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ }
+}

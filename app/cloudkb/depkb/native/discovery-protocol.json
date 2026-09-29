@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "easydep-native-discovery-protocol/v1",
+  "scope": "Provider-native IaaS elements directly connected to Docker-on-VM provisioning, reachability, persistence, failure routing, or VM-attached identity.",
+  "excluded": [
+    "kubernetes",
+    "serverless",
+    "managedDatabase",
+    "objectStorage",
+    "vpn",
+    "observabilityOnly",
+    "crossCloudNetworking"
+  ],
+  "biasControls": {
+    "forbiddenDiscoveryInputs": [
+      "depkb/vocabulary.py",
+      "evaluation/baselines/cases",
+      "docs/test-application-profiles.md"
+    ],
+    "stoppingRule": "Stop provider traversal after two complete passes add no new included native element or relation candidate."
+  },
+  "providers": {
+    "aws": {
+      "source": "AWS CloudFormation Resource Specification",
+      "resourceTypePrefixes": [
+        "AWS::EC2::",
+        "AWS::ElasticLoadBalancingV2::",
+        "AWS::IAM::InstanceProfile"
+      ]
+    },
+    "azure": {
+      "source": "Azure REST API Specifications",
+      "serviceFamilies": ["Microsoft.Compute", "Microsoft.Network", "VM-attached identity"]
+    },
+    "gcp": {
+      "source": "Google Compute API Discovery Document",
+      "serviceFamilies": ["compute", "networking", "load balancing", "VM service account attachment"]
+    }
+  },
+  "neutralCrossChecks": [
+    "Cloud-Barista",
+    "OASIS TOSCA",
+    "OGF OCCI"
+  ],
+  "downstreamOnlyEvaluationInputs": ["P1", "P2", "P3"]
+}

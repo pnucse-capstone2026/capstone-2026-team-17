@@ -1,0 +1,3458 @@
+{
+ "schemaVersion": "easydep-dependency-claims/v3",
+ "methodology": {
+  "originalProtocolTiming": "retrospective",
+  "expectedOutcomeOrigin": "Migrated from experiment code and retained results after the original runs; not preregistered.",
+  "replicationProtocolTiming": "prospectiveAgainstFrozenHistoricalExpectations",
+  "interpretation": "Replication reduces accidental execution error but does not turn the original exploratory study into a preregistered confirmatory study."
+ },
+ "_note": "Docker-on-VM provisioning and observable runtime dependency claims for AWS, Azure, and GCP.",
+ "findingCounts": {
+  "aws.notMandatoryForProvisioning": 9,
+  "aws.mandatoryForProvisioning": 3,
+  "aws.runtimeRequiredForSignal": 5,
+  "azure.notMandatoryForProvisioning": 8,
+  "azure.conditionalForProvisioning": 1,
+  "azure.runtimeRequiredForSignal": 3,
+  "azure.mandatoryForProvisioning": 3,
+  "gcp.notMandatoryForProvisioning": 4,
+  "gcp.conditionalForProvisioning": 2,
+  "gcp.runtimeRequiredForSignal": 3,
+  "gcp.mandatoryForProvisioning": 3
+ },
+ "claims": [
+  {
+   "subject": "firewall",
+   "object": "network",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "미지정 시 기본 VPC로 대체"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroup/Properties/VpcId",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroup/Properties/VpcId"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-apply2-2026-07-31",
+     "step": "B2.sg-omit-vpc",
+     "code": "ok",
+     "resultFile": "experiments/aws-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-apply2-2026-07-31/run.py",
+      "line": 71,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-apply2-2026-07-31",
+     "step": "B2.server-filled-vpc",
+     "code": "ok",
+     "resultFile": "experiments/aws-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-apply2-2026-07-31/run.py",
+      "line": 76,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `firewall`와 `network`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 서버 기본값: 미지정 시 기본 VPC로 대체.",
+   "realizationBehavior": "providerDefaulted",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "firewall",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/SecurityGroups",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/SecurityGroups"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-apply2-2026-07-31",
+     "step": "F.internal-nlb-one-subnet-no-sg",
+     "code": "ok",
+     "resultFile": "experiments/aws-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-apply2-2026-07-31/run_fix.py",
+      "line": 39,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `loadBalancer`와 `firewall`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "subnet",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "mandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "placement",
+    "machine": {
+     "minCount": 2,
+     "distinctOver": "availabilityZone",
+     "appliesWhen": "loadBalancer.type == 'application'",
+     "otherwise": {
+      "minCount": 1
+     }
+    },
+    "description": "ALB는 서로 다른 AZ의 서브넷 ≥2 (NLB는 1)"
+   },
+   "signal": null,
+   "decisionRule": "Finding is mandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/SubnetMappings",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/SubnetMappings"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/Subnets",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/Subnets"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-apply2-2026-07-31",
+     "step": "B4.lb-omit-subnets",
+     "code": "ValidationError",
+     "resultFile": "experiments/aws-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-apply2-2026-07-31/run.py",
+      "line": 106,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `ValidationError` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with ValidationError",
+     "actualOutcome": "ValidationError"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-apply2-2026-07-31",
+     "step": "B4.alb-one-subnet",
+     "code": "ValidationError",
+     "resultFile": "experiments/aws-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-apply2-2026-07-31/run.py",
+      "line": 109,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `ValidationError` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with ValidationError",
+     "actualOutcome": "ValidationError"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-apply2-2026-07-31",
+     "step": "F2.internal-nlb-omit-subnets",
+     "code": "ValidationError",
+     "resultFile": "experiments/aws-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-apply2-2026-07-31/run_fix2.py",
+      "line": 22,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `ValidationError` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with ValidationError",
+     "actualOutcome": "ValidationError"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `loadBalancer`와 `subnet`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 배치 조건: ALB는 서로 다른 AZ의 서브넷 ≥2 (NLB는 1).",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "nic",
+   "object": "firewall",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "미지정 시 VPC의 default SG 부착"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface/Properties/GroupSet",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface/Properties/GroupSet"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-apply2-2026-07-31",
+     "step": "B3.eni-omit-groups",
+     "code": "ok",
+     "resultFile": "experiments/aws-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-apply2-2026-07-31/run.py",
+      "line": 95,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-apply2-2026-07-31",
+     "step": "B3.server-filled-groups",
+     "code": "ok",
+     "resultFile": "experiments/aws-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-apply2-2026-07-31/run.py",
+      "line": 100,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `nic`와 `firewall`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 서버 기본값: 미지정 시 VPC의 default SG 부착.",
+   "realizationBehavior": "providerDefaulted",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "nic",
+   "object": "subnet",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "mandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is mandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface/Properties/SubnetId",
+     "form": "name-reference",
+     "requiredInSchema": true,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface/Properties/SubnetId"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "aws-apply-2026-07-30",
+     "step": "A.omit-nic-subnet",
+     "code": "--subnet-id",
+     "resultFile": "experiments/aws-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/aws-apply-2026-07-30/run.py",
+      "line": 79,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `--subnet-id` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with --subnet-id",
+     "actualOutcome": "--subnet-id"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `nic`와 `subnet`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 별도 조건 없음.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "subnet",
+   "object": "defaultRoute",
+   "csp": "aws",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "failed",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "0.0.0.0/0→IGW 라우트 삭제를 막지 않는다 — 기능 신호는 게스트에서 밖으로 나가는 HTTPS(아웃바운드)"
+   },
+   "signal": "egress-https",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "G1.egress-works",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 216,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "M3.delete-default-route",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 218,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "G2.egress-lost",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 221,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "M4.recreate-route",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 223,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "G3.egress-again",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 227,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "AWS subnet에 연결된 route table의 0.0.0.0/0→IGW defaultRoute를 제거했을 때 게스트의 외부 HTTPS 신호가 실패했다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-sig4-2026-07-31"
+    ],
+    "reason": "A referenced experiment failed or timed out; provider cleanup completed and the finding was not counted as replicated."
+   }
+  },
+  {
+   "subject": "subnet",
+   "object": "defaultRoute",
+   "csp": "aws",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "라우트 테이블에서 0.0.0.0/0→IGW 라우트 삭제를 컨트롤 플레인이 막지 않는다"
+   },
+   "signal": "inbound-tcp",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "F3.reachable-again",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 147,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "M3.delete-default-route",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 149,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "F4.unreachable-no-route",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 152,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "M4.recreate-route",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 153,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "F5.reachable-final",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 157,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "AWS subnet에 연결된 route table의 0.0.0.0/0→IGW defaultRoute를 제거했을 때 외부 TCP 도달 신호가 실패했다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-func2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "subnet",
+   "object": "network",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "mandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is mandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/VpcId",
+     "form": "name-reference",
+     "requiredInSchema": true,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/VpcId"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-apply2-2026-07-31",
+     "step": "B1.dangling-subnet-vpc",
+     "code": "InvalidVpcID.NotFound",
+     "resultFile": "experiments/aws-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-apply2-2026-07-31/run.py",
+      "line": 64,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `InvalidVpcID.NotFound` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with InvalidVpcID.NotFound",
+     "actualOutcome": "InvalidVpcID.NotFound"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `subnet`와 `network`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 별도 조건 없음.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "disk",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "AMI의 루트 볼륨을 서버가 만든다"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.Volume/Properties/VolumeId",
+     "form": "name-reference",
+     "requiredInSchema": true,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.Volume/Properties/VolumeId"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "aws-apply-2026-07-30",
+     "step": "A.dryrun-vm-default-vpc",
+     "code": "DryRunOperation",
+     "resultFile": "experiments/aws-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/aws-apply-2026-07-30/run.py",
+      "line": 87,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `DryRunOperation` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with DryRunOperation",
+     "actualOutcome": "DryRunOperation"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `vm`와 `disk`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 서버 자동 생성: AMI의 루트 볼륨을 서버가 만든다.",
+   "realizationBehavior": "providerCreated",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "firewall",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "미지정 시 default SG"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/GroupSet",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/GroupSet"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroupIds",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroupIds"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroups",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroups"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "aws-apply-2026-07-30",
+     "step": "A.dryrun-vm-default-vpc",
+     "code": "DryRunOperation",
+     "resultFile": "experiments/aws-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/aws-apply-2026-07-30/run.py",
+      "line": 87,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `DryRunOperation` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with DryRunOperation",
+     "actualOutcome": "DryRunOperation"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `vm`와 `firewall`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 서버 기본값: 미지정 시 default SG.",
+   "realizationBehavior": "providerDefaulted",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "firewall",
+   "csp": "aws",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "실행 중 인스턴스의 SG를 빈 인그레스 SG로 교체하는 것을 컨트롤 플레인이 막지 않는다(관계 변이)"
+   },
+   "signal": "inbound-tcp",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/GroupSet",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/GroupSet"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroupIds",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroupIds"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroups",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroups"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "F1.reachable-baseline",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 138,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "M1.swap-to-empty-sg",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 140,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "F2.unreachable-empty-sg",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 143,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "M2.restore-sg22",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 144,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "F3.reachable-again",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 147,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `vm`와 `firewall`의 기능 의존성(대상 변화로 실제 기능이 깨지는지)을 확인한 결과는 `관계 확인됨`이다. 조건: 기능상 주의: 실행 중 인스턴스의 SG를 빈 인그레스 SG로 교체하는 것을 컨트롤 플레인이 막지 않는다(관계 변이). 기능 확인 신호는 외부에서 TCP로 도달할 수 있는지이다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-func2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "nic",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "ENI를 서버가 암묵 생성"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/NetworkInterfaceId",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/NetworkInterfaceId"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "aws-apply-2026-07-30",
+     "step": "A.dryrun-vm-default-vpc",
+     "code": "DryRunOperation",
+     "resultFile": "experiments/aws-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/aws-apply-2026-07-30/run.py",
+      "line": 87,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `DryRunOperation` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with DryRunOperation",
+     "actualOutcome": "DryRunOperation"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `vm`와 `nic`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 서버 자동 생성: ENI를 서버가 암묵 생성.",
+   "realizationBehavior": "providerCreated",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "publicIp",
+   "csp": "aws",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "running 인스턴스에서 EIP 분리를 컨트롤 플레인이 막지 않는다 — 기능 신호는 외부 TCP 22 도달성"
+   },
+   "signal": "inbound-tcp",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func-2026-07-31",
+     "step": "F1.reachable-baseline",
+     "code": "ok",
+     "resultFile": "experiments/aws-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func-2026-07-31/run.py",
+      "line": 109,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func-2026-07-31",
+     "step": "M1.disassociate-while-running",
+     "code": "ok",
+     "resultFile": "experiments/aws-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func-2026-07-31/run.py",
+      "line": 111,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func-2026-07-31",
+     "step": "M1b.instance-public-ip-now",
+     "code": "ok",
+     "resultFile": "experiments/aws-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func-2026-07-31/run.py",
+      "line": 113,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func-2026-07-31",
+     "step": "F2.unreachable-after-detach",
+     "code": "ok",
+     "resultFile": "experiments/aws-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func-2026-07-31/run.py",
+      "line": 117,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func-2026-07-31",
+     "step": "M2.reassociate-eip",
+     "code": "ok",
+     "resultFile": "experiments/aws-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func-2026-07-31/run.py",
+      "line": 119,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-func-2026-07-31",
+     "step": "F3.reachable-again",
+     "code": "ok",
+     "resultFile": "experiments/aws-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func-2026-07-31/run.py",
+      "line": 124,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `vm`와 `publicIp`의 기능 의존성(대상 변화로 실제 기능이 깨지는지)을 확인한 결과는 `관계 확인됨`이다. 조건: 기능상 주의: running 인스턴스에서 EIP 분리를 컨트롤 플레인이 막지 않는다 — 기능 신호는 외부 TCP 22 도달성. 기능 확인 신호는 외부에서 TCP로 도달할 수 있는지이다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-func-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "sshKey",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/KeyName",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/KeyName"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "aws-apply-2026-07-30",
+     "step": "A.dryrun-vm-default-vpc",
+     "code": "DryRunOperation",
+     "resultFile": "experiments/aws-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/aws-apply-2026-07-30/run.py",
+      "line": 87,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `DryRunOperation` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with DryRunOperation",
+     "actualOutcome": "DryRunOperation"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "aws-apply-2026-07-30",
+     "step": "A.dangling-vm-keyname",
+     "code": "InvalidKeyPair.NotFound",
+     "resultFile": "experiments/aws-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/aws-apply-2026-07-30/run.py",
+      "line": 90,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `InvalidKeyPair.NotFound` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with InvalidKeyPair.NotFound",
+     "actualOutcome": "InvalidKeyPair.NotFound"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `vm`와 `sshKey`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "subnet",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "미지정 시 기본 VPC 서브넷 대체"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/SubnetId",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/PropertyTypes/AWS::EC2::Instance.NetworkInterface/Properties/SubnetId"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SubnetId",
+     "form": "name-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SubnetId"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "aws-apply-2026-07-30",
+     "step": "A.dryrun-vm-default-vpc",
+     "code": "DryRunOperation",
+     "resultFile": "experiments/aws-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/aws-apply-2026-07-30/run.py",
+      "line": 87,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `DryRunOperation` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with DryRunOperation",
+     "actualOutcome": "DryRunOperation"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "aws-apply-2026-07-30",
+     "step": "A.dangling-vm-subnet",
+     "code": "InvalidSubnetID.NotFound",
+     "resultFile": "experiments/aws-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/aws-apply-2026-07-30/run.py",
+      "line": 88,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `InvalidSubnetID.NotFound` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with InvalidSubnetID.NotFound",
+     "actualOutcome": "InvalidSubnetID.NotFound"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `vm`와 `subnet`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 서버 기본값: 미지정 시 기본 VPC 서브넷 대체.",
+   "realizationBehavior": "providerDefaulted",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "workloadIdentity",
+   "csp": "aws",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "aws-func2-2026-07-31",
+     "step": "R10.run-instance",
+     "code": "ok",
+     "resultFile": "experiments/aws-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-func2-2026-07-31/run.py",
+      "line": 109,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "aws에서 `vm`와 `workloadIdentity`(IAM role+instance profile)의 생성 의존성을 확인한 결과, 명시하지 않아도 VM 생성은 가능했다.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-func2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "workloadIdentity",
+   "csp": "aws",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "failed",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "실행 중 인스턴스에서 인스턴스 프로필 분리를 컨트롤 플레인이 막지 않는다 — 기능 신호는 게스트의 IMDSv2 자격증명 획득"
+   },
+   "signal": "imds-credentials",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "F1.imds-credentials-work",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 188,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "M1.disassociate-profile",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 197,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "F2.imds-credentials-lost",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 205,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "M2.reassociate-profile",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 207,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "aws-sig4-2026-07-31",
+     "step": "F3.imds-credentials-again",
+     "code": "ok",
+     "resultFile": "experiments/aws-sig4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/aws-sig4-2026-07-31/run.py",
+      "line": 211,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "AWS VM의 IAM role+instance profile을 분리했을 때 게스트의 IMDSv2 자격증명 획득 신호가 실패했다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "aws-sig4-2026-07-31"
+    ],
+    "reason": "A referenced experiment failed or timed out; provider cleanup completed and the finding was not counted as replicated."
+   }
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "publicIp",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply2-2026-07-30",
+     "step": "E0.build-chain2",
+     "code": "ok",
+     "resultFile": "experiments/azure-apply2-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply2-2026-07-30/run.py",
+      "line": 55,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `loadBalancer`와 `publicIp`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply2-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "subnet",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply2-2026-07-30",
+     "step": "E0.build-chain2",
+     "code": "ok",
+     "resultFile": "experiments/azure-apply2-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply2-2026-07-30/run.py",
+      "line": 55,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `loadBalancer`와 `subnet`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply2-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "subnet|publicIp|publicIPPrefix",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "conditionalForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "pending",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "exclusiveChoice",
+    "machine": {
+     "cardinality": {
+      "min": 1,
+      "max": 1
+     }
+    },
+    "description": "셋 중 정확히 하나(배타적)"
+   },
+   "signal": null,
+   "decisionRule": "Finding is conditionalForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "azure-preflight-2026-07-30",
+     "step": "omit-lb-frontend-ref.validate",
+     "code": "FrontendIPConfigurationHasNoSubnetOrPublicIPAddressOrPublicIPPrefix",
+     "resultFile": "experiments/azure-preflight-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-preflight-2026-07-30/results.json",
+      "line": 102,
+      "sourceKind": "결과 JSON에만 남은 이름 — 이 저장소에서 원래 요청 코드는 찾지 못함"
+     },
+     "observed": "이 단계에서 CSP가 `FrontendIPConfigurationHasNoSubnetOrPublicIPAddressOrPublicIPPrefix` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with FrontendIPConfigurationHasNoSubnetOrPublicIPAddressOrPublicIPPrefix",
+     "actualOutcome": "FrontendIPConfigurationHasNoSubnetOrPublicIPAddressOrPublicIPPrefix"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply-2026-07-30",
+     "step": "A.apply.dangling-lb-pip",
+     "code": "InvalidResourceReference",
+     "resultFile": "experiments/azure-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply-2026-07-30/results.json",
+      "line": 38,
+      "sourceKind": "결과 JSON에만 남은 이름 — 이 저장소에서 원래 요청 코드는 찾지 못함"
+     },
+     "observed": "이 단계에서 CSP가 `InvalidResourceReference` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with InvalidResourceReference",
+     "actualOutcome": "InvalidResourceReference"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "azure-disj2-2026-08-01",
+     "step": "E1.arm-both-subnet-and-pip",
+     "code": "FrontendIPConfigHasBothSubnetAndPublicIP",
+     "resultFile": "experiments/azure-disj2-2026-08-01/results.json",
+     "definition": {
+      "file": "experiments/azure-disj2-2026-08-01/run.py",
+      "line": 104,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `FrontendIPConfigHasBothSubnetAndPublicIP` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with FrontendIPConfigHasBothSubnetAndPublicIP",
+     "actualOutcome": "FrontendIPConfigHasBothSubnetAndPublicIP"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-disj2-2026-08-01",
+     "step": "E2.arm-subnet-only",
+     "code": "ok",
+     "resultFile": "experiments/azure-disj2-2026-08-01/results.json",
+     "definition": {
+      "file": "experiments/azure-disj2-2026-08-01/run.py",
+      "line": 106,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-disj2-2026-08-01",
+     "step": "E3.arm-pip-only",
+     "code": "ok",
+     "resultFile": "experiments/azure-disj2-2026-08-01/results.json",
+     "definition": {
+      "file": "experiments/azure-disj2-2026-08-01/run.py",
+      "line": 107,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `loadBalancer`와 `subnet|publicIp|publicIPPrefix`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 선택 규칙: 셋 중 정확히 하나(배타적).",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply-2026-07-30",
+     "azure-disj2-2026-08-01",
+     "azure-preflight-2026-07-30"
+    ],
+    "reason": "At least one referenced experiment was not rerun in this session."
+   }
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "vm",
+   "csp": "azure",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "failed",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "백엔드 풀에서 NIC 제거를 컨트롤 플레인이 막지 않는다 — 기능 신호는 LB 프론트엔드로의 HTTP 200"
+   },
+   "signal": "lb-serving",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-lb-serve2-2026-08-01",
+     "step": "F1.lb-serves",
+     "code": "ok",
+     "resultFile": "experiments/azure-lb-serve2-2026-08-01/results.json",
+     "definition": {
+      "file": "experiments/azure-lb-serve2-2026-08-01/run.py",
+      "line": 196,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-lb-serve2-2026-08-01",
+     "step": "F1b.probe-hits-in-log",
+     "code": "ok",
+     "resultFile": "experiments/azure-lb-serve2-2026-08-01/results.json",
+     "definition": {
+      "file": "experiments/azure-lb-serve2-2026-08-01/run.py",
+      "line": 198,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-lb-serve2-2026-08-01",
+     "step": "M1.remove-nic-from-pool",
+     "code": "ok",
+     "resultFile": "experiments/azure-lb-serve2-2026-08-01/results.json",
+     "definition": {
+      "file": "experiments/azure-lb-serve2-2026-08-01/run.py",
+      "line": 200,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-lb-serve2-2026-08-01",
+     "step": "F2.serving-lost",
+     "code": "ok",
+     "resultFile": "experiments/azure-lb-serve2-2026-08-01/results.json",
+     "definition": {
+      "file": "experiments/azure-lb-serve2-2026-08-01/run.py",
+      "line": 209,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-lb-serve2-2026-08-01",
+     "step": "M2.re-add-nic",
+     "code": "ok",
+     "resultFile": "experiments/azure-lb-serve2-2026-08-01/results.json",
+     "definition": {
+      "file": "experiments/azure-lb-serve2-2026-08-01/run.py",
+      "line": 210,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-lb-serve2-2026-08-01",
+     "step": "F3.serving-again",
+     "code": "ok",
+     "resultFile": "experiments/azure-lb-serve2-2026-08-01/results.json",
+     "definition": {
+      "file": "experiments/azure-lb-serve2-2026-08-01/run.py",
+      "line": 215,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `loadBalancer`와 `vm`의 기능 의존성(대상 변화로 실제 기능이 깨지는지)을 확인한 결과는 `관계 확인됨`이다. 조건: 기능상 주의: 백엔드 풀에서 NIC 제거를 컨트롤 플레인이 막지 않는다 — 기능 신호는 LB 프론트엔드로의 HTTP 200. 기능 확인 신호는 로드밸런서 주소가 HTTP 200으로 응답하는지이다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-lb-serve2-2026-08-01"
+    ],
+    "reason": "A referenced experiment failed or timed out; provider cleanup completed and the finding was not counted as replicated."
+   }
+  },
+  {
+   "subject": "network",
+   "object": "subnet",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-virtualNetwork.json#/definitions/Common.VirtualNetworkPropertiesFormat/properties/subnets/items",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-virtualNetwork.json#/definitions/Common.VirtualNetworkPropertiesFormat/properties/subnets/items"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply2-2026-07-30",
+     "step": "E1.apply-vnet-without-subnet",
+     "code": "ok",
+     "resultFile": "experiments/azure-apply2-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply2-2026-07-30/run.py",
+      "line": 49,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `network`와 `subnet`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply2-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "nic",
+   "object": "firewall",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-virtualNetwork.json#/definitions/Common.NetworkInterfacePropertiesFormat/properties/networkSecurityGroup",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-virtualNetwork.json#/definitions/Common.NetworkInterfacePropertiesFormat/properties/networkSecurityGroup"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply-2026-07-30",
+     "step": "B.build-chain",
+     "code": "ok",
+     "resultFile": "experiments/azure-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply-2026-07-30/run.py",
+      "line": 60,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `nic`와 `firewall`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "nic",
+   "object": "publicIp",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/publicIPAddress",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/publicIPAddress"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply-2026-07-30",
+     "step": "B.build-chain",
+     "code": "ok",
+     "resultFile": "experiments/azure-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply-2026-07-30/run.py",
+      "line": 60,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `nic`와 `publicIp`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "nic",
+   "object": "publicIp",
+   "csp": "azure",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "실행 중 VM의 NIC에서 PIP 분리를 컨트롤 플레인이 막지 않는다 — 기능 신호는 외부 TCP 22 도달성"
+   },
+   "signal": "inbound-tcp",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/publicIPAddress",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/publicIPAddress"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func-2026-07-31",
+     "step": "F1.reachable-baseline",
+     "code": "ok",
+     "resultFile": "experiments/azure-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func-2026-07-31/run.py",
+      "line": 92,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func-2026-07-31",
+     "step": "M1.detach-pip-while-running",
+     "code": "ok",
+     "resultFile": "experiments/azure-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func-2026-07-31/run.py",
+      "line": 94,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func-2026-07-31",
+     "step": "M1b.vm-still-running",
+     "code": "ok",
+     "resultFile": "experiments/azure-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func-2026-07-31/run.py",
+      "line": 98,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func-2026-07-31",
+     "step": "F2.unreachable-after-detach",
+     "code": "ok",
+     "resultFile": "experiments/azure-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func-2026-07-31/run.py",
+      "line": 101,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func-2026-07-31",
+     "step": "M2.reattach-pip",
+     "code": "ok",
+     "resultFile": "experiments/azure-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func-2026-07-31/run.py",
+      "line": 103,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func-2026-07-31",
+     "step": "F3.reachable-again",
+     "code": "ok",
+     "resultFile": "experiments/azure-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func-2026-07-31/run.py",
+      "line": 107,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `nic`와 `publicIp`의 기능 의존성(대상 변화로 실제 기능이 깨지는지)을 확인한 결과는 `관계 확인됨`이다. 조건: 기능상 주의: 실행 중 VM의 NIC에서 PIP 분리를 컨트롤 플레인이 막지 않는다 — 기능 신호는 외부 TCP 22 도달성. 기능 확인 신호는 외부에서 TCP로 도달할 수 있는지이다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-func-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "nic",
+   "object": "subnet",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "mandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is mandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/subnet",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/subnet"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-virtualNetwork.json#/definitions/Common.PrivateLinkServiceIpConfigurationProperties/properties/subnet",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-virtualNetwork.json#/definitions/Common.PrivateLinkServiceIpConfigurationProperties/properties/subnet"
+    },
+    {
+     "acquisitionMethod": "controlPlaneValidation",
+     "experiment": "azure-preflight-2026-07-30",
+     "step": "omit-nic-subnet.validate",
+     "code": "SubnetIsRequired",
+     "resultFile": "experiments/azure-preflight-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-preflight-2026-07-30/results.json",
+      "line": 132,
+      "sourceKind": "결과 JSON에만 남은 이름 — 이 저장소에서 원래 요청 코드는 찾지 못함"
+     },
+     "observed": "이 단계에서 CSP가 `SubnetIsRequired` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with SubnetIsRequired",
+     "actualOutcome": "SubnetIsRequired"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply-2026-07-30",
+     "step": "A.apply.dangling-nic-subnet",
+     "code": "InvalidResourceReference",
+     "resultFile": "experiments/azure-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply-2026-07-30/results.json",
+      "line": 14,
+      "sourceKind": "결과 JSON에만 남은 이름 — 이 저장소에서 원래 요청 코드는 찾지 못함"
+     },
+     "observed": "이 단계에서 CSP가 `InvalidResourceReference` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with InvalidResourceReference",
+     "actualOutcome": "InvalidResourceReference"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `nic`와 `subnet`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 별도 조건 없음.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply-2026-07-30",
+     "azure-preflight-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "subnet",
+   "object": "firewall",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/networkSecurityGroup",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/networkSecurityGroup"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply-2026-07-30",
+     "step": "B.build-chain",
+     "code": "ok",
+     "resultFile": "experiments/azure-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply-2026-07-30/run.py",
+      "line": 60,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `subnet`와 `firewall`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "subnet",
+   "object": "firewall",
+   "csp": "azure",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "사용 중 서브넷에서 NSG 분리를 컨트롤 플레인이 막지 않는다 — 차단은 NSG 부재와 Standard PIP secure-by-default의 합성 효과"
+   },
+   "signal": "inbound-tcp",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/networkSecurityGroup",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/networkSecurityGroup"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func2-2026-07-31",
+     "step": "F1.reachable-baseline",
+     "code": "ok",
+     "resultFile": "experiments/azure-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func2-2026-07-31/run.py",
+      "line": 103,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func2-2026-07-31",
+     "step": "M1.detach-nsg-from-subnet",
+     "code": "ok",
+     "resultFile": "experiments/azure-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func2-2026-07-31/run.py",
+      "line": 108,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func2-2026-07-31",
+     "step": "F2.unreachable-after-detach",
+     "code": "ok",
+     "resultFile": "experiments/azure-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func2-2026-07-31/run.py",
+      "line": 112,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func2-2026-07-31",
+     "step": "M2.reattach-nsg",
+     "code": "ok",
+     "resultFile": "experiments/azure-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func2-2026-07-31/run.py",
+      "line": 113,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "azure-func2-2026-07-31",
+     "step": "F3.reachable-again",
+     "code": "ok",
+     "resultFile": "experiments/azure-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func2-2026-07-31/run.py",
+      "line": 117,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `subnet`와 `firewall`의 기능 의존성(대상 변화로 실제 기능이 깨지는지)을 확인한 결과는 `관계 확인됨`이다. 조건: 기능상 주의: 사용 중 서브넷에서 NSG 분리를 컨트롤 플레인이 막지 않는다 — 차단은 NSG 부재와 Standard PIP secure-by-default의 합성 효과. 기능 확인 신호는 외부에서 TCP로 도달할 수 있는지이다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-func2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "subnet",
+   "object": "network",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "mandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is mandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+     "form": "path-nesting",
+     "requiredInSchema": true,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply-2026-07-30",
+     "step": "A.apply.dangling-subnet-parent",
+     "code": "ResourceNotFound",
+     "resultFile": "experiments/azure-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply-2026-07-30/results.json",
+      "line": 22,
+      "sourceKind": "결과 JSON에만 남은 이름 — 이 저장소에서 원래 요청 코드는 찾지 못함"
+     },
+     "observed": "이 단계에서 CSP가 `ResourceNotFound` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with ResourceNotFound",
+     "actualOutcome": "ResourceNotFound"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `subnet`와 `network`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 별도 조건 없음.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "disk",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "compute-ComputeRP.json#/definitions/DataDisk/properties/managedDisk",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "compute-ComputeRP.json#/definitions/DataDisk/properties/managedDisk"
+    },
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "compute-ComputeRP.json#/definitions/OSDisk/properties/managedDisk",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "compute-ComputeRP.json#/definitions/OSDisk/properties/managedDisk"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply3-2026-07-30",
+     "step": "F0.build-vm-no-datadisk",
+     "code": "ok",
+     "resultFile": "experiments/azure-apply3-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply3-2026-07-30/run.py",
+      "line": 49,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `vm`와 `disk`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply3-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "nic",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "mandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is mandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "compute-ComputeRP.json#/definitions/NetworkProfile/properties/networkInterfaces/items",
+     "form": "input-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "compute-ComputeRP.json#/definitions/NetworkProfile/properties/networkInterfaces/items"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply-2026-07-30",
+     "step": "A.apply.omit-vm-nic",
+     "code": "InvalidParameter",
+     "resultFile": "experiments/azure-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply-2026-07-30/results.json",
+      "line": 6,
+      "sourceKind": "결과 JSON에만 남은 이름 — 이 저장소에서 원래 요청 코드는 찾지 못함"
+     },
+     "observed": "이 단계에서 CSP가 `InvalidParameter` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with InvalidParameter",
+     "actualOutcome": "InvalidParameter"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-apply-2026-07-30",
+     "step": "A.apply.dangling-vm-nic",
+     "code": "NotFound",
+     "resultFile": "experiments/azure-apply-2026-07-30/results.json",
+     "definition": {
+      "file": "experiments/azure-apply-2026-07-30/results.json",
+      "line": 30,
+      "sourceKind": "결과 JSON에만 남은 이름 — 이 저장소에서 원래 요청 코드는 찾지 못함"
+     },
+     "observed": "이 단계에서 CSP가 `NotFound` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with NotFound",
+     "actualOutcome": "NotFound"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "azure에서 `vm`와 `nic`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 별도 조건 없음.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-apply-2026-07-30"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "workloadIdentity",
+   "csp": "azure",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "azure-func-2026-07-31",
+     "step": "R4.create-vm",
+     "code": "ok",
+     "resultFile": "experiments/azure-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/azure-func-2026-07-31/run.py",
+      "line": 80,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "Azure VM에서 managed identity를 명시하지 않아도 VM 생성은 가능했다.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "azure-func-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "firewall",
+   "object": "network",
+   "csp": "gcp",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "미지정 시 default 네트워크로 대체"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "gcp-compute#/schemas/Firewall/properties/network",
+     "form": "pair-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "gcp-compute#/schemas/Firewall/properties/network"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply-2026-07-31",
+     "step": "A.firewall-omit-network",
+     "code": "ok",
+     "resultFile": "experiments/gcp-apply-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply-2026-07-31/run.py",
+      "line": 127,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply-2026-07-31",
+     "step": "A.firewall-dangling-network",
+     "code": "notFound",
+     "resultFile": "experiments/gcp-apply-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply-2026-07-31/run.py",
+      "line": 123,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `notFound` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with notFound",
+     "actualOutcome": "notFound"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `firewall`와 `network`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 서버 기본값: 미지정 시 default 네트워크로 대체.",
+   "realizationBehavior": "providerDefaulted",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-apply-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "network",
+   "csp": "gcp",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "EXTERNAL은 불참 · INTERNAL은 서브넷에서 역산"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "gcp-compute#/schemas/ForwardingRule/properties/network",
+     "form": "pair-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "gcp-compute#/schemas/ForwardingRule/properties/network"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply2-2026-07-31",
+     "step": "B.create-ext-forwardingrule",
+     "code": "ok",
+     "resultFile": "experiments/gcp-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply2-2026-07-31/run.py",
+      "line": 141,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply4-2026-07-31",
+     "step": "I3.internal-fr-omit-network",
+     "code": "ok",
+     "resultFile": "experiments/gcp-apply4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply4-2026-07-31/run.py",
+      "line": 48,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply4-2026-07-31",
+     "step": "I3.server-filled-network",
+     "code": "ok",
+     "resultFile": "experiments/gcp-apply4-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply4-2026-07-31/run.py",
+      "line": 56,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `loadBalancer`와 `network`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 서버 기본값: EXTERNAL은 불참 · INTERNAL은 서브넷에서 역산.",
+   "realizationBehavior": "providerDefaulted",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-apply2-2026-07-31",
+     "gcp-apply4-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "subnet",
+   "csp": "gcp",
+   "relationFamily": "provisioning",
+   "finding": "conditionalForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "conditional",
+    "description": "EXTERNAL 불참 · INTERNAL 필수"
+   },
+   "signal": null,
+   "decisionRule": "Finding is conditionalForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "gcp-compute#/schemas/ForwardingRule/properties/subnetwork",
+     "form": "pair-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "gcp-compute#/schemas/ForwardingRule/properties/subnetwork"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply2-2026-07-31",
+     "step": "B.create-ext-forwardingrule",
+     "code": "ok",
+     "resultFile": "experiments/gcp-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply2-2026-07-31/run.py",
+      "line": 141,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply3-2026-07-31",
+     "step": "I1.internal-fr-omit-subnet",
+     "code": "invalid",
+     "resultFile": "experiments/gcp-apply3-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply3-2026-07-31/run.py",
+      "line": 117,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `invalid` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with invalid",
+     "actualOutcome": "invalid"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply3-2026-07-31",
+     "step": "I2.internal-fr-full",
+     "code": "ok",
+     "resultFile": "experiments/gcp-apply3-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply3-2026-07-31/run.py",
+      "line": 119,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `loadBalancer`와 `subnet`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 스킴 조건: EXTERNAL 불참 · INTERNAL 필수.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-apply2-2026-07-31",
+     "gcp-apply3-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "network",
+   "object": "defaultRoute",
+   "csp": "gcp",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "failed",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "자동 생성 기본 라우트(0.0.0.0/0→default-internet-gateway) 삭제를 컨트롤 플레인이 막지 않는다"
+   },
+   "signal": "inbound-tcp",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "M3a2.find-default-route-clientside",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/results.json",
+      "line": 69,
+      "sourceKind": "결과 JSON에만 남은 이름 — 이 저장소에서 원래 요청 코드는 찾지 못함"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "M3b.delete-default-route",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/run.py",
+      "line": 128,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "F4.unreachable-no-route",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/run.py",
+      "line": 130,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "M4.recreate-route",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/run.py",
+      "line": 131,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "F5.reachable-final",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/run.py",
+      "line": 134,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "GCP network의 0.0.0.0/0→default-internet-gateway defaultRoute를 제거했을 때 외부 TCP 도달 신호가 실패했다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-func2-2026-07-31"
+    ],
+    "reason": "A referenced experiment failed or timed out; provider cleanup completed and the finding was not counted as replicated."
+   }
+  },
+  {
+   "subject": "nic",
+   "object": "network",
+   "csp": "gcp",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "gcp-compute#/schemas/NetworkInterface/properties/network",
+     "form": "pair-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "gcp-compute#/schemas/NetworkInterface/properties/network"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply-2026-07-31",
+     "step": "F0.create-instance",
+     "code": "ok",
+     "resultFile": "experiments/gcp-apply-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply-2026-07-31/run.py",
+      "line": 162,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `nic`와 `network`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 별도 조건 없음.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-apply-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "nic",
+   "object": "subnet",
+   "csp": "gcp",
+   "relationFamily": "provisioning",
+   "finding": "conditionalForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "conditional",
+    "description": "custom에선 필수 · auto에선 서버가 리전 서브넷 대체"
+   },
+   "signal": null,
+   "decisionRule": "Finding is conditionalForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "gcp-compute#/schemas/NetworkInterface/properties/subnetwork",
+     "form": "pair-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "gcp-compute#/schemas/NetworkInterface/properties/subnetwork"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply2-2026-07-31",
+     "step": "A1.nic-network-only-custom",
+     "code": "invalid",
+     "resultFile": "experiments/gcp-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply2-2026-07-31/run.py",
+      "line": 121,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `invalid` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with invalid",
+     "actualOutcome": "invalid"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply2-2026-07-31",
+     "step": "A2.nic-network-only-auto",
+     "code": "ok",
+     "resultFile": "experiments/gcp-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply2-2026-07-31/run.py",
+      "line": 125,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply2-2026-07-31",
+     "step": "A2.server-filled-subnetwork",
+     "code": "ok",
+     "resultFile": "experiments/gcp-apply2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply2-2026-07-31/run.py",
+      "line": 131,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `nic`와 `subnet`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `선택`이다. 조건: 네트워크 모드 조건: custom에선 필수 · auto에선 서버가 리전 서브넷 대체.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-apply2-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "subnet",
+   "object": "network",
+   "csp": "gcp",
+   "relationFamily": "provisioning",
+   "finding": "mandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is mandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "gcp-compute#/schemas/Subnetwork/properties/network",
+     "form": "pair-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "gcp-compute#/schemas/Subnetwork/properties/network"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply-2026-07-31",
+     "step": "A.subnet-omit-network",
+     "code": "invalid",
+     "resultFile": "experiments/gcp-apply-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply-2026-07-31/run.py",
+      "line": 118,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `invalid` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with invalid",
+     "actualOutcome": "invalid"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply-2026-07-31",
+     "step": "A.subnet-dangling-network",
+     "code": "notFound",
+     "resultFile": "experiments/gcp-apply-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply-2026-07-31/run.py",
+      "line": 120,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `notFound` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with notFound",
+     "actualOutcome": "notFound"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `subnet`와 `network`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 별도 조건 없음.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-apply-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "disk",
+   "csp": "gcp",
+   "relationFamily": "provisioning",
+   "finding": "mandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "compatibility",
+    "description": "디스크와 인스턴스의 존이 일치해야 한다"
+   },
+   "signal": null,
+   "decisionRule": "Finding is mandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "gcp-compute#/schemas/AttachedDisk/properties/source",
+     "form": "pair-reference",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "gcp-compute#/schemas/AttachedDisk/properties/source"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply-2026-07-31",
+     "step": "A.instance-omit-disks",
+     "code": "invalid",
+     "resultFile": "experiments/gcp-apply-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply-2026-07-31/run.py",
+      "line": 153,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `invalid` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with invalid",
+     "actualOutcome": "invalid"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-paircompat-2026-07-31",
+     "step": "P1.zone-mismatch-vm-zoneB",
+     "code": "invalid",
+     "resultFile": "experiments/gcp-paircompat-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-paircompat-2026-07-31/run.py",
+      "line": 53,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `invalid` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with invalid",
+     "actualOutcome": "invalid"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-paircompat-2026-07-31",
+     "step": "P2.same-zone-control",
+     "code": "ok",
+     "resultFile": "experiments/gcp-paircompat-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-paircompat-2026-07-31/run.py",
+      "line": 56,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `vm`와 `disk`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 두 자원의 호환 조건: 디스크와 인스턴스의 존이 일치해야 한다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-apply-2026-07-31",
+     "gcp-paircompat-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "firewall",
+   "csp": "gcp",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "failed",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "네트워크 스코프 방화벽 규칙 삭제를 컨트롤 플레인이 막지 않는다 — gcp 방화벽은 자원 간 부착이 아니라 규칙이라 관계 변이가 없다(규칙 변이가 유일한 경로)"
+   },
+   "signal": "inbound-tcp",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "F1.reachable-baseline",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/run.py",
+      "line": 111,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "M1.delete-fw-rule",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/run.py",
+      "line": 113,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "F2.unreachable-no-rule",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/run.py",
+      "line": 115,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "M2.recreate-fw-rule",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/run.py",
+      "line": 116,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func2-2026-07-31",
+     "step": "F3.reachable-again",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func2-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func2-2026-07-31/run.py",
+      "line": 117,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `vm`와 `firewall`의 기능 의존성(대상 변화로 실제 기능이 깨지는지)을 확인한 결과는 `관계 확인됨`이다. 조건: 기능상 주의: 네트워크 스코프 방화벽 규칙 삭제를 컨트롤 플레인이 막지 않는다 — gcp 방화벽은 자원 간 부착이 아니라 규칙이라 관계 변이가 없다(규칙 변이가 유일한 경로). 기능 확인 신호는 외부에서 TCP로 도달할 수 있는지이다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-func2-2026-07-31"
+    ],
+    "reason": "A referenced experiment failed or timed out; provider cleanup completed and the finding was not counted as replicated."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "nic",
+   "csp": "gcp",
+   "relationFamily": "provisioning",
+   "finding": "mandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is mandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "schemaDeclaration",
+     "cite": "gcp-compute#/schemas/Instance/properties/networkInterfaces",
+     "form": "schema-ref",
+     "requiredInSchema": false,
+     "expectedOutcome": "declaration recorded",
+     "actualOutcome": "gcp-compute#/schemas/Instance/properties/networkInterfaces"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-apply-2026-07-31",
+     "step": "A.instance-omit-nic",
+     "code": "invalid",
+     "resultFile": "experiments/gcp-apply-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-apply-2026-07-31/run.py",
+      "line": 150,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계에서 CSP가 `invalid` 오류를 돌려줬다",
+     "expectedOutcome": "operation is rejected with invalid",
+     "actualOutcome": "invalid"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `vm`와 `nic`의 생성 의존성(대상이 없거나 잘못됐을 때 주체를 만들 수 있는지)을 확인한 결과는 `필수`이다. 조건: 별도 조건 없음.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-apply-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "publicIp",
+   "csp": "gcp",
+   "relationFamily": "runtime",
+   "finding": "runtimeRequiredForSignal",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always",
+    "description": "RUNNING 인스턴스에서 accessConfig 삭제를 컨트롤 플레인이 막지 않는다 — 기능 신호는 외부 TCP 22 도달성"
+   },
+   "signal": "inbound-tcp",
+   "decisionRule": "Finding is runtimeRequiredForSignal when the signal succeeds in the control state, fails after removing or disabling the target, and recovers after restoration.",
+   "observations": [
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func-2026-07-31",
+     "step": "F1.reachable-baseline",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func-2026-07-31/run.py",
+      "line": 101,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func-2026-07-31",
+     "step": "M1.delete-accessconfig-while-running",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func-2026-07-31/run.py",
+      "line": 103,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func-2026-07-31",
+     "step": "M1b.vm-still-running",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func-2026-07-31/run.py",
+      "line": 107,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func-2026-07-31",
+     "step": "F2.unreachable-after-delete",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func-2026-07-31/run.py",
+      "line": 110,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func-2026-07-31",
+     "step": "M2.add-accessconfig",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func-2026-07-31/run.py",
+      "line": 112,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "runtimeProbe",
+     "experiment": "gcp-func-2026-07-31",
+     "step": "F3.reachable-again",
+     "code": "ok",
+     "resultFile": "experiments/gcp-func-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-func-2026-07-31/run.py",
+      "line": 120,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "gcp에서 `vm`와 `publicIp`의 기능 의존성(대상 변화로 실제 기능이 깨지는지)을 확인한 결과는 `관계 확인됨`이다. 조건: 기능상 주의: RUNNING 인스턴스에서 accessConfig 삭제를 컨트롤 플레인이 막지 않는다 — 기능 신호는 외부 TCP 22 도달성. 기능 확인 신호는 외부에서 TCP로 도달할 수 있는지이다.",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-func-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  },
+  {
+   "subject": "vm",
+   "object": "workloadIdentity",
+   "csp": "gcp",
+   "relationFamily": "provisioning",
+   "finding": "notMandatoryForProvisioning",
+   "evidenceStatus": "confirmed",
+   "replicationStatus": "replicated",
+   "studyDisposition": "included",
+   "condition": {
+    "kind": "always"
+   },
+   "signal": null,
+   "decisionRule": "Finding is notMandatoryForProvisioning when the recorded control and treatment observations match their expected outcomes for the stated configuration.",
+   "observations": [
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-iam-2026-07-31",
+     "step": "A1.create-vm-omit-sa",
+     "code": "ok",
+     "resultFile": "experiments/gcp-iam-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-iam-2026-07-31/run.py",
+      "line": 45,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-iam-2026-07-31",
+     "step": "A2.running",
+     "code": "ok",
+     "resultFile": "experiments/gcp-iam-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-iam-2026-07-31/run.py",
+      "line": 62,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    },
+    {
+     "acquisitionMethod": "provisioningExecution",
+     "experiment": "gcp-iam-2026-07-31",
+     "step": "A3.serviceaccounts-shape",
+     "code": "ok",
+     "resultFile": "experiments/gcp-iam-2026-07-31/results.json",
+     "definition": {
+      "file": "experiments/gcp-iam-2026-07-31/run.py",
+      "line": 66,
+      "sourceKind": "이 저장소의 실험 코드에서 정의한 이름"
+     },
+     "observed": "이 단계가 성공했다",
+     "expectedOutcome": "operation or probe succeeds",
+     "actualOutcome": "succeeded"
+    }
+   ],
+   "provenance": {
+    "migrationSource": "depkb-claims/v1",
+    "migrationDate": "2026-08-07"
+   },
+   "note": "GCP VM에서 service account를 명시하지 않아도 VM 생성은 가능했다.",
+   "realizationBehavior": "explicitlyAttachable",
+   "replication": {
+    "session": "2026-08-07",
+    "experiments": [
+     "gcp-iam-2026-07-31"
+    ],
+    "reason": "All referenced dynamic experiments were rerun in the 2026-08-07 replication session."
+   }
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "_note": "aws 2라운드 측정 기록 — DryRun 깊이가 증명 안 된 API는 실물 생성으로 쟀다. server-filled-* 스텝이 서버 대체의 실물이다.",
+ "ranAt": "2026-08-06T19:16:09+00:00",
+ "region": "ap-northeast-2",
+ "steps": {
+  "B1.dangling-subnet-vpc": {
+   "ok": false,
+   "errorCodes": [
+    "InvalidVpcID.NotFound"
+   ],
+   "rejectedAt": "server",
+   "excerpt": "aws: [ERROR]: An error occurred (InvalidVpcID.NotFound) when calling the CreateSubnet operation: The vpc ID 'vpc-0fffffffffffffff0' does not exist"
+  },
+  "B2.sg-omit-vpc": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"GroupId\": \"sg-001d5a136dbef5850\",\n    \"SecurityGroupArn\": \"arn:aws:ec2:ap-northeast-2:838062934141:security-group/sg-001d5a136dbef5850\"\n}"
+  },
+  "B2.server-filled-vpc": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "\"vpc-0adda64ece60b6311\""
+  },
+  "B2.cleanup-sg": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Return\": true,\n    \"GroupId\": \"sg-001d5a136dbef5850\"\n}"
+  },
+  "B0.create-vpc": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Vpc\": {\n        \"OwnerId\": \"838062934141\",\n        \"InstanceTenancy\": \"default\",\n        \"Ipv6CidrBlockAssociationSet\": [],\n        \"CidrBlockAssociationSet\": [\n            {\n                \"AssociationId\": \"vpc-cidr-assoc-0bdc295a6bdcfd5ee\",\n                \"CidrBlock\": \"10.90.0.0/16\",\n                \"CidrBlockState\": {\n                    \"State\": \"associated\"\n                }\n            }\n        ],\n        \"IsDefault\": false,\n        \"VpcId\": \"vpc-05b98ba021b222885\",\n        \"State\": \"pending\",\n        \"CidrBlock\": \"10.90.0.0/16\",\n        \"DhcpOptionsId\": \"dopt-0c4e2064f71737b7f"
+  },
+  "B0.create-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Subnet\": {\n        \"AvailabilityZoneId\": \"apne2-az3\",\n        \"MapCustomerOwnedIpOnLaunch\": false,\n        \"OwnerId\": \"838062934141\",\n        \"AssignIpv6AddressOnCreation\": false,\n        \"Ipv6CidrBlockAssociationSet\": [],\n        \"SubnetArn\": \"arn:aws:ec2:ap-northeast-2:838062934141:subnet/subnet-043894e4189aafa88\",\n        \"EnableDns64\": false,\n        \"Ipv6Native\": false,\n        \"PrivateDnsNameOptionsOnLaunch\": {\n            \"HostnameType\": \"ip-name\",\n            \"EnableResourceNameDnsARecord\": false,\n            \"EnableResourceNameDnsAAAARecord\": false\n        },\n        \"SubnetId\""
+  },
+  "B3.eni-omit-groups": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"NetworkInterface\": {\n        \"AvailabilityZone\": \"ap-northeast-2c\",\n        \"Description\": \"\",\n        \"Groups\": [\n            {\n                \"GroupId\": \"sg-0c397ab317386b8d3\",\n                \"GroupName\": \"default\"\n            }\n        ],\n        \"InterfaceType\": \"interface\",\n        \"Ipv6Addresses\": [],\n        \"MacAddress\": \"0a:4d:b5:ae:7c:95\",\n        \"NetworkInterfaceId\": \"eni-0d0f3786b051f2fa6\",\n        \"OwnerId\": \"838062934141\",\n        \"PrivateIpAddress\": \"10.90.1.117\",\n        \"PrivateIpAddresses\": [\n            {\n                \"Primary\": true,\n                \"PrivateIpA"
+  },
+  "B3.server-filled-groups": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "[{\"GroupId\": \"sg-0c397ab317386b8d3\", \"GroupName\": \"default\"}]"
+  },
+  "B4.lb-omit-subnets": {
+   "ok": false,
+   "errorCodes": [
+    "ValidationError"
+   ],
+   "rejectedAt": "server",
+   "excerpt": "aws: [ERROR]: An error occurred (ValidationError) when calling the CreateLoadBalancer operation: At least one subnet must be specified"
+  },
+  "B4.alb-one-subnet": {
+   "ok": false,
+   "errorCodes": [
+    "ValidationError"
+   ],
+   "rejectedAt": "server",
+   "excerpt": "aws: [ERROR]: An error occurred (ValidationError) when calling the CreateLoadBalancer operation: At least two subnets in two different Availability Zones must be specified"
+  },
+  "B4.nlb-one-subnet-no-sg": {
+   "ok": false,
+   "errorCodes": [
+    "InvalidSubnet"
+   ],
+   "rejectedAt": "server",
+   "excerpt": "aws: [ERROR]: An error occurred (InvalidSubnet) when calling the CreateLoadBalancer operation: VPC vpc-05b98ba021b222885 has no internet gateway"
+  },
+  "D.delete-eni": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "D.delete-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "D.delete-vpc": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "residual": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"NetworkInterfaces\": []\n}"
+  },
+  "F.create-vpc": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Vpc\": {\n        \"OwnerId\": \"838062934141\",\n        \"InstanceTenancy\": \"default\",\n        \"Ipv6CidrBlockAssociationSet\": [],\n        \"CidrBlockAssociationSet\": [\n            {\n                \"AssociationId\": \"vpc-cidr-assoc-026ff50ae9ce0e546\",\n                \"CidrBlock\": \"10.91.0.0/16\",\n                \"CidrBlockState\": {\n                    \"State\": \"associated\"\n                }\n            }\n        ],\n        \"IsDefault\": false,\n        \"VpcId\": \"vpc-015d9399403545b4b\",\n        \"State\": \"pending\",\n        \"CidrBlock\": \"10.91.0.0/16\",\n        \"DhcpOptionsId\": \"dopt-0c4e2064f71737b7f"
+  },
+  "F.create-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Subnet\": {\n        \"AvailabilityZoneId\": \"apne2-az2\",\n        \"MapCustomerOwnedIpOnLaunch\": false,\n        \"OwnerId\": \"838062934141\",\n        \"AssignIpv6AddressOnCreation\": false,\n        \"Ipv6CidrBlockAssociationSet\": [],\n        \"SubnetArn\": \"arn:aws:ec2:ap-northeast-2:838062934141:subnet/subnet-0a0d35b738523ebe4\",\n        \"EnableDns64\": false,\n        \"Ipv6Native\": false,\n        \"PrivateDnsNameOptionsOnLaunch\": {\n            \"HostnameType\": \"ip-name\",\n            \"EnableResourceNameDnsARecord\": false,\n            \"EnableResourceNameDnsAAAARecord\": false\n        },\n        \"SubnetId\""
+  },
+  "F.internal-nlb-one-subnet-no-sg": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"LoadBalancers\": [\n        {\n            \"LoadBalancerArn\": \"arn:aws:elasticloadbalancing:ap-northeast-2:838062934141:loadbalancer/net/depkb2f-nlb/62e9e02d86c888ab\",\n            \"DNSName\": \"depkb2f-nlb-62e9e02d86c888ab.elb.ap-northeast-2.amazonaws.com\",\n            \"CanonicalHostedZoneId\": \"ZIBE1TIR4HY56\",\n            \"CreatedTime\": \"2026-08-06T19:16:25.142000+00:00\",\n            \"LoadBalancerName\": \"depkb2f-nlb\",\n            \"Scheme\": \"internal\",\n            \"VpcId\": \"vpc-015d9399403545b4b\",\n            \"State\": {\n                \"Code\": \"provisioning\"\n            },\n            \"Type\":"
+  },
+  "F.delete-nlb": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "F.delete-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "F.delete-vpc": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "F2.internal-nlb-omit-subnets": {
+   "ok": false,
+   "errorCodes": [
+    "ValidationError"
+   ],
+   "rejectedAt": "server",
+   "excerpt": "aws: [ERROR]: An error occurred (ValidationError) when calling the CreateLoadBalancer operation: At least one subnet must be specified"
+  }
+ },
+ "ranAtFix": "2026-08-06T19:16:39+00:00",
+ "ranAtFix2": "2026-08-06T19:16:44+00:00"
+}

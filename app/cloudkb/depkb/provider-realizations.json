@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "easydep-provider-realizations/v1",
+  "principle": "A capability is realized directly as the selected provider's native components. No cross-provider resource identity is assumed.",
+  "providers": {
+    "aws": {
+      "components": [
+        {"id":"nlb","nativePath":"load-balancer","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["aws_lb"]}},
+        {"id":"listener","nativePath":"listener","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["aws_lb_listener"]}},
+        {"id":"target-group","nativePath":"backend-group","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["aws_lb_target_group"]}},
+        {"id":"target-group-health","nativePath":"backend-group.healthCheckSettings","representation":"embedded","ownerResourceId":"target-group","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["aws_lb_target_group"]}}
+      ],
+      "realizations": [
+        {"id":"tcp-nlb","variant":"public-tcp-network-load-balancer","capabilityIds":["load-balanced-ingress"],"composition":"multi-resource","componentIds":["nlb","listener","target-group","target-group-health"]}
+      ]
+    },
+    "azure": {
+      "components": [
+        {"id":"load-balancer","nativePath":"load-balancer","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["azurerm_lb"]}},
+        {"id":"frontend-ip-config","nativePath":"load-balancer.frontend-ip-configuration","representation":"embedded","ownerResourceId":"load-balancer","boundaryStatus":"confirmed","terraformEvidence":{"ownerType":"azurerm_lb","ownerBlock":"frontend_ip_configuration"}},
+        {"id":"backend-pool","nativePath":"backend-address-pool","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["azurerm_lb_backend_address_pool"]}},
+        {"id":"probe","nativePath":"probe","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["azurerm_lb_probe"]}},
+        {"id":"load-balancing-rule","nativePath":"load-balancing-rule","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["azurerm_lb_rule"]}},
+        {"id":"backend-membership","nativePath":"nic.backend-address-pool-membership","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["azurerm_network_interface_backend_address_pool_association"]}}
+      ],
+      "realizations": [
+        {"id":"standard-public-lb","variant":"public-tcp-standard-load-balancer","capabilityIds":["load-balanced-ingress"],"composition":"multi-resource","componentIds":["load-balancer","frontend-ip-config","backend-pool","probe","load-balancing-rule","backend-membership"]}
+      ]
+    },
+    "gcp": {
+      "components": [
+        {"id":"forwarding-rule","nativePath":"forwarding-rule","representation":"composite-member","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["google_compute_forwarding_rule"]}},
+        {"id":"backend-service","nativePath":"region-backend-service","representation":"composite-member","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["google_compute_region_backend_service"]}},
+        {"id":"instance-group","nativePath":"backend-group","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["google_compute_instance_group"]}},
+        {"id":"health-check","nativePath":"region-health-check","representation":"independent","boundaryStatus":"confirmed","terraformEvidence":{"resourceTypes":["google_compute_region_health_check"]}}
+      ],
+      "realizations": [
+        {"id":"regional-external-passthrough-nlb","variant":"regional-public-tcp-passthrough-network-load-balancer","capabilityIds":["load-balanced-ingress"],"composition":"multi-resource","componentIds":["forwarding-rule","backend-service","instance-group","health-check"]}
+      ]
+    }
+  }
+}

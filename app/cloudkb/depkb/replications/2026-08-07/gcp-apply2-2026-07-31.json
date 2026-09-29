@@ -1,0 +1,99 @@
+{
+ "_note": "gcp 2라운드 측정 기록 — NIC의 네트워크 모드 조건부 양상과 EXTERNAL LB의 network/subnet 불참. INTERNAL LB 측은 미측정으로 남긴다.",
+ "ranAt": "2026-08-06T19:31:35+00:00",
+ "project": "cloud-resource-testing",
+ "region": "asia-northeast3",
+ "zone": "asia-northeast3-a",
+ "steps": {
+  "G0.create-auto-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "G1.create-custom-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "G1.create-custom-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "A1.nic-network-only-custom": {
+   "ok": false,
+   "errorCodes": [
+    "invalid"
+   ],
+   "httpStatus": 400,
+   "excerpt": "{\"error\": {\"code\": 400, \"message\": \"Invalid value for field 'resource.networkInterfaces[0].subnetwork': ''. Network interface must specify a subnet if the network resource is in custom subnet mode.\", \"errors\": [{\"message\": \"Invalid value for field 'resource.networkInterfaces[0].subnetwork': ''. Network interface must specify a subnet if the network resource is in custom subnet mode.\", \"domain\": \"global\", \"reason\": \"invalid\"}]}}"
+  },
+  "A2.nic-network-only-auto": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "A2.server-filled-subnetwork": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "https://www.googleapis.com/compute/v1/projects/cloud-resource-testing/regions/asia-northeast3/subnetworks/depkbg2-auto"
+  },
+  "A2.cleanup-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "B.create-targetpool": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "B.create-ext-forwardingrule": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-forwardingrule": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-targetpool": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-custom-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-custom-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-auto-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ }
+}

@@ -1,0 +1,50 @@
+.env
+.git
+.gitignore
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+k8s/
+README.md
+# 로컬에서 되살린 BERT 가중치(417MB)와 실행 산출물. 이미지 빌드는 weights stage에서
+# 조각으로부터 직접 되살리므로 build context로 보낼 필요가 없다.
+.easydep/
+artifacts/
+
+# 프런트엔드는 컨테이너 안에서 npm ci와 npm run build를 다시 실행한다. 로컬 의존성과
+# 빌드 결과를 전송하면 수백 MB의 중복 파일 때문에 빌드가 느려지고 메모리도 낭비된다.
+frontend/node_modules/
+frontend/.svelte-kit/
+frontend/build/
+frontend/coverage/
+frontend/playwright-report/
+frontend/test-results/
+
+# 런타임 이미지가 복사하지 않는 개발 자료는 Docker 데몬에 보낼 필요가 없다.
+tests/
+docs/
+evaluation/
+docker/
+scripts/*
+!scripts/bootstrap-implementation-tools.sh
+!scripts/bootstrap-testing-tools.sh
+
+# FR/NFR 실행에는 학습 결과만 필요하다. 원본 학습 데이터는 이미지에 포함하지 않는다.
+materials/*
+!materials/BERT_FR_NFR_Classifier/
+!materials/BERT_FR_NFR_Classifier/bert_model/
+!materials/BERT_FR_NFR_Classifier/bert_model/**
+
+# 배포 에이전트의 로컬 빌드 산출물·다운로드 캐시. 이미지는 커밋된 data/(9.1MB)만
+# 쓰고, output/ 이 함께 들어가면 KB가 커밋본 대신 그것을 보게 된다.
+app/deployment/output/
+app/deployment/.cache/
+app/deployment/tests/

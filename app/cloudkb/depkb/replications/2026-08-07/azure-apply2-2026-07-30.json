@@ -1,0 +1,64 @@
+{
+ "_note": "azure apply 2라운드 측정 기록. E0의 성공 하나가 lb 선언 술어의 분해(개별 optional) 증거를 겸한다. C는 nic→publicIp 생명주기의 직접 측정.",
+ "ranAt": "2026-08-06T18:30:30+00:00",
+ "resourceGroup": "depkb-rm-08061815-2",
+ "steps": {
+  "E1.apply-vnet-without-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-2/providers/Microsoft.Resources/deployments/depkb-e1\",\n  \"location\": null,\n  \"name\": \"depkb-e1\",\n  \"properties\": {\n    \"correlationId\": \"04838079-7b44-4ed3-bca6-2f7e9036b41f\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT9.0923555S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": [\n      {\n        \"apiVersion\": null,\n        \"extension\": null,\n        \"id\": \"/subscriptions/4140"
+  },
+  "E1.cleanup-vnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "E0.build-chain2": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-2/providers/Microsoft.Resources/deployments/depkb-chain2\",\n  \"location\": null,\n  \"name\": \"depkb-chain2\",\n  \"properties\": {\n    \"correlationId\": \"fb43f32a-d6c5-4239-9feb-1713e289e35e\",\n    \"debugSetting\": null,\n    \"dependencies\": [\n      {\n        \"dependsOn\": [\n          {\n            \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-2/providers/Microsoft.Network/virtualNetworks/depkb2-vnet\",\n            \"resourceGroup\": \"depkb-rm-08061815-2\",\n            \""
+  },
+  "C.delete-pip-attached": {
+   "ok": false,
+   "errorCodes": [
+    "PublicIPAddressCannotBeDeleted"
+   ],
+   "excerpt": "ERROR: (PublicIPAddressCannotBeDeleted) Public IP address /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-2/providers/Microsoft.Network/publicIPAddresses/depkb2-pip1 can not be deleted since it is still allocated to resource /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-2/providers/Microsoft.Network/networkInterfaces/depkb2-nic/ipConfigurations/ipc. In order to delete the public IP, disassociate/detach the Public IP address from the resource.  To learn how to do this, see aka.ms/deletepublicip.\nCode: PublicIPAddressCan"
+  },
+  "D.delete-lbi": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-lbp": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-nic": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-pip1": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-pip2": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-vnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ }
+}

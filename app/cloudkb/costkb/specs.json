@@ -1,0 +1,44 @@
+{
+  "_note": "대표 리전 온디맨드(Linux) 정가 기준의 큐레이션 subset입니다. 실제 청구서가 아니며 스토리지/이그레스/관리형 서비스/약정할인은 미반영. 프로덕션 정확도는 cb-tumblebug 라이브 조회로 대체하세요.",
+  "specs": [
+    {"provider": "aws", "region": "us-east-1", "specName": "t3.micro",   "vCPU": 2, "memGiB": 1,  "hourlyUSD": 0.0104, "family": "burstable"},
+    {"provider": "aws", "region": "us-east-1", "specName": "t3.small",   "vCPU": 2, "memGiB": 2,  "hourlyUSD": 0.0208, "family": "burstable"},
+    {"provider": "aws", "region": "us-east-1", "specName": "t3.medium",  "vCPU": 2, "memGiB": 4,  "hourlyUSD": 0.0416, "family": "burstable"},
+    {"provider": "aws", "region": "us-east-1", "specName": "t3.large",   "vCPU": 2, "memGiB": 8,  "hourlyUSD": 0.0832, "family": "burstable"},
+    {"provider": "aws", "region": "us-east-1", "specName": "t3.xlarge",  "vCPU": 4, "memGiB": 16, "hourlyUSD": 0.1664, "family": "burstable"},
+    {"provider": "aws", "region": "us-east-1", "specName": "m5.large",   "vCPU": 2, "memGiB": 8,  "hourlyUSD": 0.096,  "family": "general"},
+    {"provider": "aws", "region": "us-east-1", "specName": "m5.xlarge",  "vCPU": 4, "memGiB": 16, "hourlyUSD": 0.192,  "family": "general"},
+    {"provider": "aws", "region": "us-east-1", "specName": "m5.2xlarge", "vCPU": 8, "memGiB": 32, "hourlyUSD": 0.384,  "family": "general"},
+    {"provider": "aws", "region": "us-east-1", "specName": "c5.large",   "vCPU": 2, "memGiB": 4,  "hourlyUSD": 0.085,  "family": "compute"},
+    {"provider": "aws", "region": "us-east-1", "specName": "c5.xlarge",  "vCPU": 4, "memGiB": 8,  "hourlyUSD": 0.17,   "family": "compute"},
+    {"provider": "aws", "region": "us-east-1", "specName": "c5.2xlarge", "vCPU": 8, "memGiB": 16, "hourlyUSD": 0.34,   "family": "compute"},
+    {"provider": "aws", "region": "us-east-1", "specName": "r5.large",   "vCPU": 2, "memGiB": 16, "hourlyUSD": 0.126,  "family": "memory"},
+    {"provider": "aws", "region": "us-east-1", "specName": "r5.xlarge",  "vCPU": 4, "memGiB": 32, "hourlyUSD": 0.252,  "family": "memory"},
+
+    {"provider": "aws", "region": "ap-northeast-2", "specName": "t3.medium",  "vCPU": 2, "memGiB": 4,  "hourlyUSD": 0.052, "family": "burstable"},
+    {"provider": "aws", "region": "ap-northeast-2", "specName": "m5.large",   "vCPU": 2, "memGiB": 8,  "hourlyUSD": 0.118, "family": "general"},
+    {"provider": "aws", "region": "ap-northeast-2", "specName": "m5.xlarge",  "vCPU": 4, "memGiB": 16, "hourlyUSD": 0.236, "family": "general"},
+    {"provider": "aws", "region": "ap-northeast-2", "specName": "c5.xlarge",  "vCPU": 4, "memGiB": 8,  "hourlyUSD": 0.208, "family": "compute"},
+
+    {"provider": "gcp", "region": "us-central1", "specName": "e2-small",      "vCPU": 2, "memGiB": 2,  "hourlyUSD": 0.01675, "family": "burstable"},
+    {"provider": "gcp", "region": "us-central1", "specName": "e2-medium",     "vCPU": 2, "memGiB": 4,  "hourlyUSD": 0.03351, "family": "burstable"},
+    {"provider": "gcp", "region": "us-central1", "specName": "e2-standard-2", "vCPU": 2, "memGiB": 8,  "hourlyUSD": 0.06701, "family": "general"},
+    {"provider": "gcp", "region": "us-central1", "specName": "e2-standard-4", "vCPU": 4, "memGiB": 16, "hourlyUSD": 0.13402, "family": "general"},
+    {"provider": "gcp", "region": "us-central1", "specName": "e2-standard-8", "vCPU": 8, "memGiB": 32, "hourlyUSD": 0.26805, "family": "general"},
+    {"provider": "gcp", "region": "us-central1", "specName": "n2-standard-2", "vCPU": 2, "memGiB": 8,  "hourlyUSD": 0.09712, "family": "general"},
+    {"provider": "gcp", "region": "us-central1", "specName": "n2-standard-4", "vCPU": 4, "memGiB": 16, "hourlyUSD": 0.19424, "family": "general"},
+    {"provider": "gcp", "region": "us-central1", "specName": "c2-standard-4", "vCPU": 4, "memGiB": 16, "hourlyUSD": 0.2088,  "family": "compute"},
+
+    {"provider": "azure", "region": "eastus", "specName": "Standard_B1s",    "vCPU": 1, "memGiB": 1,  "hourlyUSD": 0.0104, "family": "burstable"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_B2s",    "vCPU": 2, "memGiB": 4,  "hourlyUSD": 0.0416, "family": "burstable"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_B2ms",   "vCPU": 2, "memGiB": 8,  "hourlyUSD": 0.0832, "family": "burstable"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_B4ms",   "vCPU": 4, "memGiB": 16, "hourlyUSD": 0.166,  "family": "burstable"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_D2s_v5", "vCPU": 2, "memGiB": 8,  "hourlyUSD": 0.096,  "family": "general"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_D4s_v5", "vCPU": 4, "memGiB": 16, "hourlyUSD": 0.192,  "family": "general"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_D8s_v5", "vCPU": 8, "memGiB": 32, "hourlyUSD": 0.384,  "family": "general"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_F2s_v2", "vCPU": 2, "memGiB": 4,  "hourlyUSD": 0.0846, "family": "compute"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_F4s_v2", "vCPU": 4, "memGiB": 8,  "hourlyUSD": 0.169,  "family": "compute"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_E2s_v5", "vCPU": 2, "memGiB": 16, "hourlyUSD": 0.126,  "family": "memory"},
+    {"provider": "azure", "region": "eastus", "specName": "Standard_E4s_v5", "vCPU": 4, "memGiB": 32, "hourlyUSD": 0.252,  "family": "memory"}
+  ]
+}

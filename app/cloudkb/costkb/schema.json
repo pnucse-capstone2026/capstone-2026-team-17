@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/scenfit/costkb/schema.json",
+  "title": "costkb instance spec / price dataset",
+  "description": "cb-tumblebug spec_infos 테이블의 투영. 번들 36건(손 큐레이션)과 빌드 산출물이 같은 스키마를 쓴다.",
+  "type": "object",
+  "required": [
+    "_note",
+    "specs"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "_note": {
+      "type": "string",
+      "minLength": 1,
+      "description": "파일 단위 출처·한계 고지. 레코드별 evidence를 대신한다."
+    },
+    "specs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "provider",
+          "region",
+          "specName",
+          "vCPU",
+          "memGiB",
+          "hourlyUSD"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Tumblebug 키 {provider}+{region}+{spec}. MCP 정렬의 근거. 번들 36건엔 없음."
+          },
+          "provider": {
+            "enum": [
+              "aws",
+              "azure",
+              "gcp"
+            ],
+            "description": "지원 범위인 AWS, Azure, GCP만 허용한다."
+          },
+          "region": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Tumblebug 표기. AWS는 CSP와 우연히 일치하나 NCP는 'KR' 등으로 다르다."
+          },
+          "specName": {
+            "type": "string",
+            "minLength": 1,
+            "description": "CSP 원본 이름 (csp_spec_name)"
+          },
+          "vCPU": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "memGiB": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "실제 메모리(GiB). 상위 CB-Spider 버그로 gcp/azure 원본이 2.4% 낮게 기록되어 있어 보정한 값이다 — 무엇을 어떻게 고쳤는지는 데이터셋의 _corrections에 있고, 그 식으로 원본을 되돌릴 수 있다."
+          },
+          "hourlyUSD": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0,
+            "description": "cost_per_hour. 0과 음수는 '가격 미상'이므로 null (0은 무료가 아니다)."
+          },
+          "architecture": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "x86_64 | arm64 | arm64_mac | x86_64_mac. MCP가 기본으로 x86_64를 주입하므로 미러에 필요. provider와 달리 enum으로 잠그지 않는다 — provider는 우리가 정규화하는 키라 우리가 통제하지만 이 값은 소스에서 그대로 온다. 새 값(riscv64 등)이 빌드를 막으면 안 된다. 대신 tests의 known-set 검사가 새 값을 알린다 — 기본 필터가 x86_64라 모르는 값은 모든 기본 질의에서 조용히 빠지기 때문이다."
+          },
+          "infraType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "diskSizeGB": {
+            "description": "로컬 디스크 크기(GB). null은 상류가 모른다는 뜻(-1로 표기하던 것). 0은 '로컬 디스크 없음'일 수도 미기입일 수도 있어 가릴 수 없으므로 그대로 싣는다.",
+            "minimum": 0,
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "acceleratorType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "acceleratorModel": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "acceleratorCount": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "acceleratorMemoryGB": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "family": {
+            "enum": [
+              "burstable",
+              "general",
+              "compute",
+              "memory"
+            ],
+            "description": "spec_infos에 없는 필드 — 번들 36건에만 존재한다."
+          }
+        }
+      }
+    },
+    "_source": {
+      "type": "array",
+      "description": "이 산출물이 어느 원본에서 나왔는지. 소스마다 한 항목. 고정 불가 소스(AWS CFN zip)는 sha256이 유일한 식별자다 — kbcommon/sources.py 참조.",
+      "items": {
+        "type": "object",
+        "required": [
+          "sha256"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "kbcommon/sources.py의 키"
+          },
+          "pin_kind": {
+            "enum": [
+              "tag",
+              "commit",
+              "digest",
+              "bundled"
+            ]
+          },
+          "pin": {
+            "type": "string",
+            "description": "태그명·커밋 SHA. digest 소스는 '(고정 불가)'"
+          },
+          "url": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "minLength": 64,
+            "maxLength": 64
+          },
+          "bytes": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "fetched_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_modified": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "etag": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "local_file": {
+            "type": "boolean"
+          },
+          "files": {
+            "type": "integer",
+            "description": "묶음 소스에서 실제로 읽은 파일 수"
+          }
+        }
+      }
+    },
+    "_corrections": {
+      "type": "array",
+      "description": "원본에 적용한 보정 규칙. 값마다 칸을 늘리는 대신 규칙을 한 곳에 적는다 — 이 식이 곧 원본 복원식이다.",
+      "items": {
+        "type": "object",
+        "required": [
+          "field",
+          "providers",
+          "operation",
+          "reason"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "field": {
+            "type": "string",
+            "minLength": 1
+          },
+          "providers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "operation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

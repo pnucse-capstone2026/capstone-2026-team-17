@@ -1,0 +1,82 @@
+{
+ "_note": "gcp compute 디스커버리에서 뽑은 의존 후보 — pair-reference는 (스키마,속성) 쌍 한정 휴리스틱(우리 구성), schema-ref는 내장 구조의 강타입 참조다. sshKey는 대응 자원이 없어 후보 자체가 없다(결속 None이 그 기록이다).",
+ "_pin": {
+  "source": "gcp-compute",
+  "version": "20260722",
+  "sha256": "b71cb75cb68d790065cecb01363b0d714c6388304ae027c45108255b311a3203"
+ },
+ "candidates": [
+  {
+   "subject": "firewall",
+   "object": "network",
+   "form": "pair-reference",
+   "trail": "network",
+   "cite": "gcp-compute#/schemas/Firewall/properties/network",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "network",
+   "form": "pair-reference",
+   "trail": "network",
+   "cite": "gcp-compute#/schemas/ForwardingRule/properties/network",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "loadBalancer",
+   "object": "subnet",
+   "form": "pair-reference",
+   "trail": "subnetwork",
+   "cite": "gcp-compute#/schemas/ForwardingRule/properties/subnetwork",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "network",
+   "form": "pair-reference",
+   "trail": "network",
+   "cite": "gcp-compute#/schemas/NetworkInterface/properties/network",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "nic",
+   "object": "subnet",
+   "form": "pair-reference",
+   "trail": "subnetwork",
+   "cite": "gcp-compute#/schemas/NetworkInterface/properties/subnetwork",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "subnet",
+   "object": "network",
+   "form": "pair-reference",
+   "trail": "network",
+   "cite": "gcp-compute#/schemas/Subnetwork/properties/network",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "disk",
+   "form": "pair-reference",
+   "trail": "disks.source",
+   "cite": "gcp-compute#/schemas/AttachedDisk/properties/source",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "image",
+   "form": "pair-reference",
+   "trail": "disks.initializeParams.sourceImage",
+   "cite": "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/sourceImage",
+   "requiredInSchema": false
+  },
+  {
+   "subject": "vm",
+   "object": "nic",
+   "form": "schema-ref",
+   "trail": "networkInterfaces",
+   "cite": "gcp-compute#/schemas/Instance/properties/networkInterfaces",
+   "requiredInSchema": false
+  }
+ ]
+}

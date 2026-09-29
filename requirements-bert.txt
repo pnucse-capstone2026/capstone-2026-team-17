@@ -1,0 +1,8 @@
+# 요구사항 FR/NFR 분류기에만 필요한 큰 패키지다. 구현·테스팅 툴체인에는 설치하지 않는다.
+# torch는 CPU 전용 휠을 사용해 CUDA 라이브러리를 포함하지 않는다.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+pandas>=2.0
+torch>=2.2.0
+transformers>=4.44.0
+safetensors>=0.4.0

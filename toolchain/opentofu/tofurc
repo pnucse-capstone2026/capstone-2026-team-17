@@ -1,0 +1,8 @@
+provider_installation {
+  filesystem_mirror {
+    path    = "/opt/easydep/provider-mirror"
+    include = ["registry.opentofu.org/hashicorp/*"]
+  }
+}
+
+disable_checkpoint = true

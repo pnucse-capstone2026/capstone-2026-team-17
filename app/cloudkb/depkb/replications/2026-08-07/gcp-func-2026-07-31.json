@@ -1,0 +1,80 @@
+{
+ "_note": "기능 의존(gcp) — vm→publicIp(accessConfig). 기능 신호 = 로컬 TCP 22. 재부여 임시 IP는 새 주소.",
+ "startedAt": "2026-08-06T19:36:22+00:00",
+ "ids": {
+  "ip": "34.47.126.137",
+  "ip2": "34.47.115.91"
+ },
+ "steps": {
+  "R1.create-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "R2.running": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "RUNNING"
+  },
+  "R3.nat-ip": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "34.47.126.137"
+  },
+  "F1.reachable-baseline": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=True (시도 2)"
+  },
+  "M1.delete-accessconfig-while-running": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "M1b.vm-still-running": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "status=RUNNING natIP=(없음)"
+  },
+  "F2.unreachable-after-delete": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=False (시도 1)"
+  },
+  "M2.add-accessconfig": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "M2b.new-nat-ip": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "34.47.115.91 (이전 34.47.126.137)"
+  },
+  "F3.reachable-again": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=True (시도 1)"
+  },
+  "T1.delete-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "T2.vm-gone": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "404"
+  },
+  "T3.residual-disks": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ },
+ "finishedAt": "2026-08-06T19:37:44+00:00"
+}

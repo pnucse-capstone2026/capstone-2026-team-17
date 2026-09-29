@@ -1,0 +1,2564 @@
+{
+ "schemaVersion": "easydep-native-discovery/v1",
+ "provider": "aws",
+ "source": {
+  "identity": "AWS CloudFormation Resource Specification",
+  "version": "258.0.0",
+  "sha256": "cb04ddec8e3e2e87f06a628c1e31b1640f49492e9d86d8cb48d7c2ef527dae63"
+ },
+ "elements": [
+  {
+   "nativeId": "AWS::EC2::CapacityManagerDataExport",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CapacityManagerDataExport"
+  },
+  {
+   "nativeId": "AWS::EC2::CapacityReservation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation"
+  },
+  {
+   "nativeId": "AWS::EC2::CapacityReservationFleet",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservationFleet"
+  },
+  {
+   "nativeId": "AWS::EC2::CarrierGateway",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CarrierGateway"
+  },
+  {
+   "nativeId": "AWS::EC2::ClientVpnAuthorizationRule",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnAuthorizationRule"
+  },
+  {
+   "nativeId": "AWS::EC2::ClientVpnEndpoint",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnEndpoint"
+  },
+  {
+   "nativeId": "AWS::EC2::ClientVpnRoute",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnRoute"
+  },
+  {
+   "nativeId": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnTargetNetworkAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::CustomerGateway",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CustomerGateway"
+  },
+  {
+   "nativeId": "AWS::EC2::DHCPOptions",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::DHCPOptions"
+  },
+  {
+   "nativeId": "AWS::EC2::EC2Fleet",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EC2Fleet"
+  },
+  {
+   "nativeId": "AWS::EC2::EIP",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EIP"
+  },
+  {
+   "nativeId": "AWS::EC2::EIPAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EIPAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::EgressOnlyInternetGateway",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EgressOnlyInternetGateway"
+  },
+  {
+   "nativeId": "AWS::EC2::EnclaveCertificateIamRoleAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EnclaveCertificateIamRoleAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::FlowLog",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::FlowLog"
+  },
+  {
+   "nativeId": "AWS::EC2::GatewayRouteTableAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::GatewayRouteTableAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::Host",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Host"
+  },
+  {
+   "nativeId": "AWS::EC2::IPAM",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAM"
+  },
+  {
+   "nativeId": "AWS::EC2::IPAMAllocation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMAllocation"
+  },
+  {
+   "nativeId": "AWS::EC2::IPAMPool",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPool"
+  },
+  {
+   "nativeId": "AWS::EC2::IPAMPoolCidr",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPoolCidr"
+  },
+  {
+   "nativeId": "AWS::EC2::IPAMPrefixListResolver",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolver"
+  },
+  {
+   "nativeId": "AWS::EC2::IPAMPrefixListResolverTarget",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolverTarget"
+  },
+  {
+   "nativeId": "AWS::EC2::IPAMResourceDiscovery",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMResourceDiscovery"
+  },
+  {
+   "nativeId": "AWS::EC2::IPAMResourceDiscoveryAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMResourceDiscoveryAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::IPAMScope",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMScope"
+  },
+  {
+   "nativeId": "AWS::EC2::Instance",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance"
+  },
+  {
+   "nativeId": "AWS::EC2::InstanceConnectEndpoint",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::InstanceConnectEndpoint"
+  },
+  {
+   "nativeId": "AWS::EC2::InternetGateway",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::InternetGateway"
+  },
+  {
+   "nativeId": "AWS::EC2::IpPoolRouteTableAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IpPoolRouteTableAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::KeyPair",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::KeyPair"
+  },
+  {
+   "nativeId": "AWS::EC2::LaunchTemplate",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LaunchTemplate"
+  },
+  {
+   "nativeId": "AWS::EC2::LocalGatewayRoute",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRoute"
+  },
+  {
+   "nativeId": "AWS::EC2::LocalGatewayRouteTable",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTable"
+  },
+  {
+   "nativeId": "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVPCAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::LocalGatewayVirtualInterface",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterface"
+  },
+  {
+   "nativeId": "AWS::EC2::LocalGatewayVirtualInterfaceGroup",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterfaceGroup"
+  },
+  {
+   "nativeId": "AWS::EC2::NatGateway",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkAcl",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkAcl"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkAclEntry",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkAclEntry"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkInsightsAccessScope",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAccessScope"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkInsightsAccessScopeAnalysis",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAccessScopeAnalysis"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkInsightsAnalysis",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAnalysis"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkInsightsPath",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsPath"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkInterface",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkInterfaceAttachment",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfaceAttachment"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkInterfacePermission",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfacePermission"
+  },
+  {
+   "nativeId": "AWS::EC2::NetworkPerformanceMetricSubscription",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkPerformanceMetricSubscription"
+  },
+  {
+   "nativeId": "AWS::EC2::PlacementGroup",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::PlacementGroup"
+  },
+  {
+   "nativeId": "AWS::EC2::PrefixList",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::PrefixList"
+  },
+  {
+   "nativeId": "AWS::EC2::Route",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route"
+  },
+  {
+   "nativeId": "AWS::EC2::RouteServer",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServer"
+  },
+  {
+   "nativeId": "AWS::EC2::RouteServerAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::RouteServerEndpoint",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerEndpoint"
+  },
+  {
+   "nativeId": "AWS::EC2::RouteServerPeer",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPeer"
+  },
+  {
+   "nativeId": "AWS::EC2::RouteServerPropagation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPropagation"
+  },
+  {
+   "nativeId": "AWS::EC2::RouteTable",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteTable"
+  },
+  {
+   "nativeId": "AWS::EC2::SecurityGroup",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroup"
+  },
+  {
+   "nativeId": "AWS::EC2::SecurityGroupEgress",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupEgress"
+  },
+  {
+   "nativeId": "AWS::EC2::SecurityGroupIngress",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress"
+  },
+  {
+   "nativeId": "AWS::EC2::SecurityGroupVpcAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupVpcAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::SnapshotBlockPublicAccess",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SnapshotBlockPublicAccess"
+  },
+  {
+   "nativeId": "AWS::EC2::SpotFleet",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SpotFleet"
+  },
+  {
+   "nativeId": "AWS::EC2::SqlHaStandbyDetectedInstance",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SqlHaStandbyDetectedInstance"
+  },
+  {
+   "nativeId": "AWS::EC2::Subnet",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Subnet"
+  },
+  {
+   "nativeId": "AWS::EC2::SubnetCidrBlock",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SubnetCidrBlock"
+  },
+  {
+   "nativeId": "AWS::EC2::SubnetNetworkAclAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SubnetNetworkAclAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::SubnetRouteTableAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SubnetRouteTableAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::TrafficMirrorFilter",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorFilter"
+  },
+  {
+   "nativeId": "AWS::EC2::TrafficMirrorFilterRule",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorFilterRule"
+  },
+  {
+   "nativeId": "AWS::EC2::TrafficMirrorSession",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession"
+  },
+  {
+   "nativeId": "AWS::EC2::TrafficMirrorTarget",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorTarget"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGateway",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGateway"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayAttachment",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayAttachment"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayConnect",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayConnect"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayConnectPeer",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayConnectPeer"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayMeteringPolicy",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicy"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayMeteringPolicyEntry",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicyEntry"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayMulticastDomain",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomain"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayMulticastDomainAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomainAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayMulticastGroupMember",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupMember"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayMulticastGroupSource",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupSource"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayPeeringAttachment",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPeeringAttachment"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayPolicyTable",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTable"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayPolicyTableAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTableAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayRoute",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRoute"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayRouteTable",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTable"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayRouteTableAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTableAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayRouteTablePropagation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTablePropagation"
+  },
+  {
+   "nativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment"
+  },
+  {
+   "nativeId": "AWS::EC2::VPC",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPC"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCBlockPublicAccessExclusion",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCBlockPublicAccessExclusion"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCBlockPublicAccessOptions",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCBlockPublicAccessOptions"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCCidrBlock",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCCidrBlock"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCDHCPOptionsAssociation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCDHCPOptionsAssociation"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCEncryptionControl",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEncryptionControl"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCEndpoint",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCEndpointConnectionNotification",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointConnectionNotification"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCEndpointService",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointService"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCEndpointServicePermissions",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointServicePermissions"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCGatewayAttachment",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCGatewayAttachment"
+  },
+  {
+   "nativeId": "AWS::EC2::VPCPeeringConnection",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection"
+  },
+  {
+   "nativeId": "AWS::EC2::VPNConcentrator",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConcentrator"
+  },
+  {
+   "nativeId": "AWS::EC2::VPNConnection",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection"
+  },
+  {
+   "nativeId": "AWS::EC2::VPNConnectionRoute",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnectionRoute"
+  },
+  {
+   "nativeId": "AWS::EC2::VPNGateway",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNGateway"
+  },
+  {
+   "nativeId": "AWS::EC2::VPNGatewayRoutePropagation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNGatewayRoutePropagation"
+  },
+  {
+   "nativeId": "AWS::EC2::VerifiedAccessEndpoint",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessEndpoint"
+  },
+  {
+   "nativeId": "AWS::EC2::VerifiedAccessGroup",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessGroup"
+  },
+  {
+   "nativeId": "AWS::EC2::VerifiedAccessInstance",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessInstance"
+  },
+  {
+   "nativeId": "AWS::EC2::VerifiedAccessTrustProvider",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessTrustProvider"
+  },
+  {
+   "nativeId": "AWS::EC2::Volume",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Volume"
+  },
+  {
+   "nativeId": "AWS::EC2::VolumeAttachment",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VolumeAttachment"
+  },
+  {
+   "nativeId": "AWS::ElasticLoadBalancingV2::Listener",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::Listener"
+  },
+  {
+   "nativeId": "AWS::ElasticLoadBalancingV2::ListenerCertificate",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::ListenerCertificate"
+  },
+  {
+   "nativeId": "AWS::ElasticLoadBalancingV2::ListenerRule",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::ListenerRule"
+  },
+  {
+   "nativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer"
+  },
+  {
+   "nativeId": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TargetGroup"
+  },
+  {
+   "nativeId": "AWS::ElasticLoadBalancingV2::TrustStore",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TrustStore"
+  },
+  {
+   "nativeId": "AWS::ElasticLoadBalancingV2::TrustStoreRevocation",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TrustStoreRevocation"
+  },
+  {
+   "nativeId": "AWS::IAM::InstanceProfile",
+   "nativeForm": "standaloneResource",
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::IAM::InstanceProfile"
+  }
+ ],
+ "candidates": [
+  {
+   "subjectNativeId": "AWS::EC2::CapacityManagerDataExport",
+   "objectNativeId": null,
+   "referenceToken": "S3BucketName",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CapacityManagerDataExport/Properties/S3BucketName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::CapacityReservation",
+   "objectNativeId": null,
+   "referenceToken": "AvailabilityZoneId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation/Properties/AvailabilityZoneId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::CapacityReservation",
+   "objectNativeId": null,
+   "referenceToken": "OutPostArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation/Properties/OutPostArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::CapacityReservation",
+   "objectNativeId": null,
+   "referenceToken": "PlacementGroupArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation/Properties/PlacementGroupArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::CapacityReservation",
+   "objectNativeId": null,
+   "referenceToken": "UnusedReservationBillingOwnerId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation/Properties/UnusedReservationBillingOwnerId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::CarrierGateway",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CarrierGateway/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnAuthorizationRule",
+   "objectNativeId": null,
+   "referenceToken": "AccessGroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnAuthorizationRule/Properties/AccessGroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnAuthorizationRule",
+   "objectNativeId": null,
+   "referenceToken": "AuthorizeAllGroups",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnAuthorizationRule/Properties/AuthorizeAllGroups"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnAuthorizationRule",
+   "objectNativeId": null,
+   "referenceToken": "ClientVpnEndpointId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnAuthorizationRule/Properties/ClientVpnEndpointId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "SecurityGroupIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnEndpoint/Properties/SecurityGroupIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "ServerCertificateArn",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnEndpoint/Properties/ServerCertificateArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnEndpoint/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnRoute",
+   "objectNativeId": null,
+   "referenceToken": "ClientVpnEndpointId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnRoute/Properties/ClientVpnEndpointId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnRoute",
+   "objectNativeId": null,
+   "referenceToken": "TargetVpcSubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnRoute/Properties/TargetVpcSubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+   "objectNativeId": null,
+   "referenceToken": "AvailabilityZoneId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnTargetNetworkAssociation/Properties/AvailabilityZoneId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+   "objectNativeId": null,
+   "referenceToken": "ClientVpnEndpointId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnTargetNetworkAssociation/Properties/ClientVpnEndpointId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnTargetNetworkAssociation/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::CustomerGateway",
+   "objectNativeId": null,
+   "referenceToken": "CertificateArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CustomerGateway/Properties/CertificateArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::CustomerGateway",
+   "objectNativeId": null,
+   "referenceToken": "DeviceName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::CustomerGateway/Properties/DeviceName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::DHCPOptions",
+   "objectNativeId": null,
+   "referenceToken": "DomainName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::DHCPOptions/Properties/DomainName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::EIP",
+   "objectNativeId": null,
+   "referenceToken": "InstanceId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EIP/Properties/InstanceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::EIP",
+   "objectNativeId": null,
+   "referenceToken": "IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EIP/Properties/IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::EIPAssociation",
+   "objectNativeId": null,
+   "referenceToken": "AllocationId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EIPAssociation/Properties/AllocationId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::EIPAssociation",
+   "objectNativeId": null,
+   "referenceToken": "InstanceId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EIPAssociation/Properties/InstanceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::EIPAssociation",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaceId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EIPAssociation/Properties/NetworkInterfaceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::EgressOnlyInternetGateway",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EgressOnlyInternetGateway/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::EnclaveCertificateIamRoleAssociation",
+   "objectNativeId": null,
+   "referenceToken": "CertificateArn",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EnclaveCertificateIamRoleAssociation/Properties/CertificateArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::EnclaveCertificateIamRoleAssociation",
+   "objectNativeId": null,
+   "referenceToken": "RoleArn",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::EnclaveCertificateIamRoleAssociation/Properties/RoleArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::FlowLog",
+   "objectNativeId": null,
+   "referenceToken": "DeliverLogsPermissionArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::FlowLog/Properties/DeliverLogsPermissionArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::FlowLog",
+   "objectNativeId": null,
+   "referenceToken": "LogGroupName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::FlowLog/Properties/LogGroupName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::FlowLog",
+   "objectNativeId": null,
+   "referenceToken": "ResourceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::FlowLog/Properties/ResourceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::GatewayRouteTableAssociation",
+   "objectNativeId": null,
+   "referenceToken": "GatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::GatewayRouteTableAssociation/Properties/GatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::GatewayRouteTableAssociation",
+   "objectNativeId": null,
+   "referenceToken": "RouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::GatewayRouteTableAssociation/Properties/RouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Host",
+   "objectNativeId": null,
+   "referenceToken": "AssetId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Host/Properties/AssetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Host",
+   "objectNativeId": null,
+   "referenceToken": "OutpostArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Host/Properties/OutpostArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMAllocation",
+   "objectNativeId": null,
+   "referenceToken": "IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMAllocation/Properties/IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMPool",
+   "objectNativeId": null,
+   "referenceToken": "IpamScopeId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPool/Properties/IpamScopeId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMPool",
+   "objectNativeId": null,
+   "referenceToken": "SourceIpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPool/Properties/SourceIpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMPoolCidr",
+   "objectNativeId": null,
+   "referenceToken": "IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPoolCidr/Properties/IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMPrefixListResolver",
+   "objectNativeId": null,
+   "referenceToken": "IpamId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolver/Properties/IpamId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMPrefixListResolverTarget",
+   "objectNativeId": null,
+   "referenceToken": "IpamPrefixListResolverId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolverTarget/Properties/IpamPrefixListResolverId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMPrefixListResolverTarget",
+   "objectNativeId": null,
+   "referenceToken": "PrefixListId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolverTarget/Properties/PrefixListId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMResourceDiscoveryAssociation",
+   "objectNativeId": null,
+   "referenceToken": "IpamId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMResourceDiscoveryAssociation/Properties/IpamId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMResourceDiscoveryAssociation",
+   "objectNativeId": null,
+   "referenceToken": "IpamResourceDiscoveryId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMResourceDiscoveryAssociation/Properties/IpamResourceDiscoveryId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IPAMScope",
+   "objectNativeId": null,
+   "referenceToken": "IpamId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IPAMScope/Properties/IpamId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "HostId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/HostId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "HostResourceGroupArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/HostResourceGroupArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "ImageId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/ImageId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "KernelId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/KernelId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "KeyName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/KeyName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaces",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/NetworkInterfaces"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "PlacementGroupName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/PlacementGroupName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "RamdiskId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/RamdiskId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "SecurityGroupIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroupIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "SecurityGroups",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroups"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Instance",
+   "objectNativeId": null,
+   "referenceToken": "Volumes",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/Volumes"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::InstanceConnectEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "SecurityGroupIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::InstanceConnectEndpoint/Properties/SecurityGroupIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::InstanceConnectEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::InstanceConnectEndpoint/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::IpPoolRouteTableAssociation",
+   "objectNativeId": null,
+   "referenceToken": "RouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::IpPoolRouteTableAssociation/Properties/RouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::KeyPair",
+   "objectNativeId": null,
+   "referenceToken": "KeyName",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::KeyPair/Properties/KeyName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LaunchTemplate",
+   "objectNativeId": null,
+   "referenceToken": "LaunchTemplateName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LaunchTemplate/Properties/LaunchTemplateName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayRoute",
+   "objectNativeId": null,
+   "referenceToken": "LocalGatewayRouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRoute/Properties/LocalGatewayRouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayRoute",
+   "objectNativeId": null,
+   "referenceToken": "LocalGatewayVirtualInterfaceGroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRoute/Properties/LocalGatewayVirtualInterfaceGroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayRoute",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaceId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRoute/Properties/NetworkInterfaceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayRouteTable",
+   "objectNativeId": null,
+   "referenceToken": "LocalGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTable/Properties/LocalGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
+   "objectNativeId": null,
+   "referenceToken": "LocalGatewayRouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVPCAssociation/Properties/LocalGatewayRouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVPCAssociation/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+   "objectNativeId": null,
+   "referenceToken": "LocalGatewayRouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation/Properties/LocalGatewayRouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+   "objectNativeId": null,
+   "referenceToken": "LocalGatewayVirtualInterfaceGroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation/Properties/LocalGatewayVirtualInterfaceGroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayVirtualInterface",
+   "objectNativeId": null,
+   "referenceToken": "LocalGatewayVirtualInterfaceGroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterface/Properties/LocalGatewayVirtualInterfaceGroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayVirtualInterface",
+   "objectNativeId": null,
+   "referenceToken": "OutpostLagId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterface/Properties/OutpostLagId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::LocalGatewayVirtualInterfaceGroup",
+   "objectNativeId": null,
+   "referenceToken": "LocalGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterfaceGroup/Properties/LocalGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NatGateway",
+   "objectNativeId": null,
+   "referenceToken": "AllocationId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway/Properties/AllocationId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NatGateway",
+   "objectNativeId": null,
+   "referenceToken": "SecondaryAllocationIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway/Properties/SecondaryAllocationIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NatGateway",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NatGateway",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NetworkAcl",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkAcl/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NetworkAclEntry",
+   "objectNativeId": null,
+   "referenceToken": "NetworkAclId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkAclEntry/Properties/NetworkAclId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NetworkInsightsAccessScopeAnalysis",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInsightsAccessScopeId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAccessScopeAnalysis/Properties/NetworkInsightsAccessScopeId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NetworkInsightsAnalysis",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInsightsPathId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAnalysis/Properties/NetworkInsightsPathId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NetworkInterface",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NetworkInterfaceAttachment",
+   "objectNativeId": null,
+   "referenceToken": "InstanceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfaceAttachment/Properties/InstanceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NetworkInterfaceAttachment",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfaceAttachment/Properties/NetworkInterfaceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NetworkInterfacePermission",
+   "objectNativeId": null,
+   "referenceToken": "AwsAccountId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfacePermission/Properties/AwsAccountId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::NetworkInterfacePermission",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfacePermission/Properties/NetworkInterfaceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::PrefixList",
+   "objectNativeId": null,
+   "referenceToken": "PrefixListName",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::PrefixList/Properties/PrefixListName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "CarrierGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/CarrierGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "CoreNetworkArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/CoreNetworkArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "DestinationPrefixListId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/DestinationPrefixListId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "EgressOnlyInternetGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/EgressOnlyInternetGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "GatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/GatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "InstanceId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/InstanceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "LocalGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/LocalGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "NatGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/NatGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaceId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/NetworkInterfaceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "OdbNetworkArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/OdbNetworkArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "RouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/RouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "VpcEndpointId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/VpcEndpointId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Route",
+   "objectNativeId": null,
+   "referenceToken": "VpcPeeringConnectionId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/VpcPeeringConnectionId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::RouteServerAssociation",
+   "objectNativeId": null,
+   "referenceToken": "RouteServerId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerAssociation/Properties/RouteServerId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::RouteServerAssociation",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerAssociation/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::RouteServerEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "RouteServerId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerEndpoint/Properties/RouteServerId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::RouteServerEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerEndpoint/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::RouteServerPeer",
+   "objectNativeId": null,
+   "referenceToken": "RouteServerEndpointId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPeer/Properties/RouteServerEndpointId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::RouteServerPropagation",
+   "objectNativeId": null,
+   "referenceToken": "RouteServerId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPropagation/Properties/RouteServerId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::RouteServerPropagation",
+   "objectNativeId": null,
+   "referenceToken": "RouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPropagation/Properties/RouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::RouteTable",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::RouteTable/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroup",
+   "objectNativeId": null,
+   "referenceToken": "GroupName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroup/Properties/GroupName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroup",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroup/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupEgress",
+   "objectNativeId": null,
+   "referenceToken": "DestinationPrefixListId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupEgress/Properties/DestinationPrefixListId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupEgress",
+   "objectNativeId": null,
+   "referenceToken": "DestinationSecurityGroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupEgress/Properties/DestinationSecurityGroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupEgress",
+   "objectNativeId": null,
+   "referenceToken": "GroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupEgress/Properties/GroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+   "objectNativeId": null,
+   "referenceToken": "GroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/GroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+   "objectNativeId": null,
+   "referenceToken": "GroupName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/GroupName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+   "objectNativeId": null,
+   "referenceToken": "SourcePrefixListId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/SourcePrefixListId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+   "objectNativeId": null,
+   "referenceToken": "SourceSecurityGroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/SourceSecurityGroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+   "objectNativeId": null,
+   "referenceToken": "SourceSecurityGroupName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/SourceSecurityGroupName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+   "objectNativeId": null,
+   "referenceToken": "SourceSecurityGroupOwnerId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/SourceSecurityGroupOwnerId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupVpcAssociation",
+   "objectNativeId": null,
+   "referenceToken": "GroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupVpcAssociation/Properties/GroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SecurityGroupVpcAssociation",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupVpcAssociation/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SqlHaStandbyDetectedInstance",
+   "objectNativeId": null,
+   "referenceToken": "InstanceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SqlHaStandbyDetectedInstance/Properties/InstanceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Subnet",
+   "objectNativeId": null,
+   "referenceToken": "AvailabilityZoneId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/AvailabilityZoneId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Subnet",
+   "objectNativeId": null,
+   "referenceToken": "Ipv4IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/Ipv4IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Subnet",
+   "objectNativeId": null,
+   "referenceToken": "Ipv6IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/Ipv6IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Subnet",
+   "objectNativeId": null,
+   "referenceToken": "OutpostArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/OutpostArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Subnet",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SubnetCidrBlock",
+   "objectNativeId": null,
+   "referenceToken": "Ipv6IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SubnetCidrBlock/Properties/Ipv6IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SubnetCidrBlock",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SubnetCidrBlock/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SubnetNetworkAclAssociation",
+   "objectNativeId": null,
+   "referenceToken": "NetworkAclId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SubnetNetworkAclAssociation/Properties/NetworkAclId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SubnetNetworkAclAssociation",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SubnetNetworkAclAssociation/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SubnetRouteTableAssociation",
+   "objectNativeId": null,
+   "referenceToken": "RouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SubnetRouteTableAssociation/Properties/RouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::SubnetRouteTableAssociation",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::SubnetRouteTableAssociation/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TrafficMirrorFilterRule",
+   "objectNativeId": null,
+   "referenceToken": "TrafficMirrorFilterId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorFilterRule/Properties/TrafficMirrorFilterId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/NetworkInterfaceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+   "objectNativeId": null,
+   "referenceToken": "OwnerId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/OwnerId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+   "objectNativeId": null,
+   "referenceToken": "TrafficMirrorFilterId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/TrafficMirrorFilterId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+   "objectNativeId": null,
+   "referenceToken": "TrafficMirrorTargetId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/TrafficMirrorTargetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+   "objectNativeId": null,
+   "referenceToken": "VirtualNetworkId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/VirtualNetworkId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TrafficMirrorTarget",
+   "objectNativeId": null,
+   "referenceToken": "GatewayLoadBalancerEndpointId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorTarget/Properties/GatewayLoadBalancerEndpointId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TrafficMirrorTarget",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaceId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorTarget/Properties/NetworkInterfaceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TrafficMirrorTarget",
+   "objectNativeId": null,
+   "referenceToken": "NetworkLoadBalancerArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorTarget/Properties/NetworkLoadBalancerArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGateway",
+   "objectNativeId": null,
+   "referenceToken": "AssociationDefaultRouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGateway/Properties/AssociationDefaultRouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGateway",
+   "objectNativeId": null,
+   "referenceToken": "PropagationDefaultRouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGateway/Properties/PropagationDefaultRouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayAttachment",
+   "objectNativeId": null,
+   "referenceToken": "SubnetIds",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayAttachment/Properties/SubnetIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayAttachment",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayAttachment/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayAttachment",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayAttachment/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayConnect",
+   "objectNativeId": null,
+   "referenceToken": "TransportTransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayConnect/Properties/TransportTransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayConnectPeer",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayConnectPeer/Properties/TransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicy",
+   "objectNativeId": null,
+   "referenceToken": "MiddleboxAttachmentIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicy/Properties/MiddleboxAttachmentIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicy",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicy/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicyEntry",
+   "objectNativeId": null,
+   "referenceToken": "DestinationTransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicyEntry/Properties/DestinationTransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicyEntry",
+   "objectNativeId": null,
+   "referenceToken": "SourceTransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicyEntry/Properties/SourceTransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicyEntry",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayMeteringPolicyId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicyEntry/Properties/TransitGatewayMeteringPolicyId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMulticastDomain",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomain/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMulticastDomainAssociation",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomainAssociation/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMulticastDomainAssociation",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomainAssociation/Properties/TransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMulticastDomainAssociation",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayMulticastDomainId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomainAssociation/Properties/TransitGatewayMulticastDomainId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMulticastGroupMember",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupMember/Properties/NetworkInterfaceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMulticastGroupMember",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayMulticastDomainId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupMember/Properties/TransitGatewayMulticastDomainId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMulticastGroupSource",
+   "objectNativeId": null,
+   "referenceToken": "NetworkInterfaceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupSource/Properties/NetworkInterfaceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayMulticastGroupSource",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayMulticastDomainId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupSource/Properties/TransitGatewayMulticastDomainId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayPeeringAttachment",
+   "objectNativeId": null,
+   "referenceToken": "PeerAccountId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPeeringAttachment/Properties/PeerAccountId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayPeeringAttachment",
+   "objectNativeId": null,
+   "referenceToken": "PeerTransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPeeringAttachment/Properties/PeerTransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayPeeringAttachment",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPeeringAttachment/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayPolicyTable",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTable/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayPolicyTableAssociation",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTableAssociation/Properties/TransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayPolicyTableAssociation",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayPolicyTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTableAssociation/Properties/TransitGatewayPolicyTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayRoute",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRoute/Properties/TransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayRoute",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayRouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRoute/Properties/TransitGatewayRouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayRouteTable",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTable/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayRouteTableAssociation",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTableAssociation/Properties/TransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayRouteTableAssociation",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayRouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTableAssociation/Properties/TransitGatewayRouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayRouteTablePropagation",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTablePropagation/Properties/TransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayRouteTablePropagation",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayRouteTableId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTablePropagation/Properties/TransitGatewayRouteTableId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+   "objectNativeId": null,
+   "referenceToken": "AddSubnetIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/AddSubnetIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+   "objectNativeId": null,
+   "referenceToken": "RemoveSubnetIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/RemoveSubnetIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+   "objectNativeId": null,
+   "referenceToken": "SubnetIds",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/SubnetIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPC",
+   "objectNativeId": null,
+   "referenceToken": "Ipv4IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPC/Properties/Ipv4IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCBlockPublicAccessExclusion",
+   "objectNativeId": null,
+   "referenceToken": "SubnetId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCBlockPublicAccessExclusion/Properties/SubnetId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCBlockPublicAccessExclusion",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCBlockPublicAccessExclusion/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCCidrBlock",
+   "objectNativeId": null,
+   "referenceToken": "Ipv4IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCCidrBlock/Properties/Ipv4IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCCidrBlock",
+   "objectNativeId": null,
+   "referenceToken": "Ipv6IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCCidrBlock/Properties/Ipv6IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCCidrBlock",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCCidrBlock/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCDHCPOptionsAssociation",
+   "objectNativeId": null,
+   "referenceToken": "DhcpOptionsId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCDHCPOptionsAssociation/Properties/DhcpOptionsId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCDHCPOptionsAssociation",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCDHCPOptionsAssociation/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEncryptionControl",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEncryptionControl/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "ResourceConfigurationArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/ResourceConfigurationArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "RouteTableIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/RouteTableIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "SecurityGroupIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/SecurityGroupIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "ServiceName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/ServiceName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "ServiceNetworkArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/ServiceNetworkArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "SubnetIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/SubnetIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpointConnectionNotification",
+   "objectNativeId": null,
+   "referenceToken": "ConnectionNotificationArn",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointConnectionNotification/Properties/ConnectionNotificationArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpointConnectionNotification",
+   "objectNativeId": null,
+   "referenceToken": "ServiceId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointConnectionNotification/Properties/ServiceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpointConnectionNotification",
+   "objectNativeId": null,
+   "referenceToken": "VPCEndpointId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointConnectionNotification/Properties/VPCEndpointId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCEndpointServicePermissions",
+   "objectNativeId": null,
+   "referenceToken": "ServiceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointServicePermissions/Properties/ServiceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCGatewayAttachment",
+   "objectNativeId": null,
+   "referenceToken": "InternetGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCGatewayAttachment/Properties/InternetGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCGatewayAttachment",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCGatewayAttachment/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCGatewayAttachment",
+   "objectNativeId": null,
+   "referenceToken": "VpnGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCGatewayAttachment/Properties/VpnGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCPeeringConnection",
+   "objectNativeId": null,
+   "referenceToken": "PeerOwnerId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection/Properties/PeerOwnerId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCPeeringConnection",
+   "objectNativeId": null,
+   "referenceToken": "PeerRoleArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection/Properties/PeerRoleArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCPeeringConnection",
+   "objectNativeId": null,
+   "referenceToken": "PeerVpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection/Properties/PeerVpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPCPeeringConnection",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPNConcentrator",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConcentrator/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPNConnection",
+   "objectNativeId": null,
+   "referenceToken": "CustomerGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/CustomerGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPNConnection",
+   "objectNativeId": null,
+   "referenceToken": "TransitGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/TransitGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPNConnection",
+   "objectNativeId": null,
+   "referenceToken": "TransportTransitGatewayAttachmentId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/TransportTransitGatewayAttachmentId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPNConnection",
+   "objectNativeId": null,
+   "referenceToken": "VpnConcentratorId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/VpnConcentratorId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPNConnection",
+   "objectNativeId": null,
+   "referenceToken": "VpnGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/VpnGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPNConnectionRoute",
+   "objectNativeId": null,
+   "referenceToken": "VpnConnectionId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnectionRoute/Properties/VpnConnectionId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPNGatewayRoutePropagation",
+   "objectNativeId": null,
+   "referenceToken": "RouteTableIds",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNGatewayRoutePropagation/Properties/RouteTableIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VPNGatewayRoutePropagation",
+   "objectNativeId": null,
+   "referenceToken": "VpnGatewayId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VPNGatewayRoutePropagation/Properties/VpnGatewayId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VerifiedAccessEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "DomainCertificateArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessEndpoint/Properties/DomainCertificateArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VerifiedAccessEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "SecurityGroupIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessEndpoint/Properties/SecurityGroupIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VerifiedAccessEndpoint",
+   "objectNativeId": null,
+   "referenceToken": "VerifiedAccessGroupId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessEndpoint/Properties/VerifiedAccessGroupId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VerifiedAccessGroup",
+   "objectNativeId": null,
+   "referenceToken": "VerifiedAccessInstanceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessGroup/Properties/VerifiedAccessInstanceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VerifiedAccessInstance",
+   "objectNativeId": null,
+   "referenceToken": "VerifiedAccessTrustProviderIds",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessInstance/Properties/VerifiedAccessTrustProviderIds"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VerifiedAccessTrustProvider",
+   "objectNativeId": null,
+   "referenceToken": "PolicyReferenceName",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessTrustProvider/Properties/PolicyReferenceName"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Volume",
+   "objectNativeId": null,
+   "referenceToken": "AvailabilityZoneId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/AvailabilityZoneId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Volume",
+   "objectNativeId": null,
+   "referenceToken": "KmsKeyId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/KmsKeyId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Volume",
+   "objectNativeId": null,
+   "referenceToken": "OutpostArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/OutpostArn"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Volume",
+   "objectNativeId": null,
+   "referenceToken": "SnapshotId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/SnapshotId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::Volume",
+   "objectNativeId": null,
+   "referenceToken": "SourceVolumeId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/SourceVolumeId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VolumeAttachment",
+   "objectNativeId": null,
+   "referenceToken": "InstanceId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VolumeAttachment/Properties/InstanceId"
+  },
+  {
+   "subjectNativeId": "AWS::EC2::VolumeAttachment",
+   "objectNativeId": null,
+   "referenceToken": "VolumeId",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::EC2::VolumeAttachment/Properties/VolumeId"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::Listener",
+   "objectNativeId": null,
+   "referenceToken": "LoadBalancerArn",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::Listener/Properties/LoadBalancerArn"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::ListenerCertificate",
+   "objectNativeId": null,
+   "referenceToken": "ListenerArn",
+   "form": "schemaProperty",
+   "requiredInSchema": true,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::ListenerCertificate/Properties/ListenerArn"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::ListenerRule",
+   "objectNativeId": null,
+   "referenceToken": "ListenerArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::ListenerRule/Properties/ListenerArn"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "objectNativeId": null,
+   "referenceToken": "Ipv4IpamPoolId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/Ipv4IpamPoolId"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "objectNativeId": null,
+   "referenceToken": "Name",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/Name"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "objectNativeId": null,
+   "referenceToken": "SecurityGroups",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/SecurityGroups"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "objectNativeId": null,
+   "referenceToken": "Subnets",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/Subnets"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "objectNativeId": null,
+   "referenceToken": "Name",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TargetGroup/Properties/Name"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "objectNativeId": null,
+   "referenceToken": "VpcId",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TargetGroup/Properties/VpcId"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::TrustStore",
+   "objectNativeId": null,
+   "referenceToken": "Name",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TrustStore/Properties/Name"
+  },
+  {
+   "subjectNativeId": "AWS::ElasticLoadBalancingV2::TrustStoreRevocation",
+   "objectNativeId": null,
+   "referenceToken": "TrustStoreArn",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TrustStoreRevocation/Properties/TrustStoreArn"
+  },
+  {
+   "subjectNativeId": "AWS::IAM::InstanceProfile",
+   "objectNativeId": null,
+   "referenceToken": "InstanceProfileName",
+   "form": "schemaProperty",
+   "requiredInSchema": false,
+   "sourceLocator": "aws-cfn#/ResourceTypes/AWS::IAM::InstanceProfile/Properties/InstanceProfileName"
+  }
+ ]
+}

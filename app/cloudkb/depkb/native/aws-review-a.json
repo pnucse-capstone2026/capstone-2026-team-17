@@ -1,0 +1,4105 @@
+{
+  "schemaVersion": "easydep-native-review/v1",
+  "provider": "aws",
+  "source": {
+    "identity": "AWS CloudFormation Resource Specification",
+    "version": "258.0.0",
+    "sha256": "cb04ddec8e3e2e87f06a628c1e31b1640f49492e9d86d8cb48d7c2ef527dae63"
+  },
+  "inventoryElementCount": 123,
+  "decisions": [
+    {
+      "nativeId": "AWS::EC2::CapacityManagerDataExport",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CapacityManagerDataExport"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::CapacityReservation",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::CapacityReservationFleet",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservationFleet"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::CarrierGateway",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CarrierGateway"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::ClientVpnAuthorizationRule",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnAuthorizationRule"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::ClientVpnEndpoint",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnEndpoint"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::ClientVpnRoute",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnRoute"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnTargetNetworkAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::CustomerGateway",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CustomerGateway"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::DHCPOptions",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::DHCPOptions"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::EC2Fleet",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EC2Fleet"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::EIP",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EIP"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::EIPAssociation",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EIPAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::EgressOnlyInternetGateway",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EgressOnlyInternetGateway"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::EnclaveCertificateIamRoleAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EnclaveCertificateIamRoleAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::FlowLog",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::FlowLog"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::GatewayRouteTableAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::GatewayRouteTableAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::Host",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Host"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IPAM",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAM"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IPAMAllocation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMAllocation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IPAMPool",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPool"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IPAMPoolCidr",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPoolCidr"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IPAMPrefixListResolver",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolver"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IPAMPrefixListResolverTarget",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolverTarget"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IPAMResourceDiscovery",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMResourceDiscovery"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IPAMResourceDiscoveryAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMResourceDiscoveryAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IPAMScope",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMScope"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::Instance",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::InstanceConnectEndpoint",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::InstanceConnectEndpoint"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::InternetGateway",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::InternetGateway"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::IpPoolRouteTableAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IpPoolRouteTableAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::KeyPair",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::KeyPair"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::LaunchTemplate",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LaunchTemplate"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::LocalGatewayRoute",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRoute"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::LocalGatewayRouteTable",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTable"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVPCAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::LocalGatewayVirtualInterface",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterface"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::LocalGatewayVirtualInterfaceGroup",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterfaceGroup"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NatGateway",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkAcl",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkAcl"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkAclEntry",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkAclEntry"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkInsightsAccessScope",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAccessScope"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkInsightsAccessScopeAnalysis",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAccessScopeAnalysis"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkInsightsAnalysis",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAnalysis"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkInsightsPath",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsPath"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkInterface",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkInterfaceAttachment",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfaceAttachment"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkInterfacePermission",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfacePermission"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::NetworkPerformanceMetricSubscription",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkPerformanceMetricSubscription"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::PlacementGroup",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::PlacementGroup"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::PrefixList",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::PrefixList"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::Route",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::RouteServer",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServer"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::RouteServerAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::RouteServerEndpoint",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerEndpoint"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::RouteServerPeer",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPeer"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::RouteServerPropagation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPropagation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::RouteTable",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteTable"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SecurityGroup",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroup"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SecurityGroupEgress",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupEgress"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SecurityGroupIngress",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SecurityGroupVpcAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupVpcAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SnapshotBlockPublicAccess",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SnapshotBlockPublicAccess"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SpotFleet",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SpotFleet"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SqlHaStandbyDetectedInstance",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SqlHaStandbyDetectedInstance"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::Subnet",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Subnet"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SubnetCidrBlock",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SubnetCidrBlock"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SubnetNetworkAclAssociation",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SubnetNetworkAclAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::SubnetRouteTableAssociation",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SubnetRouteTableAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TrafficMirrorFilter",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorFilter"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TrafficMirrorFilterRule",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorFilterRule"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TrafficMirrorSession",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TrafficMirrorTarget",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorTarget"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGateway",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGateway"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayAttachment",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayAttachment"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayConnect",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayConnect"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayConnectPeer",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayConnectPeer"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayMeteringPolicy",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicy"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayMeteringPolicyEntry",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicyEntry"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayMulticastDomain",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomain"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayMulticastDomainAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomainAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayMulticastGroupMember",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupMember"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayMulticastGroupSource",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupSource"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayPeeringAttachment",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPeeringAttachment"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayPolicyTable",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTable"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayPolicyTableAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTableAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayRoute",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRoute"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayRouteTable",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTable"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayRouteTableAssociation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTableAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayRouteTablePropagation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTablePropagation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPC",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPC"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCBlockPublicAccessExclusion",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCBlockPublicAccessExclusion"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCBlockPublicAccessOptions",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCBlockPublicAccessOptions"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCCidrBlock",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCCidrBlock"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCDHCPOptionsAssociation",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCDHCPOptionsAssociation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCEncryptionControl",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEncryptionControl"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCEndpoint",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCEndpointConnectionNotification",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointConnectionNotification"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCEndpointService",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointService"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCEndpointServicePermissions",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointServicePermissions"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCGatewayAttachment",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCGatewayAttachment"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPCPeeringConnection",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPNConcentrator",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConcentrator"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPNConnection",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPNConnectionRoute",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnectionRoute"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPNGateway",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNGateway"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VPNGatewayRoutePropagation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNGatewayRoutePropagation"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VerifiedAccessEndpoint",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessEndpoint"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VerifiedAccessGroup",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessGroup"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VerifiedAccessInstance",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessInstance"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VerifiedAccessTrustProvider",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessTrustProvider"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::Volume",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Volume"
+      ]
+    },
+    {
+      "nativeId": "AWS::EC2::VolumeAttachment",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VolumeAttachment"
+      ]
+    },
+    {
+      "nativeId": "AWS::ElasticLoadBalancingV2::Listener",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::Listener"
+      ]
+    },
+    {
+      "nativeId": "AWS::ElasticLoadBalancingV2::ListenerCertificate",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::ListenerCertificate"
+      ]
+    },
+    {
+      "nativeId": "AWS::ElasticLoadBalancingV2::ListenerRule",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::ListenerRule"
+      ]
+    },
+    {
+      "nativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer"
+      ]
+    },
+    {
+      "nativeId": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TargetGroup"
+      ]
+    },
+    {
+      "nativeId": "AWS::ElasticLoadBalancingV2::TrustStore",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TrustStore"
+      ]
+    },
+    {
+      "nativeId": "AWS::ElasticLoadBalancingV2::TrustStoreRevocation",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TrustStoreRevocation"
+      ]
+    },
+    {
+      "nativeId": "AWS::IAM::InstanceProfile",
+      "status": "included",
+      "criterion": "vmAttachedIdentity",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::IAM::InstanceProfile"
+      ]
+    }
+  ],
+  "candidateDecisions": [
+    {
+      "candidateId": "23f8c400081e12086c88",
+      "subjectNativeId": "AWS::EC2::CapacityManagerDataExport",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CapacityManagerDataExport/Properties/S3BucketName"
+      ]
+    },
+    {
+      "candidateId": "c2c5a70ab095a931c620",
+      "subjectNativeId": "AWS::EC2::CapacityReservation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation/Properties/AvailabilityZoneId"
+      ]
+    },
+    {
+      "candidateId": "758f7825cd411d944c85",
+      "subjectNativeId": "AWS::EC2::CapacityReservation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation/Properties/OutPostArn"
+      ]
+    },
+    {
+      "candidateId": "cff538638a2f78f35f4e",
+      "subjectNativeId": "AWS::EC2::CapacityReservation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation/Properties/PlacementGroupArn"
+      ]
+    },
+    {
+      "candidateId": "7e414fb8b94f86ee0e21",
+      "subjectNativeId": "AWS::EC2::CapacityReservation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CapacityReservation/Properties/UnusedReservationBillingOwnerId"
+      ]
+    },
+    {
+      "candidateId": "c407ad30103cc9617396",
+      "subjectNativeId": "AWS::EC2::CarrierGateway",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CarrierGateway/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "63dc068daddeb5b96ad0",
+      "subjectNativeId": "AWS::EC2::ClientVpnAuthorizationRule",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnAuthorizationRule/Properties/AccessGroupId"
+      ]
+    },
+    {
+      "candidateId": "8c7deef9adb581efadb8",
+      "subjectNativeId": "AWS::EC2::ClientVpnAuthorizationRule",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnAuthorizationRule/Properties/AuthorizeAllGroups"
+      ]
+    },
+    {
+      "candidateId": "3e2b4b2bc80ca944de48",
+      "subjectNativeId": "AWS::EC2::ClientVpnAuthorizationRule",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnAuthorizationRule/Properties/ClientVpnEndpointId"
+      ]
+    },
+    {
+      "candidateId": "2aa0a6b74d2d14990b4b",
+      "subjectNativeId": "AWS::EC2::ClientVpnEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnEndpoint/Properties/SecurityGroupIds"
+      ]
+    },
+    {
+      "candidateId": "d7d5fa4d4eae5bdd6182",
+      "subjectNativeId": "AWS::EC2::ClientVpnEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnEndpoint/Properties/ServerCertificateArn"
+      ]
+    },
+    {
+      "candidateId": "265f5adc8e5f79216f6c",
+      "subjectNativeId": "AWS::EC2::ClientVpnEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnEndpoint/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "26e0b3e0734635f15b27",
+      "subjectNativeId": "AWS::EC2::ClientVpnRoute",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnRoute/Properties/ClientVpnEndpointId"
+      ]
+    },
+    {
+      "candidateId": "a7721f78808ebbb94a04",
+      "subjectNativeId": "AWS::EC2::ClientVpnRoute",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnRoute/Properties/TargetVpcSubnetId"
+      ]
+    },
+    {
+      "candidateId": "612a7695fbc369b05912",
+      "subjectNativeId": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnTargetNetworkAssociation/Properties/AvailabilityZoneId"
+      ]
+    },
+    {
+      "candidateId": "bfc475b13aa3a8442d6f",
+      "subjectNativeId": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnTargetNetworkAssociation/Properties/ClientVpnEndpointId"
+      ]
+    },
+    {
+      "candidateId": "84f310b286228b103938",
+      "subjectNativeId": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::ClientVpnTargetNetworkAssociation/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "91873d41a2922281be54",
+      "subjectNativeId": "AWS::EC2::CustomerGateway",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CustomerGateway/Properties/CertificateArn"
+      ]
+    },
+    {
+      "candidateId": "b2e5620a93c1e2734952",
+      "subjectNativeId": "AWS::EC2::CustomerGateway",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::CustomerGateway/Properties/DeviceName"
+      ]
+    },
+    {
+      "candidateId": "1cced6e4484ee555f806",
+      "subjectNativeId": "AWS::EC2::DHCPOptions",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::DHCPOptions/Properties/DomainName"
+      ]
+    },
+    {
+      "candidateId": "86fb2c678c503cd4c0b8",
+      "subjectNativeId": "AWS::EC2::EIP",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Instance"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EIP/Properties/InstanceId"
+      ]
+    },
+    {
+      "candidateId": "b7eb7940d27f8cd2d4ba",
+      "subjectNativeId": "AWS::EC2::EIP",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EIP/Properties/IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "ae4d1580c086b115b36f",
+      "subjectNativeId": "AWS::EC2::EIPAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EIPAssociation/Properties/AllocationId"
+      ]
+    },
+    {
+      "candidateId": "644aae8dd8d9afc647b6",
+      "subjectNativeId": "AWS::EC2::EIPAssociation",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Instance"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EIPAssociation/Properties/InstanceId"
+      ]
+    },
+    {
+      "candidateId": "06b1592b12e48e1d1012",
+      "subjectNativeId": "AWS::EC2::EIPAssociation",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::NetworkInterface"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EIPAssociation/Properties/NetworkInterfaceId"
+      ]
+    },
+    {
+      "candidateId": "2780d8c3409e46842c65",
+      "subjectNativeId": "AWS::EC2::EgressOnlyInternetGateway",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EgressOnlyInternetGateway/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "22e7de615273d80ce840",
+      "subjectNativeId": "AWS::EC2::EnclaveCertificateIamRoleAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EnclaveCertificateIamRoleAssociation/Properties/CertificateArn"
+      ]
+    },
+    {
+      "candidateId": "8146d875c1c92e29ae06",
+      "subjectNativeId": "AWS::EC2::EnclaveCertificateIamRoleAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::EnclaveCertificateIamRoleAssociation/Properties/RoleArn"
+      ]
+    },
+    {
+      "candidateId": "b583a8e9399f6acb9e31",
+      "subjectNativeId": "AWS::EC2::FlowLog",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::FlowLog/Properties/DeliverLogsPermissionArn"
+      ]
+    },
+    {
+      "candidateId": "50020e739dead7900fb5",
+      "subjectNativeId": "AWS::EC2::FlowLog",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::FlowLog/Properties/LogGroupName"
+      ]
+    },
+    {
+      "candidateId": "7f41007db1baba331666",
+      "subjectNativeId": "AWS::EC2::FlowLog",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::FlowLog/Properties/ResourceId"
+      ]
+    },
+    {
+      "candidateId": "cd7b68334c26244cfa11",
+      "subjectNativeId": "AWS::EC2::GatewayRouteTableAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::GatewayRouteTableAssociation/Properties/GatewayId"
+      ]
+    },
+    {
+      "candidateId": "db94dee647ee3ce3f0a6",
+      "subjectNativeId": "AWS::EC2::GatewayRouteTableAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::GatewayRouteTableAssociation/Properties/RouteTableId"
+      ]
+    },
+    {
+      "candidateId": "dc43c7f87a0476e4abe3",
+      "subjectNativeId": "AWS::EC2::Host",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Host/Properties/AssetId"
+      ]
+    },
+    {
+      "candidateId": "3dc2d82b587f1afea764",
+      "subjectNativeId": "AWS::EC2::Host",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Host/Properties/OutpostArn"
+      ]
+    },
+    {
+      "candidateId": "7f6ba8ce48026de5093f",
+      "subjectNativeId": "AWS::EC2::IPAMAllocation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMAllocation/Properties/IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "5695695a48ea79df0754",
+      "subjectNativeId": "AWS::EC2::IPAMPool",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPool/Properties/IpamScopeId"
+      ]
+    },
+    {
+      "candidateId": "01ab0245abbfd4020701",
+      "subjectNativeId": "AWS::EC2::IPAMPool",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPool/Properties/SourceIpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "0d4143392bc1ea787517",
+      "subjectNativeId": "AWS::EC2::IPAMPoolCidr",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPoolCidr/Properties/IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "bdda57f97406f9d7f15b",
+      "subjectNativeId": "AWS::EC2::IPAMPrefixListResolver",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolver/Properties/IpamId"
+      ]
+    },
+    {
+      "candidateId": "b04ef66cdbf1f1213b45",
+      "subjectNativeId": "AWS::EC2::IPAMPrefixListResolverTarget",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolverTarget/Properties/IpamPrefixListResolverId"
+      ]
+    },
+    {
+      "candidateId": "e130cde483463f68571d",
+      "subjectNativeId": "AWS::EC2::IPAMPrefixListResolverTarget",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMPrefixListResolverTarget/Properties/PrefixListId"
+      ]
+    },
+    {
+      "candidateId": "2c328ae7e0fe0d8b526f",
+      "subjectNativeId": "AWS::EC2::IPAMResourceDiscoveryAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMResourceDiscoveryAssociation/Properties/IpamId"
+      ]
+    },
+    {
+      "candidateId": "9002d096c35e96bd8f16",
+      "subjectNativeId": "AWS::EC2::IPAMResourceDiscoveryAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMResourceDiscoveryAssociation/Properties/IpamResourceDiscoveryId"
+      ]
+    },
+    {
+      "candidateId": "724062a075fda7022255",
+      "subjectNativeId": "AWS::EC2::IPAMScope",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IPAMScope/Properties/IpamId"
+      ]
+    },
+    {
+      "candidateId": "6a3d3e8a57e94ec8399f",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/HostId"
+      ]
+    },
+    {
+      "candidateId": "f7162158385e33fd2b1c",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/HostResourceGroupArn"
+      ]
+    },
+    {
+      "candidateId": "fb703f0daadf43b25dd9",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/ImageId"
+      ]
+    },
+    {
+      "candidateId": "66bdedb4cd34e94633a6",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/KernelId"
+      ]
+    },
+    {
+      "candidateId": "42c1a1ccdf86a7ff6d5f",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::KeyPair"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/KeyName"
+      ]
+    },
+    {
+      "candidateId": "3f21d65b31a287c71990",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::NetworkInterface"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/NetworkInterfaces"
+      ]
+    },
+    {
+      "candidateId": "19e659e5099708834f6e",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/PlacementGroupName"
+      ]
+    },
+    {
+      "candidateId": "a616c5a0fefe992c30f2",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/RamdiskId"
+      ]
+    },
+    {
+      "candidateId": "38b3d4b814bc63cd1d04",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::SecurityGroup"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroupIds"
+      ]
+    },
+    {
+      "candidateId": "1b1bff4c9e5735df2ea7",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SecurityGroups"
+      ]
+    },
+    {
+      "candidateId": "0b0cca78118c9b249ddc",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Subnet"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "1ab9a98102ad250ddf45",
+      "subjectNativeId": "AWS::EC2::Instance",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Volume"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Instance/Properties/Volumes"
+      ]
+    },
+    {
+      "candidateId": "e42fee5c01602f688828",
+      "subjectNativeId": "AWS::EC2::InstanceConnectEndpoint",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::SecurityGroup"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::InstanceConnectEndpoint/Properties/SecurityGroupIds"
+      ]
+    },
+    {
+      "candidateId": "f2c51faca42ec6fdb21a",
+      "subjectNativeId": "AWS::EC2::InstanceConnectEndpoint",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Subnet"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::InstanceConnectEndpoint/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "8e930a3add3b4769e949",
+      "subjectNativeId": "AWS::EC2::IpPoolRouteTableAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::IpPoolRouteTableAssociation/Properties/RouteTableId"
+      ]
+    },
+    {
+      "candidateId": "4f87819ba2989f5d973d",
+      "subjectNativeId": "AWS::EC2::KeyPair",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::KeyPair/Properties/KeyName"
+      ]
+    },
+    {
+      "candidateId": "024d891258f260501de2",
+      "subjectNativeId": "AWS::EC2::LaunchTemplate",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LaunchTemplate/Properties/LaunchTemplateName"
+      ]
+    },
+    {
+      "candidateId": "2b8fc0fc9f7c2030ff74",
+      "subjectNativeId": "AWS::EC2::LocalGatewayRoute",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRoute/Properties/LocalGatewayRouteTableId"
+      ]
+    },
+    {
+      "candidateId": "3698e694a0abefcbdbdc",
+      "subjectNativeId": "AWS::EC2::LocalGatewayRoute",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRoute/Properties/LocalGatewayVirtualInterfaceGroupId"
+      ]
+    },
+    {
+      "candidateId": "52b086822524e25f9bd3",
+      "subjectNativeId": "AWS::EC2::LocalGatewayRoute",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRoute/Properties/NetworkInterfaceId"
+      ]
+    },
+    {
+      "candidateId": "34c29863262e3bcccb37",
+      "subjectNativeId": "AWS::EC2::LocalGatewayRouteTable",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTable/Properties/LocalGatewayId"
+      ]
+    },
+    {
+      "candidateId": "6d1d211e160bfbfd567b",
+      "subjectNativeId": "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVPCAssociation/Properties/LocalGatewayRouteTableId"
+      ]
+    },
+    {
+      "candidateId": "60db4b455fe09ed4378d",
+      "subjectNativeId": "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVPCAssociation/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "aa33c21d03fc28f89366",
+      "subjectNativeId": "AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation/Properties/LocalGatewayRouteTableId"
+      ]
+    },
+    {
+      "candidateId": "2c363037a6ece757578a",
+      "subjectNativeId": "AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation/Properties/LocalGatewayVirtualInterfaceGroupId"
+      ]
+    },
+    {
+      "candidateId": "5d73396a47d129177b9c",
+      "subjectNativeId": "AWS::EC2::LocalGatewayVirtualInterface",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterface/Properties/LocalGatewayVirtualInterfaceGroupId"
+      ]
+    },
+    {
+      "candidateId": "16a1912f4e5847867e53",
+      "subjectNativeId": "AWS::EC2::LocalGatewayVirtualInterface",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterface/Properties/OutpostLagId"
+      ]
+    },
+    {
+      "candidateId": "0010e6799aa747db6086",
+      "subjectNativeId": "AWS::EC2::LocalGatewayVirtualInterfaceGroup",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::LocalGatewayVirtualInterfaceGroup/Properties/LocalGatewayId"
+      ]
+    },
+    {
+      "candidateId": "897c32b4497ea02a25d5",
+      "subjectNativeId": "AWS::EC2::NatGateway",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway/Properties/AllocationId"
+      ]
+    },
+    {
+      "candidateId": "cbdb465be32d4b5a7def",
+      "subjectNativeId": "AWS::EC2::NatGateway",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway/Properties/SecondaryAllocationIds"
+      ]
+    },
+    {
+      "candidateId": "13e8c33971cde500c60d",
+      "subjectNativeId": "AWS::EC2::NatGateway",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Subnet"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "3d5ead1aae27cae5b2e9",
+      "subjectNativeId": "AWS::EC2::NatGateway",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NatGateway/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "ce71407b47241bba2871",
+      "subjectNativeId": "AWS::EC2::NetworkAcl",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkAcl/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "e12098ee65ce6063f035",
+      "subjectNativeId": "AWS::EC2::NetworkAclEntry",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkAclEntry/Properties/NetworkAclId"
+      ]
+    },
+    {
+      "candidateId": "47aae3cfe89af9defa4a",
+      "subjectNativeId": "AWS::EC2::NetworkInsightsAccessScopeAnalysis",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAccessScopeAnalysis/Properties/NetworkInsightsAccessScopeId"
+      ]
+    },
+    {
+      "candidateId": "c1d403a6603181ddb944",
+      "subjectNativeId": "AWS::EC2::NetworkInsightsAnalysis",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInsightsAnalysis/Properties/NetworkInsightsPathId"
+      ]
+    },
+    {
+      "candidateId": "88bdb62c142ecf208d03",
+      "subjectNativeId": "AWS::EC2::NetworkInterface",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Subnet"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterface/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "6e8340c31e3b3efc5108",
+      "subjectNativeId": "AWS::EC2::NetworkInterfaceAttachment",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Instance"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfaceAttachment/Properties/InstanceId"
+      ]
+    },
+    {
+      "candidateId": "50271e1c9b37f1fcac40",
+      "subjectNativeId": "AWS::EC2::NetworkInterfaceAttachment",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::NetworkInterface"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfaceAttachment/Properties/NetworkInterfaceId"
+      ]
+    },
+    {
+      "candidateId": "df666efc6617edf590c6",
+      "subjectNativeId": "AWS::EC2::NetworkInterfacePermission",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfacePermission/Properties/AwsAccountId"
+      ]
+    },
+    {
+      "candidateId": "5ff928c57b8392d5e2be",
+      "subjectNativeId": "AWS::EC2::NetworkInterfacePermission",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::NetworkInterfacePermission/Properties/NetworkInterfaceId"
+      ]
+    },
+    {
+      "candidateId": "c689a9905892a495bd3e",
+      "subjectNativeId": "AWS::EC2::PrefixList",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::PrefixList/Properties/PrefixListName"
+      ]
+    },
+    {
+      "candidateId": "d53d1a667814e1c48491",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/CarrierGatewayId"
+      ]
+    },
+    {
+      "candidateId": "4eb757bb75c867d36193",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/CoreNetworkArn"
+      ]
+    },
+    {
+      "candidateId": "418292739cd6ecb9f5a1",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/DestinationPrefixListId"
+      ]
+    },
+    {
+      "candidateId": "b65edc165fce65ae3ac8",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/EgressOnlyInternetGatewayId"
+      ]
+    },
+    {
+      "candidateId": "14382feda564b506613c",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/GatewayId"
+      ]
+    },
+    {
+      "candidateId": "c99ac2f9a7c80d8bd5a9",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Instance"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/InstanceId"
+      ]
+    },
+    {
+      "candidateId": "34209c307010404d19b2",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/LocalGatewayId"
+      ]
+    },
+    {
+      "candidateId": "31d7c45e96ee09270173",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/NatGatewayId"
+      ]
+    },
+    {
+      "candidateId": "ad83fb5affba250318ce",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::NetworkInterface"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/NetworkInterfaceId"
+      ]
+    },
+    {
+      "candidateId": "d06981a17fbf96e059d9",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/OdbNetworkArn"
+      ]
+    },
+    {
+      "candidateId": "7a612cc1b7a3bc9ce405",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::RouteTable"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/RouteTableId"
+      ]
+    },
+    {
+      "candidateId": "62d0b1533c80d28100c3",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "e63478fcd0802a5f79d2",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/VpcEndpointId"
+      ]
+    },
+    {
+      "candidateId": "e4da2dbb9718886cf93c",
+      "subjectNativeId": "AWS::EC2::Route",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Route/Properties/VpcPeeringConnectionId"
+      ]
+    },
+    {
+      "candidateId": "3eababba2808124f2f8a",
+      "subjectNativeId": "AWS::EC2::RouteServerAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerAssociation/Properties/RouteServerId"
+      ]
+    },
+    {
+      "candidateId": "177e3649defc7d9451ac",
+      "subjectNativeId": "AWS::EC2::RouteServerAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerAssociation/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "06d0de116eac131b451c",
+      "subjectNativeId": "AWS::EC2::RouteServerEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerEndpoint/Properties/RouteServerId"
+      ]
+    },
+    {
+      "candidateId": "208f5ac92022634f3723",
+      "subjectNativeId": "AWS::EC2::RouteServerEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerEndpoint/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "eb78f3cf4265d8534c8e",
+      "subjectNativeId": "AWS::EC2::RouteServerPeer",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPeer/Properties/RouteServerEndpointId"
+      ]
+    },
+    {
+      "candidateId": "131a4f0f496b6173db4a",
+      "subjectNativeId": "AWS::EC2::RouteServerPropagation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPropagation/Properties/RouteServerId"
+      ]
+    },
+    {
+      "candidateId": "49ed6c6038d2e809a206",
+      "subjectNativeId": "AWS::EC2::RouteServerPropagation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteServerPropagation/Properties/RouteTableId"
+      ]
+    },
+    {
+      "candidateId": "ec27f2c239dcb8159993",
+      "subjectNativeId": "AWS::EC2::RouteTable",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::RouteTable/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "9ae367ad5fa5eff652f1",
+      "subjectNativeId": "AWS::EC2::SecurityGroup",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroup/Properties/GroupName"
+      ]
+    },
+    {
+      "candidateId": "52ec77f5f677dd668e1f",
+      "subjectNativeId": "AWS::EC2::SecurityGroup",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroup/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "ed513a9c4e650d6ced54",
+      "subjectNativeId": "AWS::EC2::SecurityGroupEgress",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupEgress/Properties/DestinationPrefixListId"
+      ]
+    },
+    {
+      "candidateId": "c7fb9d7dae9d16f78a61",
+      "subjectNativeId": "AWS::EC2::SecurityGroupEgress",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::SecurityGroup"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupEgress/Properties/DestinationSecurityGroupId"
+      ]
+    },
+    {
+      "candidateId": "22f1d945d04dc2f809c1",
+      "subjectNativeId": "AWS::EC2::SecurityGroupEgress",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::SecurityGroup"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupEgress/Properties/GroupId"
+      ]
+    },
+    {
+      "candidateId": "019a9cdc12cccedd7b1e",
+      "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::SecurityGroup"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/GroupId"
+      ]
+    },
+    {
+      "candidateId": "a838fe2456c2398dbf64",
+      "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/GroupName"
+      ]
+    },
+    {
+      "candidateId": "354657c9d074b97cf072",
+      "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/SourcePrefixListId"
+      ]
+    },
+    {
+      "candidateId": "c2b01e87753250ed5db8",
+      "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::SecurityGroup"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/SourceSecurityGroupId"
+      ]
+    },
+    {
+      "candidateId": "101c9f73abf369b9d0e0",
+      "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/SourceSecurityGroupName"
+      ]
+    },
+    {
+      "candidateId": "4d27f44fdbe646b99db3",
+      "subjectNativeId": "AWS::EC2::SecurityGroupIngress",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupIngress/Properties/SourceSecurityGroupOwnerId"
+      ]
+    },
+    {
+      "candidateId": "7c9006ff3cd3907fbaf2",
+      "subjectNativeId": "AWS::EC2::SecurityGroupVpcAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupVpcAssociation/Properties/GroupId"
+      ]
+    },
+    {
+      "candidateId": "93a120d3a7073d1f6bf4",
+      "subjectNativeId": "AWS::EC2::SecurityGroupVpcAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SecurityGroupVpcAssociation/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "8476fad95818dbc06c1a",
+      "subjectNativeId": "AWS::EC2::SqlHaStandbyDetectedInstance",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SqlHaStandbyDetectedInstance/Properties/InstanceId"
+      ]
+    },
+    {
+      "candidateId": "265ee6f9f6a46c7b4246",
+      "subjectNativeId": "AWS::EC2::Subnet",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/AvailabilityZoneId"
+      ]
+    },
+    {
+      "candidateId": "afe8a1330e5b8ca10d95",
+      "subjectNativeId": "AWS::EC2::Subnet",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/Ipv4IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "b1d8112f9ac2e7e79855",
+      "subjectNativeId": "AWS::EC2::Subnet",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/Ipv6IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "dcf8ca031e4da2f60c7b",
+      "subjectNativeId": "AWS::EC2::Subnet",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/OutpostArn"
+      ]
+    },
+    {
+      "candidateId": "187aa73c463dcf2b0d99",
+      "subjectNativeId": "AWS::EC2::Subnet",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Subnet/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "590bd97d03262296a4e7",
+      "subjectNativeId": "AWS::EC2::SubnetCidrBlock",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SubnetCidrBlock/Properties/Ipv6IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "56a7b9ec228eaa8ac33d",
+      "subjectNativeId": "AWS::EC2::SubnetCidrBlock",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Subnet"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SubnetCidrBlock/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "ae9c2a060d6f3ea6c14d",
+      "subjectNativeId": "AWS::EC2::SubnetNetworkAclAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SubnetNetworkAclAssociation/Properties/NetworkAclId"
+      ]
+    },
+    {
+      "candidateId": "e866af26d8ebde558e46",
+      "subjectNativeId": "AWS::EC2::SubnetNetworkAclAssociation",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Subnet"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SubnetNetworkAclAssociation/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "f102cfaaf87fbc0848ad",
+      "subjectNativeId": "AWS::EC2::SubnetRouteTableAssociation",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::RouteTable"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SubnetRouteTableAssociation/Properties/RouteTableId"
+      ]
+    },
+    {
+      "candidateId": "9934e0e335d8a4f48caf",
+      "subjectNativeId": "AWS::EC2::SubnetRouteTableAssociation",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Subnet"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::SubnetRouteTableAssociation/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "e04f425b82050f3c4aae",
+      "subjectNativeId": "AWS::EC2::TrafficMirrorFilterRule",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorFilterRule/Properties/TrafficMirrorFilterId"
+      ]
+    },
+    {
+      "candidateId": "2c2c6d3abc1699ce2134",
+      "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/NetworkInterfaceId"
+      ]
+    },
+    {
+      "candidateId": "f2c7e09689c8da7f51b1",
+      "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/OwnerId"
+      ]
+    },
+    {
+      "candidateId": "94d4634a1665782a6a06",
+      "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/TrafficMirrorFilterId"
+      ]
+    },
+    {
+      "candidateId": "8e33cd40853eb836f41b",
+      "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/TrafficMirrorTargetId"
+      ]
+    },
+    {
+      "candidateId": "238a116820f1652a9c7e",
+      "subjectNativeId": "AWS::EC2::TrafficMirrorSession",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorSession/Properties/VirtualNetworkId"
+      ]
+    },
+    {
+      "candidateId": "3fa7c170070024d392e9",
+      "subjectNativeId": "AWS::EC2::TrafficMirrorTarget",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorTarget/Properties/GatewayLoadBalancerEndpointId"
+      ]
+    },
+    {
+      "candidateId": "51a7bc5da617e19d1f1b",
+      "subjectNativeId": "AWS::EC2::TrafficMirrorTarget",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorTarget/Properties/NetworkInterfaceId"
+      ]
+    },
+    {
+      "candidateId": "b740cf79d2226cc7b3be",
+      "subjectNativeId": "AWS::EC2::TrafficMirrorTarget",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TrafficMirrorTarget/Properties/NetworkLoadBalancerArn"
+      ]
+    },
+    {
+      "candidateId": "dc8b047207b37401d97d",
+      "subjectNativeId": "AWS::EC2::TransitGateway",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGateway/Properties/AssociationDefaultRouteTableId"
+      ]
+    },
+    {
+      "candidateId": "84bd230b3ab17378fa40",
+      "subjectNativeId": "AWS::EC2::TransitGateway",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGateway/Properties/PropagationDefaultRouteTableId"
+      ]
+    },
+    {
+      "candidateId": "7afb728aa0c7df01579d",
+      "subjectNativeId": "AWS::EC2::TransitGatewayAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayAttachment/Properties/SubnetIds"
+      ]
+    },
+    {
+      "candidateId": "ec3cfa40ae85cc335dc6",
+      "subjectNativeId": "AWS::EC2::TransitGatewayAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayAttachment/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "a535761bc37e6252c18b",
+      "subjectNativeId": "AWS::EC2::TransitGatewayAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayAttachment/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "b57c9b0c258d1a7f5507",
+      "subjectNativeId": "AWS::EC2::TransitGatewayConnect",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayConnect/Properties/TransportTransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "71670826b30febe8e588",
+      "subjectNativeId": "AWS::EC2::TransitGatewayConnectPeer",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayConnectPeer/Properties/TransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "fd8f5fb9a8cbf2fec3ed",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicy",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicy/Properties/MiddleboxAttachmentIds"
+      ]
+    },
+    {
+      "candidateId": "0d6fbd1da37219a86c7c",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicy",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicy/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "ff9cdd8b45f07a74d498",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicyEntry",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicyEntry/Properties/DestinationTransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "a6e4fbae9238a37b8c3c",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicyEntry",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicyEntry/Properties/SourceTransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "4c52f2f690f0221ab514",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMeteringPolicyEntry",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMeteringPolicyEntry/Properties/TransitGatewayMeteringPolicyId"
+      ]
+    },
+    {
+      "candidateId": "48cda55a4c0beaf3266e",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMulticastDomain",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomain/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "225cf9694cf0047ce538",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMulticastDomainAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomainAssociation/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "75eee31146318881089b",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMulticastDomainAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomainAssociation/Properties/TransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "f2996cde0c29e93363ea",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMulticastDomainAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastDomainAssociation/Properties/TransitGatewayMulticastDomainId"
+      ]
+    },
+    {
+      "candidateId": "f33862d69f2e78b3180d",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMulticastGroupMember",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupMember/Properties/NetworkInterfaceId"
+      ]
+    },
+    {
+      "candidateId": "2cda727bbe450c151328",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMulticastGroupMember",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupMember/Properties/TransitGatewayMulticastDomainId"
+      ]
+    },
+    {
+      "candidateId": "c51f9fd99521100b73eb",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMulticastGroupSource",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupSource/Properties/NetworkInterfaceId"
+      ]
+    },
+    {
+      "candidateId": "ca7b19c63a09eff437bb",
+      "subjectNativeId": "AWS::EC2::TransitGatewayMulticastGroupSource",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayMulticastGroupSource/Properties/TransitGatewayMulticastDomainId"
+      ]
+    },
+    {
+      "candidateId": "515d206950affd03220c",
+      "subjectNativeId": "AWS::EC2::TransitGatewayPeeringAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPeeringAttachment/Properties/PeerAccountId"
+      ]
+    },
+    {
+      "candidateId": "f0f17e41fbfc87705ca9",
+      "subjectNativeId": "AWS::EC2::TransitGatewayPeeringAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPeeringAttachment/Properties/PeerTransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "0e2de2d1d7de9b8ee27b",
+      "subjectNativeId": "AWS::EC2::TransitGatewayPeeringAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPeeringAttachment/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "a26b8af3ebb6dde51e23",
+      "subjectNativeId": "AWS::EC2::TransitGatewayPolicyTable",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTable/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "fa36323506fea9912815",
+      "subjectNativeId": "AWS::EC2::TransitGatewayPolicyTableAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTableAssociation/Properties/TransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "67905794cfabf3268705",
+      "subjectNativeId": "AWS::EC2::TransitGatewayPolicyTableAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayPolicyTableAssociation/Properties/TransitGatewayPolicyTableId"
+      ]
+    },
+    {
+      "candidateId": "e3825e1cf31ba3689a07",
+      "subjectNativeId": "AWS::EC2::TransitGatewayRoute",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRoute/Properties/TransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "9e8c9bf7009f45c90020",
+      "subjectNativeId": "AWS::EC2::TransitGatewayRoute",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRoute/Properties/TransitGatewayRouteTableId"
+      ]
+    },
+    {
+      "candidateId": "01777d96a5b073a487b4",
+      "subjectNativeId": "AWS::EC2::TransitGatewayRouteTable",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTable/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "274e506931a87951c144",
+      "subjectNativeId": "AWS::EC2::TransitGatewayRouteTableAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTableAssociation/Properties/TransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "053ba8e97e2344dd2d1f",
+      "subjectNativeId": "AWS::EC2::TransitGatewayRouteTableAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTableAssociation/Properties/TransitGatewayRouteTableId"
+      ]
+    },
+    {
+      "candidateId": "b500200ef9324b530767",
+      "subjectNativeId": "AWS::EC2::TransitGatewayRouteTablePropagation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTablePropagation/Properties/TransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "0807115cc9866ab32699",
+      "subjectNativeId": "AWS::EC2::TransitGatewayRouteTablePropagation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayRouteTablePropagation/Properties/TransitGatewayRouteTableId"
+      ]
+    },
+    {
+      "candidateId": "92cd11f4d7dd2c7f3e87",
+      "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/AddSubnetIds"
+      ]
+    },
+    {
+      "candidateId": "cede27bf4e4fde6f0ec7",
+      "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/RemoveSubnetIds"
+      ]
+    },
+    {
+      "candidateId": "9507dd822e7a310785c8",
+      "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/SubnetIds"
+      ]
+    },
+    {
+      "candidateId": "59d1c402dcee446190ed",
+      "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "7b343f32bc9683a7439c",
+      "subjectNativeId": "AWS::EC2::TransitGatewayVpcAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::TransitGatewayVpcAttachment/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "a6343c9a30395e1f6a96",
+      "subjectNativeId": "AWS::EC2::VPC",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPC/Properties/Ipv4IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "2d602bead10c835eeae1",
+      "subjectNativeId": "AWS::EC2::VPCBlockPublicAccessExclusion",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCBlockPublicAccessExclusion/Properties/SubnetId"
+      ]
+    },
+    {
+      "candidateId": "6d0dadf213246c4babdf",
+      "subjectNativeId": "AWS::EC2::VPCBlockPublicAccessExclusion",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCBlockPublicAccessExclusion/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "92bc237a449c42d4a0b6",
+      "subjectNativeId": "AWS::EC2::VPCCidrBlock",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCCidrBlock/Properties/Ipv4IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "3a0c71b583a50c8ed5d2",
+      "subjectNativeId": "AWS::EC2::VPCCidrBlock",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCCidrBlock/Properties/Ipv6IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "293a21762a518e3bf589",
+      "subjectNativeId": "AWS::EC2::VPCCidrBlock",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCCidrBlock/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "ed928def02fa223fb7e3",
+      "subjectNativeId": "AWS::EC2::VPCDHCPOptionsAssociation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCDHCPOptionsAssociation/Properties/DhcpOptionsId"
+      ]
+    },
+    {
+      "candidateId": "5d95c5c7b6a07a6ddedf",
+      "subjectNativeId": "AWS::EC2::VPCDHCPOptionsAssociation",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCDHCPOptionsAssociation/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "41fa720e76c9f33c533b",
+      "subjectNativeId": "AWS::EC2::VPCEncryptionControl",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEncryptionControl/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "6b2f0360472fe69eb79a",
+      "subjectNativeId": "AWS::EC2::VPCEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/ResourceConfigurationArn"
+      ]
+    },
+    {
+      "candidateId": "e1e368c1f3d52e83fb44",
+      "subjectNativeId": "AWS::EC2::VPCEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/RouteTableIds"
+      ]
+    },
+    {
+      "candidateId": "229ea415e488ba0e12ac",
+      "subjectNativeId": "AWS::EC2::VPCEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/SecurityGroupIds"
+      ]
+    },
+    {
+      "candidateId": "5016e0449dd5832dde94",
+      "subjectNativeId": "AWS::EC2::VPCEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/ServiceName"
+      ]
+    },
+    {
+      "candidateId": "34d1448eeb6874af1e57",
+      "subjectNativeId": "AWS::EC2::VPCEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/ServiceNetworkArn"
+      ]
+    },
+    {
+      "candidateId": "b5b4c3a7c888ebf17999",
+      "subjectNativeId": "AWS::EC2::VPCEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/SubnetIds"
+      ]
+    },
+    {
+      "candidateId": "b4b8cf68fc97b150ad3b",
+      "subjectNativeId": "AWS::EC2::VPCEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpoint/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "7709ce9dddc8966d6666",
+      "subjectNativeId": "AWS::EC2::VPCEndpointConnectionNotification",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointConnectionNotification/Properties/ConnectionNotificationArn"
+      ]
+    },
+    {
+      "candidateId": "a847bf8208574cedb083",
+      "subjectNativeId": "AWS::EC2::VPCEndpointConnectionNotification",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointConnectionNotification/Properties/ServiceId"
+      ]
+    },
+    {
+      "candidateId": "e93bf2da27f5c08a55c7",
+      "subjectNativeId": "AWS::EC2::VPCEndpointConnectionNotification",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointConnectionNotification/Properties/VPCEndpointId"
+      ]
+    },
+    {
+      "candidateId": "2e277e0342eb103cec89",
+      "subjectNativeId": "AWS::EC2::VPCEndpointServicePermissions",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCEndpointServicePermissions/Properties/ServiceId"
+      ]
+    },
+    {
+      "candidateId": "a9260723c86186b9dbf0",
+      "subjectNativeId": "AWS::EC2::VPCGatewayAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCGatewayAttachment/Properties/InternetGatewayId"
+      ]
+    },
+    {
+      "candidateId": "fed5617cb6ad04e7a680",
+      "subjectNativeId": "AWS::EC2::VPCGatewayAttachment",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCGatewayAttachment/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "eee71e7b275b3272af3f",
+      "subjectNativeId": "AWS::EC2::VPCGatewayAttachment",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCGatewayAttachment/Properties/VpnGatewayId"
+      ]
+    },
+    {
+      "candidateId": "bcdb511a6db3486f3de7",
+      "subjectNativeId": "AWS::EC2::VPCPeeringConnection",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection/Properties/PeerOwnerId"
+      ]
+    },
+    {
+      "candidateId": "4151b0bd9717dbd5bfc6",
+      "subjectNativeId": "AWS::EC2::VPCPeeringConnection",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection/Properties/PeerRoleArn"
+      ]
+    },
+    {
+      "candidateId": "d72508ee523c15b632e6",
+      "subjectNativeId": "AWS::EC2::VPCPeeringConnection",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection/Properties/PeerVpcId"
+      ]
+    },
+    {
+      "candidateId": "c28c9d8f202163da3aa2",
+      "subjectNativeId": "AWS::EC2::VPCPeeringConnection",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPCPeeringConnection/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "534c342a5a5a42d80791",
+      "subjectNativeId": "AWS::EC2::VPNConcentrator",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConcentrator/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "f198a9d4300201036cbc",
+      "subjectNativeId": "AWS::EC2::VPNConnection",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/CustomerGatewayId"
+      ]
+    },
+    {
+      "candidateId": "3343f4e62e04da989472",
+      "subjectNativeId": "AWS::EC2::VPNConnection",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/TransitGatewayId"
+      ]
+    },
+    {
+      "candidateId": "92127b43cc7aaee62d26",
+      "subjectNativeId": "AWS::EC2::VPNConnection",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/TransportTransitGatewayAttachmentId"
+      ]
+    },
+    {
+      "candidateId": "7b32db49b72f0ca5c84e",
+      "subjectNativeId": "AWS::EC2::VPNConnection",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/VpnConcentratorId"
+      ]
+    },
+    {
+      "candidateId": "8cd183f5814f7a03cfc0",
+      "subjectNativeId": "AWS::EC2::VPNConnection",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnection/Properties/VpnGatewayId"
+      ]
+    },
+    {
+      "candidateId": "510244546022d5becf25",
+      "subjectNativeId": "AWS::EC2::VPNConnectionRoute",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNConnectionRoute/Properties/VpnConnectionId"
+      ]
+    },
+    {
+      "candidateId": "dce847e656246a3a0844",
+      "subjectNativeId": "AWS::EC2::VPNGatewayRoutePropagation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNGatewayRoutePropagation/Properties/RouteTableIds"
+      ]
+    },
+    {
+      "candidateId": "9ab8bd03c65ab9cef81f",
+      "subjectNativeId": "AWS::EC2::VPNGatewayRoutePropagation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VPNGatewayRoutePropagation/Properties/VpnGatewayId"
+      ]
+    },
+    {
+      "candidateId": "c9ef177644a12f6b2b7c",
+      "subjectNativeId": "AWS::EC2::VerifiedAccessEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessEndpoint/Properties/DomainCertificateArn"
+      ]
+    },
+    {
+      "candidateId": "d8cbdeae8db332a90cdc",
+      "subjectNativeId": "AWS::EC2::VerifiedAccessEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessEndpoint/Properties/SecurityGroupIds"
+      ]
+    },
+    {
+      "candidateId": "a426376c499516db137a",
+      "subjectNativeId": "AWS::EC2::VerifiedAccessEndpoint",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessEndpoint/Properties/VerifiedAccessGroupId"
+      ]
+    },
+    {
+      "candidateId": "6be11fbc368ef8d80a67",
+      "subjectNativeId": "AWS::EC2::VerifiedAccessGroup",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessGroup/Properties/VerifiedAccessInstanceId"
+      ]
+    },
+    {
+      "candidateId": "dfa362b71c0b636b52e9",
+      "subjectNativeId": "AWS::EC2::VerifiedAccessInstance",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessInstance/Properties/VerifiedAccessTrustProviderIds"
+      ]
+    },
+    {
+      "candidateId": "993182c271d881ae85a7",
+      "subjectNativeId": "AWS::EC2::VerifiedAccessTrustProvider",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VerifiedAccessTrustProvider/Properties/PolicyReferenceName"
+      ]
+    },
+    {
+      "candidateId": "1d1a6244126186eccc2b",
+      "subjectNativeId": "AWS::EC2::Volume",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/AvailabilityZoneId"
+      ]
+    },
+    {
+      "candidateId": "283898875979fd87bbd4",
+      "subjectNativeId": "AWS::EC2::Volume",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/KmsKeyId"
+      ]
+    },
+    {
+      "candidateId": "0ae039b73bbaf884aa7e",
+      "subjectNativeId": "AWS::EC2::Volume",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/OutpostArn"
+      ]
+    },
+    {
+      "candidateId": "538a0cb12d12f7fa245f",
+      "subjectNativeId": "AWS::EC2::Volume",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/SnapshotId"
+      ]
+    },
+    {
+      "candidateId": "77a2cfae9e7425263941",
+      "subjectNativeId": "AWS::EC2::Volume",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::Volume/Properties/SourceVolumeId"
+      ]
+    },
+    {
+      "candidateId": "a43f64a3affd8f50d088",
+      "subjectNativeId": "AWS::EC2::VolumeAttachment",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Instance"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VolumeAttachment/Properties/InstanceId"
+      ]
+    },
+    {
+      "candidateId": "7145aabbaaf222ab23e8",
+      "subjectNativeId": "AWS::EC2::VolumeAttachment",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::Volume"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::EC2::VolumeAttachment/Properties/VolumeId"
+      ]
+    },
+    {
+      "candidateId": "60a8346b8e3ef0c12cb2",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::Listener",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::ElasticLoadBalancingV2::LoadBalancer"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::Listener/Properties/LoadBalancerArn"
+      ]
+    },
+    {
+      "candidateId": "65d0ab9eefdafbfa01f7",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::ListenerCertificate",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::ElasticLoadBalancingV2::Listener"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::ListenerCertificate/Properties/ListenerArn"
+      ]
+    },
+    {
+      "candidateId": "9f78d177d890fa5b4ca0",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::ListenerRule",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::ElasticLoadBalancingV2::Listener"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::ListenerRule/Properties/ListenerArn"
+      ]
+    },
+    {
+      "candidateId": "02533eeb729b5d5f1e66",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/Ipv4IpamPoolId"
+      ]
+    },
+    {
+      "candidateId": "3f338450cc82494ba800",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/Name"
+      ]
+    },
+    {
+      "candidateId": "03ab202d27993af39cf2",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/SecurityGroups"
+      ]
+    },
+    {
+      "candidateId": "6c297b8bf6993a7e7f98",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::LoadBalancer/Properties/Subnets"
+      ]
+    },
+    {
+      "candidateId": "709739ab5b66ad8f4399",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TargetGroup/Properties/Name"
+      ]
+    },
+    {
+      "candidateId": "79cc1b809920051bd4e0",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "observedObjectNativeId": null,
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "AWS::EC2::VPC"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TargetGroup/Properties/VpcId"
+      ]
+    },
+    {
+      "candidateId": "e249ca4385be1955cbc4",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::TrustStore",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TrustStore/Properties/Name"
+      ]
+    },
+    {
+      "candidateId": "18356c978973e4289827",
+      "subjectNativeId": "AWS::ElasticLoadBalancingV2::TrustStoreRevocation",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::ElasticLoadBalancingV2::TrustStoreRevocation/Properties/TrustStoreArn"
+      ]
+    },
+    {
+      "candidateId": "02adf2012c63d980de9e",
+      "subjectNativeId": "AWS::IAM::InstanceProfile",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "aws-cfn#/ResourceTypes/AWS::IAM::InstanceProfile/Properties/InstanceProfileName"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "easydep-depkb-targeted-replication/v1",
+  "session": "2026-08-14",
+  "scope": "targeted runtime dependency development observations",
+  "runs": [
+    {
+      "provider": "aws",
+      "experiment": "aws-sig4-2026-07-31",
+      "evidence": "aws-sig4-2026-07-31.json",
+      "outcome": "confirmed",
+      "signals": [
+        "instance profile detach caused IMDS credential loss and reattach restored it",
+        "default route removal caused outbound HTTPS loss and restoration recovered it"
+      ],
+      "cleanupVerified": true,
+      "residualResources": []
+    },
+    {
+      "provider": "azure",
+      "experiment": "azure-lb-serve2-2026-08-01",
+      "evidence": "azure-lb-serve2-2026-08-01.json",
+      "outcome": "confirmed-with-harness-repair",
+      "signals": [
+        "backend pool removal caused load balancer HTTP loss and restoration recovered it"
+      ],
+      "harnessNotes": [
+        "the az vm create generated NIC NSG needed an experiment-owned allow-80 rule",
+        "an auxiliary CLI query failed, but the same load balancer was reused for restoration"
+      ],
+      "cleanupVerified": true,
+      "residualResources": []
+    },
+    {
+      "provider": "gcp",
+      "experiment": "gcp-func2-2026-07-31",
+      "evidence": "gcp-func2-2026-07-31.json",
+      "outcome": "confirmed",
+      "signals": [
+        "firewall rule removal caused inbound TCP loss and restoration recovered it",
+        "default route removal caused inbound TCP loss and restoration recovered it"
+      ],
+      "cleanupVerified": true,
+      "residualResources": []
+    }
+  ],
+  "limitations": [
+    "Each provider relationship was observed once in this session.",
+    "The Azure load balancer run required a harness correction before its baseline.",
+    "Two earlier GCP route attempts exposed harness filter defects; the legacy same-day path did not retain those raw attempts."
+  ],
+  "productClaimsUpdated": false
+}

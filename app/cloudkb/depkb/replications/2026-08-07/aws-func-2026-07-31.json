@@ -1,0 +1,124 @@
+{
+ "_note": "기능 의존(aws) — vm→publicIp(EIP). 기능 신호 = 로컬 TCP 22. EIP라 같은 주소로 회복 관측.",
+ "startedAt": "2026-08-06T17:42:33+00:00",
+ "ids": {
+  "sg": "sg-02964482657747a6e",
+  "instance": "i-0010830335a09fb67",
+  "allocId": "eipalloc-0c052be5feac320c2",
+  "ip": "43.203.4.237",
+  "assocId": "eipassoc-06503181e0f8cbf9c",
+  "assocId2": "eipassoc-0ebd55b9f3b7b7d27"
+ },
+ "steps": {
+  "R1.resolve-ami": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "ami-00f6db7984ad32b20"
+  },
+  "R2.create-sg-allow22": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"GroupId\": \"sg-02964482657747a6e\",\n    \"SecurityGroupArn\": \"arn:aws:ec2:ap-northeast-2:838062934141:security-group/sg-02964482657747a6e\"\n}"
+  },
+  "R3.sg-ingress-22": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Return\": true,\n    \"SecurityGroupRules\": [\n        {\n            \"SecurityGroupRuleId\": \"sgr-09d4de57337781895\",\n            \"GroupId\": \"sg-02964482657747a6e\",\n            \"GroupOwnerId\": \"838062934141\",\n            \"IsEgress\": false,\n            \"IpProtocol\": \"tcp\",\n            \"FromPort\": 22,\n            \"ToPort\": 22,\n            \"CidrIpv4\": \"0.0.0.0/0\",\n            \"SecurityGroupRuleArn\": \"arn:aws:ec2:ap-northeast-2:838062934141:security-group-rule/sgr-09d4de57337781895\"\n        }\n    ]\n}"
+  },
+  "R4.run-instance-no-auto-ip": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"ReservationId\": \"r-033d1d2317d7cbbdb\",\n    \"OwnerId\": \"838062934141\",\n    \"Groups\": [],\n    \"Instances\": [\n        {\n            \"Architecture\": \"x86_64\",\n            \"BlockDeviceMappings\": [],\n            \"ClientToken\": \"cdf12312-c265-4815-ac65-1fdb671bc64d\",\n            \"EbsOptimized\": false,\n            \"EnaSupport\": true,\n            \"Hypervisor\": \"xen\",\n            \"NetworkInterfaces\": [\n                {\n                    \"Attachment\": {\n                        \"AttachTime\": \"2026-08-06T17:42:42+00:00\",\n                        \"AttachmentId\": \"eni-attach-077277b27fe921edf\",\n    "
+  },
+  "R5.running": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "running"
+  },
+  "R6.allocate-eip": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"AllocationId\": \"eipalloc-0c052be5feac320c2\",\n    \"PublicIpv4Pool\": \"amazon\",\n    \"NetworkBorderGroup\": \"ap-northeast-2\",\n    \"Domain\": \"vpc\",\n    \"PublicIp\": \"43.203.4.237\"\n}"
+  },
+  "R7.associate-eip": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"AssociationId\": \"eipassoc-06503181e0f8cbf9c\"\n}"
+  },
+  "F1.reachable-baseline": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=True (시도 1)"
+  },
+  "M1.disassociate-while-running": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "M1b.instance-public-ip-now": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"state\": \"running\",\n    \"publicIp\": null\n}"
+  },
+  "F2.unreachable-after-detach": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=False (시도 1)"
+  },
+  "M2.reassociate-eip": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"AssociationId\": \"eipassoc-0ebd55b9f3b7b7d27\"\n}"
+  },
+  "F3.reachable-again": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=True (시도 1)"
+  },
+  "T1.disassociate": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T2.release-eip": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T3.terminate": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"TerminatingInstances\": [\n        {\n            \"InstanceId\": \"i-0010830335a09fb67\",\n            \"CurrentState\": {\n                \"Code\": 32,\n                \"Name\": \"shutting-down\"\n            },\n            \"PreviousState\": {\n                \"Code\": 16,\n                \"Name\": \"running\"\n            }\n        }\n    ]\n}"
+  },
+  "T4.terminated": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "terminated"
+  },
+  "T5.delete-sg": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Return\": true,\n    \"GroupId\": \"sg-02964482657747a6e\"\n}"
+  },
+  "T6.residual-eips": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "[]"
+  }
+ },
+ "finishedAt": "2026-08-06T17:47:20+00:00"
+}

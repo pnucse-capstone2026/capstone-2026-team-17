@@ -1,0 +1,133 @@
+{
+ "_note": "기능 의존 2라운드(gcp) — 방화벽 규칙·기본 라우트 삭제/복원. 기능 신호 = 로컬 TCP 22.",
+ "startedAt": "2026-08-14T09:13:20+00:00",
+ "ids": {
+  "ip": "34.64.189.141"
+ },
+ "steps": {
+  "R1.create-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "R2.create-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "R3.create-fw-allow22": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "R4.create-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "R5.running": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "RUNNING"
+  },
+  "F1.reachable-baseline": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=True (시도 3, 연속 1)"
+  },
+  "M1.delete-fw-rule": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "F2.unreachable-no-rule": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=False (시도 2, 연속 2)"
+  },
+  "M2.recreate-fw-rule": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "F3.reachable-again": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=True (시도 1, 연속 1)"
+  },
+  "M3a.find-default-route": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\"name\": \"default-route-ef82e9ed5d8efca3\", \"nextHop\": \"global/gateways/default-internet-gateway\"}"
+  },
+  "M3b.delete-default-route": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "F4.unreachable-no-route": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=False (시도 2, 연속 2)"
+  },
+  "M4.recreate-route": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "F5.reachable-final": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=True (시도 1, 연속 1)"
+  },
+  "T1.delete-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "T2.vm-gone": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "404"
+  },
+  "T3.delete-fw": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "T4.delete-route": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "T5.delete-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "T6.delete-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "T7.residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ },
+ "finishedAt": "2026-08-14T09:17:09+00:00"
+}

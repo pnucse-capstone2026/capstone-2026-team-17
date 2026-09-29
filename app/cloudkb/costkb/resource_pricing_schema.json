@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/scenfit/easydep/resource-pricing-schema.json",
+  "title": "EasyDep deployment resource pricing rule knowledge base",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "asOf",
+    "scope",
+    "policy",
+    "sources",
+    "rateSources",
+    "coverage",
+    "rules"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "easydep-resource-pricing/v1"
+    },
+    "asOf": {
+      "type": "string",
+      "format": "date"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "currency",
+        "missingUsage",
+        "freeAllowance",
+        "discounts",
+        "taxes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "currency": { "const": "USD" },
+        "missingUsage": { "const": "unknown-not-zero" },
+        "freeAllowance": { "const": "apply-only-with-account-remaining-allowance" },
+        "discounts": { "const": "on-demand-retail-only" },
+        "taxes": { "const": "excluded" }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["title", "url", "kind", "accessedOn"],
+        "additionalProperties": false,
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri" },
+          "kind": {
+            "enum": ["pricing-page", "pricing-api", "billing-documentation"]
+          },
+          "accessedOn": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "rateSources": {
+      "type": "object",
+      "required": ["aws", "azure", "gcp"],
+      "additionalProperties": false,
+      "properties": {
+        "aws": { "$ref": "#/$defs/rateSource" },
+        "azure": { "$ref": "#/$defs/rateSource" },
+        "gcp": { "$ref": "#/$defs/rateSource" }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": ["aws", "azure", "gcp"],
+      "additionalProperties": false,
+      "properties": {
+        "aws": { "$ref": "#/$defs/providerCoverage" },
+        "azure": { "$ref": "#/$defs/providerCoverage" },
+        "gcp": { "$ref": "#/$defs/providerCoverage" }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/rule" }
+    }
+  },
+  "$defs": {
+    "provider": {
+      "enum": ["aws", "azure", "gcp"]
+    },
+    "rateSource": {
+      "type": "object",
+      "required": ["sourceRef", "access", "endpoint", "matchingFields", "limitations"],
+      "additionalProperties": false,
+      "properties": {
+        "sourceRef": { "type": "string", "minLength": 1 },
+        "access": {
+          "enum": ["aws-credentials", "none", "gcp-api-key-or-oauth"]
+        },
+        "endpoint": { "type": "string", "minLength": 1 },
+        "matchingFields": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "limitations": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "providerCoverage": {
+      "type": "object",
+      "required": ["noSeparateMeterPrimitiveKinds", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "noSeparateMeterPrimitiveKinds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "required": ["name", "unit", "source", "required"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "unit": { "type": "string", "minLength": 1 },
+        "source": { "enum": ["configuration", "usage", "derived", "account"] },
+        "required": { "type": "boolean" },
+        "description": { "type": "string", "minLength": 1 }
+      }
+    },
+    "rateLookup": {
+      "type": "object",
+      "required": ["key", "dimensions"],
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "dimensions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "notes": { "type": "string", "minLength": 1 }
+      }
+    },
+    "billingTerm": {
+      "type": "object",
+      "required": ["name", "formula", "rateKey", "unit"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "formula": { "type": "string", "minLength": 1 },
+        "rateKey": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "unit": { "type": "string", "minLength": 1 },
+        "condition": { "type": "string", "minLength": 1 }
+      }
+    },
+    "rule": {
+      "type": "object",
+      "required": [
+        "id",
+        "provider",
+        "category",
+        "attribution",
+        "providerPrimitiveKinds",
+        "terraformTypes",
+        "calculationKind",
+        "summary",
+        "inputs",
+        "rateLookups",
+        "billingTerms",
+        "parameters",
+        "freeTierHandling",
+        "sourceRefs",
+        "limitations"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^(aws|azure|gcp)\\.[a-z0-9._-]+$" },
+        "provider": { "$ref": "#/$defs/provider" },
+        "category": {
+          "enum": [
+            "compute",
+            "block-storage",
+            "load-balancer",
+            "nat",
+            "public-ip",
+            "container-registry",
+            "network-egress",
+            "secret-access"
+          ]
+        },
+        "attribution": {
+          "enum": ["generated-resource", "generated-usage", "external-resource-usage"]
+        },
+        "providerPrimitiveKinds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "terraformTypes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "calculationKind": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "inputs": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/input" }
+        },
+        "rateLookups": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/rateLookup" }
+        },
+        "billingTerms": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/billingTerm" }
+        },
+        "parameters": {
+          "type": "object"
+        },
+        "freeTierHandling": {
+          "enum": ["separate-policy", "account-aggregate-input", "none"]
+        },
+        "sourceRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "limitations": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

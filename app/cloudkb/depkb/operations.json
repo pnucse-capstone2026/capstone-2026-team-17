@@ -1,0 +1,54 @@
+{
+ "_note": "Reviewed asynchronous operation observations for VM resources.",
+ "statusMeaning": {
+  "async-confirmed": "중간 상태가 실험 원자료에 관측됐다(서버가 '아직'을 답한 실물)",
+  "waited": "우리가 폴링은 했으나 중간 상태 기록이 없다 — 기다려야 한다는 증명은 아니다"
+ },
+ "cspCharacter": {
+  "aws": "VM 생성·삭제에서 중간 상태를 관측했으므로 완료 신호까지 기다린다.",
+  "azure": "ARM이 provisioningState로 통일한다. **az CLI가 기본으로 완료를 기다리므로** 우리가 --no-wait로 비동기를 고른 자리에서만 중간 상태가 관측된다 — 즉 '동기로 보이는 것'은 CLI의 성질이지 자원의 성질이 아니다.",
+  "gcp": "VM 생성은 Operation을 반환하며 완료 신호까지 기다린다."
+ },
+ "counts": {
+  "aws.async-confirmed": 2,
+  "gcp.waited": 1
+ },
+ "operations": [
+  {
+   "csp": "aws",
+   "resource": "vm",
+   "op": "create",
+   "status": "async-confirmed",
+   "doneSignal": "State.Name == running",
+   "intermediateObserved": "pending",
+   "evidence": {
+    "experiment": "aws-sig4-2026-07-31",
+    "step": "R15.running"
+   }
+  },
+  {
+   "csp": "aws",
+   "resource": "vm",
+   "op": "delete",
+   "status": "async-confirmed",
+   "doneSignal": "State.Name == terminated",
+   "intermediateObserved": "shutting-down",
+   "evidence": {
+    "experiment": "aws-sig4-2026-07-31",
+    "step": "T2.terminated"
+   }
+  },
+  {
+   "csp": "gcp",
+   "resource": "vm",
+   "op": "create",
+   "status": "waited",
+   "doneSignal": "status == RUNNING",
+   "intermediateObserved": null,
+   "evidence": {
+    "experiment": "gcp-func-2026-07-31",
+    "step": "R2.running"
+   }
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "_note": "gcp 4라운드 — INTERNAL FR의 network 생략(스킴 술어의 반쪽 완성).",
+ "ranAt": "2026-08-06T19:36:15+00:00",
+ "project": "cloud-resource-testing",
+ "region": "asia-northeast3",
+ "steps": {
+  "G.create-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "G.create-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "G.create-healthcheck": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "G.create-backendservice": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "I3.internal-fr-omit-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "I3.server-filled-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "https://www.googleapis.com/compute/v1/projects/cloud-resource-testing/global/networks/depkbg4-net"
+  },
+  "D.delete-fr": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-backendservice": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-healthcheck": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ }
+}

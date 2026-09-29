@@ -1,0 +1,99 @@
+이 디렉터리는 AWS·Azure·GCP의 Docker-on-VM 배포에 필요한 데이터만 포함한다.
+각 gzip 파일의 `_source` 블록에 원본 버전·URL·해시가 기록되어 있다.
+
+## cb-tumblebug 파생 데이터
+
+다음 파일은 cloud-barista/cb-tumblebug의 고정 버전 데이터에서 유도했다.
+
+- `data/tumblebug-cost.json.gz`: VM 사양과 온디맨드 가격
+- `data/tumblebug-perf.json.gz`: VM 성능 특성
+- `data/basic-images.json.gz`: 기본 Linux VM 이미지
+- `data/cloud-regions.json.gz`: 리전 코드와 이름
+
+    https://github.com/cloud-barista/cb-tumblebug
+    Copyright The Cloud-Barista Authors
+    Apache License 2.0
+
+가격은 스냅샷이며 실제 청구액이 아니다. 네 파일 모두 AWS·Azure·GCP 레코드만 보존한다.
+
+`costkb/resource_pricing_rules.json`은 AWS·Azure·Google Cloud 공식 가격 페이지와
+가격 API 문서에서 확인한 과금 항목·계산 구조를 요약한 조사 지식이다. 공급자 응답이나
+가격표 원문을 복제하지 않으며, 각 레코드가 원문 URL과 확인일을 보존한다. 실제 단가와
+청구액은 변할 수 있으므로 실행 시점의 공식 가격과 계정 조건을 다시 적용해야 한다.
+
+`tumblebug-perf.json.gz`에는 다음 보강 소스의 필드도 포함한다.
+
+- MicrosoftDocs/azure-compute-docs, CC BY 4.0
+  https://github.com/MicrosoftDocs/azure-compute-docs
+- vantage-sh/ec2instances.info, MIT
+  https://github.com/vantage-sh/ec2instances.info
+- Cyclenerd/google-cloud-compute-machine-types, Apache-2.0
+  https://github.com/Cyclenerd/google-cloud-compute-machine-types
+
+레코드의 `*Evidence` 필드가 보강값의 출처를 구분한다.
+
+## GCP 가격 보강
+
+`data/gcp-spot-commit.json.gz`는 Cyclenerd/google-cloud-pricing-cost-calculator의
+고정 스냅샷에서 유도한 GCP VM 스팟·약정 가격이다.
+
+    https://github.com/Cyclenerd/google-cloud-pricing-cost-calculator
+    Apache License 2.0
+
+## Azure 가격 보강
+
+`data/azure-discount-pricing.json.gz`는 Microsoft Azure Retail Prices API 응답에서
+유도한 VM 스팟·예약·저축 플랜 가격이다.
+
+    https://prices.azure.com/api/retail/prices
+    Copyright Microsoft Corporation
+
+이 API에는 파생 데이터 재배포를 명시적으로 허가하거나 금지하는 문구를 찾지 못했다.
+허가를 받았다는 뜻은 아니며 권리자가 요청하면 제거한다. 버전이 없는 API이므로 파일의
+`_source` 해시와 수집 시점으로 사용한 응답을 식별한다.
+
+## speckb 원본 응답
+
+`speckb/raw/` 아래 파일은 위 항목들과 성격이 다르다. **유도한 데이터가 아니라
+CSP 응답 본문 그대로**이며, 파일별 `.provenance.json`에 URL·sha256·수집 시각이 있다.
+가공하지 않았으므로 각 CSP의 원문 조건이 그대로 적용된다.
+
+**AWS는 커밋하지 않는다.** `speckb/raw/aws/`는 `.gitignore`에 있다. AWS 약관이
+가격 데이터 재배포를 명시적으로 금지하기 때문이며(`aws-price-list`,
+`redistribution="denied"`), 문구가 *없는* Azure·GCP와 구분된다. 각자
+`python -m app.core.cloudkb.speckb.fetch_aws`로 받는다. 응답 본문도 스스로 밝힌다:
+
+    "This pricing list is for informational purposes only. All prices are
+    subject to the additional terms included in the pricing pages on
+    http://aws.amazon.com."
+
+`speckb/aws_locations.json`은 커밋한다. 리전 코드와 표시명만 담고 있고 가격
+데이터가 한 건도 없다.
+
+- `speckb/raw/azure/**` — Microsoft Azure Retail Prices 및 Compute Resource SKUs 응답
+  Copyright Microsoft Corporation
+  https://prices.azure.com/api/retail/prices
+  https://management.azure.com/subscriptions/{id}/providers/Microsoft.Compute/skus
+
+  Resource SKUs는 구독 인증이 필요한 API다. 응답 본문에 구독 고유 정보는 없고
+  (전수 검사에서 구독 ID 0회) SKU 카탈로그와 리전별 가용성만 들어 있다. 요청 URL에는
+  구독 ID가 들어가므로 provenance 사이드카의 `url`에서 마스킹한다.
+
+  리전 목록을 알아내기 위해 `$filter` 없는 SKUs 호출을 한 번 하지만 그 응답은
+  저장하지 않는다. 압축을 풀면 123.8MB라 열람이 안 돼 리전별로 다시 받기 때문이다.
+  같은 데이터이므로 커밋된 리전별 파일이 그 응답을 온전히 대신한다.
+
+**GCP도 커밋하지 않는다.** `speckb/raw/gcp/`는 `.gitignore`에 있다. 재배포 조건 때문이
+아니라 `machineTypes` 응답의 `selfLink`마다 수집에 쓴 프로젝트 ID가 들어 있어서다.
+응답 본문이라 지우면 무가공 보장이 깨지므로 원본을 그대로 두고 커밋만 하지 않는다.
+각자 `python -m app.core.cloudkb.speckb.fetch_gcp`로 받는다.
+
+    https://compute.googleapis.com/compute/v1/projects/{project}/aggregated/machineTypes
+    https://cloudbilling.googleapis.com/v1/services/6F81-5844-456A/skus
+    Copyright Google LLC
+
+커밋하는 Azure·GCP 두 소스는 응답 재배포를 허가하거나 금지하는 문구를 찾지 못했다.
+허가를 받았다는 뜻이 아니며 권리자가 요청하면 제거한다. 모두 버전이 없는
+엔드포인트이므로 사이드카의 sha256과 수집 시각으로 사용한 응답을 식별한다.
+
+가격은 전부 특정 시점 스냅샷이며 실제 청구액이 아니다.

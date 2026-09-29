@@ -1,0 +1,172 @@
+{
+ "_note": "azure preflight 측정 기록(P5a). ok=True는 preflight 통과일 뿐 의존 부재의 증거가 아니다 — 거부만이 증거다(계획 T7). 자원 생성 없음(validate·what-if만).",
+ "ranAt": "2026-08-06T18:15:40+00:00",
+ "resourceGroup": "depkb-rm-08061815-0",
+ "tests": {
+  "control-disk-alone": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/control-disk-alone\",\n  \"name\": \"control-disk-alone\",\n  \"properties\": {\n    \"correlationId\": \"854cff09-c4b3-4031-bc53-2f67b909154d\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n    \"provid"
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-03-02\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Compute/disks/depkb-disk1\",\n        \"location\": \"koreacentral\",\n        \"name\": \"depkb-disk1\",\n        \"properties\": {\n          \"creationData\": {\n            \"createOption\": \"Empty\"\n          },\n          \"diskSizeGB\": 4\n        },\n        \"resourceGroup\": \"depkb-rm-08061815-0\",\n        \"sku\": {\n          \"name\": \"Standard_LRS\"\n        },\n        \"type\": \"Microsoft.Compute/disks\"\n      },\n      \"be"
+   }
+  },
+  "control-nsg-alone": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/control-nsg-alone\",\n  \"name\": \"control-nsg-alone\",\n  \"properties\": {\n    \"correlationId\": \"68dfb84a-4e19-4cfe-9943-37d768856aec\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n    \"provider"
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-01-01\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/networkSecurityGroups/depkb-nsg1\",\n        \"location\": \"koreacentral\",\n        \"name\": \"depkb-nsg1\",\n        \"resourceGroup\": \"depkb-rm-08061815-0\",\n        \"type\": \"Microsoft.Network/networkSecurityGroups\"\n      },\n      \"before\": null,\n      \"changeType\": \"Create\",\n      \"delta\": null,\n      \"deploymentId\": null,\n      \"extension\": null,\n      \"identifiers\": null,\n      \"resourceId\": \"/sub"
+   }
+  },
+  "control-pip-alone": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/control-pip-alone\",\n  \"name\": \"control-pip-alone\",\n  \"properties\": {\n    \"correlationId\": \"25522a21-2ed9-4246-8319-e2c431201d1f\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n    \"provider"
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-01-01\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/publicIPAddresses/depkb-pip1\",\n        \"location\": \"koreacentral\",\n        \"name\": \"depkb-pip1\",\n        \"properties\": {\n          \"publicIPAllocationMethod\": \"Static\"\n        },\n        \"resourceGroup\": \"depkb-rm-08061815-0\",\n        \"sku\": {\n          \"name\": \"Standard\"\n        },\n        \"type\": \"Microsoft.Network/publicIPAddresses\"\n      },\n      \"before\": null,\n      \"changeType\": \"Crea"
+   }
+  },
+  "control-vnet-valid": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/control-vnet-valid\",\n  \"name\": \"control-vnet-valid\",\n  \"properties\": {\n    \"correlationId\": \"67d4ece2-f7ee-4858-aea7-beea3fa992bc\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n    \"provid"
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-01-01\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/virtualNetworks/depkb-vnet\",\n        \"location\": \"koreacentral\",\n        \"name\": \"depkb-vnet\",\n        \"properties\": {\n          \"addressSpace\": {\n            \"addressPrefixes\": [\n              \"10.10.0.0/16\"\n            ]\n          },\n          \"subnets\": [\n            {\n              \"name\": \"s1\",\n              \"properties\": {\n                \"addressPrefix\": \"10.10.1.0/24\"\n              }"
+   }
+  },
+  "dangling-lb-pip": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/dangling-lb-pip\",\n  \"name\": \"dangling-lb-pip\",\n  \"properties\": {\n    \"correlationId\": \"4d3d0fe5-3db6-402f-bfe7-40a3712d3bcb\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n    \"providers\": "
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-01-01\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/loadBalancers/depkb-lb2\",\n        \"location\": \"koreacentral\",\n        \"name\": \"depkb-lb2\",\n        \"properties\": {\n          \"frontendIPConfigurations\": [\n            {\n              \"name\": \"fe\",\n              \"properties\": {\n                \"publicIPAddress\": {\n                  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsof"
+   }
+  },
+  "dangling-nic-subnet": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/dangling-nic-subnet\",\n  \"name\": \"dangling-nic-subnet\",\n  \"properties\": {\n    \"correlationId\": \"1cb78b09-c261-43b0-aa1c-63985a7a7951\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n    \"prov"
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-01-01\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/networkInterfaces/depkb-nic3\",\n        \"location\": \"koreacentral\",\n        \"name\": \"depkb-nic3\",\n        \"properties\": {\n          \"ipConfigurations\": [\n            {\n              \"name\": \"ipc\",\n              \"properties\": {\n                \"subnet\": {\n                  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/"
+   }
+  },
+  "dangling-subnet-parent": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/dangling-subnet-parent\",\n  \"name\": \"dangling-subnet-parent\",\n  \"properties\": {\n    \"correlationId\": \"07e39ecc-1633-45b6-829f-4aa9936502e9\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n   "
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-01-01\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/virtualNetworks/depkb-absent-vnet/subnets/depkb-orphan\",\n        \"name\": \"depkb-orphan\",\n        \"properties\": {\n          \"addressPrefix\": \"10.20.1.0/24\"\n        },\n        \"resourceGroup\": \"depkb-rm-08061815-0\",\n        \"type\": \"Microsoft.Network/virtualNetworks/subnets\"\n      },\n      \"before\": null,\n      \"changeType\": \"Create\",\n      \"delta\": null,\n      \"deploymentId\": null,\n      \"ext"
+   }
+  },
+  "dangling-vm-nic": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/dangling-vm-nic\",\n  \"name\": \"dangling-vm-nic\",\n  \"properties\": {\n    \"correlationId\": \"b20cd25c-8a87-4913-b6c9-d0a297fcf301\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n    \"providers\": "
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-04-01\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Compute/virtualMachines/depkb-vm2\",\n        \"location\": \"koreacentral\",\n        \"name\": \"depkb-vm2\",\n        \"properties\": {\n          \"hardwareProfile\": {\n            \"vmSize\": \"Standard_B2ats_v2\"\n          },\n          \"networkProfile\": {\n            \"networkInterfaces\": [\n              {\n                \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/"
+   }
+  },
+  "omit-lb-frontend-ref": {
+   "validate": {
+    "ok": false,
+    "errorCodes": [
+     "InvalidTemplateDeployment",
+     "FrontendIPConfigurationHasNoSubnetOrPublicIPAddressOrPublicIPPrefix"
+    ],
+    "excerpt": "ERROR: {\"code\": \"InvalidTemplateDeployment\", \"message\": \"The template deployment 'omit-lb-frontend-ref' is not valid according to the validation procedure. The following resource provider(s) - 'Microsoft.Network/loadBalancers (2026-01-01)' reported preflight validation errors. Tracking id is '2312ed5a-a8df-46f1-b859-48427397810a'. See inner errors for details.\"}\n\nInner Errors: \n{\"code\": \"FrontendIPConfigurationHasNoSubnetOrPublicIPAddressOrPublicIPPrefix\", \"target\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/loadBalancers"
+   },
+   "what-if": {
+    "ok": false,
+    "errorCodes": [],
+    "excerpt": "ERROR: InvalidTemplateDeployment - The template deployment 'omit-lb-frontend-ref' is not valid according to the validation procedure. The following resource provider(s) - 'Microsoft.Network/loadBalancers (2026-01-01)' reported preflight validation errors. Tracking id is '5c7535b3-68ee-4207-a98c-5d753ab47c4c'. See inner errors for details.\nFrontendIPConfigurationHasNoSubnetOrPublicIPAddressOrPublicIPPrefix - Frontend IP Configuration /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/loadBalancers/depkb-lb1/frontendIPConfigurations"
+   }
+  },
+  "omit-nic-ipconfig": {
+   "validate": {
+    "ok": false,
+    "errorCodes": [
+     "InvalidTemplateDeployment",
+     "NetworkInterfaceMustHaveIpConfigurationOrAttachedElasticNetworkInterface"
+    ],
+    "excerpt": "ERROR: {\"code\": \"InvalidTemplateDeployment\", \"message\": \"The template deployment 'omit-nic-ipconfig' is not valid according to the validation procedure. The following resource provider(s) - 'Microsoft.Network/networkInterfaces (2026-01-01)' reported preflight validation errors. Tracking id is '747fbfb8-5f50-4209-9a02-5b45d3564b77'. See inner errors for details.\"}\n\nInner Errors: \n{\"code\": \"NetworkInterfaceMustHaveIpConfigurationOrAttachedElasticNetworkInterface\", \"target\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/network"
+   },
+   "what-if": {
+    "ok": false,
+    "errorCodes": [],
+    "excerpt": "ERROR: InvalidTemplateDeployment - The template deployment 'omit-nic-ipconfig' is not valid according to the validation procedure. The following resource provider(s) - 'Microsoft.Network/networkInterfaces (2026-01-01)' reported preflight validation errors. Tracking id is '515992ab-13d9-440a-a513-54b0f1c6bf1e'. See inner errors for details.\nNetworkInterfaceMustHaveIpConfigurationOrAttachedElasticNetworkInterface - Network Interface /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/networkInterfaces/depkb-nic2 must contain an ipCon"
+   }
+  },
+  "omit-nic-subnet": {
+   "validate": {
+    "ok": false,
+    "errorCodes": [
+     "InvalidTemplateDeployment",
+     "SubnetIsRequired"
+    ],
+    "excerpt": "ERROR: {\"code\": \"InvalidTemplateDeployment\", \"message\": \"The template deployment 'omit-nic-subnet' is not valid according to the validation procedure. The following resource provider(s) - 'Microsoft.Network/networkInterfaces (2026-01-01)' reported preflight validation errors. Tracking id is 'ab3f634f-54a1-46aa-b97a-8df64b383803'. See inner errors for details.\"}\n\nInner Errors: \n{\"code\": \"SubnetIsRequired\", \"target\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/networkInterfaces/depkb-nic1\", \"message\": \"Subnet reference is re"
+   },
+   "what-if": {
+    "ok": false,
+    "errorCodes": [],
+    "excerpt": "ERROR: InvalidTemplateDeployment - The template deployment 'omit-nic-subnet' is not valid according to the validation procedure. The following resource provider(s) - 'Microsoft.Network/networkInterfaces (2026-01-01)' reported preflight validation errors. Tracking id is '2ee4f2b7-4ef0-45ce-852c-d1ec03ef7792'. See inner errors for details.\nSubnetIsRequired - Subnet reference is required for ipconfiguration /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/networkInterfaces/depkb-nic1/ipConfigurations/ipc."
+   }
+  },
+  "omit-vm-nic": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/omit-vm-nic\",\n  \"name\": \"omit-vm-nic\",\n  \"properties\": {\n    \"correlationId\": \"a447c525-625d-42c8-a176-c629e8e79e13\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n    \"providers\": [\n      "
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-04-01\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Compute/virtualMachines/depkb-vm1\",\n        \"location\": \"koreacentral\",\n        \"name\": \"depkb-vm1\",\n        \"properties\": {\n          \"hardwareProfile\": {\n            \"vmSize\": \"Standard_B2ats_v2\"\n          },\n          \"osProfile\": {\n            \"adminPassword\": \"*******\",\n            \"adminUsername\": \"azureuser\",\n            \"computerName\": \"depkb-vm1\"\n          },\n          \"storageProfile\": {\n "
+   }
+  },
+  "omit-vnet-subnet": {
+   "validate": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"error\": null,\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Resources/deployments/omit-vnet-subnet\",\n  \"name\": \"omit-vnet-subnet\",\n  \"properties\": {\n    \"correlationId\": \"78b076d0-6e5f-4a3b-82a3-61fea39817bf\",\n    \"debugSetting\": null,\n    \"dependencies\": [],\n    \"diagnostics\": null,\n    \"duration\": \"PT0S\",\n    \"error\": null,\n    \"extensions\": [],\n    \"mode\": \"Incremental\",\n    \"onErrorDeployment\": null,\n    \"outputResources\": null,\n    \"outputs\": null,\n    \"parameters\": null,\n    \"parametersLink\": null,\n    \"providers\""
+   },
+   "what-if": {
+    "ok": true,
+    "errorCodes": [],
+    "excerpt": "{\n  \"changes\": [\n    {\n      \"after\": {\n        \"apiVersion\": \"2026-01-01\",\n        \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-0/providers/Microsoft.Network/virtualNetworks/depkb-vnet-nosub\",\n        \"location\": \"koreacentral\",\n        \"name\": \"depkb-vnet-nosub\",\n        \"properties\": {\n          \"addressSpace\": {\n            \"addressPrefixes\": [\n              \"10.10.0.0/16\"\n            ]\n          }\n        },\n        \"resourceGroup\": \"depkb-rm-08061815-0\",\n        \"type\": \"Microsoft.Network/virtualNetworks\"\n      },\n      \"before\": null,\n     "
+   }
+  }
+ }
+}

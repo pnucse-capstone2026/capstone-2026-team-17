@@ -125,78 +125,57 @@
 
 ```text
 ├── app/                            # 백엔드와 AI 에이전트 소스 코드
-│   ├── requirements/               # 요구사항 정제·분류, 유스케이스 명세·다이어그램 생성
-│   ├── design/                     # 클래스·시퀀스·API·ERD·배포 설계 생성과 수정
-│   ├── implementation/             # OpenHands로 코드 구현, 테스트·배포 파일 생성
-│   ├── testing/                    # 생성된 애플리케이션과 배포 파일의 정적·동적 검사
-│   ├── workspace/                  # 사용자 요청·피드백과 단계별 진행 상황 관리
-│   ├── cloudkb/                    # 클라우드 자원 의존관계·가격·성능 자료
-│   │   ├── depkb/                  # 자원 생성에 필요한 선행 조건과 연결 규칙
-│   │   ├── costkb/                 # VM 가격, 무료 사용 정책과 자원별 과금 규칙
-│   │   ├── perfkb/                 # VM 성능 특성과 사양 비교 자료
-│   │   ├── speckb/                 # AWS·Azure·GCP의 VM 사양 목록 수집
-│   │   └── data/
-│   ├── db/                         # MySQL 연결·테이블 정의·체크포인트 저장
-│   ├── repositories/               # 앱 정보와 산출물의 DB 저장·조회
-│   ├── metrics/                    # LLM 호출 기록과 응답 지연 분석
+│   ├── requirements/               # 요구사항 분석·유스케이스 생성
+│   ├── design/                     # 클래스·시퀀스·API·ERD·배포 설계
+│   ├── implementation/             # 애플리케이션 코드와 배포 파일 생성
+│   ├── testing/                    # 정적·동적 검사와 결과 관리
+│   ├── workspace/                  # 사용자 대화·피드백·작업 상태 관리
+│   ├── cloudkb/                    # 클라우드 의존관계·가격·성능 자료
+│   │   ├── depkb/
+│   │   ├── costkb/
+│   │   ├── perfkb/
+│   │   ├── speckb/
+│   │   └── data/                    # 실행 시 사용하는 압축 지식 데이터
+│   ├── db/                         # MySQL 연결과 테이블 정의
+│   ├── repositories/               # 앱·산출물 저장 및 조회
+│   ├── metrics/                    # 실행·LLM 호출 측정
 │   ├── artifacts_api.py
 │   ├── config.py
-│   ├── llm_connection.py
-│   └── validation.py
-├── frontend/                       # SvelteKit UI 소스 코드
+│   └── llm_connection.py
+├── frontend/                       # SvelteKit UI 빌드 입력
 │   ├── src/
 │   │   ├── routes/
 │   │   └── lib/
 │   │       ├── components/
-│   │       ├── api.ts
-│   │       ├── types.ts
-│   │       └── auto-mode.ts
-│   ├── tests/
+│   │       └── api.ts
 │   ├── package.json
+│   ├── package-lock.json
+│   ├── svelte.config.js
 │   └── vite.config.ts
-├── evaluation/                     # 시스템 실행·비교 실험과 평가 자료
-│   ├── easydep/                    # Workspace API를 이용한 개발 과정 실행 코드
-│   ├── comparison/
-│   ├── baselines/                  # MetaGPT·ChatDev 설치 스크립트와 비교 실험 자료
-│   ├── checkpoint_e2e/             # 체크포인트를 이용한 단계별 실행 검증 자료
-│   ├── dependency_audit/           # 자원 의존관계·배포 실험의 검증 결과
-│   └── research_protocol/          # 실험 조건·평가 기준·측정 자료
-├── tests/
-├── inputs/                         # 애플리케이션별 요구사항 입력 파일
-├── materials/                      # 요구사항 분류 모델과 학습 데이터
-│   ├── BERT_FR_NFR_Classifier/
-│   └── FR_NFR_Dataset/
-├── artifacts/                      # 단계별 검증 결과와 실험 측정 기록
-├── docs/
-├── scripts/                        # 개발 환경 준비·실행 및 배포 스크립트
-│   └── run-easydep.ps1
-├── docker/                         # 구현·테스팅 도구의 Docker 이미지 빌드 설정
-│   └── Dockerfile.toolchain
-├── toolchain/                      # OpenTofu 플러그인 버전과 오프라인 저장소 설정
-│   └── opentofu/
-├── k8s/                            # 서버 배포용 Kubernetes 설정
-│   ├── base/
-│   └── overlays/
-├── .easydep/
-│   └── agent-plans/                # 기능 개선 계획 문서
-├── install_and_build.sh
-├── server.py
-├── Dockerfile
-├── requirements.txt
+├── materials/
+│   └── BERT_FR_NFR_Classifier/bert_model/  # 요구사항 분류 모델과 분할 가중치
+├── docker/
+│   └── Dockerfile.toolchain        # 구현·테스팅 도구 이미지
+├── toolchain/opentofu/             # OpenTofu 공급자 설정
+├── scripts/
+│   ├── run-easydep.ps1             # Windows 개발 실행
+│   ├── bootstrap-implementation-tools.sh
+│   └── bootstrap-testing-tools.sh
+├── docs/                           # 제출 보고서·포스터·발표 자료
+├── install_and_build.sh            # 의존성 설치·빌드·서버 실행
+├── server.py                       # FastAPI 진입점
+├── Dockerfile                      # 애플리케이션 이미지 빌드
+├── requirements.txt                # 백엔드 실행 의존성
 ├── requirements-common.txt
 ├── requirements-bert.txt
 ├── requirements-browser-testing.txt
-├── requirements-dev.txt
-├── pyproject.toml
-├── pytest.ini
-├── verify_db.py
-├── .env.example
+├── .env.example                    # 환경 설정 템플릿(실제 키 미포함)
 ├── .dockerignore
-├── .gitignore
 ├── .gitattributes
-├── AGENTS.md
 └── README.md
 ```
+
+`.env`, `.venv`, `frontend/node_modules`, `frontend/build`, `.easydep` 등은 제출 파일이 아니라 설치·실행 과정에서 생성되는 로컬 파일이다.
 
 
 

@@ -1,0 +1,4 @@
+# 개발 서버에는 공통 패키지와 BERT 분류기 패키지가 모두 필요하다. 구현 툴체인은
+# requirements-common.txt만 설치하고, 브라우저 E2E 이미지는 별도 파일을 추가로 설치한다.
+-r requirements-common.txt
+-r requirements-bert.txt

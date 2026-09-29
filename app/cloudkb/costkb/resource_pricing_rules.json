@@ -1,0 +1,1023 @@
+{
+  "schemaVersion": "easydep-resource-pricing/v1",
+  "asOf": "2026-09-09",
+  "scope": "Retail pricing equations for resources created or consumed by the AWS, Azure, and GCP Docker-on-VM deployment-plan corpus. Rates are looked up separately and are not bundled here.",
+  "policy": {
+    "currency": "USD",
+    "missingUsage": "unknown-not-zero",
+    "freeAllowance": "apply-only-with-account-remaining-allowance",
+    "discounts": "on-demand-retail-only",
+    "taxes": "excluded"
+  },
+  "sources": {
+    "aws-price-list-api": {
+      "title": "AWS Price List API",
+      "url": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html",
+      "kind": "pricing-api",
+      "accessedOn": "2026-09-09"
+    },
+    "aws-compute-pricing": {
+      "title": "Amazon EC2 On-Demand pricing",
+      "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "aws-ebs-pricing": {
+      "title": "Amazon EBS pricing",
+      "url": "https://aws.amazon.com/ebs/pricing/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "aws-elb-pricing": {
+      "title": "Elastic Load Balancing pricing",
+      "url": "https://aws.amazon.com/elasticloadbalancing/pricing/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "aws-vpc-pricing": {
+      "title": "Amazon VPC pricing",
+      "url": "https://aws.amazon.com/vpc/pricing/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "aws-ecr-pricing": {
+      "title": "Amazon ECR pricing",
+      "url": "https://aws.amazon.com/ecr/pricing/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "aws-secrets-pricing": {
+      "title": "AWS Secrets Manager pricing",
+      "url": "https://aws.amazon.com/secrets-manager/pricing/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "azure-retail-prices-api": {
+      "title": "Azure Retail Prices REST API",
+      "url": "https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices",
+      "kind": "pricing-api",
+      "accessedOn": "2026-09-09"
+    },
+    "azure-vm-pricing": {
+      "title": "Azure Linux Virtual Machines pricing",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "azure-disk-pricing": {
+      "title": "Azure Managed Disks pricing",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/managed-disks/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "azure-load-balancer-pricing": {
+      "title": "Azure Load Balancer pricing",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/load-balancer/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "azure-nat-pricing": {
+      "title": "Azure NAT Gateway pricing",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/azure-nat-gateway/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "azure-ip-pricing": {
+      "title": "Azure IP address pricing",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/ip-addresses/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "azure-acr-pricing": {
+      "title": "Azure Container Registry pricing",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/container-registry/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "azure-bandwidth-pricing": {
+      "title": "Azure Bandwidth pricing",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/bandwidth/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "azure-key-vault-pricing": {
+      "title": "Azure Key Vault pricing",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/key-vault/",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "gcp-catalog-api": {
+      "title": "Google Cloud Billing Catalog API",
+      "url": "https://docs.cloud.google.com/billing/docs/reference/rest/v1/services.skus/list",
+      "kind": "pricing-api",
+      "accessedOn": "2026-09-09"
+    },
+    "gcp-vm-pricing": {
+      "title": "Compute Engine VM instance pricing",
+      "url": "https://cloud.google.com/products/compute/pricing",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "gcp-resource-based-pricing": {
+      "title": "Compute Engine resource-based pricing",
+      "url": "https://cloud.google.com/products/compute/resources/pricing",
+      "kind": "billing-documentation",
+      "accessedOn": "2026-09-09"
+    },
+    "gcp-disk-pricing": {
+      "title": "Compute Engine disk and image pricing",
+      "url": "https://cloud.google.com/compute/disks-image-pricing",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "gcp-load-balancer-pricing": {
+      "title": "Cloud Load Balancing pricing",
+      "url": "https://cloud.google.com/load-balancing/pricing",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "gcp-vpc-pricing": {
+      "title": "Google Cloud VPC pricing",
+      "url": "https://cloud.google.com/vpc/network-pricing",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "gcp-artifact-registry-pricing": {
+      "title": "Artifact Registry pricing",
+      "url": "https://cloud.google.com/artifact-registry/pricing",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    },
+    "gcp-secret-manager-pricing": {
+      "title": "Secret Manager pricing",
+      "url": "https://cloud.google.com/secret-manager/pricing",
+      "kind": "pricing-page",
+      "accessedOn": "2026-09-09"
+    }
+  },
+  "rateSources": {
+    "aws": {
+      "sourceRef": "aws-price-list-api",
+      "access": "aws-credentials",
+      "endpoint": "https://api.pricing.us-east-1.amazonaws.com",
+      "matchingFields": [
+        "ServiceCode",
+        "productFamily",
+        "location",
+        "operation",
+        "usageType",
+        "unit",
+        "beginRange",
+        "endRange",
+        "termType"
+      ],
+      "limitations": [
+        "The pricing API endpoint region is not the deployment region; the product location attribute identifies the deployment region.",
+        "The AWS Price List is not a complete source for limited-period Free Tier offers.",
+        "If the price list and a service pricing page differ, AWS states that the service pricing page governs."
+      ]
+    },
+    "azure": {
+      "sourceRef": "azure-retail-prices-api",
+      "access": "none",
+      "endpoint": "https://prices.azure.com/api/retail/prices",
+      "matchingFields": [
+        "serviceName",
+        "armRegionName",
+        "armSkuName",
+        "meterName",
+        "priceType",
+        "tierMinimumUnits",
+        "unitOfMeasure",
+        "effectiveStartDate"
+      ],
+      "limitations": [
+        "Filters are case-sensitive in the current preview API.",
+        "Retail prices exclude negotiated agreement pricing and taxes.",
+        "Responses are paginated and current values are not a version-pinned dataset."
+      ]
+    },
+    "gcp": {
+      "sourceRef": "gcp-catalog-api",
+      "access": "gcp-api-key-or-oauth",
+      "endpoint": "https://cloudbilling.googleapis.com/v1/services/{service}/skus",
+      "matchingFields": [
+        "category.serviceDisplayName",
+        "category.resourceFamily",
+        "category.resourceGroup",
+        "category.usageType",
+        "serviceRegions",
+        "pricingInfo.effectiveTime",
+        "pricingInfo.pricingExpression.usageUnit",
+        "pricingInfo.pricingExpression.tieredRates"
+      ],
+      "limitations": [
+        "The Catalog API exposes public list prices, not billing-account contract prices.",
+        "A Google Cloud project with the Cloud Billing API enabled and an API key or OAuth credential is required.",
+        "Tiered rates and aggregation metadata must be preserved when normalizing a SKU."
+      ]
+    }
+  },
+  "coverage": {
+    "aws": {
+      "noSeparateMeterPrimitiveKinds": [
+        "registry-pull-identity",
+        "registry-pull-policy",
+        "registry-pull-binding",
+        "registry-instance-profile",
+        "state-secret-identity",
+        "state-secret-instance-profile",
+        "network",
+        "subnet",
+        "state-subnet",
+        "ingress-subnet",
+        "security-group",
+        "load-balancer-security-group",
+        "application-ingress-rule",
+        "internet-gateway",
+        "ingress-route-table",
+        "ingress-default-route",
+        "ingress-route-association",
+        "application-route-table",
+        "application-default-route",
+        "application-route-association"
+      ],
+      "notes": [
+        "No separate meter means that this knowledge base found no distinct charge to attach to the primitive in the scoped pricing pages. It does not claim that all traffic or attached services are free.",
+        "IAM and routing primitives can cause usage of separately metered services, which are attributed to their owning pricing rule."
+      ]
+    },
+    "azure": {
+      "noSeparateMeterPrimitiveKinds": [
+        "resource-group",
+        "registry-pull-identity",
+        "registry-pull-binding",
+        "state-secret-identity",
+        "network",
+        "subnet",
+        "network-interface",
+        "security-group",
+        "security-group-association"
+      ],
+      "notes": [
+        "No separate meter means that this knowledge base found no distinct charge to attach to the primitive in the scoped pricing pages. It does not claim that all traffic or attached services are free.",
+        "Role assignments and network interfaces are structural inputs to separately metered resources and traffic."
+      ]
+    },
+    "gcp": {
+      "noSeparateMeterPrimitiveKinds": [
+        "registry-pull-identity",
+        "registry-pull-binding",
+        "state-secret-identity",
+        "network",
+        "subnet",
+        "network-interface",
+        "firewall"
+      ],
+      "notes": [
+        "No separate meter means that this knowledge base found no distinct charge to attach to the primitive in the scoped pricing pages. It does not claim that all traffic or attached services are free.",
+        "Service accounts and IAM bindings are structural inputs; API calls made through them belong to the corresponding service usage rule."
+      ]
+    }
+  },
+  "rules": [
+    {
+      "id": "aws.compute.ec2-on-demand",
+      "provider": "aws",
+      "category": "compute",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["compute-instance", "compute-group", "compute-template", "boot-image"],
+      "terraformTypes": ["aws_instance", "aws_autoscaling_group", "aws_launch_template"],
+      "calculationKind": "instance-runtime",
+      "summary": "Sum the on-demand runtime charge for every EC2 instance created directly or by an Auto Scaling group.",
+      "inputs": [
+        {"name": "instance_count", "unit": "instance", "source": "derived", "required": true},
+        {"name": "running_seconds", "unit": "second", "source": "usage", "required": true},
+        {"name": "instance_type", "unit": "sku", "source": "configuration", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "operating_system", "unit": "name", "source": "configuration", "required": true},
+        {"name": "tenancy", "unit": "name", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "instance_runtime_rate", "dimensions": ["instance_type", "region", "operating_system", "tenancy", "capacity_status", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "runtime", "formula": "instance_count * billable_runtime_units * instance_runtime_rate", "rateKey": "instance_runtime_rate", "unit": "USD"}
+      ],
+      "parameters": {"linuxMinimumSecondsPerLaunch": 60},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["aws-compute-pricing", "aws-price-list-api"],
+      "limitations": [
+        "EBS volumes, public IPv4 addresses, load balancers, NAT, data transfer, and burstable CPU surplus are separate terms.",
+        "The effective boot-volume size must be resolved from the image or explicit block-device configuration and priced by the EBS rule."
+      ]
+    },
+    {
+      "id": "aws.storage.ebs-gp3",
+      "provider": "aws",
+      "category": "block-storage",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["disk", "disk-attachment"],
+      "terraformTypes": ["aws_ebs_volume", "aws_volume_attachment"],
+      "calculationKind": "provisioned-gp3-storage",
+      "summary": "Charge gp3 provisioned capacity plus IOPS and throughput above the included gp3 baselines, prorated by provisioned duration.",
+      "inputs": [
+        {"name": "volume_count", "unit": "volume", "source": "derived", "required": true},
+        {"name": "capacity_gib", "unit": "GiB", "source": "configuration", "required": true},
+        {"name": "provisioned_seconds", "unit": "second", "source": "usage", "required": true},
+        {"name": "provisioned_iops", "unit": "IOPS", "source": "configuration", "required": false},
+        {"name": "provisioned_throughput_mibps", "unit": "MiB/s", "source": "configuration", "required": false},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "storage_gib_month_rate", "dimensions": ["region", "volume_type", "usage_type", "unit"]},
+        {"key": "extra_iops_month_rate", "dimensions": ["region", "volume_type", "usage_type", "unit"]},
+        {"key": "extra_throughput_month_rate", "dimensions": ["region", "volume_type", "usage_type", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "capacity", "formula": "volume_count * capacity_gib * provisioned_month_fraction * storage_gib_month_rate", "rateKey": "storage_gib_month_rate", "unit": "USD"},
+        {"name": "extra_iops", "formula": "volume_count * max(0, provisioned_iops - 3000) * provisioned_month_fraction * extra_iops_month_rate", "rateKey": "extra_iops_month_rate", "unit": "USD"},
+        {"name": "extra_throughput", "formula": "volume_count * max(0, provisioned_throughput_mibps - 125) * provisioned_month_fraction * extra_throughput_month_rate", "rateKey": "extra_throughput_month_rate", "unit": "USD"}
+      ],
+      "parameters": {"volumeType": "gp3", "includedIops": 3000, "includedThroughputMiBps": 125, "minimumSeconds": 60},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["aws-ebs-pricing", "aws-price-list-api"],
+      "limitations": [
+        "This rule intentionally covers gp3 because the current deployment renderer emits gp3; other EBS volume types require their own calculation kind.",
+        "A root volume whose size is inherited from an AMI remains unknown until its effective size is resolved."
+      ]
+    },
+    {
+      "id": "aws.network.nlb",
+      "provider": "aws",
+      "category": "load-balancer",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["load-balancer", "listener", "backend-group", "health-check"],
+      "terraformTypes": ["aws_lb", "aws_lb_listener", "aws_lb_target_group"],
+      "calculationKind": "network-load-balancer-capacity",
+      "summary": "Charge each running Network Load Balancer hour plus the highest NLCU dimension for each protocol and hour; also count implicit public IPv4 addresses.",
+      "inputs": [
+        {"name": "load_balancer_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "new_flows_per_second", "unit": "flow/second", "source": "usage", "required": true},
+        {"name": "active_flows", "unit": "flow", "source": "usage", "required": true},
+        {"name": "processed_gib_per_hour", "unit": "GiB/hour", "source": "usage", "required": true},
+        {"name": "protocol", "unit": "name", "source": "configuration", "required": true},
+        {"name": "public_ipv4_count", "unit": "address", "source": "derived", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "load_balancer_hour_rate", "dimensions": ["region", "load_balancer_type", "unit"]},
+        {"key": "nlcu_hour_rate", "dimensions": ["region", "load_balancer_type", "unit"]},
+        {"key": "public_ipv4_hour_rate", "dimensions": ["region", "address_state", "unit"], "notes": "NLB public addresses can be implicit rather than explicit aws_eip resources."}
+      ],
+      "billingTerms": [
+        {"name": "load_balancer_runtime", "formula": "load_balancer_hours * load_balancer_hour_rate", "rateKey": "load_balancer_hour_rate", "unit": "USD"},
+        {"name": "capacity", "formula": "sum_over_protocol_hours(max(new_flows_per_second/flow_capacity, active_flows/active_capacity, processed_gib_per_hour/1) * nlcu_hour_rate)", "rateKey": "nlcu_hour_rate", "unit": "USD"},
+        {"name": "implicit_public_ipv4", "formula": "public_ipv4_count * load_balancer_hours * public_ipv4_hour_rate", "rateKey": "public_ipv4_hour_rate", "unit": "USD"}
+      ],
+      "parameters": {
+        "capacityPerNlcu": {
+          "tcp": {"newFlowsPerSecond": 800, "activeFlows": 100000, "processedGiBPerHour": 1},
+          "udp": {"newFlowsPerSecond": 400, "activeFlows": 50000, "processedGiBPerHour": 1},
+          "tls": {"newFlowsPerSecond": 50, "activeFlows": 3000, "processedGiBPerHour": 1}
+        },
+        "partialHourRounding": "up"
+      },
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["aws-elb-pricing", "aws-vpc-pricing", "aws-price-list-api"],
+      "limitations": [
+        "Standard AWS data transfer charges are separate.",
+        "Reserved NLCU capacity and TLS certificate-related services are outside the current plan scope."
+      ]
+    },
+    {
+      "id": "aws.network.nat-gateway",
+      "provider": "aws",
+      "category": "nat",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["nat-gateway"],
+      "terraformTypes": ["aws_nat_gateway"],
+      "calculationKind": "gateway-hours-and-processed-data",
+      "summary": "Charge each NAT Gateway provisioned hour and every GB processed in either direction.",
+      "inputs": [
+        {"name": "gateway_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "processed_gb", "unit": "GB", "source": "usage", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "gateway_hour_rate", "dimensions": ["region", "operation", "usage_type", "unit"]},
+        {"key": "processed_gb_rate", "dimensions": ["region", "operation", "usage_type", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "gateway_runtime", "formula": "ceil_each_partial_gateway_hour(gateway_hours) * gateway_hour_rate", "rateKey": "gateway_hour_rate", "unit": "USD"},
+        {"name": "data_processing", "formula": "processed_gb * processed_gb_rate", "rateKey": "processed_gb_rate", "unit": "USD"}
+      ],
+      "parameters": {"partialHourRounding": "up"},
+      "freeTierHandling": "none",
+      "sourceRefs": ["aws-vpc-pricing", "aws-price-list-api"],
+      "limitations": [
+        "The NAT Elastic IP is priced by the public IPv4 rule.",
+        "Internet and cross-AZ data transfer are additional and must be priced as separate flows."
+      ]
+    },
+    {
+      "id": "aws.network.public-ipv4",
+      "provider": "aws",
+      "category": "public-ip",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["public-ip", "nat-public-ip"],
+      "terraformTypes": ["aws_eip"],
+      "calculationKind": "address-hours",
+      "summary": "Charge each in-use or idle public IPv4 address by time allocated.",
+      "inputs": [
+        {"name": "address_count", "unit": "address", "source": "derived", "required": true},
+        {"name": "allocated_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "address_state", "unit": "name", "source": "derived", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "public_ipv4_hour_rate", "dimensions": ["region", "address_state", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "address_runtime", "formula": "address_count * allocated_hours * public_ipv4_hour_rate", "rateKey": "public_ipv4_hour_rate", "unit": "USD"}
+      ],
+      "parameters": {"minimumSeconds": 60},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["aws-vpc-pricing", "aws-price-list-api"],
+      "limitations": ["Implicit public IPv4 addresses consumed by a Network Load Balancer are owned by the NLB rule to avoid missing them or counting them twice."]
+    },
+    {
+      "id": "aws.registry.ecr",
+      "provider": "aws",
+      "category": "container-registry",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["app-registry"],
+      "terraformTypes": ["aws_ecr_repository"],
+      "calculationKind": "registry-storage-and-transfer",
+      "summary": "Charge stored image GB-months and charge eligible registry data transfer; same-region transfer to AWS compute is zero-rated by the ECR pricing policy.",
+      "inputs": [
+        {"name": "stored_gb_month", "unit": "GB-month", "source": "usage", "required": true},
+        {"name": "transfer_out_gb", "unit": "GB", "source": "usage", "required": true},
+        {"name": "repository_region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "destination_region", "unit": "region", "source": "usage", "required": true},
+        {"name": "repository_visibility", "unit": "name", "source": "configuration", "required": true},
+        {"name": "account_remaining_free_storage_gb", "unit": "GB-month", "source": "account", "required": false}
+      ],
+      "rateLookups": [
+        {"key": "registry_storage_rate", "dimensions": ["repository_visibility", "region", "usage_type", "unit"]},
+        {"key": "registry_transfer_rate", "dimensions": ["repository_visibility", "repository_region", "destination_region", "tier", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "storage", "formula": "max(0, stored_gb_month - account_remaining_free_storage_gb) * registry_storage_rate", "rateKey": "registry_storage_rate", "unit": "USD"},
+        {"name": "transfer", "formula": "eligible_transfer_out_gb * registry_transfer_rate", "rateKey": "registry_transfer_rate", "unit": "USD", "condition": "Zero for private-repository transfer to AWS compute in the same region; otherwise use the applicable transfer tier."}
+      ],
+      "parameters": {},
+      "freeTierHandling": "account-aggregate-input",
+      "sourceRefs": ["aws-ecr-pricing", "aws-price-list-api"],
+      "limitations": ["Image size is only measurable after an image exists; before implementation it must remain an explicit scenario input."]
+    },
+    {
+      "id": "aws.network.internet-egress",
+      "provider": "aws",
+      "category": "network-egress",
+      "attribution": "generated-usage",
+      "providerPrimitiveKinds": [],
+      "terraformTypes": [],
+      "calculationKind": "account-aggregated-tiered-transfer",
+      "summary": "Apply AWS internet data-transfer-out tiers to the account-aggregated eligible outbound volume.",
+      "inputs": [
+        {"name": "internet_egress_gb", "unit": "GB", "source": "usage", "required": true},
+        {"name": "account_aggregated_eligible_egress_gb", "unit": "GB", "source": "account", "required": false},
+        {"name": "account_remaining_free_egress_gb", "unit": "GB", "source": "account", "required": false},
+        {"name": "source_region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "destination", "unit": "location", "source": "usage", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "internet_egress_tier_rate", "dimensions": ["source_region", "destination", "begin_range", "end_range", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "tiered_egress", "formula": "sum(tier_overlap(max(0, account_aggregated_eligible_egress_gb - account_remaining_free_egress_gb)) * internet_egress_tier_rate)", "rateKey": "internet_egress_tier_rate", "unit": "USD"}
+      ],
+      "parameters": {},
+      "freeTierHandling": "account-aggregate-input",
+      "sourceRefs": ["aws-compute-pricing", "aws-price-list-api"],
+      "limitations": [
+        "The free allowance and tier position are shared across eligible AWS services and regions, so a deployment-local estimate cannot claim them without account context.",
+        "Cross-AZ and inter-region paths require separate transfer classifications."
+      ]
+    },
+    {
+      "id": "aws.secret.existing-access",
+      "provider": "aws",
+      "category": "secret-access",
+      "attribution": "external-resource-usage",
+      "providerPrimitiveKinds": ["secret-ref", "secret-access-binding", "state-secret-access-binding"],
+      "terraformTypes": ["aws_iam_role_policy"],
+      "calculationKind": "api-operation-batches",
+      "summary": "Attribute Secrets Manager API access calls made by generated workloads without attributing the externally owned secret's monthly storage charge to the generated stack.",
+      "inputs": [
+        {"name": "api_calls", "unit": "call", "source": "usage", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "secret_api_call_rate", "dimensions": ["region", "operation", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "access_operations", "formula": "api_calls / rate_unit_call_count * secret_api_call_rate", "rateKey": "secret_api_call_rate", "unit": "USD"}
+      ],
+      "parameters": {},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["aws-secrets-pricing", "aws-price-list-api"],
+      "limitations": ["Secret storage, rotation, custom KMS keys, and audit-log storage are externally owned or optional and are not included in this generated-stack estimate."]
+    },
+    {
+      "id": "azure.compute.linux-vm-payg",
+      "provider": "azure",
+      "category": "compute",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["compute-instance", "compute-group", "boot-image"],
+      "terraformTypes": ["azurerm_linux_virtual_machine", "azurerm_linux_virtual_machine_scale_set"],
+      "calculationKind": "instance-runtime",
+      "summary": "Sum pay-as-you-go Linux VM runtime for direct virtual machines and instances created by a scale set.",
+      "inputs": [
+        {"name": "instance_count", "unit": "instance", "source": "derived", "required": true},
+        {"name": "running_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "vm_size", "unit": "sku", "source": "configuration", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "operating_system", "unit": "name", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "vm_runtime_rate", "dimensions": ["region", "vm_size", "operating_system"]}
+      ],
+      "billingTerms": [
+        {"name": "runtime", "formula": "instance_count * running_hours * vm_runtime_rate", "rateKey": "vm_runtime_rate", "unit": "USD"}
+      ],
+      "parameters": {"priceType": "Consumption", "image": "Linux"},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["azure-vm-pricing", "azure-retail-prices-api"],
+      "limitations": [
+        "Managed OS and data disks, public IPs, load balancers, NAT, and bandwidth are separate terms.",
+        "The active meter must be selected using effectiveStartDate and the primary-meter flag rather than trusting the first API match."
+      ]
+    },
+    {
+      "id": "azure.storage.standard-hdd-managed-disk",
+      "provider": "azure",
+      "category": "block-storage",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["disk", "disk-attachment"],
+      "terraformTypes": ["azurerm_managed_disk", "azurerm_virtual_machine_data_disk_attachment"],
+      "calculationKind": "managed-disk-tier-and-transactions",
+      "summary": "Map the requested Standard_LRS disk size to the smallest supported managed-disk tier, prorate its tier price, and add billable transaction batches.",
+      "inputs": [
+        {"name": "disk_count", "unit": "disk", "source": "derived", "required": true},
+        {"name": "requested_capacity_gib", "unit": "GiB", "source": "configuration", "required": true},
+        {"name": "provisioned_seconds", "unit": "second", "source": "usage", "required": true},
+        {"name": "billable_transaction_batches_after_hourly_cap", "unit": "batch", "source": "usage", "required": true},
+        {"name": "disk_sku", "unit": "name", "source": "derived", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "disk_tier_month_rate", "dimensions": ["region", "disk_sku"]},
+        {"key": "transaction_batch_rate", "dimensions": ["region", "disk_sku"]}
+      ],
+      "billingTerms": [
+        {"name": "capacity_tier", "formula": "disk_count * provisioned_month_fraction * disk_tier_month_rate", "rateKey": "disk_tier_month_rate", "unit": "USD"},
+        {"name": "transactions", "formula": "billable_transaction_batches_after_hourly_cap * transaction_batch_rate", "rateKey": "transaction_batch_rate", "unit": "USD"}
+      ],
+      "parameters": {"storageAccountType": "Standard_LRS", "transactionBatchSize": 10000},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["azure-disk-pricing", "azure-retail-prices-api"],
+      "limitations": [
+        "The current renderer uses Standard_LRS. Premium SSD, Premium SSD v2, Ultra Disk, and on-demand bursting need different calculation kinds.",
+        "OS disk size can be inherited from the image and remains unknown until its effective tier is resolved."
+      ]
+    },
+    {
+      "id": "azure.network.standard-load-balancer",
+      "provider": "azure",
+      "category": "load-balancer",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["load-balancer", "frontend-ip-config", "backend-group", "health-check", "routing-rule", "backend-membership"],
+      "terraformTypes": ["azurerm_lb", "azurerm_lb_backend_address_pool", "azurerm_lb_probe", "azurerm_lb_rule", "azurerm_network_interface_backend_address_pool_association"],
+      "calculationKind": "load-balancer-rules-and-data",
+      "summary": "Charge the Standard Load Balancer rule bundle by hour, additional rules above five, and total inbound plus outbound data processed.",
+      "inputs": [
+        {"name": "load_balancer_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "billable_rule_count", "unit": "rule", "source": "derived", "required": true},
+        {"name": "processed_gb", "unit": "GB", "source": "usage", "required": true},
+        {"name": "tier", "unit": "name", "source": "configuration", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "first_five_rules_hour_rate", "dimensions": ["region", "tier"]},
+        {"key": "additional_rule_hour_rate", "dimensions": ["region", "tier"]},
+        {"key": "processed_gb_rate", "dimensions": ["region", "tier"]}
+      ],
+      "billingTerms": [
+        {"name": "first_five_rules", "formula": "if(billable_rule_count > 0, load_balancer_hours * first_five_rules_hour_rate, 0)", "rateKey": "first_five_rules_hour_rate", "unit": "USD"},
+        {"name": "additional_rules", "formula": "max(0, billable_rule_count - 5) * load_balancer_hours * additional_rule_hour_rate", "rateKey": "additional_rule_hour_rate", "unit": "USD"},
+        {"name": "data_processing", "formula": "processed_gb * processed_gb_rate", "rateKey": "processed_gb_rate", "unit": "USD"}
+      ],
+      "parameters": {"includedRules": 5, "inboundNatRulesBillable": false, "partialHourRounding": "up"},
+      "freeTierHandling": "none",
+      "sourceRefs": ["azure-load-balancer-pricing", "azure-retail-prices-api"],
+      "limitations": ["The frontend public IP and outbound bandwidth are separate charges."]
+    },
+    {
+      "id": "azure.network.nat-gateway",
+      "provider": "azure",
+      "category": "nat",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["nat-gateway", "nat-association", "nat-public-ip-association"],
+      "terraformTypes": ["azurerm_nat_gateway", "azurerm_subnet_nat_gateway_association", "azurerm_nat_gateway_public_ip_association"],
+      "calculationKind": "gateway-hours-and-processed-data",
+      "summary": "Charge NAT Gateway hours from creation until deletion plus outbound and return data processed.",
+      "inputs": [
+        {"name": "gateway_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "processed_gb", "unit": "GB", "source": "usage", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "sku", "unit": "name", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "gateway_hour_rate", "dimensions": ["region", "sku"]},
+        {"key": "processed_gb_rate", "dimensions": ["region", "sku"]}
+      ],
+      "billingTerms": [
+        {"name": "gateway_runtime", "formula": "ceil_each_partial_gateway_hour(gateway_hours) * gateway_hour_rate", "rateKey": "gateway_hour_rate", "unit": "USD"},
+        {"name": "data_processing", "formula": "processed_gb * processed_gb_rate", "rateKey": "processed_gb_rate", "unit": "USD"}
+      ],
+      "parameters": {"partialHourRounding": "up", "standardAndStandardV2SameListPrice": true},
+      "freeTierHandling": "none",
+      "sourceRefs": ["azure-nat-pricing", "azure-retail-prices-api"],
+      "limitations": ["The attached Standard public IP and internet egress are priced separately."]
+    },
+    {
+      "id": "azure.network.public-ipv4",
+      "provider": "azure",
+      "category": "public-ip",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["public-ip", "nat-public-ip"],
+      "terraformTypes": ["azurerm_public_ip"],
+      "calculationKind": "address-hours",
+      "summary": "Charge each Standard static public IPv4 address for allocated time.",
+      "inputs": [
+        {"name": "address_count", "unit": "address", "source": "derived", "required": true},
+        {"name": "allocated_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "sku", "unit": "name", "source": "configuration", "required": true},
+        {"name": "allocation_method", "unit": "name", "source": "configuration", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "public_ipv4_hour_rate", "dimensions": ["region", "sku", "allocation_method"]}
+      ],
+      "billingTerms": [
+        {"name": "address_runtime", "formula": "address_count * rounded_allocated_hours * public_ipv4_hour_rate", "rateKey": "public_ipv4_hour_rate", "unit": "USD"}
+      ],
+      "parameters": {"sku": "Standard", "allocationMethod": "Static", "partialHourRounding": "up"},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["azure-ip-pricing", "azure-retail-prices-api"],
+      "limitations": ["Basic and dynamic-address lifecycle rules differ; the current renderer emits Standard static addresses."]
+    },
+    {
+      "id": "azure.registry.acr-basic",
+      "provider": "azure",
+      "category": "container-registry",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["app-registry"],
+      "terraformTypes": ["azurerm_container_registry"],
+      "calculationKind": "registry-tier-days-and-excess-storage",
+      "summary": "Charge the ACR tier by day and add storage above the tier's included capacity; ordinary network egress is separate.",
+      "inputs": [
+        {"name": "registry_days", "unit": "day", "source": "usage", "required": true},
+        {"name": "stored_gib", "unit": "GiB", "source": "usage", "required": true},
+        {"name": "sku", "unit": "name", "source": "configuration", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "registry_day_rate", "dimensions": ["region", "sku"]},
+        {"key": "excess_storage_gib_day_rate", "dimensions": ["region", "sku"]}
+      ],
+      "billingTerms": [
+        {"name": "tier_runtime", "formula": "registry_days * registry_day_rate", "rateKey": "registry_day_rate", "unit": "USD"},
+        {"name": "excess_storage", "formula": "registry_days * max(0, stored_gib - included_storage_gib[sku]) * excess_storage_gib_day_rate", "rateKey": "excess_storage_gib_day_rate", "unit": "USD"}
+      ],
+      "parameters": {"includedStorageGiB": {"Basic": 10, "Standard": 100, "Premium": 500}, "rendererSku": "Basic"},
+      "freeTierHandling": "none",
+      "sourceRefs": ["azure-acr-pricing", "azure-retail-prices-api"],
+      "limitations": [
+        "The current renderer uses Basic. Geo-replication, connected registries, build tasks, and vulnerability services are not enabled by the templates.",
+        "Image size is unknown before implementation and must remain an explicit scenario input."
+      ]
+    },
+    {
+      "id": "azure.network.internet-egress",
+      "provider": "azure",
+      "category": "network-egress",
+      "attribution": "generated-usage",
+      "providerPrimitiveKinds": [],
+      "terraformTypes": [],
+      "calculationKind": "tiered-transfer-by-source-continent",
+      "summary": "Apply the selected Azure routing preference and source-continent internet egress tiers after any known account allowance.",
+      "inputs": [
+        {"name": "internet_egress_gb", "unit": "GB", "source": "usage", "required": true},
+        {"name": "account_remaining_free_egress_gb", "unit": "GB", "source": "account", "required": false},
+        {"name": "source_continent", "unit": "name", "source": "derived", "required": true},
+        {"name": "routing_preference", "unit": "name", "source": "configuration", "required": true},
+        {"name": "destination", "unit": "location", "source": "usage", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "internet_egress_tier_rate", "dimensions": ["source_continent", "routing_preference", "destination", "tierMinimumUnits", "unitOfMeasure"]}
+      ],
+      "billingTerms": [
+        {"name": "tiered_egress", "formula": "sum(tier_overlap(max(0, internet_egress_gb - account_remaining_free_egress_gb)) * internet_egress_tier_rate)", "rateKey": "internet_egress_tier_rate", "unit": "USD"}
+      ],
+      "parameters": {},
+      "freeTierHandling": "account-aggregate-input",
+      "sourceRefs": ["azure-bandwidth-pricing", "azure-retail-prices-api"],
+      "limitations": ["Inter-zone and inter-region transfers are separate path classes and must not be merged into internet egress."]
+    },
+    {
+      "id": "azure.secret.existing-key-vault-access",
+      "provider": "azure",
+      "category": "secret-access",
+      "attribution": "external-resource-usage",
+      "providerPrimitiveKinds": ["secret-ref", "secret-access-binding", "state-secret-access-binding"],
+      "terraformTypes": ["azurerm_role_assignment"],
+      "calculationKind": "api-operation-batches",
+      "summary": "Attribute secret operations made by generated workloads without attributing the externally owned vault or keys to the generated stack.",
+      "inputs": [
+        {"name": "secret_operations", "unit": "operation", "source": "usage", "required": true},
+        {"name": "vault_tier", "unit": "name", "source": "configuration", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "secret_operation_rate", "dimensions": ["armRegionName", "skuName", "meterName", "unitOfMeasure"]}
+      ],
+      "billingTerms": [
+        {"name": "access_operations", "formula": "secret_operations / rate_unit_operation_count * secret_operation_rate", "rateKey": "secret_operation_rate", "unit": "USD"}
+      ],
+      "parameters": {},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["azure-key-vault-pricing", "azure-retail-prices-api"],
+      "limitations": ["Vault creation, certificates, HSM-protected keys, rotation, and logging are external or optional and excluded from the generated-stack estimate."]
+    },
+    {
+      "id": "gcp.compute.vm-on-demand",
+      "provider": "gcp",
+      "category": "compute",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["compute-instance", "compute-group", "compute-template", "boot-image"],
+      "terraformTypes": ["google_compute_instance", "google_compute_region_instance_group_manager", "google_compute_instance_template"],
+      "calculationKind": "instance-runtime",
+      "summary": "Sum on-demand Compute Engine runtime for direct VMs and managed-instance-group VMs, using separate vCPU and memory meters for resource-based machine types and a whole-instance meter for shared-core types.",
+      "inputs": [
+        {"name": "instance_count", "unit": "instance", "source": "derived", "required": true},
+        {"name": "running_seconds", "unit": "second", "source": "usage", "required": true},
+        {"name": "machine_type", "unit": "sku", "source": "configuration", "required": true},
+        {"name": "machine_family", "unit": "name", "source": "derived", "required": true},
+        {"name": "pricing_model", "unit": "name", "source": "derived", "required": true, "description": "resource-based or shared-core-instance"},
+        {"name": "vcpu_count", "unit": "vCPU", "source": "derived", "required": true},
+        {"name": "memory_gib", "unit": "GiB", "source": "derived", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "operating_system", "unit": "name", "source": "configuration", "required": true},
+        {"name": "unit", "unit": "name", "source": "derived", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "vcpu_runtime_rate", "dimensions": ["region", "machine_family", "pricing_model", "operating_system", "unit"]},
+        {"key": "memory_gib_runtime_rate", "dimensions": ["region", "machine_family", "pricing_model", "operating_system", "unit"]},
+        {"key": "shared_core_instance_runtime_rate", "dimensions": ["region", "machine_type", "pricing_model", "operating_system", "unit"], "notes": "The SKU description distinguishes the shared-core machine type."}
+      ],
+      "billingTerms": [
+        {"name": "vcpu_runtime", "formula": "instance_count * vcpu_count * billable_runtime_units * vcpu_runtime_rate", "rateKey": "vcpu_runtime_rate", "unit": "USD", "condition": "pricing_model == resource-based"},
+        {"name": "memory_runtime", "formula": "instance_count * memory_gib * billable_runtime_units * memory_gib_runtime_rate", "rateKey": "memory_gib_runtime_rate", "unit": "USD", "condition": "pricing_model == resource-based"},
+        {"name": "shared_core_runtime", "formula": "instance_count * billable_runtime_units * shared_core_instance_runtime_rate", "rateKey": "shared_core_instance_runtime_rate", "unit": "USD", "condition": "pricing_model == shared-core-instance"}
+      ],
+      "parameters": {"minimumSecondsPerLaunch": 60, "billingAfterMinimum": "per-second", "sharedCorePricing": "whole-instance"},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["gcp-vm-pricing", "gcp-resource-based-pricing", "gcp-catalog-api"],
+      "limitations": [
+        "Persistent disks, external IPs, load balancing, Cloud NAT, and network transfer are separate terms.",
+        "Premium operating-system images add a separate rate that must be selected from the image metadata.",
+        "Google documents most machine types as resource-based vCPU plus memory billing; shared-core machine types retain a predefined whole-instance price."
+      ]
+    },
+    {
+      "id": "gcp.storage.persistent-disk",
+      "provider": "gcp",
+      "category": "block-storage",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["disk", "disk-attachment"],
+      "terraformTypes": ["google_compute_disk", "google_compute_attached_disk"],
+      "calculationKind": "provisioned-persistent-disk-storage",
+      "summary": "Charge provisioned Persistent Disk capacity by type and location, prorated to the time provisioned; standard, balanced, and SSD Persistent Disk I/O is included.",
+      "inputs": [
+        {"name": "disk_count", "unit": "disk", "source": "derived", "required": true},
+        {"name": "capacity_gib", "unit": "GiB", "source": "configuration", "required": true},
+        {"name": "provisioned_seconds", "unit": "second", "source": "usage", "required": true},
+        {"name": "disk_type", "unit": "name", "source": "configuration", "required": true},
+        {"name": "disk_scope", "unit": "name", "source": "configuration", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "unit", "unit": "name", "source": "derived", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "disk_gib_time_rate", "dimensions": ["region", "disk_type", "disk_scope", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "capacity", "formula": "disk_count * capacity_gib * provisioned_time_units * disk_gib_time_rate", "rateKey": "disk_gib_time_rate", "unit": "USD"}
+      ],
+      "parameters": {"rendererDataDiskType": "pd-balanced", "ioIncludedTypes": ["pd-standard", "pd-balanced", "pd-ssd"]},
+      "freeTierHandling": "separate-policy",
+      "sourceRefs": ["gcp-disk-pricing", "gcp-catalog-api"],
+      "limitations": [
+        "Hyperdisk provisioned IOPS and throughput require additional terms and are outside the current renderer's pd-balanced scope.",
+        "Boot disk type and size can be inherited from the source image and remain unknown until resolved."
+      ]
+    },
+    {
+      "id": "gcp.network.regional-external-passthrough-nlb",
+      "provider": "gcp",
+      "category": "load-balancer",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["forwarding-rule", "backend-service", "backend-group", "health-check"],
+      "terraformTypes": ["google_compute_forwarding_rule", "google_compute_region_backend_service", "google_compute_instance_group", "google_compute_region_health_check"],
+      "calculationKind": "forwarding-rules-and-data",
+      "summary": "Charge regional forwarding-rule hours and inbound plus outbound data processed by the regional external passthrough Network Load Balancer.",
+      "inputs": [
+        {"name": "forwarding_rule_count", "unit": "rule", "source": "derived", "required": true},
+        {"name": "forwarding_rule_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "inbound_processed_gib", "unit": "GiB", "source": "usage", "required": true},
+        {"name": "outbound_processed_gib", "unit": "GiB", "source": "usage", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "load_balancing_scheme", "unit": "name", "source": "configuration", "required": true},
+        {"name": "unit", "unit": "name", "source": "derived", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "first_five_forwarding_rules_hour_rate", "dimensions": ["region", "load_balancing_scheme", "unit"]},
+        {"key": "additional_forwarding_rule_hour_rate", "dimensions": ["region", "load_balancing_scheme", "unit"]},
+        {"key": "inbound_processed_gib_rate", "dimensions": ["region", "load_balancing_scheme", "unit"]},
+        {"key": "outbound_processed_gib_rate", "dimensions": ["region", "load_balancing_scheme", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "first_five_forwarding_rules", "formula": "if(forwarding_rule_count > 0, forwarding_rule_hours * first_five_forwarding_rules_hour_rate, 0)", "rateKey": "first_five_forwarding_rules_hour_rate", "unit": "USD"},
+        {"name": "additional_forwarding_rules", "formula": "max(0, forwarding_rule_count - 5) * forwarding_rule_hours * additional_forwarding_rule_hour_rate", "rateKey": "additional_forwarding_rule_hour_rate", "unit": "USD"},
+        {"name": "inbound_processing", "formula": "inbound_processed_gib * inbound_processed_gib_rate", "rateKey": "inbound_processed_gib_rate", "unit": "USD"},
+        {"name": "outbound_processing", "formula": "outbound_processed_gib * outbound_processed_gib_rate", "rateKey": "outbound_processed_gib_rate", "unit": "USD"}
+      ],
+      "parameters": {"includedForwardingRules": 5, "loadBalancingScheme": "EXTERNAL", "protocol": "TCP"},
+      "freeTierHandling": "none",
+      "sourceRefs": ["gcp-load-balancer-pricing", "gcp-catalog-api"],
+      "limitations": [
+        "Internet egress and inter-zone VM transfer remain separate path charges.",
+        "An external IP attached to a forwarding rule is zero-rated under the linked VPC address policy and must not also be charged as a VM public IP."
+      ]
+    },
+    {
+      "id": "gcp.network.cloud-nat",
+      "provider": "gcp",
+      "category": "nat",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["cloud-router", "cloud-nat"],
+      "terraformTypes": ["google_compute_router", "google_compute_router_nat"],
+      "calculationKind": "assigned-vm-capped-gateway-and-data",
+      "summary": "Charge Cloud NAT gateway time by assigned VM count up to the provider cap, processed GiB, and automatically allocated external IP address time.",
+      "inputs": [
+        {"name": "assigned_vm_count", "unit": "instance", "source": "derived", "required": true},
+        {"name": "gateway_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "processed_gib", "unit": "GiB", "source": "usage", "required": true},
+        {"name": "external_ip_count", "unit": "address", "source": "derived", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "nat_allocation_mode", "unit": "name", "source": "configuration", "required": true},
+        {"name": "unit", "unit": "name", "source": "derived", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "per_vm_gateway_hour_rate", "dimensions": ["region", "nat_allocation_mode", "unit"]},
+        {"key": "capped_gateway_hour_rate", "dimensions": ["region", "nat_allocation_mode", "unit"]},
+        {"key": "processed_gib_rate", "dimensions": ["region", "nat_allocation_mode", "unit"]},
+        {"key": "nat_external_ip_hour_rate", "dimensions": ["region", "nat_allocation_mode", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "gateway_runtime_below_cap", "formula": "if(assigned_vm_count <= 32, assigned_vm_count * gateway_hours * per_vm_gateway_hour_rate, 0)", "rateKey": "per_vm_gateway_hour_rate", "unit": "USD"},
+        {"name": "gateway_runtime_at_cap", "formula": "if(assigned_vm_count > 32, gateway_hours * capped_gateway_hour_rate, 0)", "rateKey": "capped_gateway_hour_rate", "unit": "USD"},
+        {"name": "data_processing", "formula": "processed_gib * processed_gib_rate", "rateKey": "processed_gib_rate", "unit": "USD"},
+        {"name": "implicit_external_ips", "formula": "external_ip_count * gateway_hours * nat_external_ip_hour_rate", "rateKey": "nat_external_ip_hour_rate", "unit": "USD"}
+      ],
+      "parameters": {"assignedVmCap": 32, "rendererAllocationMode": "AUTO_ONLY"},
+      "freeTierHandling": "none",
+      "sourceRefs": ["gcp-vpc-pricing", "gcp-catalog-api"],
+      "limitations": ["Internet egress is additional. AUTO_ONLY external address count must be derived from the effective Cloud NAT allocation, not assumed to be one in all configurations."]
+    },
+    {
+      "id": "gcp.network.external-ipv4",
+      "provider": "gcp",
+      "category": "public-ip",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["public-ip"],
+      "terraformTypes": ["google_compute_address"],
+      "calculationKind": "address-hours-by-attachment-state",
+      "summary": "Charge external IPv4 address hours according to whether the address is used by a standard VM, a Spot VM, Cloud NAT, a forwarding rule, or is reserved but unused.",
+      "inputs": [
+        {"name": "address_count", "unit": "address", "source": "derived", "required": true},
+        {"name": "allocated_hours", "unit": "hour", "source": "usage", "required": true},
+        {"name": "attachment_class", "unit": "name", "source": "derived", "required": true},
+        {"name": "region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "network_tier", "unit": "name", "source": "configuration", "required": true},
+        {"name": "unit", "unit": "name", "source": "derived", "required": true},
+        {"name": "account_remaining_free_address_hours", "unit": "address-hour", "source": "account", "required": false}
+      ],
+      "rateLookups": [
+        {"key": "external_ipv4_hour_rate", "dimensions": ["region", "attachment_class", "network_tier", "unit"]}
+      ],
+      "billingTerms": [
+        {"name": "address_runtime", "formula": "max(0, address_count * allocated_hours - account_remaining_free_address_hours) * external_ipv4_hour_rate", "rateKey": "external_ipv4_hour_rate", "unit": "USD", "condition": "The forwarding-rule attachment class has a zero rate; other attachment classes use their matching SKU."}
+      ],
+      "parameters": {},
+      "freeTierHandling": "account-aggregate-input",
+      "sourceRefs": ["gcp-vpc-pricing", "gcp-catalog-api"],
+      "limitations": ["Cloud NAT AUTO_ONLY addresses are owned by the Cloud NAT rule because no explicit google_compute_address exists in the rendered plan."]
+    },
+    {
+      "id": "gcp.registry.artifact-registry",
+      "provider": "gcp",
+      "category": "container-registry",
+      "attribution": "generated-resource",
+      "providerPrimitiveKinds": ["app-registry"],
+      "terraformTypes": ["google_artifact_registry_repository"],
+      "calculationKind": "registry-storage-and-location-transfer",
+      "summary": "Charge Artifact Registry storage after any known account-level allowance and charge transfer according to repository and destination locations.",
+      "inputs": [
+        {"name": "stored_gib_month", "unit": "GiB-month", "source": "usage", "required": true},
+        {"name": "transfer_out_gib", "unit": "GiB", "source": "usage", "required": true},
+        {"name": "repository_location", "unit": "location", "source": "configuration", "required": true},
+        {"name": "destination_location", "unit": "location", "source": "usage", "required": true},
+        {"name": "account_remaining_free_storage_gib", "unit": "GiB-month", "source": "account", "required": false}
+      ],
+      "rateLookups": [
+        {"key": "artifact_storage_rate", "dimensions": ["serviceRegions", "resourceGroup", "usageUnit", "tieredRates"]},
+        {"key": "artifact_transfer_rate", "dimensions": ["repository_location", "destination_location", "usageUnit", "tieredRates"]}
+      ],
+      "billingTerms": [
+        {"name": "storage", "formula": "max(0, stored_gib_month - account_remaining_free_storage_gib) * artifact_storage_rate", "rateKey": "artifact_storage_rate", "unit": "USD"},
+        {"name": "transfer", "formula": "transfer_out_gib * artifact_transfer_rate", "rateKey": "artifact_transfer_rate", "unit": "USD"}
+      ],
+      "parameters": {"documentedAccountFreeStorageGiBMonth": 0.5},
+      "freeTierHandling": "account-aggregate-input",
+      "sourceRefs": ["gcp-artifact-registry-pricing", "gcp-catalog-api"],
+      "limitations": [
+        "Vulnerability scanning is optional and is not enabled by the current templates.",
+        "Image size is unknown before implementation and must remain an explicit scenario input."
+      ]
+    },
+    {
+      "id": "gcp.network.internet-egress",
+      "provider": "gcp",
+      "category": "network-egress",
+      "attribution": "generated-usage",
+      "providerPrimitiveKinds": [],
+      "terraformTypes": [],
+      "calculationKind": "tiered-transfer-by-source-destination-and-network-tier",
+      "summary": "Apply Google Cloud internet data-transfer tiers using the source region, destination, and Premium or Standard network tier.",
+      "inputs": [
+        {"name": "internet_egress_gib", "unit": "GiB", "source": "usage", "required": true},
+        {"name": "account_remaining_free_egress_gib", "unit": "GiB", "source": "account", "required": false},
+        {"name": "source_region", "unit": "region", "source": "configuration", "required": true},
+        {"name": "destination", "unit": "location", "source": "usage", "required": true},
+        {"name": "network_tier", "unit": "name", "source": "configuration", "required": true}
+      ],
+      "rateLookups": [
+        {"key": "internet_egress_tier_rate", "dimensions": ["source_region", "destination", "network_tier", "usageUnit", "tieredRates"]}
+      ],
+      "billingTerms": [
+        {"name": "tiered_egress", "formula": "sum(tier_overlap(max(0, internet_egress_gib - account_remaining_free_egress_gib)) * internet_egress_tier_rate)", "rateKey": "internet_egress_tier_rate", "unit": "USD"}
+      ],
+      "parameters": {},
+      "freeTierHandling": "account-aggregate-input",
+      "sourceRefs": ["gcp-vpc-pricing", "gcp-catalog-api"],
+      "limitations": ["Same-zone, inter-zone, inter-region, and internet destinations are distinct path classes and must not be collapsed into one rate."]
+    },
+    {
+      "id": "gcp.secret.existing-access",
+      "provider": "gcp",
+      "category": "secret-access",
+      "attribution": "external-resource-usage",
+      "providerPrimitiveKinds": ["secret-ref", "secret-access-binding", "state-secret-access-binding"],
+      "terraformTypes": ["google_secret_manager_secret_iam_member"],
+      "calculationKind": "api-operation-batches",
+      "summary": "Attribute access-secret-version operations made by generated workloads without attributing externally owned active secret versions to the generated stack.",
+      "inputs": [
+        {"name": "access_operations", "unit": "operation", "source": "usage", "required": true},
+        {"name": "account_remaining_free_access_operations", "unit": "operation", "source": "account", "required": false}
+      ],
+      "rateLookups": [
+        {"key": "access_operation_rate", "dimensions": ["resourceGroup", "usageUnit", "tieredRates"]}
+      ],
+      "billingTerms": [
+        {"name": "access_operations", "formula": "max(0, access_operations - account_remaining_free_access_operations) / rate_unit_operation_count * access_operation_rate", "rateKey": "access_operation_rate", "unit": "USD"}
+      ],
+      "parameters": {"documentedAccountFreeAccessOperations": 10000},
+      "freeTierHandling": "account-aggregate-input",
+      "sourceRefs": ["gcp-secret-manager-pricing", "gcp-catalog-api"],
+      "limitations": ["Active secret versions, rotation notifications, and optional logging are externally owned or outside the current generated-stack scope."]
+    }
+  ]
+}

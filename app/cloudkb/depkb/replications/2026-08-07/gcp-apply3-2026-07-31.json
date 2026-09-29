@@ -1,0 +1,81 @@
+{
+ "_note": "gcp 3라운드 — INTERNAL 포워딩 규칙의 subnetwork 필수성 측정.",
+ "ranAt": "2026-08-06T19:34:02+00:00",
+ "project": "cloud-resource-testing",
+ "region": "asia-northeast3",
+ "steps": {
+  "G.create-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "G.create-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "G.create-healthcheck": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "G.create-backendservice": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "I1.internal-fr-omit-subnet": {
+   "ok": false,
+   "errorCodes": [
+    "invalid"
+   ],
+   "httpStatus": 400,
+   "excerpt": "{\"error\": {\"code\": 400, \"message\": \"Invalid value for field 'resource.subnetwork': ''. Network interface must specify a subnet if the network resource is in custom subnet mode.\", \"errors\": [{\"message\": \"Invalid value for field 'resource.subnetwork': ''. Network interface must specify a subnet if the network resource is in custom subnet mode.\", \"domain\": \"global\", \"reason\": \"invalid\"}]}}"
+  },
+  "I2.internal-fr-full": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-fr": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-backendservice": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-healthcheck": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ }
+}

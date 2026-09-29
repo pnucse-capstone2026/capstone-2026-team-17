@@ -1,0 +1,104 @@
+{
+ "_note": "azure apply 측정 기록(P5b). A국면은 실패가 성공이다(자원 무생성). C국면은 생명주기 질문의 직접 측정. residual이 빈 목록이어야 실험이 깨끗이 끝난 것이다.",
+ "ranAt": "2026-08-06T18:27:23+00:00",
+ "resourceGroup": "depkb-rm-08061815-1",
+ "steps": {
+  "A.apply.omit-vm-nic": {
+   "ok": false,
+   "errorCodes": [
+    "DeploymentFailed",
+    "InvalidParameter"
+   ],
+   "excerpt": "ERROR: {\"status\":\"Failed\",\"error\":{\"code\":\"DeploymentFailed\",\"target\":\"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Resources/deployments/depkb-omit-vm-nic\",\"message\":\"At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/arm-deployment-operations for usage details.\",\"details\":[{\"code\":\"InvalidParameter\",\"target\":\"networkProfile\",\"message\":\"Required parameter 'networkProfile' is missing (null).\"}]}}"
+  },
+  "A.apply.dangling-nic-subnet": {
+   "ok": false,
+   "errorCodes": [
+    "DeploymentFailed",
+    "InvalidResourceReference"
+   ],
+   "excerpt": "ERROR: {\"status\":\"Failed\",\"error\":{\"code\":\"DeploymentFailed\",\"target\":\"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Resources/deployments/depkb-dangling-nic-subnet\",\"message\":\"At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/arm-deployment-operations for usage details.\",\"details\":[{\"code\":\"InvalidResourceReference\",\"message\":\"Resource /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Network/virtualNetw"
+  },
+  "A.apply.dangling-subnet-parent": {
+   "ok": false,
+   "errorCodes": [
+    "DeploymentFailed",
+    "ResourceNotFound"
+   ],
+   "excerpt": "ERROR: {\"status\":\"Failed\",\"error\":{\"code\":\"DeploymentFailed\",\"target\":\"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Resources/deployments/depkb-dangling-subnet-parent\",\"message\":\"At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/arm-deployment-operations for usage details.\",\"details\":[{\"code\":\"ResourceNotFound\",\"message\":\"The Resource 'Microsoft.Network/virtualNetworks/depkb-absent-vnet' under resource group 'depkb-rm-08061815-1' was not found. For more detail"
+  },
+  "A.apply.dangling-vm-nic": {
+   "ok": false,
+   "errorCodes": [
+    "DeploymentFailed",
+    "NotFound"
+   ],
+   "excerpt": "ERROR: {\"status\":\"Failed\",\"error\":{\"code\":\"DeploymentFailed\",\"target\":\"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Resources/deployments/depkb-dangling-vm-nic\",\"message\":\"At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/arm-deployment-operations for usage details.\",\"details\":[{\"code\":\"NotFound\",\"message\":\"Resource /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Network/networkInterfaces/depkb-absent-"
+  },
+  "A.apply.dangling-lb-pip": {
+   "ok": false,
+   "errorCodes": [
+    "DeploymentFailed",
+    "InvalidResourceReference",
+    "NotFound"
+   ],
+   "excerpt": "ERROR: {\"status\":\"Failed\",\"error\":{\"code\":\"DeploymentFailed\",\"target\":\"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Resources/deployments/depkb-dangling-lb-pip\",\"message\":\"At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/arm-deployment-operations for usage details.\",\"details\":[{\"code\":\"InvalidResourceReference\",\"message\":\"Resource /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/DEPKB-RM-08061815-1/providers/Microsoft.Network/publicIPAddress"
+  },
+  "B.build-chain": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Resources/deployments/depkb-chain\",\n  \"location\": null,\n  \"name\": \"depkb-chain\",\n  \"properties\": {\n    \"correlationId\": \"90d928f0-5963-425d-9894-d3ccdcd293c8\",\n    \"debugSetting\": null,\n    \"dependencies\": [\n      {\n        \"dependsOn\": [\n          {\n            \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Network/virtualNetworks/depkb-l-vnet\",\n            \"resourceGroup\": \"depkb-rm-08061815-1\",\n            \"r"
+  },
+  "C.delete-subnet-in-use": {
+   "ok": false,
+   "errorCodes": [
+    "InUseSubnetCannotBeDeleted"
+   ],
+   "excerpt": "ERROR: (InUseSubnetCannotBeDeleted) Subnet s1 is in use by /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/DEPKB-RM-08061815-1/providers/Microsoft.Network/networkInterfaces/DEPKB-L-NIC1/ipConfigurations/IPC and cannot be deleted. In order to delete the subnet, delete all the resources within the subnet. See aka.ms/deletesubnet.\nCode: InUseSubnetCannotBeDeleted\nMessage: Subnet s1 is in use by /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/DEPKB-RM-08061815-1/providers/Microsoft.Network/networkInterfaces/DEPKB-L-NIC1/ipConfigurations/IPC and cannot be delet"
+  },
+  "C.delete-vnet-in-use": {
+   "ok": false,
+   "errorCodes": [
+    "InUseSubnetCannotBeDeleted"
+   ],
+   "excerpt": "ERROR: (InUseSubnetCannotBeDeleted) Subnet s1 is in use by /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/DEPKB-RM-08061815-1/providers/Microsoft.Network/networkInterfaces/DEPKB-L-NIC1/ipConfigurations/IPC and cannot be deleted. In order to delete the subnet, delete all the resources within the subnet. See aka.ms/deletesubnet.\nCode: InUseSubnetCannotBeDeleted\nMessage: Subnet s1 is in use by /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/DEPKB-RM-08061815-1/providers/Microsoft.Network/networkInterfaces/DEPKB-L-NIC1/ipConfigurations/IPC and cannot be delet"
+  },
+  "C.delete-nsg-attached": {
+   "ok": false,
+   "errorCodes": [
+    "InUseNetworkSecurityGroupCannotBeDeleted"
+   ],
+   "excerpt": "ERROR: (InUseNetworkSecurityGroupCannotBeDeleted) Network security group /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-1/providers/Microsoft.Network/networkSecurityGroups/depkb-l-nsg cannot be deleted because it is in use by the following resources: /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/DEPKB-RM-08061815-1/providers/Microsoft.Network/networkInterfaces/DEPKB-L-NIC2. In order to delete the Network security group, remove the association with the resource(s). To learn how to do this, see aka.ms/deletensg.\nCode: InUseNetworkSecurit"
+  },
+  "D.delete-nic1": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-nic2": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-nsg": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-vnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ }
+}

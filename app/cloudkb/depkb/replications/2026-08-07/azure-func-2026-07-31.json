@@ -1,0 +1,99 @@
+{
+ "_note": "기능 의존(azure) — nic→publicIp. 기능 신호 = 로컬 TCP 22. 회복(F3)까지 봐야 인과가 선다.",
+ "startedAt": "2026-08-06T18:34:24+00:00",
+ "ids": {
+  "ip": "20.196.201.20"
+ },
+ "steps": {
+  "R1.create-vnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"newVNet\": {\n    \"addressSpace\": {\n      \"addressPrefixes\": [\n        \"10.100.0.0/16\"\n      ]\n    },\n    \"enableDdosProtection\": false,\n    \"etag\": \"W/\\\"2b65501b-98ab-480e-bcb5-c5da586a98fb\\\"\",\n    \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-4/providers/Microsoft.Network/virtualNetworks/depkb-func-vnet\",\n    \"location\": \"koreacentral\",\n    \"name\": \"depkb-func-vnet\",\n    \"privateEndpointVNetPolicies\": \"Disabled\",\n    \"provisioningState\": \"Succeeded\",\n    \"resourceGroup\": \"depkb-rm-08061815-4\",\n    \"resourceGuid\": \"66e9d2bd-d44e-496a-b2ac-7e33e"
+  },
+  "R2.create-pip": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"publicIp\": {\n    \"ddosSettings\": {\n      \"protectionMode\": \"VirtualNetworkInherited\"\n    },\n    \"etag\": \"W/\\\"08044fea-5f94-4420-bcc2-9e823f3e77d8\\\"\",\n    \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-4/providers/Microsoft.Network/publicIPAddresses/depkb-func-pip\",\n    \"idleTimeoutInMinutes\": 4,\n    \"ipAddress\": \"20.196.201.20\",\n    \"ipTags\": [],\n    \"location\": \"koreacentral\",\n    \"name\": \"depkb-func-pip\",\n    \"provisioningState\": \"Succeeded\",\n    \"publicIPAddressVersion\": \"IPv4\",\n    \"publicIPAllocationMethod\": \"Static\",\n    \"resourceGroup\": "
+  },
+  "R3.create-nic": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"NewNIC\": {\n    \"auxiliaryMode\": \"None\",\n    \"auxiliarySku\": \"None\",\n    \"disableTcpStateTracking\": false,\n    \"dnsSettings\": {\n      \"appliedDnsServers\": [],\n      \"dnsServers\": [],\n      \"internalDomainNameSuffix\": \"xxjoszso0rvetmvmpyz4tydwed.syx.internal.cloudapp.net\"\n    },\n    \"enableAcceleratedNetworking\": false,\n    \"enableIPForwarding\": false,\n    \"etag\": \"W/\\\"ac494551-7072-4b45-b9f8-f4f17fe01ee8\\\"\",\n    \"hostedWorkloads\": [],\n    \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-4/providers/Microsoft.Network/networkInterfaces/depkb-func-ni"
+  },
+  "R4.create-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"fqdns\": \"\",\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-4/providers/Microsoft.Compute/virtualMachines/depkb-func-vm\",\n  \"location\": \"koreacentral\",\n  \"macAddress\": \"7C-ED-8D-F7-97-94\",\n  \"powerState\": \"VM running\",\n  \"privateIpAddress\": \"10.100.0.4\",\n  \"publicIpAddress\": \"20.196.201.20\",\n  \"resourceGroup\": \"depkb-rm-08061815-4\"\n}"
+  },
+  "R5.pip-address": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "20.196.201.20"
+  },
+  "F1.reachable-baseline": {
+   "ok": false,
+   "errorCodes": [
+    "PROBE_TIMEOUT"
+   ],
+   "excerpt": "tcp22가 300초 내 True에 도달 못 함 (시도 20)"
+  },
+  "M1.detach-pip-while-running": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"etag\": \"W/\\\"0ffb8694-2f5f-4ee0-9f69-cbc37c65865b\\\"\",\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-4/providers/Microsoft.Network/networkInterfaces/depkb-func-nic/ipConfigurations/ipconfig1\",\n  \"name\": \"ipconfig1\",\n  \"primary\": true,\n  \"privateIPAddress\": \"10.100.0.4\",\n  \"privateIPAddressVersion\": \"IPv4\",\n  \"privateIPAllocationMethod\": \"Dynamic\",\n  \"provisioningState\": \"Succeeded\",\n  \"resourceGroup\": \"depkb-rm-08061815-4\",\n  \"subnet\": {\n    \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-4/providers"
+  },
+  "M1b.vm-still-running": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "VM running"
+  },
+  "F2.unreachable-after-detach": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "tcp22=False (시도 1)"
+  },
+  "M2.reattach-pip": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"etag\": \"W/\\\"3e5e66ec-ecd6-472b-a0f5-1db1a4696e6e\\\"\",\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-4/providers/Microsoft.Network/networkInterfaces/depkb-func-nic/ipConfigurations/ipconfig1\",\n  \"name\": \"ipconfig1\",\n  \"primary\": true,\n  \"privateIPAddress\": \"10.100.0.4\",\n  \"privateIPAddressVersion\": \"IPv4\",\n  \"privateIPAllocationMethod\": \"Dynamic\",\n  \"provisioningState\": \"Succeeded\",\n  \"publicIPAddress\": {\n    \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-4/providers/Microsoft.Network/publicIPAddres"
+  },
+  "F3.reachable-again": {
+   "ok": false,
+   "errorCodes": [
+    "PROBE_TIMEOUT"
+   ],
+   "excerpt": "tcp22가 300초 내 True에 도달 못 함 (시도 20)"
+  },
+  "T1.delete-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "T2.delete-osdisk": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "T3.delete-nic": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "T4.delete-pip": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "T5.delete-vnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "T6.residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ },
+ "finishedAt": "2026-08-06T18:49:24+00:00"
+}

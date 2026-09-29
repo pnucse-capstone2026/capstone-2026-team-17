@@ -1,0 +1,2691 @@
+{
+ "schemaVersion": "easydep-native-discovery/v1",
+ "provider": "gcp",
+ "source": {
+  "identity": "Google Compute API Discovery Document",
+  "version": "20260722",
+  "sha256": "b71cb75cb68d790065cecb01363b0d714c6388304ae027c45108255b311a3203"
+ },
+ "elements": [
+  {
+   "nativeId": "compute.addresses",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/addresses"
+  },
+  {
+   "nativeId": "compute.autoscalers",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/autoscalers"
+  },
+  {
+   "nativeId": "compute.backendBuckets",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/backendBuckets"
+  },
+  {
+   "nativeId": "compute.backendServices",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/backendServices"
+  },
+  {
+   "nativeId": "compute.crossSiteNetworks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/crossSiteNetworks"
+  },
+  {
+   "nativeId": "compute.disks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/disks"
+  },
+  {
+   "nativeId": "compute.externalVpnGateways",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/externalVpnGateways"
+  },
+  {
+   "nativeId": "compute.firewallPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/firewallPolicies"
+  },
+  {
+   "nativeId": "compute.firewalls",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/firewalls"
+  },
+  {
+   "nativeId": "compute.forwardingRules",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/forwardingRules"
+  },
+  {
+   "nativeId": "compute.futureReservations",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/futureReservations"
+  },
+  {
+   "nativeId": "compute.globalAddresses",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/globalAddresses"
+  },
+  {
+   "nativeId": "compute.globalForwardingRules",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/globalForwardingRules"
+  },
+  {
+   "nativeId": "compute.globalNetworkEndpointGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/globalNetworkEndpointGroups"
+  },
+  {
+   "nativeId": "compute.globalOperations",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete"
+   ],
+   "sourceLocator": "gcp-compute#/resources/globalOperations"
+  },
+  {
+   "nativeId": "compute.globalOrganizationOperations",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete"
+   ],
+   "sourceLocator": "gcp-compute#/resources/globalOrganizationOperations"
+  },
+  {
+   "nativeId": "compute.globalPublicDelegatedPrefixes",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/globalPublicDelegatedPrefixes"
+  },
+  {
+   "nativeId": "compute.globalVmExtensionPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/globalVmExtensionPolicies"
+  },
+  {
+   "nativeId": "compute.healthChecks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/healthChecks"
+  },
+  {
+   "nativeId": "compute.httpHealthChecks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/httpHealthChecks"
+  },
+  {
+   "nativeId": "compute.httpsHealthChecks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/httpsHealthChecks"
+  },
+  {
+   "nativeId": "compute.images",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/images"
+  },
+  {
+   "nativeId": "compute.instanceGroupManagerResizeRequests",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/instanceGroupManagerResizeRequests"
+  },
+  {
+   "nativeId": "compute.instanceGroupManagers",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/instanceGroupManagers"
+  },
+  {
+   "nativeId": "compute.instanceGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/instanceGroups"
+  },
+  {
+   "nativeId": "compute.instanceSettings",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/instanceSettings"
+  },
+  {
+   "nativeId": "compute.instanceTemplates",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/instanceTemplates"
+  },
+  {
+   "nativeId": "compute.instances",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/instances"
+  },
+  {
+   "nativeId": "compute.instantSnapshotGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/instantSnapshotGroups"
+  },
+  {
+   "nativeId": "compute.instantSnapshots",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/instantSnapshots"
+  },
+  {
+   "nativeId": "compute.interconnectAttachmentGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/interconnectAttachmentGroups"
+  },
+  {
+   "nativeId": "compute.interconnectAttachments",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/interconnectAttachments"
+  },
+  {
+   "nativeId": "compute.interconnectGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/interconnectGroups"
+  },
+  {
+   "nativeId": "compute.interconnects",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/interconnects"
+  },
+  {
+   "nativeId": "compute.licenses",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/licenses"
+  },
+  {
+   "nativeId": "compute.machineImages",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/machineImages"
+  },
+  {
+   "nativeId": "compute.networkAttachments",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/networkAttachments"
+  },
+  {
+   "nativeId": "compute.networkEdgeSecurityServices",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/networkEdgeSecurityServices"
+  },
+  {
+   "nativeId": "compute.networkEndpointGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/networkEndpointGroups"
+  },
+  {
+   "nativeId": "compute.networkFirewallPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/networkFirewallPolicies"
+  },
+  {
+   "nativeId": "compute.networks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/networks"
+  },
+  {
+   "nativeId": "compute.nodeGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/nodeGroups"
+  },
+  {
+   "nativeId": "compute.nodeTemplates",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/nodeTemplates"
+  },
+  {
+   "nativeId": "compute.organizationSecurityPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/organizationSecurityPolicies"
+  },
+  {
+   "nativeId": "compute.packetMirrorings",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/packetMirrorings"
+  },
+  {
+   "nativeId": "compute.previewFeatures",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/previewFeatures"
+  },
+  {
+   "nativeId": "compute.publicAdvertisedPrefixes",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/publicAdvertisedPrefixes"
+  },
+  {
+   "nativeId": "compute.publicDelegatedPrefixes",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/publicDelegatedPrefixes"
+  },
+  {
+   "nativeId": "compute.regionAutoscalers",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionAutoscalers"
+  },
+  {
+   "nativeId": "compute.regionBackendBuckets",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionBackendBuckets"
+  },
+  {
+   "nativeId": "compute.regionBackendServices",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionBackendServices"
+  },
+  {
+   "nativeId": "compute.regionCommitments",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionCommitments"
+  },
+  {
+   "nativeId": "compute.regionCompositeHealthChecks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionCompositeHealthChecks"
+  },
+  {
+   "nativeId": "compute.regionDisks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionDisks"
+  },
+  {
+   "nativeId": "compute.regionHealthAggregationPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionHealthAggregationPolicies"
+  },
+  {
+   "nativeId": "compute.regionHealthCheckServices",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionHealthCheckServices"
+  },
+  {
+   "nativeId": "compute.regionHealthChecks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionHealthChecks"
+  },
+  {
+   "nativeId": "compute.regionHealthSources",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionHealthSources"
+  },
+  {
+   "nativeId": "compute.regionInstanceGroupManagerResizeRequests",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionInstanceGroupManagerResizeRequests"
+  },
+  {
+   "nativeId": "compute.regionInstanceGroupManagers",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionInstanceGroupManagers"
+  },
+  {
+   "nativeId": "compute.regionInstanceTemplates",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionInstanceTemplates"
+  },
+  {
+   "nativeId": "compute.regionInstantSnapshotGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionInstantSnapshotGroups"
+  },
+  {
+   "nativeId": "compute.regionInstantSnapshots",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionInstantSnapshots"
+  },
+  {
+   "nativeId": "compute.regionNetworkEndpointGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionNetworkEndpointGroups"
+  },
+  {
+   "nativeId": "compute.regionNetworkFirewallPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionNetworkFirewallPolicies"
+  },
+  {
+   "nativeId": "compute.regionNotificationEndpoints",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionNotificationEndpoints"
+  },
+  {
+   "nativeId": "compute.regionOperations",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionOperations"
+  },
+  {
+   "nativeId": "compute.regionSecurityPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionSecurityPolicies"
+  },
+  {
+   "nativeId": "compute.regionSnapshotSettings",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionSnapshotSettings"
+  },
+  {
+   "nativeId": "compute.regionSnapshots",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionSnapshots"
+  },
+  {
+   "nativeId": "compute.regionSslCertificates",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionSslCertificates"
+  },
+  {
+   "nativeId": "compute.regionSslPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionSslPolicies"
+  },
+  {
+   "nativeId": "compute.regionTargetHttpProxies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionTargetHttpProxies"
+  },
+  {
+   "nativeId": "compute.regionTargetHttpsProxies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionTargetHttpsProxies"
+  },
+  {
+   "nativeId": "compute.regionTargetTcpProxies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionTargetTcpProxies"
+  },
+  {
+   "nativeId": "compute.regionUrlMaps",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/regionUrlMaps"
+  },
+  {
+   "nativeId": "compute.reservationSlots",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/reservationSlots"
+  },
+  {
+   "nativeId": "compute.reservations",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/reservations"
+  },
+  {
+   "nativeId": "compute.resourcePolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/resourcePolicies"
+  },
+  {
+   "nativeId": "compute.rolloutPlans",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/rolloutPlans"
+  },
+  {
+   "nativeId": "compute.rollouts",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete"
+   ],
+   "sourceLocator": "gcp-compute#/resources/rollouts"
+  },
+  {
+   "nativeId": "compute.routers",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/routers"
+  },
+  {
+   "nativeId": "compute.routes",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/routes"
+  },
+  {
+   "nativeId": "compute.securityPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/securityPolicies"
+  },
+  {
+   "nativeId": "compute.serviceAttachments",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/serviceAttachments"
+  },
+  {
+   "nativeId": "compute.snapshotSettings",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/snapshotSettings"
+  },
+  {
+   "nativeId": "compute.snapshots",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/snapshots"
+  },
+  {
+   "nativeId": "compute.sslCertificates",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/sslCertificates"
+  },
+  {
+   "nativeId": "compute.sslPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/sslPolicies"
+  },
+  {
+   "nativeId": "compute.storagePools",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/storagePools"
+  },
+  {
+   "nativeId": "compute.subnetworks",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/subnetworks"
+  },
+  {
+   "nativeId": "compute.targetGrpcProxies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/targetGrpcProxies"
+  },
+  {
+   "nativeId": "compute.targetHttpProxies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/targetHttpProxies"
+  },
+  {
+   "nativeId": "compute.targetHttpsProxies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/targetHttpsProxies"
+  },
+  {
+   "nativeId": "compute.targetInstances",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/targetInstances"
+  },
+  {
+   "nativeId": "compute.targetPools",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/targetPools"
+  },
+  {
+   "nativeId": "compute.targetSslProxies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/targetSslProxies"
+  },
+  {
+   "nativeId": "compute.targetTcpProxies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/targetTcpProxies"
+  },
+  {
+   "nativeId": "compute.targetVpnGateways",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/targetVpnGateways"
+  },
+  {
+   "nativeId": "compute.urlMaps",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/urlMaps"
+  },
+  {
+   "nativeId": "compute.vpnGateways",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/vpnGateways"
+  },
+  {
+   "nativeId": "compute.vpnTunnels",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert"
+   ],
+   "sourceLocator": "gcp-compute#/resources/vpnTunnels"
+  },
+  {
+   "nativeId": "compute.wireGroups",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "patch"
+   ],
+   "sourceLocator": "gcp-compute#/resources/wireGroups"
+  },
+  {
+   "nativeId": "compute.zoneOperations",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete"
+   ],
+   "sourceLocator": "gcp-compute#/resources/zoneOperations"
+  },
+  {
+   "nativeId": "compute.zoneVmExtensionPolicies",
+   "nativeForm": "standaloneResource",
+   "operations": [
+    "delete",
+    "insert",
+    "update"
+   ],
+   "sourceLocator": "gcp-compute#/resources/zoneVmExtensionPolicies"
+  }
+ ],
+ "candidates": [
+  {
+   "subjectNativeId": "compute.addresses",
+   "objectNativeId": null,
+   "referenceToken": "ipCollection",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Address/properties/ipCollection",
+   "unresolvedTarget": "ipCollection"
+  },
+  {
+   "subjectNativeId": "compute.addresses",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Address/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.addresses",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Address/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.autoscalers",
+   "objectNativeId": null,
+   "referenceToken": "target",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Autoscaler/properties/target",
+   "unresolvedTarget": "target"
+  },
+  {
+   "subjectNativeId": "compute.backendServices",
+   "objectNativeId": null,
+   "referenceToken": "backends.group",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Backend/properties/group",
+   "unresolvedTarget": "group"
+  },
+  {
+   "subjectNativeId": "compute.backendServices",
+   "objectNativeId": null,
+   "referenceToken": "backends.orchestrationInfo.resourceUri",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendBackendOrchestrationInfo/properties/resourceUri",
+   "unresolvedTarget": "resourceUri"
+  },
+  {
+   "subjectNativeId": "compute.backendServices",
+   "objectNativeId": null,
+   "referenceToken": "backends.preference",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Backend/properties/preference",
+   "unresolvedTarget": "preference"
+  },
+  {
+   "subjectNativeId": "compute.backendServices",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendService/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.backendServices",
+   "objectNativeId": null,
+   "referenceToken": "orchestrationInfo.resourceUri",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendServiceOrchestrationInfo/properties/resourceUri",
+   "unresolvedTarget": "resourceUri"
+  },
+  {
+   "subjectNativeId": "compute.backendServices",
+   "objectNativeId": null,
+   "referenceToken": "serviceLbPolicy",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendService/properties/serviceLbPolicy",
+   "unresolvedTarget": "serviceLbPolicy"
+  },
+  {
+   "subjectNativeId": "compute.backendServices",
+   "objectNativeId": null,
+   "referenceToken": "tlsSettings.authenticationConfig",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendServiceTlsSettings/properties/authenticationConfig",
+   "unresolvedTarget": "authenticationConfig"
+  },
+  {
+   "subjectNativeId": "compute.disks",
+   "objectNativeId": null,
+   "referenceToken": "asyncPrimaryDisk.disk",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/DiskAsyncReplication/properties/disk",
+   "unresolvedTarget": "disk"
+  },
+  {
+   "subjectNativeId": "compute.disks",
+   "objectNativeId": null,
+   "referenceToken": "sourceDisk",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/sourceDisk",
+   "unresolvedTarget": "sourceDisk"
+  },
+  {
+   "subjectNativeId": "compute.disks",
+   "objectNativeId": null,
+   "referenceToken": "sourceInstantSnapshot",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/sourceInstantSnapshot",
+   "unresolvedTarget": "sourceInstantSnapshot"
+  },
+  {
+   "subjectNativeId": "compute.disks",
+   "objectNativeId": null,
+   "referenceToken": "sourceSnapshot",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/sourceSnapshot",
+   "unresolvedTarget": "sourceSnapshot"
+  },
+  {
+   "subjectNativeId": "compute.disks",
+   "objectNativeId": "compute.storagePools",
+   "referenceToken": "storagePool",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/storagePool"
+  },
+  {
+   "subjectNativeId": "compute.disks",
+   "objectNativeId": null,
+   "referenceToken": "type",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/type",
+   "unresolvedTarget": "type"
+  },
+  {
+   "subjectNativeId": "compute.firewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "packetMirroringRules.securityProfileGroup",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup",
+   "unresolvedTarget": "securityProfileGroup"
+  },
+  {
+   "subjectNativeId": "compute.firewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "packetMirroringRules.targetForwardingRules",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules",
+   "unresolvedTarget": "targetForwardingRules"
+  },
+  {
+   "subjectNativeId": "compute.firewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "rules.securityProfileGroup",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup",
+   "unresolvedTarget": "securityProfileGroup"
+  },
+  {
+   "subjectNativeId": "compute.firewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "rules.targetForwardingRules",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules",
+   "unresolvedTarget": "targetForwardingRules"
+  },
+  {
+   "subjectNativeId": "compute.firewalls",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Firewall/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.forwardingRules",
+   "objectNativeId": null,
+   "referenceToken": "IPAddress",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ForwardingRule/properties/IPAddress",
+   "unresolvedTarget": "IPAddress"
+  },
+  {
+   "subjectNativeId": "compute.forwardingRules",
+   "objectNativeId": null,
+   "referenceToken": "ipCollection",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ForwardingRule/properties/ipCollection",
+   "unresolvedTarget": "ipCollection"
+  },
+  {
+   "subjectNativeId": "compute.forwardingRules",
+   "objectNativeId": null,
+   "referenceToken": "target",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ForwardingRule/properties/target",
+   "unresolvedTarget": "target"
+  },
+  {
+   "subjectNativeId": "compute.futureReservations",
+   "objectNativeId": null,
+   "referenceToken": "aggregateReservation.reservedResources.accelerator.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AllocationAggregateReservationReservedResourceInfoAccelerator/properties/acceleratorType",
+   "unresolvedTarget": "acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.futureReservations",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "specificSkuProperties.instanceProperties.guestAccelerators.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.globalAddresses",
+   "objectNativeId": null,
+   "referenceToken": "ipCollection",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Address/properties/ipCollection",
+   "unresolvedTarget": "ipCollection"
+  },
+  {
+   "subjectNativeId": "compute.globalAddresses",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Address/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.globalAddresses",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Address/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.globalForwardingRules",
+   "objectNativeId": null,
+   "referenceToken": "IPAddress",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ForwardingRule/properties/IPAddress",
+   "unresolvedTarget": "IPAddress"
+  },
+  {
+   "subjectNativeId": "compute.globalForwardingRules",
+   "objectNativeId": null,
+   "referenceToken": "ipCollection",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ForwardingRule/properties/ipCollection",
+   "unresolvedTarget": "ipCollection"
+  },
+  {
+   "subjectNativeId": "compute.globalForwardingRules",
+   "objectNativeId": null,
+   "referenceToken": "target",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ForwardingRule/properties/target",
+   "unresolvedTarget": "target"
+  },
+  {
+   "subjectNativeId": "compute.globalNetworkEndpointGroups",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkEndpointGroup/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.globalNetworkEndpointGroups",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkEndpointGroup/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.globalPublicDelegatedPrefixes",
+   "objectNativeId": null,
+   "referenceToken": "parentPrefix",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PublicDelegatedPrefix/properties/parentPrefix",
+   "unresolvedTarget": "parentPrefix"
+  },
+  {
+   "subjectNativeId": "compute.images",
+   "objectNativeId": null,
+   "referenceToken": "sourceDisk",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Image/properties/sourceDisk",
+   "unresolvedTarget": "sourceDisk"
+  },
+  {
+   "subjectNativeId": "compute.images",
+   "objectNativeId": null,
+   "referenceToken": "sourceSnapshot",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Image/properties/sourceSnapshot",
+   "unresolvedTarget": "sourceSnapshot"
+  },
+  {
+   "subjectNativeId": "compute.instanceGroupManagers",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "distributionPolicy.zones.zone",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/DistributionPolicyZoneConfiguration/properties/zone"
+  },
+  {
+   "subjectNativeId": "compute.instanceGroupManagers",
+   "objectNativeId": null,
+   "referenceToken": "instanceTemplate",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstanceGroupManager/properties/instanceTemplate",
+   "unresolvedTarget": "instanceTemplate"
+  },
+  {
+   "subjectNativeId": "compute.instanceGroupManagers",
+   "objectNativeId": null,
+   "referenceToken": "resourcePolicies.workloadPolicy",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstanceGroupManagerResourcePolicies/properties/workloadPolicy",
+   "unresolvedTarget": "workloadPolicy"
+  },
+  {
+   "subjectNativeId": "compute.instanceGroupManagers",
+   "objectNativeId": null,
+   "referenceToken": "versions.instanceTemplate",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstanceGroupManagerVersion/properties/instanceTemplate",
+   "unresolvedTarget": "instanceTemplate"
+  },
+  {
+   "subjectNativeId": "compute.instanceGroups",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstanceGroup/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.instanceTemplates",
+   "objectNativeId": null,
+   "referenceToken": "properties.disks.initializeParams.diskType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/diskType",
+   "unresolvedTarget": "diskType"
+  },
+  {
+   "subjectNativeId": "compute.instanceTemplates",
+   "objectNativeId": "compute.storagePools",
+   "referenceToken": "properties.disks.initializeParams.storagePool",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/storagePool"
+  },
+  {
+   "subjectNativeId": "compute.instanceTemplates",
+   "objectNativeId": null,
+   "referenceToken": "properties.disks.source",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDisk/properties/source",
+   "unresolvedTarget": "source"
+  },
+  {
+   "subjectNativeId": "compute.instanceTemplates",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "properties.guestAccelerators.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.instanceTemplates",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "properties.networkInterfaces.network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.instanceTemplates",
+   "objectNativeId": "compute.networkAttachments",
+   "referenceToken": "properties.networkInterfaces.networkAttachment",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/networkAttachment"
+  },
+  {
+   "subjectNativeId": "compute.instanceTemplates",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "properties.networkInterfaces.subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.instanceTemplates",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "sourceInstance",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstanceTemplate/properties/sourceInstance"
+  },
+  {
+   "subjectNativeId": "compute.instances",
+   "objectNativeId": null,
+   "referenceToken": "disks.initializeParams.diskType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/diskType",
+   "unresolvedTarget": "diskType"
+  },
+  {
+   "subjectNativeId": "compute.instances",
+   "objectNativeId": "compute.storagePools",
+   "referenceToken": "disks.initializeParams.storagePool",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/storagePool"
+  },
+  {
+   "subjectNativeId": "compute.instances",
+   "objectNativeId": null,
+   "referenceToken": "disks.source",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDisk/properties/source",
+   "unresolvedTarget": "source"
+  },
+  {
+   "subjectNativeId": "compute.instances",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "networkInterfaces.network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.instances",
+   "objectNativeId": "compute.networkAttachments",
+   "referenceToken": "networkInterfaces.networkAttachment",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/networkAttachment"
+  },
+  {
+   "subjectNativeId": "compute.instances",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "networkInterfaces.subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.instantSnapshots",
+   "objectNativeId": null,
+   "referenceToken": "sourceDisk",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstantSnapshot/properties/sourceDisk",
+   "unresolvedTarget": "sourceDisk"
+  },
+  {
+   "subjectNativeId": "compute.interconnectAttachmentGroups",
+   "objectNativeId": "compute.interconnectGroups",
+   "referenceToken": "interconnectGroup",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InterconnectAttachmentGroup/properties/interconnectGroup"
+  },
+  {
+   "subjectNativeId": "compute.interconnectAttachments",
+   "objectNativeId": "compute.interconnects",
+   "referenceToken": "interconnect",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InterconnectAttachment/properties/interconnect"
+  },
+  {
+   "subjectNativeId": "compute.interconnectAttachments",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "l2Forwarding.network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InterconnectAttachmentL2Forwarding/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.interconnectAttachments",
+   "objectNativeId": null,
+   "referenceToken": "partnerMetadata.portalUrl",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InterconnectAttachmentPartnerMetadata/properties/portalUrl",
+   "unresolvedTarget": "portalUrl"
+  },
+  {
+   "subjectNativeId": "compute.interconnectAttachments",
+   "objectNativeId": "compute.routers",
+   "referenceToken": "router",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InterconnectAttachment/properties/router"
+  },
+  {
+   "subjectNativeId": "compute.interconnects",
+   "objectNativeId": null,
+   "referenceToken": "location",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Interconnect/properties/location",
+   "unresolvedTarget": "location"
+  },
+  {
+   "subjectNativeId": "compute.machineImages",
+   "objectNativeId": null,
+   "referenceToken": "instanceProperties.disks.initializeParams.diskType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/diskType",
+   "unresolvedTarget": "diskType"
+  },
+  {
+   "subjectNativeId": "compute.machineImages",
+   "objectNativeId": "compute.storagePools",
+   "referenceToken": "instanceProperties.disks.initializeParams.storagePool",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/storagePool"
+  },
+  {
+   "subjectNativeId": "compute.machineImages",
+   "objectNativeId": null,
+   "referenceToken": "instanceProperties.disks.source",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDisk/properties/source",
+   "unresolvedTarget": "source"
+  },
+  {
+   "subjectNativeId": "compute.machineImages",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "instanceProperties.guestAccelerators.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.machineImages",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "instanceProperties.networkInterfaces.network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.machineImages",
+   "objectNativeId": "compute.networkAttachments",
+   "referenceToken": "instanceProperties.networkInterfaces.networkAttachment",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/networkAttachment"
+  },
+  {
+   "subjectNativeId": "compute.machineImages",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "instanceProperties.networkInterfaces.subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.machineImages",
+   "objectNativeId": null,
+   "referenceToken": "sourceDiskEncryptionKeys.sourceDisk",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/SourceDiskEncryptionKey/properties/sourceDisk",
+   "unresolvedTarget": "sourceDisk"
+  },
+  {
+   "subjectNativeId": "compute.machineImages",
+   "objectNativeId": null,
+   "referenceToken": "sourceInstance",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/MachineImage/properties/sourceInstance",
+   "unresolvedTarget": "sourceInstance"
+  },
+  {
+   "subjectNativeId": "compute.networkAttachments",
+   "objectNativeId": null,
+   "referenceToken": "connectionPreference",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkAttachment/properties/connectionPreference",
+   "unresolvedTarget": "connectionPreference"
+  },
+  {
+   "subjectNativeId": "compute.networkAttachments",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "subnetworks",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkAttachment/properties/subnetworks"
+  },
+  {
+   "subjectNativeId": "compute.networkEndpointGroups",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkEndpointGroup/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.networkEndpointGroups",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkEndpointGroup/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.networkFirewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "packetMirroringRules.securityProfileGroup",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup",
+   "unresolvedTarget": "securityProfileGroup"
+  },
+  {
+   "subjectNativeId": "compute.networkFirewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "packetMirroringRules.targetForwardingRules",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules",
+   "unresolvedTarget": "targetForwardingRules"
+  },
+  {
+   "subjectNativeId": "compute.networkFirewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "rules.securityProfileGroup",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup",
+   "unresolvedTarget": "securityProfileGroup"
+  },
+  {
+   "subjectNativeId": "compute.networkFirewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "rules.targetForwardingRules",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules",
+   "unresolvedTarget": "targetForwardingRules"
+  },
+  {
+   "subjectNativeId": "compute.nodeGroups",
+   "objectNativeId": "compute.nodeTemplates",
+   "referenceToken": "nodeTemplate",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NodeGroup/properties/nodeTemplate"
+  },
+  {
+   "subjectNativeId": "compute.nodeTemplates",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "accelerators.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.packetMirrorings",
+   "objectNativeId": null,
+   "referenceToken": "collectorIlb.url",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PacketMirroringForwardingRuleInfo/properties/url",
+   "unresolvedTarget": "url"
+  },
+  {
+   "subjectNativeId": "compute.packetMirrorings",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "mirroredResources.instances.url",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PacketMirroringMirroredResourceInfoInstanceInfo/properties/url"
+  },
+  {
+   "subjectNativeId": "compute.packetMirrorings",
+   "objectNativeId": null,
+   "referenceToken": "mirroredResources.subnetworks.url",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PacketMirroringMirroredResourceInfoSubnetInfo/properties/url",
+   "unresolvedTarget": "url"
+  },
+  {
+   "subjectNativeId": "compute.packetMirrorings",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network.url",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PacketMirroringNetworkInfo/properties/url"
+  },
+  {
+   "subjectNativeId": "compute.publicDelegatedPrefixes",
+   "objectNativeId": null,
+   "referenceToken": "parentPrefix",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PublicDelegatedPrefix/properties/parentPrefix",
+   "unresolvedTarget": "parentPrefix"
+  },
+  {
+   "subjectNativeId": "compute.regionAutoscalers",
+   "objectNativeId": null,
+   "referenceToken": "target",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Autoscaler/properties/target",
+   "unresolvedTarget": "target"
+  },
+  {
+   "subjectNativeId": "compute.regionBackendServices",
+   "objectNativeId": null,
+   "referenceToken": "backends.group",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Backend/properties/group",
+   "unresolvedTarget": "group"
+  },
+  {
+   "subjectNativeId": "compute.regionBackendServices",
+   "objectNativeId": null,
+   "referenceToken": "backends.orchestrationInfo.resourceUri",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendBackendOrchestrationInfo/properties/resourceUri",
+   "unresolvedTarget": "resourceUri"
+  },
+  {
+   "subjectNativeId": "compute.regionBackendServices",
+   "objectNativeId": null,
+   "referenceToken": "backends.preference",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Backend/properties/preference",
+   "unresolvedTarget": "preference"
+  },
+  {
+   "subjectNativeId": "compute.regionBackendServices",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendService/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.regionBackendServices",
+   "objectNativeId": null,
+   "referenceToken": "orchestrationInfo.resourceUri",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendServiceOrchestrationInfo/properties/resourceUri",
+   "unresolvedTarget": "resourceUri"
+  },
+  {
+   "subjectNativeId": "compute.regionBackendServices",
+   "objectNativeId": null,
+   "referenceToken": "serviceLbPolicy",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendService/properties/serviceLbPolicy",
+   "unresolvedTarget": "serviceLbPolicy"
+  },
+  {
+   "subjectNativeId": "compute.regionBackendServices",
+   "objectNativeId": null,
+   "referenceToken": "tlsSettings.authenticationConfig",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/BackendServiceTlsSettings/properties/authenticationConfig",
+   "unresolvedTarget": "authenticationConfig"
+  },
+  {
+   "subjectNativeId": "compute.regionCommitments",
+   "objectNativeId": null,
+   "referenceToken": "reservations.aggregateReservation.reservedResources.accelerator.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AllocationAggregateReservationReservedResourceInfoAccelerator/properties/acceleratorType",
+   "unresolvedTarget": "acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.regionCommitments",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "reservations.specificReservation.instanceProperties.guestAccelerators.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.regionCommitments",
+   "objectNativeId": null,
+   "referenceToken": "reservations.specificReservation.sourceInstanceTemplate",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AllocationSpecificSKUReservation/properties/sourceInstanceTemplate",
+   "unresolvedTarget": "sourceInstanceTemplate"
+  },
+  {
+   "subjectNativeId": "compute.regionCompositeHealthChecks",
+   "objectNativeId": null,
+   "referenceToken": "healthDestination",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/CompositeHealthCheck/properties/healthDestination",
+   "unresolvedTarget": "healthDestination"
+  },
+  {
+   "subjectNativeId": "compute.regionDisks",
+   "objectNativeId": null,
+   "referenceToken": "asyncPrimaryDisk.disk",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/DiskAsyncReplication/properties/disk",
+   "unresolvedTarget": "disk"
+  },
+  {
+   "subjectNativeId": "compute.regionDisks",
+   "objectNativeId": null,
+   "referenceToken": "sourceDisk",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/sourceDisk",
+   "unresolvedTarget": "sourceDisk"
+  },
+  {
+   "subjectNativeId": "compute.regionDisks",
+   "objectNativeId": null,
+   "referenceToken": "sourceInstantSnapshot",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/sourceInstantSnapshot",
+   "unresolvedTarget": "sourceInstantSnapshot"
+  },
+  {
+   "subjectNativeId": "compute.regionDisks",
+   "objectNativeId": null,
+   "referenceToken": "sourceSnapshot",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/sourceSnapshot",
+   "unresolvedTarget": "sourceSnapshot"
+  },
+  {
+   "subjectNativeId": "compute.regionDisks",
+   "objectNativeId": "compute.storagePools",
+   "referenceToken": "storagePool",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/storagePool"
+  },
+  {
+   "subjectNativeId": "compute.regionDisks",
+   "objectNativeId": null,
+   "referenceToken": "type",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Disk/properties/type",
+   "unresolvedTarget": "type"
+  },
+  {
+   "subjectNativeId": "compute.regionHealthSources",
+   "objectNativeId": "compute.regionHealthAggregationPolicies",
+   "referenceToken": "healthAggregationPolicy",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/HealthSource/properties/healthAggregationPolicy"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceGroupManagers",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "distributionPolicy.zones.zone",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/DistributionPolicyZoneConfiguration/properties/zone"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceGroupManagers",
+   "objectNativeId": null,
+   "referenceToken": "instanceTemplate",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstanceGroupManager/properties/instanceTemplate",
+   "unresolvedTarget": "instanceTemplate"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceGroupManagers",
+   "objectNativeId": null,
+   "referenceToken": "resourcePolicies.workloadPolicy",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstanceGroupManagerResourcePolicies/properties/workloadPolicy",
+   "unresolvedTarget": "workloadPolicy"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceGroupManagers",
+   "objectNativeId": null,
+   "referenceToken": "versions.instanceTemplate",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstanceGroupManagerVersion/properties/instanceTemplate",
+   "unresolvedTarget": "instanceTemplate"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceTemplates",
+   "objectNativeId": null,
+   "referenceToken": "properties.disks.initializeParams.diskType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/diskType",
+   "unresolvedTarget": "diskType"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceTemplates",
+   "objectNativeId": "compute.storagePools",
+   "referenceToken": "properties.disks.initializeParams.storagePool",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/storagePool"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceTemplates",
+   "objectNativeId": null,
+   "referenceToken": "properties.disks.source",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AttachedDisk/properties/source",
+   "unresolvedTarget": "source"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceTemplates",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "properties.guestAccelerators.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceTemplates",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "properties.networkInterfaces.network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceTemplates",
+   "objectNativeId": "compute.networkAttachments",
+   "referenceToken": "properties.networkInterfaces.networkAttachment",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/networkAttachment"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceTemplates",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "properties.networkInterfaces.subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkInterface/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.regionInstanceTemplates",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "sourceInstance",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstanceTemplate/properties/sourceInstance"
+  },
+  {
+   "subjectNativeId": "compute.regionInstantSnapshots",
+   "objectNativeId": null,
+   "referenceToken": "sourceDisk",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/InstantSnapshot/properties/sourceDisk",
+   "unresolvedTarget": "sourceDisk"
+  },
+  {
+   "subjectNativeId": "compute.regionNetworkEndpointGroups",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkEndpointGroup/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.regionNetworkEndpointGroups",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/NetworkEndpointGroup/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.regionNetworkFirewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "packetMirroringRules.securityProfileGroup",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup",
+   "unresolvedTarget": "securityProfileGroup"
+  },
+  {
+   "subjectNativeId": "compute.regionNetworkFirewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "packetMirroringRules.targetForwardingRules",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules",
+   "unresolvedTarget": "targetForwardingRules"
+  },
+  {
+   "subjectNativeId": "compute.regionNetworkFirewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "rules.securityProfileGroup",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup",
+   "unresolvedTarget": "securityProfileGroup"
+  },
+  {
+   "subjectNativeId": "compute.regionNetworkFirewallPolicies",
+   "objectNativeId": null,
+   "referenceToken": "rules.targetForwardingRules",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules",
+   "unresolvedTarget": "targetForwardingRules"
+  },
+  {
+   "subjectNativeId": "compute.regionSnapshots",
+   "objectNativeId": null,
+   "referenceToken": "sourceInstantSnapshot",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Snapshot/properties/sourceInstantSnapshot",
+   "unresolvedTarget": "sourceInstantSnapshot"
+  },
+  {
+   "subjectNativeId": "compute.regionTargetHttpProxies",
+   "objectNativeId": null,
+   "referenceToken": "urlMap",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpProxy/properties/urlMap",
+   "unresolvedTarget": "urlMap"
+  },
+  {
+   "subjectNativeId": "compute.regionTargetHttpsProxies",
+   "objectNativeId": "compute.sslCertificates",
+   "referenceToken": "certificateMap",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpsProxy/properties/certificateMap"
+  },
+  {
+   "subjectNativeId": "compute.regionTargetHttpsProxies",
+   "objectNativeId": "compute.sslCertificates",
+   "referenceToken": "sslCertificates",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpsProxy/properties/sslCertificates"
+  },
+  {
+   "subjectNativeId": "compute.regionTargetHttpsProxies",
+   "objectNativeId": null,
+   "referenceToken": "sslPolicy",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpsProxy/properties/sslPolicy",
+   "unresolvedTarget": "sslPolicy"
+  },
+  {
+   "subjectNativeId": "compute.regionTargetHttpsProxies",
+   "objectNativeId": null,
+   "referenceToken": "urlMap",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpsProxy/properties/urlMap",
+   "unresolvedTarget": "urlMap"
+  },
+  {
+   "subjectNativeId": "compute.regionTargetTcpProxies",
+   "objectNativeId": null,
+   "referenceToken": "service",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetTcpProxy/properties/service",
+   "unresolvedTarget": "service"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "defaultCustomErrorResponsePolicy.errorService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService",
+   "unresolvedTarget": "errorService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "defaultRouteAction.requestMirrorPolicy.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "defaultRouteAction.weightedBackendServices.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/WeightedBackendService/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "defaultService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/UrlMap/properties/defaultService",
+   "unresolvedTarget": "defaultService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.defaultCustomErrorResponsePolicy.errorService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService",
+   "unresolvedTarget": "errorService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.defaultRouteAction.requestMirrorPolicy.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.defaultRouteAction.weightedBackendServices.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/WeightedBackendService/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.defaultService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PathMatcher/properties/defaultService",
+   "unresolvedTarget": "defaultService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.pathRules.customErrorResponsePolicy.errorService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService",
+   "unresolvedTarget": "errorService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.pathRules.routeAction.requestMirrorPolicy.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.pathRules.routeAction.weightedBackendServices.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/WeightedBackendService/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.pathRules.service",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PathRule/properties/service",
+   "unresolvedTarget": "service"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.routeRules.customErrorResponsePolicy.errorService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService",
+   "unresolvedTarget": "errorService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.routeRules.routeAction.requestMirrorPolicy.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.routeRules.routeAction.weightedBackendServices.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/WeightedBackendService/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.routeRules.service",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/HttpRouteRule/properties/service",
+   "unresolvedTarget": "service"
+  },
+  {
+   "subjectNativeId": "compute.regionUrlMaps",
+   "objectNativeId": null,
+   "referenceToken": "tests.expectedOutputUrl",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/UrlMapTest/properties/expectedOutputUrl",
+   "unresolvedTarget": "expectedOutputUrl"
+  },
+  {
+   "subjectNativeId": "compute.reservations",
+   "objectNativeId": null,
+   "referenceToken": "aggregateReservation.reservedResources.accelerator.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AllocationAggregateReservationReservedResourceInfoAccelerator/properties/acceleratorType",
+   "unresolvedTarget": "acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.reservations",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "specificReservation.instanceProperties.guestAccelerators.acceleratorType",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+  },
+  {
+   "subjectNativeId": "compute.reservations",
+   "objectNativeId": null,
+   "referenceToken": "specificReservation.sourceInstanceTemplate",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/AllocationSpecificSKUReservation/properties/sourceInstanceTemplate",
+   "unresolvedTarget": "sourceInstanceTemplate"
+  },
+  {
+   "subjectNativeId": "compute.routers",
+   "objectNativeId": null,
+   "referenceToken": "bgpPeers.routerApplianceInstance",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RouterBgpPeer/properties/routerApplianceInstance",
+   "unresolvedTarget": "routerApplianceInstance"
+  },
+  {
+   "subjectNativeId": "compute.routers",
+   "objectNativeId": null,
+   "referenceToken": "interfaces.linkedInterconnectAttachment",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RouterInterface/properties/linkedInterconnectAttachment",
+   "unresolvedTarget": "linkedInterconnectAttachment"
+  },
+  {
+   "subjectNativeId": "compute.routers",
+   "objectNativeId": null,
+   "referenceToken": "interfaces.linkedVpnTunnel",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RouterInterface/properties/linkedVpnTunnel",
+   "unresolvedTarget": "linkedVpnTunnel"
+  },
+  {
+   "subjectNativeId": "compute.routers",
+   "objectNativeId": "compute.subnetworks",
+   "referenceToken": "interfaces.subnetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RouterInterface/properties/subnetwork"
+  },
+  {
+   "subjectNativeId": "compute.routers",
+   "objectNativeId": null,
+   "referenceToken": "nats.rules.match",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RouterNatRule/properties/match",
+   "unresolvedTarget": "match"
+  },
+  {
+   "subjectNativeId": "compute.routers",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Router/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.routes",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Route/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.routes",
+   "objectNativeId": null,
+   "referenceToken": "nextHopGateway",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Route/properties/nextHopGateway",
+   "unresolvedTarget": "nextHopGateway"
+  },
+  {
+   "subjectNativeId": "compute.routes",
+   "objectNativeId": null,
+   "referenceToken": "nextHopIlb",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Route/properties/nextHopIlb",
+   "unresolvedTarget": "nextHopIlb"
+  },
+  {
+   "subjectNativeId": "compute.routes",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "nextHopInstance",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Route/properties/nextHopInstance"
+  },
+  {
+   "subjectNativeId": "compute.routes",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "nextHopNetwork",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Route/properties/nextHopNetwork"
+  },
+  {
+   "subjectNativeId": "compute.routes",
+   "objectNativeId": "compute.vpnTunnels",
+   "referenceToken": "nextHopVpnTunnel",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Route/properties/nextHopVpnTunnel"
+  },
+  {
+   "subjectNativeId": "compute.serviceAttachments",
+   "objectNativeId": null,
+   "referenceToken": "connectionPreference",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ServiceAttachment/properties/connectionPreference",
+   "unresolvedTarget": "connectionPreference"
+  },
+  {
+   "subjectNativeId": "compute.serviceAttachments",
+   "objectNativeId": null,
+   "referenceToken": "consumerAcceptLists.endpointUrl",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ServiceAttachmentConsumerProjectLimit/properties/endpointUrl",
+   "unresolvedTarget": "endpointUrl"
+  },
+  {
+   "subjectNativeId": "compute.serviceAttachments",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "consumerAcceptLists.networkUrl",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ServiceAttachmentConsumerProjectLimit/properties/networkUrl"
+  },
+  {
+   "subjectNativeId": "compute.serviceAttachments",
+   "objectNativeId": null,
+   "referenceToken": "natSubnets",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ServiceAttachment/properties/natSubnets",
+   "unresolvedTarget": "natSubnets"
+  },
+  {
+   "subjectNativeId": "compute.serviceAttachments",
+   "objectNativeId": null,
+   "referenceToken": "producerForwardingRule",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ServiceAttachment/properties/producerForwardingRule",
+   "unresolvedTarget": "producerForwardingRule"
+  },
+  {
+   "subjectNativeId": "compute.serviceAttachments",
+   "objectNativeId": null,
+   "referenceToken": "targetService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/ServiceAttachment/properties/targetService",
+   "unresolvedTarget": "targetService"
+  },
+  {
+   "subjectNativeId": "compute.snapshots",
+   "objectNativeId": null,
+   "referenceToken": "sourceInstantSnapshot",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Snapshot/properties/sourceInstantSnapshot",
+   "unresolvedTarget": "sourceInstantSnapshot"
+  },
+  {
+   "subjectNativeId": "compute.subnetworks",
+   "objectNativeId": null,
+   "referenceToken": "ipCollection",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Subnetwork/properties/ipCollection",
+   "unresolvedTarget": "ipCollection"
+  },
+  {
+   "subjectNativeId": "compute.subnetworks",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Subnetwork/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.subnetworks",
+   "objectNativeId": null,
+   "referenceToken": "reservedInternalRange",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/Subnetwork/properties/reservedInternalRange",
+   "unresolvedTarget": "reservedInternalRange"
+  },
+  {
+   "subjectNativeId": "compute.subnetworks",
+   "objectNativeId": null,
+   "referenceToken": "secondaryIpRanges.ipCollection",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/SubnetworkSecondaryRange/properties/ipCollection",
+   "unresolvedTarget": "ipCollection"
+  },
+  {
+   "subjectNativeId": "compute.subnetworks",
+   "objectNativeId": null,
+   "referenceToken": "secondaryIpRanges.reservedInternalRange",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/SubnetworkSecondaryRange/properties/reservedInternalRange",
+   "unresolvedTarget": "reservedInternalRange"
+  },
+  {
+   "subjectNativeId": "compute.targetGrpcProxies",
+   "objectNativeId": null,
+   "referenceToken": "urlMap",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetGrpcProxy/properties/urlMap",
+   "unresolvedTarget": "urlMap"
+  },
+  {
+   "subjectNativeId": "compute.targetGrpcProxies",
+   "objectNativeId": null,
+   "referenceToken": "validateForProxyless",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetGrpcProxy/properties/validateForProxyless",
+   "unresolvedTarget": "validateForProxyless"
+  },
+  {
+   "subjectNativeId": "compute.targetHttpProxies",
+   "objectNativeId": null,
+   "referenceToken": "urlMap",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpProxy/properties/urlMap",
+   "unresolvedTarget": "urlMap"
+  },
+  {
+   "subjectNativeId": "compute.targetHttpsProxies",
+   "objectNativeId": "compute.sslCertificates",
+   "referenceToken": "certificateMap",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpsProxy/properties/certificateMap"
+  },
+  {
+   "subjectNativeId": "compute.targetHttpsProxies",
+   "objectNativeId": "compute.sslCertificates",
+   "referenceToken": "sslCertificates",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpsProxy/properties/sslCertificates"
+  },
+  {
+   "subjectNativeId": "compute.targetHttpsProxies",
+   "objectNativeId": null,
+   "referenceToken": "sslPolicy",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpsProxy/properties/sslPolicy",
+   "unresolvedTarget": "sslPolicy"
+  },
+  {
+   "subjectNativeId": "compute.targetHttpsProxies",
+   "objectNativeId": null,
+   "referenceToken": "urlMap",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetHttpsProxy/properties/urlMap",
+   "unresolvedTarget": "urlMap"
+  },
+  {
+   "subjectNativeId": "compute.targetInstances",
+   "objectNativeId": "compute.instances",
+   "referenceToken": "instance",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetInstance/properties/instance"
+  },
+  {
+   "subjectNativeId": "compute.targetInstances",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetInstance/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.targetPools",
+   "objectNativeId": "compute.healthChecks",
+   "referenceToken": "healthChecks",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetPool/properties/healthChecks"
+  },
+  {
+   "subjectNativeId": "compute.targetSslProxies",
+   "objectNativeId": "compute.sslCertificates",
+   "referenceToken": "certificateMap",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetSslProxy/properties/certificateMap"
+  },
+  {
+   "subjectNativeId": "compute.targetSslProxies",
+   "objectNativeId": null,
+   "referenceToken": "service",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetSslProxy/properties/service",
+   "unresolvedTarget": "service"
+  },
+  {
+   "subjectNativeId": "compute.targetSslProxies",
+   "objectNativeId": null,
+   "referenceToken": "sslPolicy",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetSslProxy/properties/sslPolicy",
+   "unresolvedTarget": "sslPolicy"
+  },
+  {
+   "subjectNativeId": "compute.targetTcpProxies",
+   "objectNativeId": null,
+   "referenceToken": "service",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetTcpProxy/properties/service",
+   "unresolvedTarget": "service"
+  },
+  {
+   "subjectNativeId": "compute.targetVpnGateways",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetVpnGateway/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.targetVpnGateways",
+   "objectNativeId": null,
+   "referenceToken": "region",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/TargetVpnGateway/properties/region",
+   "unresolvedTarget": "region"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "defaultCustomErrorResponsePolicy.errorService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService",
+   "unresolvedTarget": "errorService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "defaultRouteAction.requestMirrorPolicy.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "defaultRouteAction.weightedBackendServices.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/WeightedBackendService/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "defaultService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/UrlMap/properties/defaultService",
+   "unresolvedTarget": "defaultService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.defaultCustomErrorResponsePolicy.errorService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService",
+   "unresolvedTarget": "errorService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.defaultRouteAction.requestMirrorPolicy.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.defaultRouteAction.weightedBackendServices.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/WeightedBackendService/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.defaultService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PathMatcher/properties/defaultService",
+   "unresolvedTarget": "defaultService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.pathRules.customErrorResponsePolicy.errorService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService",
+   "unresolvedTarget": "errorService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.pathRules.routeAction.requestMirrorPolicy.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.pathRules.routeAction.weightedBackendServices.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/WeightedBackendService/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.pathRules.service",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/PathRule/properties/service",
+   "unresolvedTarget": "service"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.routeRules.customErrorResponsePolicy.errorService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService",
+   "unresolvedTarget": "errorService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.routeRules.routeAction.requestMirrorPolicy.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.routeRules.routeAction.weightedBackendServices.backendService",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/WeightedBackendService/properties/backendService",
+   "unresolvedTarget": "backendService"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "pathMatchers.routeRules.service",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/HttpRouteRule/properties/service",
+   "unresolvedTarget": "service"
+  },
+  {
+   "subjectNativeId": "compute.urlMaps",
+   "objectNativeId": null,
+   "referenceToken": "tests.expectedOutputUrl",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/UrlMapTest/properties/expectedOutputUrl",
+   "unresolvedTarget": "expectedOutputUrl"
+  },
+  {
+   "subjectNativeId": "compute.vpnGateways",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "network",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/VpnGateway/properties/network"
+  },
+  {
+   "subjectNativeId": "compute.vpnGateways",
+   "objectNativeId": "compute.interconnectAttachments",
+   "referenceToken": "vpnInterfaces.interconnectAttachment",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/VpnGatewayVpnGatewayInterface/properties/interconnectAttachment"
+  },
+  {
+   "subjectNativeId": "compute.vpnTunnels",
+   "objectNativeId": null,
+   "referenceToken": "peerExternalGateway",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/VpnTunnel/properties/peerExternalGateway",
+   "unresolvedTarget": "peerExternalGateway"
+  },
+  {
+   "subjectNativeId": "compute.vpnTunnels",
+   "objectNativeId": "compute.networks",
+   "referenceToken": "peerGcpGateway",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/VpnTunnel/properties/peerGcpGateway"
+  },
+  {
+   "subjectNativeId": "compute.vpnTunnels",
+   "objectNativeId": null,
+   "referenceToken": "region",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/VpnTunnel/properties/region",
+   "unresolvedTarget": "region"
+  },
+  {
+   "subjectNativeId": "compute.vpnTunnels",
+   "objectNativeId": "compute.routers",
+   "referenceToken": "router",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/VpnTunnel/properties/router"
+  },
+  {
+   "subjectNativeId": "compute.vpnTunnels",
+   "objectNativeId": "compute.targetVpnGateways",
+   "referenceToken": "targetVpnGateway",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/VpnTunnel/properties/targetVpnGateway"
+  },
+  {
+   "subjectNativeId": "compute.vpnTunnels",
+   "objectNativeId": "compute.vpnGateways",
+   "referenceToken": "vpnGateway",
+   "form": "schemaProperty",
+   "sourceLocator": "gcp-compute#/schemas/VpnTunnel/properties/vpnGateway"
+  }
+ ]
+}

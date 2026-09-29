@@ -1,0 +1,48 @@
+# 로컬 자격 증명: 배포용 템플릿만 추적한다.
+/.env
+/.env.*
+!/.env.example
+/frontend/.env
+/frontend/.env.*
+!/frontend/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+**/kubeconfig
+**/id_rsa
+**/id_ed25519
+
+# Python·프런트엔드 설치 및 빌드 결과
+__pycache__/
+*.py[cod]
+/.venv*/
+/venv/
+*.egg-info/
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/
+node_modules/
+/frontend/.svelte-kit/
+/frontend/build/
+
+# 실행 상태·다운로드 캐시·임시 결과
+/.easydep/
+/artifacts/
+/output/
+/tmp/
+/.pytest-*/
+/.pytest-tmp-*/
+/app/cloudkb/.cache/
+/app/implementation/tools/openapi-generator/
+/app/implementation/tools/gradle/.gradle/
+/app/implementation/tools/gradle/build/
+/app/deployment/output/
+/app/deployment/.cache/
+*.log
+
+# 편집기·운영체제 파일
+/.vscode/
+/.idea/
+.DS_Store
+Thumbs.db

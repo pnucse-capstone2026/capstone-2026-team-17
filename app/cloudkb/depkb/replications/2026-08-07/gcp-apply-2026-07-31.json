@@ -1,0 +1,157 @@
+{
+ "_note": "gcp apply 측정 기록 — REST 직접 호출(gcloud CLI의 기본값 주입을 배제). preflight 층 부재 자체가 CSP 색인 관측이다.",
+ "ranAt": "2026-08-06T19:25:31+00:00",
+ "project": "cloud-resource-testing",
+ "region": "asia-northeast3",
+ "zone": "asia-northeast3-a",
+ "steps": {
+  "A.subnet-omit-network": {
+   "ok": false,
+   "errorCodes": [
+    "invalid"
+   ],
+   "httpStatus": 400,
+   "excerpt": "{\"error\": {\"code\": 400, \"message\": \"Invalid value for field 'resource.network': ''. A Network must be specified for Subnetwork creation.\", \"errors\": [{\"message\": \"Invalid value for field 'resource.network': ''. A Network must be specified for Subnetwork creation.\", \"domain\": \"global\", \"reason\": \"invalid\"}]}}"
+  },
+  "A.subnet-dangling-network": {
+   "ok": false,
+   "errorCodes": [
+    "notFound"
+   ],
+   "httpStatus": 404,
+   "excerpt": "{\"error\": {\"code\": 404, \"message\": \"The resource 'projects/cloud-resource-testing/global/networks/depkbg-absent' was not found\", \"errors\": [{\"message\": \"The resource 'projects/cloud-resource-testing/global/networks/depkbg-absent' was not found\", \"domain\": \"global\", \"reason\": \"notFound\"}]}}"
+  },
+  "A.firewall-dangling-network": {
+   "ok": false,
+   "errorCodes": [
+    "notFound"
+   ],
+   "httpStatus": 404,
+   "excerpt": "{\"error\": {\"code\": 404, \"message\": \"The resource 'projects/cloud-resource-testing/global/networks/depkbg-absent' was not found\", \"errors\": [{\"message\": \"The resource 'projects/cloud-resource-testing/global/networks/depkbg-absent' was not found\", \"domain\": \"global\", \"reason\": \"notFound\"}]}}"
+  },
+  "A.firewall-omit-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "A.cleanup-x4": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "B.create-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "B.create-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "B.create-firewall": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "A.instance-omit-nic": {
+   "ok": false,
+   "errorCodes": [
+    "invalid"
+   ],
+   "httpStatus": 400,
+   "excerpt": "{\"error\": {\"code\": 400, \"message\": \"Invalid value for field 'resource.networkInterfaces': ''. At least one network interface is required.\", \"errors\": [{\"message\": \"Invalid value for field 'resource.networkInterfaces': ''. At least one network interface is required.\", \"domain\": \"global\", \"reason\": \"invalid\"}]}}"
+  },
+  "A.instance-omit-disks": {
+   "ok": false,
+   "errorCodes": [
+    "invalid"
+   ],
+   "httpStatus": 400,
+   "excerpt": "{\"error\": {\"code\": 400, \"message\": \"Invalid value for field 'resource.disks': ''. No disks are specified.\", \"errors\": [{\"message\": \"Invalid value for field 'resource.disks': ''. No disks are specified.\", \"domain\": \"global\", \"reason\": \"invalid\"}]}}"
+  },
+  "A.instance-dangling-subnet": {
+   "ok": false,
+   "errorCodes": [
+    "invalid"
+   ],
+   "httpStatus": 400,
+   "excerpt": "{\"error\": {\"code\": 400, \"message\": \"Invalid value for field 'resource.networkInterfaces[0].subnetwork': 'https://compute.googleapis.com/compute/v1/projects/cloud-resource-testing/regions/asia-northeast3/subnetworks/depkbg-absent'. The referenced subnetwork resource cannot be found.\", \"errors\": [{\"message\": \"Invalid value for field 'resource.networkInterfaces[0].subnetwork': 'https://compute.googleapis.com/compute/v1/projects/cloud-resource-testing/regions/asia-northeast3/subnetworks/depkbg-absent'. The referenced subnetwork resource cannot be found.\", \"domain\": \"global\", \"reason\": \"invalid\"}]}"
+  },
+  "F0.create-instance": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "C.delete-subnet-in-use": {
+   "ok": false,
+   "errorCodes": [
+    "resourceInUseByAnotherResource"
+   ],
+   "httpStatus": 400,
+   "excerpt": "{\"error\": {\"code\": 400, \"message\": \"The subnetwork resource 'projects/cloud-resource-testing/regions/asia-northeast3/subnetworks/depkbg-subnet' is already being used by 'projects/cloud-resource-testing/zones/asia-northeast3-a/instances/depkbg-vm'\", \"errors\": [{\"message\": \"The subnetwork resource 'projects/cloud-resource-testing/regions/asia-northeast3/subnetworks/depkbg-subnet' is already being used by 'projects/cloud-resource-testing/zones/asia-northeast3-a/instances/depkbg-vm'\", \"domain\": \"global\", \"reason\": \"resourceInUseByAnotherResource\"}]}}"
+  },
+  "C.delete-network-in-use": {
+   "ok": false,
+   "errorCodes": [
+    "RESOURCE_IN_USE_BY_ANOTHER_RESOURCE"
+   ],
+   "excerpt": "{\"errors\": [{\"code\": \"RESOURCE_IN_USE_BY_ANOTHER_RESOURCE\", \"message\": \"The network resource 'projects/cloud-resource-testing/global/networks/depkbg-net' is already being used by 'projects/cloud-resource-testing/global/firewalls/depkbg-fw'\"}]}",
+   "httpStatus": 200
+  },
+  "C.delete-bootdisk-attached": {
+   "ok": false,
+   "errorCodes": [
+    "resourceInUseByAnotherResource"
+   ],
+   "httpStatus": 400,
+   "excerpt": "{\"error\": {\"code\": 400, \"message\": \"The disk resource 'projects/cloud-resource-testing/zones/asia-northeast3-a/disks/depkbg-vm' is already being used by 'projects/cloud-resource-testing/zones/asia-northeast3-a/instances/depkbg-vm'\", \"errors\": [{\"message\": \"The disk resource 'projects/cloud-resource-testing/zones/asia-northeast3-a/disks/depkbg-vm' is already being used by 'projects/cloud-resource-testing/zones/asia-northeast3-a/instances/depkbg-vm'\", \"domain\": \"global\", \"reason\": \"resourceInUseByAnotherResource\"}]}}"
+  },
+  "D.delete-instance": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.disks-after-delete": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[\"depkbg-vm\"]"
+  },
+  "D.delete-disk.depkbg-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-firewall": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "D.delete-network": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ }
+}

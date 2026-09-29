@@ -1,0 +1,3655 @@
+{
+  "schemaVersion": "easydep-native-review/v1",
+  "provider": "gcp",
+  "source": {
+    "identity": "Google Compute API Discovery Document",
+    "version": "20260722",
+    "sha256": "b71cb75cb68d790065cecb01363b0d714c6388304ae027c45108255b311a3203"
+  },
+  "inventoryElementCount": 105,
+  "decisions": [
+    {
+      "nativeId": "compute.addresses",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/addresses"
+      ]
+    },
+    {
+      "nativeId": "compute.autoscalers",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/autoscalers"
+      ]
+    },
+    {
+      "nativeId": "compute.backendBuckets",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/backendBuckets"
+      ]
+    },
+    {
+      "nativeId": "compute.backendServices",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/backendServices"
+      ]
+    },
+    {
+      "nativeId": "compute.crossSiteNetworks",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/crossSiteNetworks"
+      ]
+    },
+    {
+      "nativeId": "compute.disks",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/disks"
+      ]
+    },
+    {
+      "nativeId": "compute.externalVpnGateways",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/externalVpnGateways"
+      ]
+    },
+    {
+      "nativeId": "compute.firewallPolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/firewallPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.firewalls",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/firewalls"
+      ]
+    },
+    {
+      "nativeId": "compute.forwardingRules",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/forwardingRules"
+      ]
+    },
+    {
+      "nativeId": "compute.futureReservations",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/futureReservations"
+      ]
+    },
+    {
+      "nativeId": "compute.globalAddresses",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/globalAddresses"
+      ]
+    },
+    {
+      "nativeId": "compute.globalForwardingRules",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/globalForwardingRules"
+      ]
+    },
+    {
+      "nativeId": "compute.globalNetworkEndpointGroups",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/globalNetworkEndpointGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.globalOperations",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/globalOperations"
+      ]
+    },
+    {
+      "nativeId": "compute.globalOrganizationOperations",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/globalOrganizationOperations"
+      ]
+    },
+    {
+      "nativeId": "compute.globalPublicDelegatedPrefixes",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/globalPublicDelegatedPrefixes"
+      ]
+    },
+    {
+      "nativeId": "compute.globalVmExtensionPolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/globalVmExtensionPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.healthChecks",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/healthChecks"
+      ]
+    },
+    {
+      "nativeId": "compute.httpHealthChecks",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/httpHealthChecks"
+      ]
+    },
+    {
+      "nativeId": "compute.httpsHealthChecks",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/httpsHealthChecks"
+      ]
+    },
+    {
+      "nativeId": "compute.images",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/images"
+      ]
+    },
+    {
+      "nativeId": "compute.instanceGroupManagerResizeRequests",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/instanceGroupManagerResizeRequests"
+      ]
+    },
+    {
+      "nativeId": "compute.instanceGroupManagers",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/instanceGroupManagers"
+      ]
+    },
+    {
+      "nativeId": "compute.instanceGroups",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/instanceGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.instanceSettings",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/instanceSettings"
+      ]
+    },
+    {
+      "nativeId": "compute.instanceTemplates",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/instanceTemplates"
+      ]
+    },
+    {
+      "nativeId": "compute.instances",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/instances"
+      ]
+    },
+    {
+      "nativeId": "compute.instantSnapshotGroups",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/instantSnapshotGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.instantSnapshots",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/instantSnapshots"
+      ]
+    },
+    {
+      "nativeId": "compute.interconnectAttachmentGroups",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/interconnectAttachmentGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.interconnectAttachments",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/interconnectAttachments"
+      ]
+    },
+    {
+      "nativeId": "compute.interconnectGroups",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/interconnectGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.interconnects",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/interconnects"
+      ]
+    },
+    {
+      "nativeId": "compute.licenses",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/licenses"
+      ]
+    },
+    {
+      "nativeId": "compute.machineImages",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/machineImages"
+      ]
+    },
+    {
+      "nativeId": "compute.networkAttachments",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/networkAttachments"
+      ]
+    },
+    {
+      "nativeId": "compute.networkEdgeSecurityServices",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/networkEdgeSecurityServices"
+      ]
+    },
+    {
+      "nativeId": "compute.networkEndpointGroups",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/networkEndpointGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.networkFirewallPolicies",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/networkFirewallPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.networks",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/networks"
+      ]
+    },
+    {
+      "nativeId": "compute.nodeGroups",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/nodeGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.nodeTemplates",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/nodeTemplates"
+      ]
+    },
+    {
+      "nativeId": "compute.organizationSecurityPolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/organizationSecurityPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.packetMirrorings",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/packetMirrorings"
+      ]
+    },
+    {
+      "nativeId": "compute.previewFeatures",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/previewFeatures"
+      ]
+    },
+    {
+      "nativeId": "compute.publicAdvertisedPrefixes",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/publicAdvertisedPrefixes"
+      ]
+    },
+    {
+      "nativeId": "compute.publicDelegatedPrefixes",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/publicDelegatedPrefixes"
+      ]
+    },
+    {
+      "nativeId": "compute.regionAutoscalers",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionAutoscalers"
+      ]
+    },
+    {
+      "nativeId": "compute.regionBackendBuckets",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionBackendBuckets"
+      ]
+    },
+    {
+      "nativeId": "compute.regionBackendServices",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionBackendServices"
+      ]
+    },
+    {
+      "nativeId": "compute.regionCommitments",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionCommitments"
+      ]
+    },
+    {
+      "nativeId": "compute.regionCompositeHealthChecks",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionCompositeHealthChecks"
+      ]
+    },
+    {
+      "nativeId": "compute.regionDisks",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionDisks"
+      ]
+    },
+    {
+      "nativeId": "compute.regionHealthAggregationPolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionHealthAggregationPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.regionHealthCheckServices",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionHealthCheckServices"
+      ]
+    },
+    {
+      "nativeId": "compute.regionHealthChecks",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionHealthChecks"
+      ]
+    },
+    {
+      "nativeId": "compute.regionHealthSources",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionHealthSources"
+      ]
+    },
+    {
+      "nativeId": "compute.regionInstanceGroupManagerResizeRequests",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionInstanceGroupManagerResizeRequests"
+      ]
+    },
+    {
+      "nativeId": "compute.regionInstanceGroupManagers",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionInstanceGroupManagers"
+      ]
+    },
+    {
+      "nativeId": "compute.regionInstanceTemplates",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionInstanceTemplates"
+      ]
+    },
+    {
+      "nativeId": "compute.regionInstantSnapshotGroups",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionInstantSnapshotGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.regionInstantSnapshots",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionInstantSnapshots"
+      ]
+    },
+    {
+      "nativeId": "compute.regionNetworkEndpointGroups",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionNetworkEndpointGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.regionNetworkFirewallPolicies",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionNetworkFirewallPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.regionNotificationEndpoints",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionNotificationEndpoints"
+      ]
+    },
+    {
+      "nativeId": "compute.regionOperations",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionOperations"
+      ]
+    },
+    {
+      "nativeId": "compute.regionSecurityPolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionSecurityPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.regionSnapshotSettings",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionSnapshotSettings"
+      ]
+    },
+    {
+      "nativeId": "compute.regionSnapshots",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionSnapshots"
+      ]
+    },
+    {
+      "nativeId": "compute.regionSslCertificates",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionSslCertificates"
+      ]
+    },
+    {
+      "nativeId": "compute.regionSslPolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionSslPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.regionTargetHttpProxies",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionTargetHttpProxies"
+      ]
+    },
+    {
+      "nativeId": "compute.regionTargetHttpsProxies",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionTargetHttpsProxies"
+      ]
+    },
+    {
+      "nativeId": "compute.regionTargetTcpProxies",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionTargetTcpProxies"
+      ]
+    },
+    {
+      "nativeId": "compute.regionUrlMaps",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/regionUrlMaps"
+      ]
+    },
+    {
+      "nativeId": "compute.reservationSlots",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/reservationSlots"
+      ]
+    },
+    {
+      "nativeId": "compute.reservations",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/reservations"
+      ]
+    },
+    {
+      "nativeId": "compute.resourcePolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/resourcePolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.rolloutPlans",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/rolloutPlans"
+      ]
+    },
+    {
+      "nativeId": "compute.rollouts",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/rollouts"
+      ]
+    },
+    {
+      "nativeId": "compute.routers",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/routers"
+      ]
+    },
+    {
+      "nativeId": "compute.routes",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/routes"
+      ]
+    },
+    {
+      "nativeId": "compute.securityPolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/securityPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.serviceAttachments",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/serviceAttachments"
+      ]
+    },
+    {
+      "nativeId": "compute.snapshotSettings",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/snapshotSettings"
+      ]
+    },
+    {
+      "nativeId": "compute.snapshots",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/snapshots"
+      ]
+    },
+    {
+      "nativeId": "compute.sslCertificates",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/sslCertificates"
+      ]
+    },
+    {
+      "nativeId": "compute.sslPolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/sslPolicies"
+      ]
+    },
+    {
+      "nativeId": "compute.storagePools",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/storagePools"
+      ]
+    },
+    {
+      "nativeId": "compute.subnetworks",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/subnetworks"
+      ]
+    },
+    {
+      "nativeId": "compute.targetGrpcProxies",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/targetGrpcProxies"
+      ]
+    },
+    {
+      "nativeId": "compute.targetHttpProxies",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/targetHttpProxies"
+      ]
+    },
+    {
+      "nativeId": "compute.targetHttpsProxies",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/targetHttpsProxies"
+      ]
+    },
+    {
+      "nativeId": "compute.targetInstances",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/targetInstances"
+      ]
+    },
+    {
+      "nativeId": "compute.targetPools",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/targetPools"
+      ]
+    },
+    {
+      "nativeId": "compute.targetSslProxies",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/targetSslProxies"
+      ]
+    },
+    {
+      "nativeId": "compute.targetTcpProxies",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/targetTcpProxies"
+      ]
+    },
+    {
+      "nativeId": "compute.targetVpnGateways",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/targetVpnGateways"
+      ]
+    },
+    {
+      "nativeId": "compute.urlMaps",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "gcp-compute#/resources/urlMaps"
+      ]
+    },
+    {
+      "nativeId": "compute.vpnGateways",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/vpnGateways"
+      ]
+    },
+    {
+      "nativeId": "compute.vpnTunnels",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/vpnTunnels"
+      ]
+    },
+    {
+      "nativeId": "compute.wireGroups",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/wireGroups"
+      ]
+    },
+    {
+      "nativeId": "compute.zoneOperations",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/zoneOperations"
+      ]
+    },
+    {
+      "nativeId": "compute.zoneVmExtensionPolicies",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "gcp-compute#/resources/zoneVmExtensionPolicies"
+      ]
+    }
+  ],
+  "candidateDecisions": [
+    {
+      "candidateId": "bcc651bcda2a46f178e5",
+      "subjectNativeId": "compute.addresses",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Address/properties/ipCollection"
+      ]
+    },
+    {
+      "candidateId": "41689f3b6e0e1dcf0418",
+      "subjectNativeId": "compute.addresses",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Address/properties/network"
+      ]
+    },
+    {
+      "candidateId": "22e4ee64939d257d6434",
+      "subjectNativeId": "compute.addresses",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Address/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "671e0c2b0f6aeacb5d48",
+      "subjectNativeId": "compute.autoscalers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Autoscaler/properties/target"
+      ]
+    },
+    {
+      "candidateId": "d4ae6d5cca4a5eabdd4d",
+      "subjectNativeId": "compute.backendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Backend/properties/group"
+      ]
+    },
+    {
+      "candidateId": "4cec06cf25d8b5965566",
+      "subjectNativeId": "compute.backendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendBackendOrchestrationInfo/properties/resourceUri"
+      ]
+    },
+    {
+      "candidateId": "a40fc67d333e50894434",
+      "subjectNativeId": "compute.backendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Backend/properties/preference"
+      ]
+    },
+    {
+      "candidateId": "41781b27fcded05e6a29",
+      "subjectNativeId": "compute.backendServices",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendService/properties/network"
+      ]
+    },
+    {
+      "candidateId": "c85cef0fc289f5050e5e",
+      "subjectNativeId": "compute.backendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendServiceOrchestrationInfo/properties/resourceUri"
+      ]
+    },
+    {
+      "candidateId": "e4729ddad7fdbdf9ae3e",
+      "subjectNativeId": "compute.backendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendService/properties/serviceLbPolicy"
+      ]
+    },
+    {
+      "candidateId": "d7305e7cef95d3885d83",
+      "subjectNativeId": "compute.backendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendServiceTlsSettings/properties/authenticationConfig"
+      ]
+    },
+    {
+      "candidateId": "977f496643f6a06610c2",
+      "subjectNativeId": "compute.disks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/DiskAsyncReplication/properties/disk"
+      ]
+    },
+    {
+      "candidateId": "40030e7416cfa8568b8b",
+      "subjectNativeId": "compute.disks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/sourceDisk"
+      ]
+    },
+    {
+      "candidateId": "f6f8a0778469f4c52128",
+      "subjectNativeId": "compute.disks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/sourceInstantSnapshot"
+      ]
+    },
+    {
+      "candidateId": "390371e4f26aadb199b9",
+      "subjectNativeId": "compute.disks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/sourceSnapshot"
+      ]
+    },
+    {
+      "candidateId": "e0a6cedf88a3aef61843",
+      "subjectNativeId": "compute.disks",
+      "observedObjectNativeId": "compute.storagePools",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/storagePool"
+      ]
+    },
+    {
+      "candidateId": "b27425b4217daf652125",
+      "subjectNativeId": "compute.disks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/type"
+      ]
+    },
+    {
+      "candidateId": "3e47b4f10bfd3417f2c1",
+      "subjectNativeId": "compute.firewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup"
+      ]
+    },
+    {
+      "candidateId": "b4111b1b369e440c7d4b",
+      "subjectNativeId": "compute.firewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules"
+      ]
+    },
+    {
+      "candidateId": "005da20c8006cc95fc8c",
+      "subjectNativeId": "compute.firewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup"
+      ]
+    },
+    {
+      "candidateId": "b68be3bd832d8643df64",
+      "subjectNativeId": "compute.firewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules"
+      ]
+    },
+    {
+      "candidateId": "846d56e03bbd6d67a29a",
+      "subjectNativeId": "compute.firewalls",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Firewall/properties/network"
+      ]
+    },
+    {
+      "candidateId": "2a2bcd123f81dc1ceac3",
+      "subjectNativeId": "compute.forwardingRules",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ForwardingRule/properties/IPAddress"
+      ]
+    },
+    {
+      "candidateId": "618152d7e04f542e2d56",
+      "subjectNativeId": "compute.forwardingRules",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ForwardingRule/properties/ipCollection"
+      ]
+    },
+    {
+      "candidateId": "3ab5d6166372ab79646f",
+      "subjectNativeId": "compute.forwardingRules",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ForwardingRule/properties/target"
+      ]
+    },
+    {
+      "candidateId": "03fa90b0e1c196f6459d",
+      "subjectNativeId": "compute.futureReservations",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AllocationAggregateReservationReservedResourceInfoAccelerator/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "0cb0c0947383af0d84c3",
+      "subjectNativeId": "compute.futureReservations",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "be930b4fdd6b4a318405",
+      "subjectNativeId": "compute.globalAddresses",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Address/properties/ipCollection"
+      ]
+    },
+    {
+      "candidateId": "26858651e9252de3581a",
+      "subjectNativeId": "compute.globalAddresses",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Address/properties/network"
+      ]
+    },
+    {
+      "candidateId": "0a811a5eaf4ff9428f92",
+      "subjectNativeId": "compute.globalAddresses",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Address/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "f70f5b1a1f5156153ac8",
+      "subjectNativeId": "compute.globalForwardingRules",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ForwardingRule/properties/IPAddress"
+      ]
+    },
+    {
+      "candidateId": "3e5836641f464955b522",
+      "subjectNativeId": "compute.globalForwardingRules",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ForwardingRule/properties/ipCollection"
+      ]
+    },
+    {
+      "candidateId": "1221fe36617867e75324",
+      "subjectNativeId": "compute.globalForwardingRules",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ForwardingRule/properties/target"
+      ]
+    },
+    {
+      "candidateId": "98e1bef7ed2d4996bdd8",
+      "subjectNativeId": "compute.globalNetworkEndpointGroups",
+      "observedObjectNativeId": "compute.networks",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkEndpointGroup/properties/network"
+      ]
+    },
+    {
+      "candidateId": "b0c0654e792b88320bd0",
+      "subjectNativeId": "compute.globalNetworkEndpointGroups",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkEndpointGroup/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "0db8227b81dc98e836bd",
+      "subjectNativeId": "compute.globalPublicDelegatedPrefixes",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PublicDelegatedPrefix/properties/parentPrefix"
+      ]
+    },
+    {
+      "candidateId": "ea192917950339fcce4e",
+      "subjectNativeId": "compute.images",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Image/properties/sourceDisk"
+      ]
+    },
+    {
+      "candidateId": "fe112396abd724f6c995",
+      "subjectNativeId": "compute.images",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Image/properties/sourceSnapshot"
+      ]
+    },
+    {
+      "candidateId": "7f0c57510b20f8e6243f",
+      "subjectNativeId": "compute.instanceGroupManagers",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/DistributionPolicyZoneConfiguration/properties/zone"
+      ]
+    },
+    {
+      "candidateId": "6fb98c4c2bddef446855",
+      "subjectNativeId": "compute.instanceGroupManagers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstanceGroupManager/properties/instanceTemplate"
+      ]
+    },
+    {
+      "candidateId": "8f93cefad1334d6c1e8e",
+      "subjectNativeId": "compute.instanceGroupManagers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstanceGroupManagerResourcePolicies/properties/workloadPolicy"
+      ]
+    },
+    {
+      "candidateId": "591a6a1eb4a4dbe3335c",
+      "subjectNativeId": "compute.instanceGroupManagers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstanceGroupManagerVersion/properties/instanceTemplate"
+      ]
+    },
+    {
+      "candidateId": "ff708ef0599d0dbbb988",
+      "subjectNativeId": "compute.instanceGroups",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstanceGroup/properties/network"
+      ]
+    },
+    {
+      "candidateId": "6875b6286f828469bdc6",
+      "subjectNativeId": "compute.instanceTemplates",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/diskType"
+      ]
+    },
+    {
+      "candidateId": "fa63653013b87fc8c9b6",
+      "subjectNativeId": "compute.instanceTemplates",
+      "observedObjectNativeId": "compute.storagePools",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/storagePool"
+      ]
+    },
+    {
+      "candidateId": "1c3ae969ce40a290ed14",
+      "subjectNativeId": "compute.instanceTemplates",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDisk/properties/source"
+      ]
+    },
+    {
+      "candidateId": "2c45e0f9c07b26f845ca",
+      "subjectNativeId": "compute.instanceTemplates",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "3ce3edd2f4dcf7eda41f",
+      "subjectNativeId": "compute.instanceTemplates",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/network"
+      ]
+    },
+    {
+      "candidateId": "746fb8d4fff2389709e9",
+      "subjectNativeId": "compute.instanceTemplates",
+      "observedObjectNativeId": "compute.networkAttachments",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networkAttachments"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/networkAttachment"
+      ]
+    },
+    {
+      "candidateId": "f96403f355485bcc23a5",
+      "subjectNativeId": "compute.instanceTemplates",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "e1aecdfc69261fa392f3",
+      "subjectNativeId": "compute.instanceTemplates",
+      "observedObjectNativeId": "compute.instances",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.instances"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstanceTemplate/properties/sourceInstance"
+      ]
+    },
+    {
+      "candidateId": "61218b2b7c29d020c564",
+      "subjectNativeId": "compute.instances",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/diskType"
+      ]
+    },
+    {
+      "candidateId": "a9e78e7f8e83241114f1",
+      "subjectNativeId": "compute.instances",
+      "observedObjectNativeId": "compute.storagePools",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/storagePool"
+      ]
+    },
+    {
+      "candidateId": "b9a960722c9074b512f2",
+      "subjectNativeId": "compute.instances",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDisk/properties/source"
+      ]
+    },
+    {
+      "candidateId": "ec34b094ef75c893954e",
+      "subjectNativeId": "compute.instances",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/network"
+      ]
+    },
+    {
+      "candidateId": "734d3847dc0ad13fb783",
+      "subjectNativeId": "compute.instances",
+      "observedObjectNativeId": "compute.networkAttachments",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networkAttachments"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/networkAttachment"
+      ]
+    },
+    {
+      "candidateId": "9b20323bc382801f4478",
+      "subjectNativeId": "compute.instances",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "bad10e221a16c27e191e",
+      "subjectNativeId": "compute.instantSnapshots",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstantSnapshot/properties/sourceDisk"
+      ]
+    },
+    {
+      "candidateId": "de79a977e9294a0ae92b",
+      "subjectNativeId": "compute.interconnectAttachmentGroups",
+      "observedObjectNativeId": "compute.interconnectGroups",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InterconnectAttachmentGroup/properties/interconnectGroup"
+      ]
+    },
+    {
+      "candidateId": "9298996fa24e2da75633",
+      "subjectNativeId": "compute.interconnectAttachments",
+      "observedObjectNativeId": "compute.interconnects",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InterconnectAttachment/properties/interconnect"
+      ]
+    },
+    {
+      "candidateId": "59ce9786ff513cee16e2",
+      "subjectNativeId": "compute.interconnectAttachments",
+      "observedObjectNativeId": "compute.networks",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InterconnectAttachmentL2Forwarding/properties/network"
+      ]
+    },
+    {
+      "candidateId": "77a26473ee4553e52f29",
+      "subjectNativeId": "compute.interconnectAttachments",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InterconnectAttachmentPartnerMetadata/properties/portalUrl"
+      ]
+    },
+    {
+      "candidateId": "cb0d3b3390049da0516e",
+      "subjectNativeId": "compute.interconnectAttachments",
+      "observedObjectNativeId": "compute.routers",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InterconnectAttachment/properties/router"
+      ]
+    },
+    {
+      "candidateId": "a1f7db98f94eb0d8a59e",
+      "subjectNativeId": "compute.interconnects",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Interconnect/properties/location"
+      ]
+    },
+    {
+      "candidateId": "664347b7c192707651fb",
+      "subjectNativeId": "compute.machineImages",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/diskType"
+      ]
+    },
+    {
+      "candidateId": "492c7ca7faa165bda4fc",
+      "subjectNativeId": "compute.machineImages",
+      "observedObjectNativeId": "compute.storagePools",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/storagePool"
+      ]
+    },
+    {
+      "candidateId": "355125ab2d79b9531e54",
+      "subjectNativeId": "compute.machineImages",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDisk/properties/source"
+      ]
+    },
+    {
+      "candidateId": "d72919684abff69d2444",
+      "subjectNativeId": "compute.machineImages",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "30430fccd3a2f4878a39",
+      "subjectNativeId": "compute.machineImages",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/network"
+      ]
+    },
+    {
+      "candidateId": "cf2a3d772de1bece817e",
+      "subjectNativeId": "compute.machineImages",
+      "observedObjectNativeId": "compute.networkAttachments",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networkAttachments"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/networkAttachment"
+      ]
+    },
+    {
+      "candidateId": "821efe662af144e7cf51",
+      "subjectNativeId": "compute.machineImages",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "4190309b1478106ba70d",
+      "subjectNativeId": "compute.machineImages",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/SourceDiskEncryptionKey/properties/sourceDisk"
+      ]
+    },
+    {
+      "candidateId": "26faf80cb131277934e3",
+      "subjectNativeId": "compute.machineImages",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/MachineImage/properties/sourceInstance"
+      ]
+    },
+    {
+      "candidateId": "1de2fe1ddf5c906c4250",
+      "subjectNativeId": "compute.networkAttachments",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkAttachment/properties/connectionPreference"
+      ]
+    },
+    {
+      "candidateId": "29cf742e07b319c8a1d7",
+      "subjectNativeId": "compute.networkAttachments",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkAttachment/properties/subnetworks"
+      ]
+    },
+    {
+      "candidateId": "71fe027296fdab8246ee",
+      "subjectNativeId": "compute.networkEndpointGroups",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkEndpointGroup/properties/network"
+      ]
+    },
+    {
+      "candidateId": "776b2ac3e27468843123",
+      "subjectNativeId": "compute.networkEndpointGroups",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkEndpointGroup/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "6dc38edc7685785025de",
+      "subjectNativeId": "compute.networkFirewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup"
+      ]
+    },
+    {
+      "candidateId": "5637e27e7732e3e81f54",
+      "subjectNativeId": "compute.networkFirewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules"
+      ]
+    },
+    {
+      "candidateId": "a9ae536209de52d0af1b",
+      "subjectNativeId": "compute.networkFirewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup"
+      ]
+    },
+    {
+      "candidateId": "55b5efd60b20af29f631",
+      "subjectNativeId": "compute.networkFirewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules"
+      ]
+    },
+    {
+      "candidateId": "feaf24d4877b333ad646",
+      "subjectNativeId": "compute.nodeGroups",
+      "observedObjectNativeId": "compute.nodeTemplates",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.nodeTemplates"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NodeGroup/properties/nodeTemplate"
+      ]
+    },
+    {
+      "candidateId": "2908c8b0528bbad524f0",
+      "subjectNativeId": "compute.nodeTemplates",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "5e26449d01ddac669992",
+      "subjectNativeId": "compute.packetMirrorings",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PacketMirroringForwardingRuleInfo/properties/url"
+      ]
+    },
+    {
+      "candidateId": "f41fe5228e676e561f81",
+      "subjectNativeId": "compute.packetMirrorings",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PacketMirroringMirroredResourceInfoInstanceInfo/properties/url"
+      ]
+    },
+    {
+      "candidateId": "e9e151c0a4e2c433a0c8",
+      "subjectNativeId": "compute.packetMirrorings",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PacketMirroringMirroredResourceInfoSubnetInfo/properties/url"
+      ]
+    },
+    {
+      "candidateId": "6a0b6d3f531658efc071",
+      "subjectNativeId": "compute.packetMirrorings",
+      "observedObjectNativeId": "compute.networks",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PacketMirroringNetworkInfo/properties/url"
+      ]
+    },
+    {
+      "candidateId": "130814d2107ac9b1df6c",
+      "subjectNativeId": "compute.publicDelegatedPrefixes",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PublicDelegatedPrefix/properties/parentPrefix"
+      ]
+    },
+    {
+      "candidateId": "72e0c28780b96806f81c",
+      "subjectNativeId": "compute.regionAutoscalers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Autoscaler/properties/target"
+      ]
+    },
+    {
+      "candidateId": "ac6d36c02179433c510a",
+      "subjectNativeId": "compute.regionBackendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Backend/properties/group"
+      ]
+    },
+    {
+      "candidateId": "fc7d978e09a4b85c99cd",
+      "subjectNativeId": "compute.regionBackendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendBackendOrchestrationInfo/properties/resourceUri"
+      ]
+    },
+    {
+      "candidateId": "7661f2192117f74ce7d0",
+      "subjectNativeId": "compute.regionBackendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Backend/properties/preference"
+      ]
+    },
+    {
+      "candidateId": "cf85df5092f52f1ca354",
+      "subjectNativeId": "compute.regionBackendServices",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendService/properties/network"
+      ]
+    },
+    {
+      "candidateId": "7f7a7c6099c7fcf2443b",
+      "subjectNativeId": "compute.regionBackendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendServiceOrchestrationInfo/properties/resourceUri"
+      ]
+    },
+    {
+      "candidateId": "1e9b5a120bd22f23a80b",
+      "subjectNativeId": "compute.regionBackendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendService/properties/serviceLbPolicy"
+      ]
+    },
+    {
+      "candidateId": "98964be121299f527cd4",
+      "subjectNativeId": "compute.regionBackendServices",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/BackendServiceTlsSettings/properties/authenticationConfig"
+      ]
+    },
+    {
+      "candidateId": "5472e2dcff0720f63d03",
+      "subjectNativeId": "compute.regionCommitments",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AllocationAggregateReservationReservedResourceInfoAccelerator/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "6e198aef6440e91d0a14",
+      "subjectNativeId": "compute.regionCommitments",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "8871c1955a4c3de4a2eb",
+      "subjectNativeId": "compute.regionCommitments",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AllocationSpecificSKUReservation/properties/sourceInstanceTemplate"
+      ]
+    },
+    {
+      "candidateId": "3efd409c47c143004888",
+      "subjectNativeId": "compute.regionCompositeHealthChecks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/CompositeHealthCheck/properties/healthDestination"
+      ]
+    },
+    {
+      "candidateId": "f0e34f80e7ed2647c42d",
+      "subjectNativeId": "compute.regionDisks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/DiskAsyncReplication/properties/disk"
+      ]
+    },
+    {
+      "candidateId": "6f2ff8e48b04ccd14d3e",
+      "subjectNativeId": "compute.regionDisks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/sourceDisk"
+      ]
+    },
+    {
+      "candidateId": "7a3bb22a79f06a03ae37",
+      "subjectNativeId": "compute.regionDisks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/sourceInstantSnapshot"
+      ]
+    },
+    {
+      "candidateId": "4a033d26c5c9b634c8a5",
+      "subjectNativeId": "compute.regionDisks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/sourceSnapshot"
+      ]
+    },
+    {
+      "candidateId": "4f0699476e85f09cdffc",
+      "subjectNativeId": "compute.regionDisks",
+      "observedObjectNativeId": "compute.storagePools",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/storagePool"
+      ]
+    },
+    {
+      "candidateId": "d0d2569e7c43d2c7cb39",
+      "subjectNativeId": "compute.regionDisks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Disk/properties/type"
+      ]
+    },
+    {
+      "candidateId": "2b63114202e26588329a",
+      "subjectNativeId": "compute.regionHealthSources",
+      "observedObjectNativeId": "compute.regionHealthAggregationPolicies",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/HealthSource/properties/healthAggregationPolicy"
+      ]
+    },
+    {
+      "candidateId": "7ff8a0985478a20346db",
+      "subjectNativeId": "compute.regionInstanceGroupManagers",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/DistributionPolicyZoneConfiguration/properties/zone"
+      ]
+    },
+    {
+      "candidateId": "da7b1afc4957333266e6",
+      "subjectNativeId": "compute.regionInstanceGroupManagers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstanceGroupManager/properties/instanceTemplate"
+      ]
+    },
+    {
+      "candidateId": "27331dd88fc3f138836e",
+      "subjectNativeId": "compute.regionInstanceGroupManagers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstanceGroupManagerResourcePolicies/properties/workloadPolicy"
+      ]
+    },
+    {
+      "candidateId": "28d3338402d6ebcc8a70",
+      "subjectNativeId": "compute.regionInstanceGroupManagers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstanceGroupManagerVersion/properties/instanceTemplate"
+      ]
+    },
+    {
+      "candidateId": "762ed9f00def4137dec0",
+      "subjectNativeId": "compute.regionInstanceTemplates",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/diskType"
+      ]
+    },
+    {
+      "candidateId": "0f0620266be4f77b6cb3",
+      "subjectNativeId": "compute.regionInstanceTemplates",
+      "observedObjectNativeId": "compute.storagePools",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDiskInitializeParams/properties/storagePool"
+      ]
+    },
+    {
+      "candidateId": "cf84dd2d7aa658fa1f8b",
+      "subjectNativeId": "compute.regionInstanceTemplates",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AttachedDisk/properties/source"
+      ]
+    },
+    {
+      "candidateId": "c9f2ce351abe5c45f8df",
+      "subjectNativeId": "compute.regionInstanceTemplates",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "1c0e01a1dd7367cf6c57",
+      "subjectNativeId": "compute.regionInstanceTemplates",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/network"
+      ]
+    },
+    {
+      "candidateId": "97d0b742008345f5add6",
+      "subjectNativeId": "compute.regionInstanceTemplates",
+      "observedObjectNativeId": "compute.networkAttachments",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networkAttachments"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/networkAttachment"
+      ]
+    },
+    {
+      "candidateId": "03f40732b257088517f4",
+      "subjectNativeId": "compute.regionInstanceTemplates",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkInterface/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "436975e2edcc1f5322d0",
+      "subjectNativeId": "compute.regionInstanceTemplates",
+      "observedObjectNativeId": "compute.instances",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.instances"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstanceTemplate/properties/sourceInstance"
+      ]
+    },
+    {
+      "candidateId": "02d494738809f579b7b2",
+      "subjectNativeId": "compute.regionInstantSnapshots",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/InstantSnapshot/properties/sourceDisk"
+      ]
+    },
+    {
+      "candidateId": "f43b73146aa09d9bd744",
+      "subjectNativeId": "compute.regionNetworkEndpointGroups",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkEndpointGroup/properties/network"
+      ]
+    },
+    {
+      "candidateId": "526e2c1cbf47292f91a8",
+      "subjectNativeId": "compute.regionNetworkEndpointGroups",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/NetworkEndpointGroup/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "a2c55b27fe5b40e1041e",
+      "subjectNativeId": "compute.regionNetworkFirewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup"
+      ]
+    },
+    {
+      "candidateId": "f5bab49992e1518666d5",
+      "subjectNativeId": "compute.regionNetworkFirewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules"
+      ]
+    },
+    {
+      "candidateId": "ae4ded3b4f01bda3ea3b",
+      "subjectNativeId": "compute.regionNetworkFirewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/securityProfileGroup"
+      ]
+    },
+    {
+      "candidateId": "3323e5ec666a659dc7b5",
+      "subjectNativeId": "compute.regionNetworkFirewallPolicies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/FirewallPolicyRule/properties/targetForwardingRules"
+      ]
+    },
+    {
+      "candidateId": "3abda183250dbebb3131",
+      "subjectNativeId": "compute.regionSnapshots",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Snapshot/properties/sourceInstantSnapshot"
+      ]
+    },
+    {
+      "candidateId": "a2713b1e44b76a3d3976",
+      "subjectNativeId": "compute.regionTargetHttpProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpProxy/properties/urlMap"
+      ]
+    },
+    {
+      "candidateId": "ef0ed28a521bf180f7ab",
+      "subjectNativeId": "compute.regionTargetHttpsProxies",
+      "observedObjectNativeId": "compute.sslCertificates",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpsProxy/properties/certificateMap"
+      ]
+    },
+    {
+      "candidateId": "0b4a5a0eb8555df2114a",
+      "subjectNativeId": "compute.regionTargetHttpsProxies",
+      "observedObjectNativeId": "compute.sslCertificates",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.sslCertificates"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpsProxy/properties/sslCertificates"
+      ]
+    },
+    {
+      "candidateId": "d6499afa5d6494f5f367",
+      "subjectNativeId": "compute.regionTargetHttpsProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpsProxy/properties/sslPolicy"
+      ]
+    },
+    {
+      "candidateId": "f53d71b4f3386c3d3f1e",
+      "subjectNativeId": "compute.regionTargetHttpsProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpsProxy/properties/urlMap"
+      ]
+    },
+    {
+      "candidateId": "52a5d89e423b603c4b92",
+      "subjectNativeId": "compute.regionTargetTcpProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetTcpProxy/properties/service"
+      ]
+    },
+    {
+      "candidateId": "0fa046c7d5f5b81b1d58",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService"
+      ]
+    },
+    {
+      "candidateId": "584ba217f1b544ea5bdc",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "4c199f71e0faab0fb271",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/WeightedBackendService/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "4547ae44298ef48ced93",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/UrlMap/properties/defaultService"
+      ]
+    },
+    {
+      "candidateId": "96a7856891f524b6634a",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService"
+      ]
+    },
+    {
+      "candidateId": "670b3dcfa93d1bb1145f",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "ae746b5330583d79b8c5",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/WeightedBackendService/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "e77a65b4c973ec95fecc",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PathMatcher/properties/defaultService"
+      ]
+    },
+    {
+      "candidateId": "aa58d231ff0578df8713",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService"
+      ]
+    },
+    {
+      "candidateId": "9c778b1e8dc2f415df27",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "11d1245dfef64f6e534c",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/WeightedBackendService/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "314b5fc252f87b137b58",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PathRule/properties/service"
+      ]
+    },
+    {
+      "candidateId": "5543466eda1dd510b0a6",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService"
+      ]
+    },
+    {
+      "candidateId": "99804f5248ec3d278ddf",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "bc87fcc7922475efcc2b",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/WeightedBackendService/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "1e5a147dbca47af27802",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/HttpRouteRule/properties/service"
+      ]
+    },
+    {
+      "candidateId": "c2b42ed2300e00f6ad56",
+      "subjectNativeId": "compute.regionUrlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/UrlMapTest/properties/expectedOutputUrl"
+      ]
+    },
+    {
+      "candidateId": "99a7e90e0db3d43f51ce",
+      "subjectNativeId": "compute.reservations",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AllocationAggregateReservationReservedResourceInfoAccelerator/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "a5be7d2ca516e31eb425",
+      "subjectNativeId": "compute.reservations",
+      "observedObjectNativeId": "compute.instances",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AcceleratorConfig/properties/acceleratorType"
+      ]
+    },
+    {
+      "candidateId": "fe0749c4aebf7d72e25f",
+      "subjectNativeId": "compute.reservations",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/AllocationSpecificSKUReservation/properties/sourceInstanceTemplate"
+      ]
+    },
+    {
+      "candidateId": "e7106d6ac467496315ea",
+      "subjectNativeId": "compute.routers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RouterBgpPeer/properties/routerApplianceInstance"
+      ]
+    },
+    {
+      "candidateId": "1048c6ff45fe5178061e",
+      "subjectNativeId": "compute.routers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RouterInterface/properties/linkedInterconnectAttachment"
+      ]
+    },
+    {
+      "candidateId": "e6ba298c27abb93ec346",
+      "subjectNativeId": "compute.routers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RouterInterface/properties/linkedVpnTunnel"
+      ]
+    },
+    {
+      "candidateId": "fa526eb69cb0107601fd",
+      "subjectNativeId": "compute.routers",
+      "observedObjectNativeId": "compute.subnetworks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.subnetworks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RouterInterface/properties/subnetwork"
+      ]
+    },
+    {
+      "candidateId": "a45b29b44e566875f840",
+      "subjectNativeId": "compute.routers",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RouterNatRule/properties/match"
+      ]
+    },
+    {
+      "candidateId": "cc662f40d8c4e77c3179",
+      "subjectNativeId": "compute.routers",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Router/properties/network"
+      ]
+    },
+    {
+      "candidateId": "1561ed1133ad14da32e0",
+      "subjectNativeId": "compute.routes",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Route/properties/network"
+      ]
+    },
+    {
+      "candidateId": "9270da149d8976daee0b",
+      "subjectNativeId": "compute.routes",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Route/properties/nextHopGateway"
+      ]
+    },
+    {
+      "candidateId": "51afb6ac8f44152e6d79",
+      "subjectNativeId": "compute.routes",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Route/properties/nextHopIlb"
+      ]
+    },
+    {
+      "candidateId": "b1877a234f3e20a37d71",
+      "subjectNativeId": "compute.routes",
+      "observedObjectNativeId": "compute.instances",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.instances"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Route/properties/nextHopInstance"
+      ]
+    },
+    {
+      "candidateId": "c91df762c2d5f46d3d84",
+      "subjectNativeId": "compute.routes",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Route/properties/nextHopNetwork"
+      ]
+    },
+    {
+      "candidateId": "cef65e62ad0f539fd184",
+      "subjectNativeId": "compute.routes",
+      "observedObjectNativeId": "compute.vpnTunnels",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Route/properties/nextHopVpnTunnel"
+      ]
+    },
+    {
+      "candidateId": "e875102c0958993d9a95",
+      "subjectNativeId": "compute.serviceAttachments",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ServiceAttachment/properties/connectionPreference"
+      ]
+    },
+    {
+      "candidateId": "0214d1b9dcbaf2914534",
+      "subjectNativeId": "compute.serviceAttachments",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ServiceAttachmentConsumerProjectLimit/properties/endpointUrl"
+      ]
+    },
+    {
+      "candidateId": "49828951f7ec4596ef8f",
+      "subjectNativeId": "compute.serviceAttachments",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ServiceAttachmentConsumerProjectLimit/properties/networkUrl"
+      ]
+    },
+    {
+      "candidateId": "4867eda50968f7a03d85",
+      "subjectNativeId": "compute.serviceAttachments",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ServiceAttachment/properties/natSubnets"
+      ]
+    },
+    {
+      "candidateId": "259bc46820dc3623a3cc",
+      "subjectNativeId": "compute.serviceAttachments",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ServiceAttachment/properties/producerForwardingRule"
+      ]
+    },
+    {
+      "candidateId": "57b8dc2e552c2100b230",
+      "subjectNativeId": "compute.serviceAttachments",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/ServiceAttachment/properties/targetService"
+      ]
+    },
+    {
+      "candidateId": "ff90315c4eb1eafd7627",
+      "subjectNativeId": "compute.snapshots",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Snapshot/properties/sourceInstantSnapshot"
+      ]
+    },
+    {
+      "candidateId": "b8d7f223550b640a6670",
+      "subjectNativeId": "compute.subnetworks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Subnetwork/properties/ipCollection"
+      ]
+    },
+    {
+      "candidateId": "2019561cb80e89cbe704",
+      "subjectNativeId": "compute.subnetworks",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Subnetwork/properties/network"
+      ]
+    },
+    {
+      "candidateId": "2ccdb29859460bf5203f",
+      "subjectNativeId": "compute.subnetworks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/Subnetwork/properties/reservedInternalRange"
+      ]
+    },
+    {
+      "candidateId": "5013277b861ee4bbdd57",
+      "subjectNativeId": "compute.subnetworks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/SubnetworkSecondaryRange/properties/ipCollection"
+      ]
+    },
+    {
+      "candidateId": "3a7db5c4c8f049df6eec",
+      "subjectNativeId": "compute.subnetworks",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/SubnetworkSecondaryRange/properties/reservedInternalRange"
+      ]
+    },
+    {
+      "candidateId": "1c584abc5e9eef14282d",
+      "subjectNativeId": "compute.targetGrpcProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetGrpcProxy/properties/urlMap"
+      ]
+    },
+    {
+      "candidateId": "aafec7fe8d78b11f628f",
+      "subjectNativeId": "compute.targetGrpcProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetGrpcProxy/properties/validateForProxyless"
+      ]
+    },
+    {
+      "candidateId": "922b1124c50c207eabaf",
+      "subjectNativeId": "compute.targetHttpProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpProxy/properties/urlMap"
+      ]
+    },
+    {
+      "candidateId": "e7a9d15fa920a90346c7",
+      "subjectNativeId": "compute.targetHttpsProxies",
+      "observedObjectNativeId": "compute.sslCertificates",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpsProxy/properties/certificateMap"
+      ]
+    },
+    {
+      "candidateId": "ef0ad3ba0efc9ce3e0da",
+      "subjectNativeId": "compute.targetHttpsProxies",
+      "observedObjectNativeId": "compute.sslCertificates",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.sslCertificates"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpsProxy/properties/sslCertificates"
+      ]
+    },
+    {
+      "candidateId": "94431e6fd9a00adc12a2",
+      "subjectNativeId": "compute.targetHttpsProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpsProxy/properties/sslPolicy"
+      ]
+    },
+    {
+      "candidateId": "f6d9430726d063b7313b",
+      "subjectNativeId": "compute.targetHttpsProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetHttpsProxy/properties/urlMap"
+      ]
+    },
+    {
+      "candidateId": "1c9e05c4d9bfce59e4a2",
+      "subjectNativeId": "compute.targetInstances",
+      "observedObjectNativeId": "compute.instances",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.instances"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetInstance/properties/instance"
+      ]
+    },
+    {
+      "candidateId": "d391a306e8991ba40f44",
+      "subjectNativeId": "compute.targetInstances",
+      "observedObjectNativeId": "compute.networks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.networks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetInstance/properties/network"
+      ]
+    },
+    {
+      "candidateId": "0a7d81c4f6bfc7bdf0b7",
+      "subjectNativeId": "compute.targetPools",
+      "observedObjectNativeId": "compute.healthChecks",
+      "status": "included",
+      "relationKind": "reference",
+      "resolvedObjectNativeIds": [
+        "compute.healthChecks"
+      ],
+      "reason": "The pinned native property identifies an included native resource used by this included VM-connected resource.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetPool/properties/healthChecks"
+      ]
+    },
+    {
+      "candidateId": "6949af78abd6a23873bd",
+      "subjectNativeId": "compute.targetSslProxies",
+      "observedObjectNativeId": "compute.sslCertificates",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetSslProxy/properties/certificateMap"
+      ]
+    },
+    {
+      "candidateId": "2cb14d8624ee1cfba998",
+      "subjectNativeId": "compute.targetSslProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetSslProxy/properties/service"
+      ]
+    },
+    {
+      "candidateId": "83267fdd2349fa39df3e",
+      "subjectNativeId": "compute.targetSslProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetSslProxy/properties/sslPolicy"
+      ]
+    },
+    {
+      "candidateId": "9cd85f966b4f3b4c70f4",
+      "subjectNativeId": "compute.targetTcpProxies",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetTcpProxy/properties/service"
+      ]
+    },
+    {
+      "candidateId": "88bb4e7c7aa1941aeaad",
+      "subjectNativeId": "compute.targetVpnGateways",
+      "observedObjectNativeId": "compute.networks",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetVpnGateway/properties/network"
+      ]
+    },
+    {
+      "candidateId": "76beaabdc5fe74703956",
+      "subjectNativeId": "compute.targetVpnGateways",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/TargetVpnGateway/properties/region"
+      ]
+    },
+    {
+      "candidateId": "cd1ce4ffe500fa74f945",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService"
+      ]
+    },
+    {
+      "candidateId": "8495e78f63e1b8522584",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "11224cdeebc310d6adbf",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/WeightedBackendService/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "534259c1067b13a70135",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/UrlMap/properties/defaultService"
+      ]
+    },
+    {
+      "candidateId": "e3340111173c980aa770",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService"
+      ]
+    },
+    {
+      "candidateId": "9dbf57d074f2b4016318",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "6b46619405f593d18e7a",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/WeightedBackendService/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "c55c1d49cdb30a8caa1a",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PathMatcher/properties/defaultService"
+      ]
+    },
+    {
+      "candidateId": "dbcbb6906bd33269abab",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService"
+      ]
+    },
+    {
+      "candidateId": "32e2716519db92759679",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "8fafd36bf0b9587fc9d4",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/WeightedBackendService/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "a7593d86bde3fd4db91b",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/PathRule/properties/service"
+      ]
+    },
+    {
+      "candidateId": "ae539cc3477d7afc198d",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/CustomErrorResponsePolicy/properties/errorService"
+      ]
+    },
+    {
+      "candidateId": "3f6a5cb0547da06c18e9",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/RequestMirrorPolicy/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "b43efff0428488c142cc",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/WeightedBackendService/properties/backendService"
+      ]
+    },
+    {
+      "candidateId": "b9b26a0ef70939d7dd6e",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/HttpRouteRule/properties/service"
+      ]
+    },
+    {
+      "candidateId": "1a89f1ce493ee35df81d",
+      "subjectNativeId": "compute.urlMaps",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/UrlMapTest/properties/expectedOutputUrl"
+      ]
+    },
+    {
+      "candidateId": "2219b84883e711904f1b",
+      "subjectNativeId": "compute.vpnGateways",
+      "observedObjectNativeId": "compute.networks",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/VpnGateway/properties/network"
+      ]
+    },
+    {
+      "candidateId": "c38b7eeecb4bf90d3013",
+      "subjectNativeId": "compute.vpnGateways",
+      "observedObjectNativeId": "compute.interconnectAttachments",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/VpnGatewayVpnGatewayInterface/properties/interconnectAttachment"
+      ]
+    },
+    {
+      "candidateId": "4341de10d4d9bddee01b",
+      "subjectNativeId": "compute.vpnTunnels",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/VpnTunnel/properties/peerExternalGateway"
+      ]
+    },
+    {
+      "candidateId": "7497e0f98b0b4ffb2e0b",
+      "subjectNativeId": "compute.vpnTunnels",
+      "observedObjectNativeId": "compute.networks",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/VpnTunnel/properties/peerGcpGateway"
+      ]
+    },
+    {
+      "candidateId": "79c712e3a650942113a6",
+      "subjectNativeId": "compute.vpnTunnels",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/VpnTunnel/properties/region"
+      ]
+    },
+    {
+      "candidateId": "b0d718d72c0fd09349ea",
+      "subjectNativeId": "compute.vpnTunnels",
+      "observedObjectNativeId": "compute.routers",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/VpnTunnel/properties/router"
+      ]
+    },
+    {
+      "candidateId": "993dd1d44d4e48476a7e",
+      "subjectNativeId": "compute.vpnTunnels",
+      "observedObjectNativeId": "compute.targetVpnGateways",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/VpnTunnel/properties/targetVpnGateway"
+      ]
+    },
+    {
+      "candidateId": "da5017beedeebe8d19a2",
+      "subjectNativeId": "compute.vpnTunnels",
+      "observedObjectNativeId": "compute.vpnGateways",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "gcp-compute#/schemas/VpnTunnel/properties/vpnGateway"
+      ]
+    }
+  ]
+}

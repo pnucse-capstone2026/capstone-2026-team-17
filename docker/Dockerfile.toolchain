@@ -1,0 +1,105 @@
+FROM ghcr.io/astral-sh/uv:0.8.22 AS uv-runtime
+
+FROM eclipse-temurin:21-jdk-jammy AS jdk-runtime
+FROM gradle:8.14.2-jdk21 AS gradle-runtime
+FROM ghcr.io/opentofu/opentofu:1.12.6-minimal AS opentofu-runtime
+
+# 생성하는 IaC가 사용하는 provider를 빌드 때 한 번 받아 오프라인 mirror로 보관한다.
+FROM alpine:3.22 AS opentofu-providers
+RUN apk add --no-cache ca-certificates
+COPY --from=opentofu-runtime /usr/local/bin/tofu /usr/local/bin/tofu
+WORKDIR /provider-bootstrap
+COPY toolchain/opentofu/providers.tf ./providers.tf
+RUN TF_REGISTRY_DISCOVERY_RETRY=5 \
+    TF_REGISTRY_CLIENT_TIMEOUT=60 \
+    TF_PROVIDER_DOWNLOAD_RETRY=5 \
+    sed -i \
+      's#source  = "hashicorp/#source  = "registry.terraform.io/hashicorp/#' \
+      providers.tf \
+    && tofu providers mirror -platform=linux_amd64 /upstream-provider-mirror \
+    && mkdir -p /provider-mirror/registry.opentofu.org \
+    && mv \
+      /upstream-provider-mirror/registry.terraform.io/hashicorp \
+      /provider-mirror/registry.opentofu.org/hashicorp
+
+FROM aquasec/trivy:0.74.0 AS trivy-runtime
+FROM docker:27.5.1-cli AS docker-runtime
+FROM node:22-bookworm-slim AS node-runtime
+FROM mcr.microsoft.com/powershell:7.4-debian-12 AS powershell-runtime
+
+# 용량이 큰 고정 도구 계층이다. Python 의존성과 브라우저 버전이 바뀌어도 이 계층은
+# 다시 만들지 않는다.
+FROM python:3.13-slim-bookworm AS toolchain-system
+
+COPY --from=uv-runtime /uv /usr/local/bin/uv
+COPY --from=jdk-runtime /opt/java/openjdk /opt/java/openjdk
+COPY --from=gradle-runtime /opt/gradle /opt/gradle
+COPY --from=opentofu-runtime /usr/local/bin/tofu /usr/local/bin/tofu
+COPY --from=opentofu-providers /provider-mirror /opt/easydep/provider-mirror
+COPY toolchain/opentofu/tofurc /opt/easydep/tofurc
+COPY --from=trivy-runtime /usr/local/bin/trivy /usr/local/bin/trivy
+COPY --from=docker-runtime /usr/local/bin/docker /usr/local/bin/docker
+COPY --from=docker-runtime /usr/local/libexec/docker/cli-plugins/docker-compose /usr/local/libexec/docker/cli-plugins/docker-compose
+COPY --from=node-runtime /usr/local/bin/node /usr/local/bin/node
+COPY --from=node-runtime /usr/local/lib/node_modules /usr/local/lib/node_modules
+COPY --from=powershell-runtime /opt/microsoft/powershell /opt/microsoft/powershell
+
+ENV JAVA_HOME=/opt/java/openjdk
+ENV PATH="${JAVA_HOME}/bin:/opt/gradle/bin:${PATH}"
+ENV GRADLE_USER_HOME=/app/.gradle-cache
+ENV POWERSHELL_TELEMETRY_OPTOUT=1
+ENV TF_CLI_CONFIG_FILE=/opt/easydep/tofurc
+ENV UV_LINK_MODE=copy
+ENV LITELLM_LOCAL_MODEL_COST_MAP=true
+ENV OPENHANDS_SUPPRESS_BANNER=1
+
+WORKDIR /app
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        cloud-init curl libicu72 ripgrep shellcheck \
+    && rm -rf /var/lib/apt/lists/* \
+    && ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm \
+    && ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx \
+    && ln -s /opt/microsoft/powershell/7/pwsh /usr/local/bin/pwsh
+
+RUN mkdir -p /opt/easydep \
+    && curl --fail --location --retry 3 \
+      https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/7.24.0/openapi-generator-cli-7.24.0.jar \
+      --output /opt/easydep/openapi-generator-7.24.0.jar \
+    && printf '%s  %s\n' \
+      4b83ccc6fd43056c8c631cd0195e5100bd0550912502527bab09ac76152dab0c \
+      /opt/easydep/openapi-generator-7.24.0.jar | sha256sum --check --status
+
+RUN useradd -m appuser \
+    && mkdir -p /app/.easydep /app/.gradle-cache /app/.cache/opentofu /tmp/easydep-gradle-cache \
+    && chown -R appuser:appuser \
+      /app/.easydep /app/.gradle-cache /app/.cache /tmp/easydep-gradle-cache
+
+# 브라우저와 운영체제 의존성도 공통 Python 패키지와 독립된 고정 계층으로 둔다.
+FROM toolchain-system AS toolchain-browser
+
+COPY requirements-browser-testing.txt /tmp/easydep-requirements-browser-testing.txt
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv pip install --system \
+      --requirements /tmp/easydep-requirements-browser-testing.txt
+ENV PLAYWRIGHT_BROWSERS_PATH=/opt/ms-playwright
+RUN python -m playwright install --with-deps --only-shell chromium \
+    && chmod -R a+rX /opt/ms-playwright \
+    && rm -rf /var/lib/apt/lists/*
+
+# 변경 가능성이 높은 Python 공통 의존성은 마지막에 설치한다. 이 파일이 바뀌어도 위의
+# JDK·Gradle·OpenTofu·Playwright 계층은 그대로 재사용된다.
+FROM toolchain-browser AS toolchain
+
+COPY requirements-common.txt /tmp/easydep-requirements-common.txt
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv pip install --system \
+      --requirements /tmp/easydep-requirements-common.txt
+
+COPY scripts/bootstrap-implementation-tools.sh ./scripts/bootstrap-implementation-tools.sh
+COPY scripts/bootstrap-testing-tools.sh ./scripts/bootstrap-testing-tools.sh
+USER appuser
+RUN sh ./scripts/bootstrap-implementation-tools.sh \
+    && sh ./scripts/bootstrap-testing-tools.sh
+
+CMD ["python", "--version"]

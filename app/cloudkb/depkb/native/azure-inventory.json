@@ -1,0 +1,1490 @@
+{
+ "schemaVersion": "easydep-native-discovery/v1",
+ "provider": "azure",
+ "source": {
+  "identity": "Azure REST API Specifications",
+  "version": "478f542f0e4a8872a8c6e5cde5dd4e44a01bc120"
+ },
+ "elements": [
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/microsoft.Compute/cloudServices/{resourceName}/providers/Microsoft.Network/cloudServiceSlots/{singletonResource}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/microsoft.Compute/cloudServices/{resourceName}/providers/Microsoft.Network/cloudServiceSlots/{singletonResource}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}/capacityReservations/{capacityReservationName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}/capacityReservations/{capacityReservationName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}/privateEndpointConnections/{privateEndpointConnectionName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}/privateEndpointConnections/{privateEndpointConnectionName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/interconnectBlocks/{interconnectBlockName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/interconnectBlocks/{interconnectBlockName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/proximityPlacementGroups/{proximityPlacementGroupName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/proximityPlacementGroups/{proximityPlacementGroupName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/extensions/{vmExtensionName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/extensions/{vmExtensionName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/IpAllocations/{ipAllocationName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/IpAllocations/{ipAllocationName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/customIpPrefixes/{customIpPrefixName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/customIpPrefixes/{customIpPrefixName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ddosCustomPolicies/{ddosCustomPolicyName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ddosCustomPolicies/{ddosCustomPolicyName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ddosProtectionPlans/{ddosProtectionPlanName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ddosProtectionPlans/{ddosProtectionPlanName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dscpConfigurations/{dscpConfigurationName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dscpConfigurations/{dscpConfigurationName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ipGroups/{ipGroupsName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ipGroups/{ipGroupsName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-loadBalancer.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-loadBalancer.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-loadBalancer.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}/tapConfigurations/{tapConfigurationName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}/tapConfigurations/{tapConfigurationName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}/staticCidrs/{staticCidrName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}/staticCidrs/{staticCidrName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisRuns/{reachabilityAnalysisRunName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisRuns/{reachabilityAnalysisRunName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkProfiles/{networkProfileName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkProfiles/{networkProfileName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/inboundSecurityRules/{ruleCollectionName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/inboundSecurityRules/{ruleCollectionName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/virtualApplianceSites/{siteName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/virtualApplianceSites/{siteName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups/{privateDnsZoneGroupName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups/{privateDnsZoneGroupName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}/privateEndpointConnections/{peConnectionName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}/privateEndpointConnections/{peConnectionName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIpPrefixName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIpPrefixName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes/{routeName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes/{routeName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/securityPartnerProviders/{securityPartnerProviderName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/securityPartnerProviders/{securityPartnerProviderName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualRouters/{virtualRouterName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualRouters/{virtualRouterName}"
+  },
+  {
+   "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualRouters/{virtualRouterName}/peerings/{peeringName}",
+   "nativeForm": "childResource",
+   "sourceLocator": "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualRouters/{virtualRouterName}/peerings/{peeringName}"
+  }
+ ],
+ "candidates": [
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.proximityPlacementGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/AvailabilitySetProperties/properties/proximityPlacementGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachines[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/AvailabilitySetProperties/properties/virtualMachines/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sharingProfile.subscriptionIds[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ResourceSharingProfile/properties/subscriptionIds/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}",
+   "objectNativeId": null,
+   "referenceToken": "extendedLocation",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/ExtendedLocation",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-DiskRP.json#/definitions/DiskAccess/properties/extendedLocation"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
+   "objectNativeId": null,
+   "referenceToken": "extendedLocation",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/ExtendedLocation",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-DiskRP.json#/definitions/Disk/properties/extendedLocation"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+   "objectNativeId": null,
+   "referenceToken": "extendedLocation",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/ExtendedLocation",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/Image/properties/extendedLocation"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceVirtualMachine",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ImageProperties/properties/sourceVirtualMachine"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.dataDisks[].diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.dataDisks[].managedDisk",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ImageDisk/properties/managedDisk"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.dataDisks[].snapshot",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ImageDisk/properties/snapshot"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.managedDisk",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ImageDisk/properties/managedDisk"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.snapshot",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ImageDisk/properties/snapshot"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.dataDisks[].diskRestorePoint",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResourceReadOnly",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskRestorePointAttributes/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.dataDisks[].diskRestorePoint.encryption.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.dataDisks[].managedDisk",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.dataDisks[].managedDisk.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.dataDisks[].managedDisk.securityProfile.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.osDisk.diskRestorePoint",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResourceReadOnly",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskRestorePointAttributes/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.osDisk.diskRestorePoint.encryption.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.osDisk.managedDisk",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.osDisk.managedDisk.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceMetadata.storageProfile.osDisk.managedDisk.securityProfile.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+   "objectNativeId": null,
+   "referenceToken": "extendedLocation",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/ExtendedLocation",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-DiskRP.json#/definitions/Snapshot/properties/extendedLocation"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "extendedLocation",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/ExtendedLocation",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSet/properties/extendedLocation"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.hostGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetProperties/properties/hostGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.proximityPlacementGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetProperties/properties/proximityPlacementGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.capacityReservation.capacityReservationGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/CapacityReservationProfile/properties/capacityReservationGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}",
+   "referenceToken": "properties.virtualMachineProfile.extensionProfile.extensions[]",
+   "targetSchemaRef": "#/definitions/VirtualMachineScaleSetExtension",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetExtensionProfile/properties/extensions/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.networkProfile.interconnectGroupProfile.interconnectGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/interconnectGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.networkProfile.interconnectGroupProfile.subgroups[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/subgroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.applicationGatewayBackendAddressPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/applicationGatewayBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.applicationSecurityGroups[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/applicationSecurityGroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.loadBalancerBackendAddressPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/loadBalancerBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.loadBalancerInboundNatPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/loadBalancerInboundNatPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.publicIPAddressConfiguration.properties.publicIPPrefix",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetPublicIPAddressConfigurationProperties/properties/publicIPPrefix"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.networkProfile.networkInterfaceConfigurations[].properties.networkSecurityGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetNetworkConfigurationProperties/properties/networkSecurityGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.osProfile.secrets[].sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VaultSecretGroup/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.storageProfile.dataDisks[].managedDisk.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.storageProfile.dataDisks[].managedDisk.securityProfile.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.storageProfile.imageReference",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ImageReference/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk.securityProfile.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.protectedSettingsFromKeyVault.sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.availabilitySet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetVMProperties/properties/availabilitySet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.interconnectGroupProfile.interconnectGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/interconnectGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.interconnectGroupProfile.subgroups[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/subgroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.dscpConfiguration",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceConfigurationProperties/properties/dscpConfiguration"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.applicationGatewayBackendAddressPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/applicationGatewayBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.applicationSecurityGroups[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/applicationSecurityGroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.loadBalancerBackendAddressPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/loadBalancerBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.publicIPAddressConfiguration.properties.publicIPPrefix",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachinePublicIPAddressConfigurationProperties/properties/publicIPPrefix"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.subnet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/subnet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.networkSecurityGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceConfigurationProperties/properties/networkSecurityGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaces[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/NetworkInterfaceReference/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfileConfiguration.interconnectGroupProfile.interconnectGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/interconnectGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfileConfiguration.interconnectGroupProfile.subgroups[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/subgroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfileConfiguration.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.applicationGatewayBackendAddressPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/applicationGatewayBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfileConfiguration.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.applicationSecurityGroups[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/applicationSecurityGroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfileConfiguration.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.loadBalancerBackendAddressPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/loadBalancerBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfileConfiguration.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.loadBalancerInboundNatPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/loadBalancerInboundNatPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfileConfiguration.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.publicIPAddressConfiguration.properties.publicIPPrefix",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetPublicIPAddressConfigurationProperties/properties/publicIPPrefix"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfileConfiguration.networkInterfaceConfigurations[].properties.networkSecurityGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetNetworkConfigurationProperties/properties/networkSecurityGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.osProfile.secrets[].sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VaultSecretGroup/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.dataDisks[].managedDisk",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.dataDisks[].managedDisk.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.dataDisks[].managedDisk.securityProfile.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.imageReference",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ImageReference/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/KeyVaultKeyReference/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.managedDisk",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.managedDisk.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.managedDisk.securityProfile.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/extensions/{vmExtensionName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.protectedSettingsFromKeyVault.sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "extendedLocation",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/ExtendedLocation",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachine/properties/extendedLocation"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.availabilitySet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/availabilitySet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.capacityReservation.capacityReservationGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/CapacityReservationProfile/properties/capacityReservationGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.host",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/host"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.hostGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/hostGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.interconnectGroupProfile.interconnectGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/interconnectGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.interconnectGroupProfile.subgroups[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/subgroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.dscpConfiguration",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceConfigurationProperties/properties/dscpConfiguration"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.applicationGatewayBackendAddressPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/applicationGatewayBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.applicationSecurityGroups[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/applicationSecurityGroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.loadBalancerBackendAddressPools[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/loadBalancerBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.publicIPAddressConfiguration.properties.publicIPPrefix",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachinePublicIPAddressConfigurationProperties/properties/publicIPPrefix"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.ipConfigurations[].properties.subnet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/subnet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaceConfigurations[].properties.networkSecurityGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceConfigurationProperties/properties/networkSecurityGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.networkProfile.networkInterfaces[]",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/NetworkInterfaceReference/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.osProfile.secrets[].sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VaultSecretGroup/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.proximityPlacementGroup",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/proximityPlacementGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.dataDisks[].managedDisk",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.dataDisks[].managedDisk.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.dataDisks[].managedDisk.securityProfile.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.imageReference",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ImageReference/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.encryptionSettings.diskEncryptionKey.sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.encryptionSettings.keyEncryptionKey.sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/KeyVaultKeyReference/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.managedDisk",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.managedDisk.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.storageProfile.osDisk.managedDisk.securityProfile.diskEncryptionSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualMachineScaleSet",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/virtualMachineScaleSet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.protectedSettingsFromKeyVault.sourceVault",
+   "unresolvedTarget": "../../common-types/v1/common.json#/definitions/SubResource",
+   "form": "typedSchemaReference",
+   "sourceLocator": "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+   "referenceToken": "properties.backendAddressPools[]",
+   "targetSchemaRef": "#/definitions/Common.BackendAddressPool",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-loadBalancer.json#/definitions/Common.LoadBalancerPropertiesFormat/properties/backendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+   "referenceToken": "properties.frontendIPConfigurations[].properties.publicIPAddress",
+   "targetSchemaRef": "./virtualNetwork.json#/definitions/Common.PublicIPAddress",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "referenceToken": "properties.frontendIPConfigurations[].properties.subnet",
+   "targetSchemaRef": "./virtualNetwork.json#/definitions/Common.Subnet",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}",
+   "referenceToken": "properties.inboundNatRules[]",
+   "targetSchemaRef": "#/definitions/Common.InboundNatRule",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-loadBalancer.json#/definitions/Common.LoadBalancerPropertiesFormat/properties/inboundNatRules/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.ipConfigurations[].properties.applicationGatewayBackendAddressPools[]",
+   "unresolvedTarget": "./applicationGateway.json#/definitions/Common.ApplicationGatewayBackendAddressPool",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/applicationGatewayBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+   "referenceToken": "properties.ipConfigurations[].properties.applicationSecurityGroups[]",
+   "targetSchemaRef": "#/definitions/Common.ApplicationSecurityGroup",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/applicationSecurityGroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+   "referenceToken": "properties.ipConfigurations[].properties.loadBalancerBackendAddressPools[]",
+   "targetSchemaRef": "./loadBalancer.json#/definitions/Common.BackendAddressPool",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/loadBalancerBackendAddressPools/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}",
+   "referenceToken": "properties.ipConfigurations[].properties.loadBalancerInboundNatRules[]",
+   "targetSchemaRef": "./loadBalancer.json#/definitions/Common.InboundNatRule",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/loadBalancerInboundNatRules/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+   "referenceToken": "properties.ipConfigurations[].properties.publicIPAddress",
+   "targetSchemaRef": "#/definitions/Common.PublicIPAddress",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/publicIPAddress"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "referenceToken": "properties.ipConfigurations[].properties.subnet",
+   "targetSchemaRef": "#/definitions/Common.Subnet",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/subnet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.ipConfigurations[].properties.virtualNetworkTaps[]",
+   "unresolvedTarget": "./networkGateway.json#/definitions/Common.VirtualNetworkTap",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/virtualNetworkTaps/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}",
+   "referenceToken": "properties.networkSecurityGroup",
+   "targetSchemaRef": "#/definitions/Common.NetworkSecurityGroup",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfacePropertiesFormat/properties/networkSecurityGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+   "referenceToken": "properties.privateLinkService",
+   "targetSchemaRef": "#/definitions/Common.PrivateLinkService",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfacePropertiesFormat/properties/privateLinkService"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}/tapConfigurations/{tapConfigurationName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.virtualNetworkTap",
+   "unresolvedTarget": "./networkGateway.json#/definitions/Common.VirtualNetworkTap",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceTapConfigurationPropertiesFormat/properties/virtualNetworkTap"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.destinationResourceId",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/ReachabilityAnalysisIntentProperties/properties/destinationResourceId",
+   "unresolvedTarget": "arm-id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.sourceResourceId",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/ReachabilityAnalysisIntentProperties/properties/sourceResourceId",
+   "unresolvedTarget": "arm-id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkProfiles/{networkProfileName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "referenceToken": "properties.containerNetworkInterfaceConfigurations[].properties.ipConfigurations[].properties.subnet",
+   "targetSchemaRef": "#/definitions/Common.Subnet",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.IPConfigurationProfilePropertiesFormat/properties/subnet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+   "referenceToken": "properties.securityRules[]",
+   "targetSchemaRef": "#/definitions/Common.SecurityRule",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.NetworkSecurityGroupPropertiesFormat/properties/securityRules/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+   "referenceToken": "properties.destinationApplicationSecurityGroups[]",
+   "targetSchemaRef": "#/definitions/Common.ApplicationSecurityGroup",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.SecurityRulePropertiesFormat/properties/destinationApplicationSecurityGroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+   "referenceToken": "properties.sourceApplicationSecurityGroups[]",
+   "targetSchemaRef": "#/definitions/Common.ApplicationSecurityGroup",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.SecurityRulePropertiesFormat/properties/sourceApplicationSecurityGroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+   "referenceToken": "properties.internetIngressPublicIps[].id",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/InternetIngressPublicIpsProperties/properties/id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "referenceToken": "properties.nvaInterfaceConfigurations[].subnet.id",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/NvaInVnetSubnetReferenceProperties/properties/id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+   "referenceToken": "properties.applicationSecurityGroups[]",
+   "targetSchemaRef": "#/definitions/Common.ApplicationSecurityGroup",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.PrivateEndpointProperties/properties/applicationSecurityGroups/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "referenceToken": "properties.subnet",
+   "targetSchemaRef": "#/definitions/Common.Subnet",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.PrivateEndpointProperties/properties/subnet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "referenceToken": "properties.ipConfigurations[].properties.subnet",
+   "targetSchemaRef": "#/definitions/Common.Subnet",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.PrivateLinkServiceIpConfigurationProperties/properties/subnet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+   "referenceToken": "properties.loadBalancerFrontendIpConfigurations[].properties.publicIPAddress",
+   "targetSchemaRef": "./virtualNetwork.json#/definitions/Common.PublicIPAddress",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "referenceToken": "properties.loadBalancerFrontendIpConfigurations[].properties.subnet",
+   "targetSchemaRef": "./virtualNetwork.json#/definitions/Common.Subnet",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}",
+   "referenceToken": "properties.natGateway",
+   "targetSchemaRef": "#/definitions/Common.NatGateway",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.PublicIPAddressPropertiesFormat/properties/natGateway"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIpPrefixName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}",
+   "referenceToken": "properties.natGateway",
+   "targetSchemaRef": "#/definitions/Common.NatGateway",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/PublicIPPrefixPropertiesFormat/properties/natGateway"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes/{routeName}",
+   "referenceToken": "properties.routes[]",
+   "targetSchemaRef": "#/definitions/Common.Route",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.RouteTablePropertiesFormat/properties/routes/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.addressSpace.ipamPoolPrefixAllocations[].pool.id",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id",
+   "unresolvedTarget": "arm-id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "referenceToken": "properties.subnets[]",
+   "targetSchemaRef": "#/definitions/Common.Subnet",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.VirtualNetworkPropertiesFormat/properties/subnets/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.summarizedGatewayPrefixes.ipamPoolPrefixAllocations[].pool.id",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id",
+   "unresolvedTarget": "arm-id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+   "referenceToken": "properties.virtualNetworkPeerings[]",
+   "targetSchemaRef": "#/definitions/Common.VirtualNetworkPeering",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.VirtualNetworkPropertiesFormat/properties/virtualNetworkPeerings/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.applicationGatewayIPConfigurations[]",
+   "unresolvedTarget": "./applicationGateway.json#/definitions/Common.ApplicationGatewayIPConfiguration",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/applicationGatewayIPConfigurations/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.ipamPoolPrefixAllocations[].pool.id",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id",
+   "unresolvedTarget": "arm-id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}",
+   "referenceToken": "properties.networkSecurityGroup",
+   "targetSchemaRef": "#/definitions/Common.NetworkSecurityGroup",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/networkSecurityGroup"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "objectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}",
+   "referenceToken": "properties.routeTable",
+   "targetSchemaRef": "#/definitions/Common.RouteTable",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/routeTable"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.serviceEndpointPolicies[]",
+   "unresolvedTarget": "./expressRoute.json#/definitions/Common.ServiceEndpointPolicy",
+   "form": "typedSchemaReference",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/serviceEndpointPolicies/items"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.localAddressSpace.ipamPoolPrefixAllocations[].pool.id",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id",
+   "unresolvedTarget": "arm-id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.localVirtualNetworkAddressSpace.ipamPoolPrefixAllocations[].pool.id",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id",
+   "unresolvedTarget": "arm-id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.remoteAddressSpace.ipamPoolPrefixAllocations[].pool.id",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id",
+   "unresolvedTarget": "arm-id"
+  },
+  {
+   "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+   "objectNativeId": null,
+   "referenceToken": "properties.remoteVirtualNetworkAddressSpace.ipamPoolPrefixAllocations[].pool.id",
+   "form": "schemaProperty",
+   "sourceLocator": "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id",
+   "unresolvedTarget": "arm-id"
+  }
+ ]
+}

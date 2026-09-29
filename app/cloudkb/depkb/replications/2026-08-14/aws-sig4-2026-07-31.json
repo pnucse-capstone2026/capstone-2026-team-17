@@ -1,0 +1,253 @@
+{
+ "_note": "기능 신호(aws) — 메타데이터 자격증명·아웃바운드. 게스트 안에서 curl로만 관측(앱 없음).",
+ "startedAt": "2026-08-14T08:21:05+00:00",
+ "ids": {
+  "vpc": "vpc-05190560a79cb2d53",
+  "igw": "igw-015c5e50f8b3b4f0f",
+  "rt": "rtb-040d1dc201d766ae4",
+  "subnet": "subnet-0f2a05eb417eaa25f",
+  "sg": "sg-00fea47da24e19a87",
+  "instance": "i-0107074278c94d978",
+  "ip": "3.36.118.188",
+  "assoc": "iip-assoc-041e05d2364651eaa"
+ },
+ "steps": {
+  "R1.create-key-pair": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "개인키 1674바이트 · 27줄 (JSON 경로 — text·헬퍼는 절단됐다)"
+  },
+  "R2.create-role": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Role\": {\n        \"Path\": \"/\",\n        \"RoleName\": \"depkb-sig4-role\",\n        \"RoleId\": \"AROA4GIDRRB6UG3M64A73\",\n        \"Arn\": \"arn:aws:iam::838062934141:role/depkb-sig4-role\",\n        \"CreateDate\": \"2026-08-14T08:21:09+00:00\",\n        \"AssumeRolePolicyDocument\": {\n            \"Version\": \"2012-10-17\",\n            \"Statement\": [\n                {\n                    \"Effect\": \"Allow\",\n                    \"Principal\": {\n                        \"Service\": \"ec2.amazonaws.com\"\n                    },\n                    \"Action\": \"sts:AssumeRole\"\n                }\n            ]\n        }\n    "
+  },
+  "R3.attach-readonly": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "R4.create-instance-profile": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"InstanceProfile\": {\n        \"Path\": \"/\",\n        \"InstanceProfileName\": \"depkb-sig4-profile\",\n        \"InstanceProfileId\": \"AIPA4GIDRRB6RM3VL53YS\",\n        \"Arn\": \"arn:aws:iam::838062934141:instance-profile/depkb-sig4-profile\",\n        \"CreateDate\": \"2026-08-14T08:21:14+00:00\",\n        \"Roles\": []\n    }\n}"
+  },
+  "R5.add-role-to-profile": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "R6.create-vpc": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Vpc\": {\n        \"OwnerId\": \"838062934141\",\n        \"InstanceTenancy\": \"default\",\n        \"Ipv6CidrBlockAssociationSet\": [],\n        \"CidrBlockAssociationSet\": [\n            {\n                \"AssociationId\": \"vpc-cidr-assoc-03e64b93797e0a058\",\n                \"CidrBlock\": \"10.111.0.0/16\",\n                \"CidrBlockState\": {\n                    \"State\": \"associated\"\n                }\n            }\n        ],\n        \"IsDefault\": false,\n        \"VpcId\": \"vpc-05190560a79cb2d53\",\n        \"State\": \"pending\",\n        \"CidrBlock\": \"10.111.0.0/16\",\n        \"DhcpOptionsId\": \"dopt-0c4e2064f71737b"
+  },
+  "R7.create-igw": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"InternetGateway\": {\n        \"Attachments\": [],\n        \"InternetGatewayId\": \"igw-015c5e50f8b3b4f0f\",\n        \"OwnerId\": \"838062934141\",\n        \"Tags\": []\n    }\n}"
+  },
+  "R8.attach-igw": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "R9.default-route": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Return\": true\n}"
+  },
+  "R10.create-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Subnet\": {\n        \"AvailabilityZoneId\": \"apne2-az1\",\n        \"MapCustomerOwnedIpOnLaunch\": false,\n        \"OwnerId\": \"838062934141\",\n        \"AssignIpv6AddressOnCreation\": false,\n        \"Ipv6CidrBlockAssociationSet\": [],\n        \"SubnetArn\": \"arn:aws:ec2:ap-northeast-2:838062934141:subnet/subnet-0f2a05eb417eaa25f\",\n        \"EnableDns64\": false,\n        \"Ipv6Native\": false,\n        \"PrivateDnsNameOptionsOnLaunch\": {\n            \"HostnameType\": \"ip-name\",\n            \"EnableResourceNameDnsARecord\": false,\n            \"EnableResourceNameDnsAAAARecord\": false\n        },\n        \"SubnetId\""
+  },
+  "R11.public-ip-on-launch": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "R12.create-sg": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"GroupId\": \"sg-00fea47da24e19a87\",\n    \"SecurityGroupArn\": \"arn:aws:ec2:ap-northeast-2:838062934141:security-group/sg-00fea47da24e19a87\"\n}"
+  },
+  "R13.sg-allow22": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Return\": true,\n    \"SecurityGroupRules\": [\n        {\n            \"SecurityGroupRuleId\": \"sgr-0bd2c37aeafc5468d\",\n            \"GroupId\": \"sg-00fea47da24e19a87\",\n            \"GroupOwnerId\": \"838062934141\",\n            \"IsEgress\": false,\n            \"IpProtocol\": \"tcp\",\n            \"FromPort\": 22,\n            \"ToPort\": 22,\n            \"CidrIpv4\": \"0.0.0.0/0\",\n            \"SecurityGroupRuleArn\": \"arn:aws:ec2:ap-northeast-2:838062934141:security-group-rule/sgr-0bd2c37aeafc5468d\"\n        }\n    ]\n}"
+  },
+  "R14.run-instance": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"ReservationId\": \"r-0455617f25bbcc6b6\",\n    \"OwnerId\": \"838062934141\",\n    \"Groups\": [],\n    \"Instances\": [\n        {\n            \"Architecture\": \"x86_64\",\n            \"BlockDeviceMappings\": [],\n            \"ClientToken\": \"b35b92bc-b895-4252-9ac6-a5692b3ded48\",\n            \"EbsOptimized\": false,\n            \"EnaSupport\": true,\n            \"Hypervisor\": \"xen\",\n            \"IamInstanceProfile\": {\n                \"Arn\": \"arn:aws:iam::838062934141:instance-profile/depkb-sig4-profile\",\n                \"Id\": \"AIPA4GIDRRB6RM3VL53YS\"\n            },\n            \"NetworkInterfaces\": [\n            "
+  },
+  "R15.running": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "running"
+  },
+  "R16.guest-baseline": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "want_ok=True 도달 (시도 37, 연속 1, rc=0) out=depkb-ok"
+  },
+  "F1.imds-credentials-work": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "want_ok=True 도달 (시도 1, 연속 1, rc=0) out=depkb-sig4-role"
+  },
+  "M1.disassociate-profile": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"IamInstanceProfileAssociation\": {\n        \"AssociationId\": \"iip-assoc-041e05d2364651eaa\",\n        \"InstanceId\": \"i-0107074278c94d978\",\n        \"IamInstanceProfile\": {\n            \"Arn\": \"arn:aws:iam::838062934141:instance-profile/depkb-sig4-profile\",\n            \"Id\": \"AIPA4GIDRRB6RM3VL53YS\"\n        },\n        \"State\": \"disassociating\"\n    }\n}"
+  },
+  "M1b.instance-still-running": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "running"
+  },
+  "F2.imds-credentials-lost": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "want_ok=False 도달 (시도 2, 연속 2, rc=22) out="
+  },
+  "M2.reassociate-profile": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"IamInstanceProfileAssociation\": {\n        \"AssociationId\": \"iip-assoc-0b99bd2e6489c3652\",\n        \"InstanceId\": \"i-0107074278c94d978\",\n        \"IamInstanceProfile\": {\n            \"Arn\": \"arn:aws:iam::838062934141:instance-profile/depkb-sig4-profile\",\n            \"Id\": \"AIPA4GIDRRB6RM3VL53YS\"\n        },\n        \"State\": \"associating\"\n    }\n}"
+  },
+  "F3.imds-credentials-again": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "want_ok=True 도달 (시도 1, 연속 1, rc=0) out=depkb-sig4-role"
+  },
+  "G1.egress-works": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "want_ok=True 도달 (시도 1, 연속 1, rc=0) out="
+  },
+  "M3.delete-default-route": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "G2.egress-lost": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "want_ok=False 도달 (시도 2, 연속 2, rc=255) out="
+  },
+  "M4.recreate-route": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Return\": true\n}"
+  },
+  "G3.egress-again": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "want_ok=True 도달 (시도 1, 연속 1, rc=0) out="
+  },
+  "T1.terminate": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"TerminatingInstances\": [\n        {\n            \"InstanceId\": \"i-0107074278c94d978\",\n            \"CurrentState\": {\n                \"Code\": 32,\n                \"Name\": \"shutting-down\"\n            },\n            \"PreviousState\": {\n                \"Code\": 16,\n                \"Name\": \"running\"\n            }\n        }\n    ]\n}"
+  },
+  "T2.terminated": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "terminated"
+  },
+  "T3.delete-key-pair": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Return\": true,\n    \"KeyPairId\": \"key-0bb748e351f9d498e\"\n}"
+  },
+  "T4.delete-sg": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "{\n    \"Return\": true,\n    \"GroupId\": \"sg-00fea47da24e19a87\"\n}"
+  },
+  "T5.delete-subnet": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T6.detach-igw": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T7.delete-igw": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T8.delete-vpc": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T9.remove-role-from-profile": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T10.delete-profile": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T11.detach-readonly": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T12.delete-role": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": ""
+  },
+  "T13.residual-vpcs": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "[]"
+  },
+  "T14.residual-roles": {
+   "ok": true,
+   "errorCodes": [],
+   "rejectedAt": null,
+   "excerpt": "[]"
+  }
+ },
+ "finishedAt": "2026-08-14T08:30:22+00:00"
+}

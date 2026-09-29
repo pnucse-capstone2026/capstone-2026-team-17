@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "easydep-vm-free-tier/v1",
+  "asOf": "2026-09-06",
+  "scope": "Virtual machine compute offers only.",
+  "disclaimer": "A VM marked eligible does not make the whole deployment free. Account eligibility, offer duration, usage limits, images, disks, registries, public IP addresses, and network traffic can still incur charges.",
+  "providers": {
+    "aws": {
+      "program": "Amazon EC2 Free Tier",
+      "sources": [
+        {
+          "title": "Track your Free Tier usage for Amazon EC2",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-free-tier-usage.html"
+        },
+        {
+          "title": "Unlimited mode for burstable performance instances",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode.html"
+        }
+      ],
+      "skus": {
+        "t2.micro": { "availability": "accounts-before-2025-07-15" },
+        "t3.micro": { "availability": "all-current-account-cohorts" },
+        "t3.small": { "availability": "accounts-on-or-after-2025-07-15" },
+        "t4g.micro": { "availability": "accounts-on-or-after-2025-07-15" },
+        "t4g.small": { "availability": "accounts-on-or-after-2025-07-15" },
+        "c7i-flex.large": { "availability": "accounts-on-or-after-2025-07-15" },
+        "m7i-flex.large": { "availability": "accounts-on-or-after-2025-07-15" }
+      },
+      "conditions": [
+        "For accounts created before July 15, 2025, the EC2 offer lasts 12 months and includes t2.micro or t3.micro within usage limits.",
+        "For accounts created on or after July 15, 2025, the Free Plan lasts 6 months or until credits are depleted and includes the documented newer SKU set.",
+        "The AMI must also be Free Tier eligible.",
+        "T3 Unlimited CPU usage can incur additional charges above the baseline.",
+        "Use the EC2 free-tier-eligible API filter to verify current regional availability before launch."
+      ],
+      "liveEligibilityCheck": "aws ec2 describe-instance-types --region <region> --filters Name=free-tier-eligible,Values=true"
+    },
+    "azure": {
+      "program": "Azure free account VM services",
+      "sources": [
+        {
+          "title": "Create your Azure free account",
+          "url": "https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account"
+        },
+        {
+          "title": "Create free services with an Azure free account",
+          "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/create-free-services"
+        },
+        {
+          "title": "Avoid charges with your Azure free account",
+          "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/avoid-charges-free-account"
+        }
+      ],
+      "skus": {
+        "standard_b1s": { "availability": "all-free-accounts" },
+        "standard_b2pts_v2": { "availability": "all-free-accounts" },
+        "standard_b2ats_v2": { "availability": "all-free-accounts" }
+      },
+      "conditions": [
+        "The VM offer is available to eligible new customers for 12 months.",
+        "The allowance is 750 hours per month for each listed VM type.",
+        "The SKU must be available in the selected region.",
+        "Unused monthly quantities do not roll over and usage beyond the allowance is billed after upgrading to pay as you go.",
+        "The separate USD 200 trial credit expires after 30 days."
+      ]
+    },
+    "gcp": {
+      "program": "Google Cloud Free Tier for Compute Engine",
+      "sources": [
+        {
+          "title": "Free Google Cloud features and trial offer",
+          "url": "https://docs.cloud.google.com/free/docs/free-cloud-features"
+        }
+      ],
+      "skus": {
+        "e2-micro": {
+          "availability": "always-free",
+          "regions": ["us-west1", "us-central1", "us-east1"]
+        }
+      },
+      "conditions": [
+        "The allowance is one non-preemptible e2-micro equivalent per month across eligible regions, measured by aggregate running time.",
+        "Only us-west1, us-central1, and us-east1 are eligible.",
+        "The offer includes 30 GB-months of standard persistent disk and 1 GB of outbound data transfer from North America, subject to documented destination exclusions.",
+        "GPUs and TPUs are not included."
+      ]
+    }
+  }
+}

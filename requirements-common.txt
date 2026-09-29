@@ -1,0 +1,45 @@
+# --- 에이전트 공통 ---
+langgraph==1.2.8
+fastapi==0.125.0
+uvicorn[standard]==0.38.0
+python-dotenv==1.2.2
+PyYAML>=6.0
+jsonschema>=4.20
+jsonpath-rfc9535>=1.0,<2
+
+# --- 요구사항 분석 에이전트 ---
+# LLM 호출은 langchain-openai(구조화 출력 with_structured_output)를 쓴다.
+langchain-openai>=0.2.0
+langchain-core>=0.3.0
+# LANGSMITH_TRACING은 별도 이미지 변경 없이 켤 수 있게 기본 설치한다.
+langsmith>=0.3.18,<1
+pydantic-settings>=2.5.0
+
+# --- 시스템 설계 에이전트 ---
+openai>=2.45.0,<3
+sqlalchemy==2.0.44
+pymysql==1.2.0
+
+# --- 시스템 구현 에이전트(OpenHands SDK 기반 편집 작업자) ---
+openhands-sdk==1.36.1
+openhands-tools==1.36.1
+# 이 범위를 넘는 litellm 배포본은 휠이 없어 Rust 빌드가 필요하다.
+litellm<1.92
+
+# --- 배포 에이전트(클라우드 지식베이스) ---
+openai-agents>=0.18.2
+httpx>=0.28
+fastjsonschema>=2.19
+orjson>=3.10
+regex>=2024.5.15
+ddgs>=9.14.4
+
+# --- 구현 검증 및 Testing 공통 ---
+# 구현 단계는 생성 코드의 단위·작은 통합 테스트를 실행한다. Testing 단계도 같은
+# pytest 실행기를 쓰지만, 실행된 앱을 대상으로 하는 전체 흐름 검사만 담당한다.
+alembic>=1.13.1
+pytest>=8.3,<9
+pytest-json-report>=1.5,<2
+requests>=2.32,<3
+
+# 로컬 빌드 전용이라 넣지 않는 것: neo4j·pgdumplib·pypdf.

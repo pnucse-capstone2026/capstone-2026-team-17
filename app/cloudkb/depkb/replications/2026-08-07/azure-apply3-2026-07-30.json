@@ -1,0 +1,69 @@
+{
+ "_note": "azure apply 3라운드 측정 기록 — vm→disk 존재·생명주기와 OS 디스크의 서버측 합성·잔존 관측.",
+ "ranAt": "2026-08-06T18:33:57+00:00",
+ "resourceGroup": "depkb-rm-08061815-3",
+ "steps": {
+  "F0.build-vm-no-datadisk": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\n  \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-3/providers/Microsoft.Resources/deployments/depkb-chain3\",\n  \"location\": null,\n  \"name\": \"depkb-chain3\",\n  \"properties\": {\n    \"correlationId\": \"f0fbed37-d680-4ed5-a4db-98dfc72906e2\",\n    \"debugSetting\": null,\n    \"dependencies\": [\n      {\n        \"dependsOn\": [\n          {\n            \"id\": \"/subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-3/providers/Microsoft.Network/virtualNetworks/depkb3-vnet\",\n            \"resourceGroup\": \"depkb-rm-08061815-3\",\n            \""
+  },
+  "F0.disks-after-create": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[\n  \"depkb3-data\",\n  \"depkb3-vm_OsDisk_1_efa1a0c5cae942c7b82ec1891fb9022f\"\n]"
+  },
+  "F1.attach-data-disk": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "C1.delete-disk-attached": {
+   "ok": false,
+   "errorCodes": [
+    "OperationNotAllowed"
+   ],
+   "excerpt": "ERROR: (OperationNotAllowed) Disk depkb3-data is attached to VM /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-3/providers/Microsoft.Compute/virtualMachines/depkb3-vm.\nCode: OperationNotAllowed\nMessage: Disk depkb3-data is attached to VM /subscriptions/414038da-b07b-4474-a54e-2ccdbb2dc3db/resourceGroups/depkb-rm-08061815-3/providers/Microsoft.Compute/virtualMachines/depkb3-vm."
+  },
+  "F2.detach-data-disk": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.disks-after-vm-delete": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[\n  \"depkb3-data\",\n  \"depkb3-vm_OsDisk_1_efa1a0c5cae942c7b82ec1891fb9022f\"\n]"
+  },
+  "D.delete-data-disk": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-os-disk.depkb3-vm_OsDisk_1_efa1a0c5c": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-nic": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "D.delete-vnet": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": ""
+  },
+  "residual": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "[]"
+  }
+ }
+}

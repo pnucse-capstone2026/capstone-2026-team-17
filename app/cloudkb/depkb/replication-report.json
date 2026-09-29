@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "easydep-depkb-replication/v1",
+  "session": "2026-08-07",
+  "claimSummary": {
+    "replicated": 49,
+    "failed": 5,
+    "pending": 2,
+    "total": 56
+  },
+  "providers": {
+    "aws": {
+      "replicatedClaims": 18,
+      "failedClaims": 2,
+      "failedExperiments": ["aws-sig4-2026-07-31"],
+      "failureReason": "AWS CLI instance-state lookup timed out during the build phase.",
+      "residualAudit": {}
+    },
+    "azure": {
+      "replicatedClaims": 18,
+      "failedClaims": 1,
+      "pendingClaims": 2,
+      "failedExperiments": ["azure-lb-serve2-2026-08-01"],
+      "notRun": ["azure-disj2-2026-08-01", "azure-sig4-2026-07-31"],
+      "failureReason": "The load-balancer runtime experiment exceeded one hour and was stopped to limit cost.",
+      "residualResourceGroups": []
+    },
+    "gcp": {
+      "replicatedClaims": 13,
+      "failedClaims": 2,
+      "failedExperiments": ["gcp-func2-2026-07-31"],
+      "failureReason": "The custom VPC had no matching default route, so the route-removal treatment could not run.",
+      "residualAudit": {
+        "instances": [],
+        "disks": [],
+        "networks": [],
+        "subnets": [],
+        "forwardingRules": [],
+        "firewallRules": [],
+        "routes": [],
+        "backendServices": [],
+        "healthChecks": []
+      }
+    }
+  },
+  "rawEvidenceDirectory": "replications/2026-08-07",
+  "interpretation": "replicated is not a universal truth claim; it means all dynamic observations referenced by that claim were reproduced in this session. failed and pending claims remain usable only as retained historical evidence and must be disclosed separately."
+}

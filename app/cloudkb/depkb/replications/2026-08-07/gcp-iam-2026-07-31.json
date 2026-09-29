@@ -1,0 +1,34 @@
+{
+ "_note": "vm→iamRole(gcp) — SA 생략 생성 후 serviceAccounts 실물 관측. 실물이 판정한다.",
+ "startedAt": "2026-08-06T19:40:02+00:00",
+ "steps": {
+  "A1.create-vm-omit-sa": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "A2.running": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "RUNNING"
+  },
+  "A3.serviceaccounts-shape": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "{\"serviceAccounts\": null}"
+  },
+  "T1.delete-vm": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "\"DONE\"",
+   "httpStatus": 200
+  },
+  "T2.vm-gone": {
+   "ok": true,
+   "errorCodes": [],
+   "excerpt": "404"
+  }
+ },
+ "finishedAt": "2026-08-06T19:42:40+00:00"
+}

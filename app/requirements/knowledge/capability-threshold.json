@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "easydep-capability-threshold/v1",
+  "status": "frozen",
+  "version": "development-no-inference-v1",
+  "method": "development-no-inference-always-question",
+  "sampleCount": 0,
+  "targetPrecision": 0.9,
+  "minimumWilsonLower95": 0.8,
+  "autoAcceptEnabled": false,
+  "acceptThreshold": null,
+  "mapping": [],
+  "qualification": {
+    "reason": "no-inferred-proposals-in-development-campaign",
+    "proposalCount": 41,
+    "inferredCount": 0
+  },
+  "proposalsSha256": "2c6a7435a0bc97800e298184675cd6d1b0ee4c179f30a2dbbb7c0325ffb8a282"
+}

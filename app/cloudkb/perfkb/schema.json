@@ -1,0 +1,348 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "perfkb 인스턴스 성능 데이터셋",
+  "type": "object",
+  "required": [
+    "_note",
+    "specs"
+  ],
+  "properties": {
+    "_note": {
+      "type": "string",
+      "description": "파일 단위 출처·한계 고지. 프로바이더 간 비교 불가 등."
+    },
+    "specs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/spec"
+      }
+    },
+    "_coverage": {
+      "type": "array",
+      "description": "무엇을 왜 안 담았나. 프로바이더마다 판정별 개수(fields)와 담지 않은 키의 사유(notAdopted)가 들어간다 — 분류표는 perfkb/parsers/field_map.py이고, 인벤토리에 있는 키가 거기 없으면 빌드가 죽는다. ibm-perf의 droppedConstantFields를 일반화한 것이다: 버린 칸을 한 소스만 기록하면 나머지는 '무엇을 왜 안 담았는지' 아무도 모른다. 마지막 항목은 분류표를 두지 않은 프로바이더와 그 사유(untrackedProviders).",
+      "items": {
+        "type": "object"
+      }
+    },
+    "_source": {
+      "type": "array",
+      "description": "이 산출물이 어느 원본에서 나왔는지. 소스마다 한 항목. 고정 불가 소스(AWS CFN zip)는 sha256이 유일한 식별자다 — kbcommon/sources.py 참조.",
+      "items": {
+        "type": "object",
+        "required": [
+          "sha256"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "kbcommon/sources.py의 키"
+          },
+          "pin_kind": {
+            "enum": [
+              "tag",
+              "commit",
+              "digest",
+              "bundled"
+            ]
+          },
+          "pin": {
+            "type": "string",
+            "description": "태그명·커밋 SHA. digest 소스는 '(고정 불가)'"
+          },
+          "url": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "minLength": 64,
+            "maxLength": 64
+          },
+          "bytes": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "fetched_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_modified": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "etag": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "local_file": {
+            "type": "boolean"
+          },
+          "files": {
+            "type": "integer",
+            "description": "묶음 소스에서 실제로 읽은 파일 수"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "spec": {
+      "type": "object",
+      "required": [
+        "id",
+        "provider",
+        "specName"
+      ],
+      "description": "성능 신호가 없는 스펙은 레코드 자체가 없다. 필드 부재 = '모른다'.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "costkb 조인 키 (aws+us-east-1+t3.medium)"
+        },
+        "provider": {
+          "enum": [
+            "aws",
+            "azure",
+            "gcp"
+          ],
+          "description": "지원 범위인 AWS, Azure, GCP만 허용한다."
+        },
+        "specName": {
+          "type": "string"
+        },
+        "sustainedCpu": {
+          "type": "object",
+          "description": "상시 CPU 성능이 보장되나. 프로바이더마다 다른 메커니즘에서 오므로 근거를 함께 담는다.",
+          "required": [
+            "value",
+            "evidence",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": "boolean"
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "evidence": {
+              "enum": [
+                "aws-burstable-field",
+                "aws-non-burstable-inferred",
+                "gcp-shared-cpu-field",
+                "gcp-dedicated-cpu-inferred",
+                "azure-family-name"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "enum": [
+                "stated",
+                "inferred"
+              ],
+              "description": "근거의 성격. stated는 원본 필드를 그대로 옮긴 것, inferred는 이름 규칙에서 짐작한 것이다(kbcommon/basis.py)."
+            }
+          },
+          "additionalProperties": false
+        },
+        "currentGeneration": {
+          "type": "boolean"
+        },
+        "clockGHz": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "threadsPerCore": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "bareMetal": {
+          "type": "boolean"
+        },
+        "networkPerformance": {
+          "type": "string",
+          "description": "AWS 원문 유지 ('Up to 5 Gigabit' | '25 Gigabit')"
+        },
+        "networkIsBurst": {
+          "type": "boolean",
+          "description": "'Up to'로 시작하면 true — 광고 대역폭이 버스트라는 뜻"
+        },
+        "ebsBaselineMbps": {
+          "type": "number",
+          "description": "지속 가능한 EBS 대역폭. Maximum이 아니라 이 값이 진짜 성능이다."
+        },
+        "ebsMaxMbps": {
+          "type": "number"
+        },
+        "ebsBaselineIops": {
+          "type": "number"
+        },
+        "ebsMaxIops": {
+          "type": "number"
+        },
+        "acu": {
+          "type": "number",
+          "description": "Azure Compute Units. Azure 내부에서만 비교 가능하며 37.7%만 채워져 있다."
+        },
+        "diskIops": {
+          "type": "number"
+        },
+        "cachedDiskIops": {
+          "type": "number"
+        },
+        "acceleratedNetworking": {
+          "type": "boolean"
+        },
+        "premiumIO": {
+          "type": "boolean"
+        },
+        "family": {
+          "type": "string"
+        },
+        "maxPersistentDisks": {
+          "type": "number"
+        },
+        "maxPersistentDiskGB": {
+          "type": "number"
+        },
+        "vendorDescription": {
+          "type": "string",
+          "description": "GCP 벤더 설명 ('Efficient Instance, 8 vCPUs, 64 GB RAM')"
+        },
+        "cpuVendor": {
+          "type": "string",
+          "description": "CPU 제조사 문자열 그대로 (GenuineIntel · AuthenticAMD 등)."
+        },
+        "cpuModel": {
+          "type": "string",
+          "description": "CPU 모델명 그대로 (예: Intel(R) Xeon(R) Platinum 8488C)."
+        },
+        "cpuClockMHz": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "cpuCacheKB": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "cpuCores": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "cpuThreads": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "memorySpeedMHz": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "gpuCount": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "장착된 GPU 개수. 0은 담지 않는다 — '없음'과 '모름'이 섞인다. GCP g4처럼 GPU를 나눠 쓰는 크기는 소수(0.25)가 사실이라 정수로 반올림하지 않는다."
+        },
+        "gpuModel": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ],
+          "description": "GPU 모델명. 한 인스턴스에 모델이 섞여 있으면 목록으로 남긴다 — 하나로 고르면 짐작이 된다."
+        },
+        "gpuArchitecture": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "hardwareCheckedAt": {
+          "type": "string",
+          "description": "하드웨어 사실이 확인된 날짜(YYYY-MM-DD). 잘 안 바뀌는 값이지만 언제 확인된 것인지 없으면 신선도를 판단할 수 없다."
+        },
+        "hardwareEvidence": {
+          "type": "string",
+          "enum": [
+            "ec2-hardware-probe"
+          ],
+          "description": "하드웨어 칸들의 근거. 본체(cb-tumblebug)와 다른 소스라 따로 적는다."
+        },
+        "networkBandwidthMbps": {
+          "type": "number",
+          "description": "총 네트워크 대역폭(Mbps). Azure 크기 문서 표의 Max Network Bandwidth 등 CSP별 원자료에서 가져온다."
+        },
+        "azureSizesEvidence": {
+          "type": "string",
+          "enum": [
+            "azure-sizes-doc"
+          ],
+          "description": "azure 크기 문서(표)에서 온 칸들의 근거. 본체(cb-tumblebug)와 다른 소스라 따로 적는다 — hardwareEvidence와 같은 규약."
+        },
+        "gcpSeriesEvidence": {
+          "type": "string",
+          "enum": [
+            "cyclenerd-gcp-catalog"
+          ],
+          "description": "gcp 칸들(cpuFamily·family·대역폭·GPU·로컬SSD)의 근거 — Cyclenerd 큐레이션(basis=inferred). 같은 규약."
+        },
+        "localSsdGB": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "장착 로컬 SSD 용량(GB). 값이 없으면 '미지원'이 아니라 '모름'이다."
+        },
+        "portSpeedMbps": {
+          "type": "number",
+          "description": "포트 속도(Mbps)."
+        },
+        "maxNics": {
+          "type": "integer",
+          "description": "붙일 수 있는 네트워크 인터페이스 수."
+        },
+        "numaCount": {
+          "type": "integer",
+          "description": "NUMA 노드 수."
+        },
+        "provisioningTimeoutSeconds": {
+          "type": "integer",
+          "description": "원본이 밝힌 프로비저닝 타임아웃(초)."
+        },
+        "vcpuTenancy": {
+          "type": "string",
+          "description": "vCPU 점유 방식(dedicated|shared). **sustainedCpu로 옮기지 않는다** — 그건 우리 추론이지 원본이 한 말이 아니다."
+        },
+        "cpuFamily": {
+          "type": "string",
+          "description": "CPU 마이크로아키텍처 계열(Sapphirerapids 등). 정확한 모델명(cpuModel)과 다르다."
+        },
+        "gpuMemoryGB": {
+          "type": "number",
+          "description": "GPU 하나당 메모리(GB)."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

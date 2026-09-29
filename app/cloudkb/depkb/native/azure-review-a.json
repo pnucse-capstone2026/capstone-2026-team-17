@@ -1,0 +1,2329 @@
+{
+  "schemaVersion": "easydep-native-review/v1",
+  "provider": "azure",
+  "source": {
+    "identity": "Azure REST API Specifications",
+    "version": "478f542f0e4a8872a8c6e5cde5dd4e44a01bc120"
+  },
+  "inventoryElementCount": 64,
+  "decisions": [
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/microsoft.Compute/cloudServices/{resourceName}/providers/Microsoft.Network/cloudServiceSlots/{singletonResource}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/microsoft.Compute/cloudServices/{resourceName}/providers/Microsoft.Network/cloudServiceSlots/{singletonResource}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}/capacityReservations/{capacityReservationName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}/capacityReservations/{capacityReservationName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}/privateEndpointConnections/{privateEndpointConnectionName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/interconnectBlocks/{interconnectBlockName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/interconnectBlocks/{interconnectBlockName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/proximityPlacementGroups/{proximityPlacementGroupName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/proximityPlacementGroups/{proximityPlacementGroupName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+      "status": "included",
+      "criterion": "dataPersistence",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-DiskRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/extensions/{vmExtensionName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/extensions/{vmExtensionName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+      "status": "included",
+      "criterion": "provisioningOutcome",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/IpAllocations/{ipAllocationName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/IpAllocations/{ipAllocationName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/customIpPrefixes/{customIpPrefixName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/customIpPrefixes/{customIpPrefixName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ddosCustomPolicies/{ddosCustomPolicyName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ddosCustomPolicies/{ddosCustomPolicyName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ddosProtectionPlans/{ddosProtectionPlanName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ddosProtectionPlans/{ddosProtectionPlanName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dscpConfigurations/{dscpConfigurationName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dscpConfigurations/{dscpConfigurationName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ipGroups/{ipGroupsName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ipGroups/{ipGroupsName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-loadBalancer.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-loadBalancer.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}",
+      "status": "included",
+      "criterion": "failureRouting",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-loadBalancer.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}/tapConfigurations/{tapConfigurationName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}/tapConfigurations/{tapConfigurationName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}/staticCidrs/{staticCidrName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}/staticCidrs/{staticCidrName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisRuns/{reachabilityAnalysisRunName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisRuns/{reachabilityAnalysisRunName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkProfiles/{networkProfileName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkProfiles/{networkProfileName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/inboundSecurityRules/{ruleCollectionName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/inboundSecurityRules/{ruleCollectionName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/virtualApplianceSites/{siteName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/virtualApplianceSites/{siteName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups/{privateDnsZoneGroupName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups/{privateDnsZoneGroupName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}/privateEndpointConnections/{peConnectionName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}/privateEndpointConnections/{peConnectionName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIpPrefixName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIpPrefixName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes/{routeName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes/{routeName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/securityPartnerProviders/{securityPartnerProviderName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/securityPartnerProviders/{securityPartnerProviderName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+      "status": "included",
+      "criterion": "networkReachability",
+      "reason": "Pinned native resource/operation directly controls an in-scope VM provisioning, reachability, persistence, failure-routing, or attached-identity outcome.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualRouters/{virtualRouterName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualRouters/{virtualRouterName}"
+      ]
+    },
+    {
+      "nativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualRouters/{virtualRouterName}/peerings/{peeringName}",
+      "status": "excluded",
+      "criterion": "noDirectOrTransitiveVmConnection",
+      "reason": "The pinned native inventory entry does not establish an in-scope VM-connected outcome within the discovery boundary.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/paths//subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualRouters/{virtualRouterName}/peerings/{peeringName}"
+      ]
+    }
+  ],
+  "candidateDecisions": [
+    {
+      "candidateId": "2312c48a83cdd78b7ac0",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/AvailabilitySetProperties/properties/proximityPlacementGroup"
+      ]
+    },
+    {
+      "candidateId": "a34c9500aced89a1eb83",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/AvailabilitySetProperties/properties/virtualMachines/items"
+      ]
+    },
+    {
+      "candidateId": "129a0ec405784bd2595f",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ResourceSharingProfile/properties/subscriptionIds/items"
+      ]
+    },
+    {
+      "candidateId": "277b4cb40b6269508523",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-DiskRP.json#/definitions/DiskAccess/properties/extendedLocation"
+      ]
+    },
+    {
+      "candidateId": "7a7170c67fd48d179480",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-DiskRP.json#/definitions/Disk/properties/extendedLocation"
+      ]
+    },
+    {
+      "candidateId": "62e9b0172de43ffb8c0d",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/Image/properties/extendedLocation"
+      ]
+    },
+    {
+      "candidateId": "15f9e15a10fe1dbe6109",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ImageProperties/properties/sourceVirtualMachine"
+      ]
+    },
+    {
+      "candidateId": "7b73b31a94f50aeba765",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "2f133689e5df503a475c",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ImageDisk/properties/managedDisk"
+      ]
+    },
+    {
+      "candidateId": "58005326479260d77d1f",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ImageDisk/properties/snapshot"
+      ]
+    },
+    {
+      "candidateId": "e78a14777afc5e915dfb",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "e17fb017fd46e2e5afb6",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ImageDisk/properties/managedDisk"
+      ]
+    },
+    {
+      "candidateId": "d2c511210b79af0aa138",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ImageDisk/properties/snapshot"
+      ]
+    },
+    {
+      "candidateId": "844e35ac3f3b0ecedf67",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskRestorePointAttributes/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "ddd7854be213f58d1456",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "1f08d04998ac607e486e",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "64eb09711e1c8352ffc9",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "df6b6cafdbf2b8affbfa",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "f08d654f117789673097",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskRestorePointAttributes/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "63fe5562754ee4d14d72",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "2ac19678f8c0842e7a23",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "e657c1223bd093e40763",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "31b1ca4f7b1769e901fa",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "1b254eb32f46f5b3675c",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-DiskRP.json#/definitions/Snapshot/properties/extendedLocation"
+      ]
+    },
+    {
+      "candidateId": "f6c85ea95894bb9a49d6",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSet/properties/extendedLocation"
+      ]
+    },
+    {
+      "candidateId": "c6986125ea363d4be8fa",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetProperties/properties/hostGroup"
+      ]
+    },
+    {
+      "candidateId": "130bc5242929ff9c073b",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetProperties/properties/proximityPlacementGroup"
+      ]
+    },
+    {
+      "candidateId": "b7b835f9f867331b0969",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/CapacityReservationProfile/properties/capacityReservationGroup"
+      ]
+    },
+    {
+      "candidateId": "7e9573bfc2c2b10a0db5",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetExtensionProfile/properties/extensions/items"
+      ]
+    },
+    {
+      "candidateId": "3e2bc1ff36efa739acf5",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/interconnectGroup"
+      ]
+    },
+    {
+      "candidateId": "8c71ce7f0e891af70836",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/subgroups/items"
+      ]
+    },
+    {
+      "candidateId": "232405a48e1c4f61ed90",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/applicationGatewayBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "1f1cc8dc3c40491db066",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/applicationSecurityGroups/items"
+      ]
+    },
+    {
+      "candidateId": "72d39590cf39f0781859",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/loadBalancerBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "471fac055ab7520eaba7",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/loadBalancerInboundNatPools/items"
+      ]
+    },
+    {
+      "candidateId": "2ced8ed6290de356f953",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetPublicIPAddressConfigurationProperties/properties/publicIPPrefix"
+      ]
+    },
+    {
+      "candidateId": "fbe8f729d8e988efd4f9",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetNetworkConfigurationProperties/properties/networkSecurityGroup"
+      ]
+    },
+    {
+      "candidateId": "86c68c86943d09d5d1d2",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VaultSecretGroup/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "81e72f8e8a32cd367805",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "928ddf59bbd9ff6ba238",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "fbdfeb059b5c95003bf7",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ImageReference/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "038861b8b5ed5b4dbcc1",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "12f7bdd2bdc115b87c90",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "c2807ce0f72dac42faac",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "0011056931ced899a52a",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetVMProperties/properties/availabilitySet"
+      ]
+    },
+    {
+      "candidateId": "50f73a59d5a3d2f369c4",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/interconnectGroup"
+      ]
+    },
+    {
+      "candidateId": "79aa28fd7626b43a23cf",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/subgroups/items"
+      ]
+    },
+    {
+      "candidateId": "bcc866510dee8c3ad022",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceConfigurationProperties/properties/dscpConfiguration"
+      ]
+    },
+    {
+      "candidateId": "0435be2d34d10018c244",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/applicationGatewayBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "52d79b8a228333df554f",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/applicationSecurityGroups/items"
+      ]
+    },
+    {
+      "candidateId": "aba98e27f710464769b1",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/loadBalancerBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "7528b0dfef7e456e1c26",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachinePublicIPAddressConfigurationProperties/properties/publicIPPrefix"
+      ]
+    },
+    {
+      "candidateId": "be2fe549118a53fb2b62",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/subnet"
+      ]
+    },
+    {
+      "candidateId": "993e4d4e8e25d73dc453",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceConfigurationProperties/properties/networkSecurityGroup"
+      ]
+    },
+    {
+      "candidateId": "77f6039984897da0e5a9",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/NetworkInterfaceReference/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "5a9a0e5ba108b20cf70e",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/interconnectGroup"
+      ]
+    },
+    {
+      "candidateId": "43b670045e55b382c4f8",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/subgroups/items"
+      ]
+    },
+    {
+      "candidateId": "661a11107d34ad97897a",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/applicationGatewayBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "3abdd1e7f8da2aafb405",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/applicationSecurityGroups/items"
+      ]
+    },
+    {
+      "candidateId": "d583f98bc40785474cde",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/loadBalancerBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "f620fa64f665b2c13d5a",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetIPConfigurationProperties/properties/loadBalancerInboundNatPools/items"
+      ]
+    },
+    {
+      "candidateId": "cb74af929d6ee87ca099",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetPublicIPAddressConfigurationProperties/properties/publicIPPrefix"
+      ]
+    },
+    {
+      "candidateId": "dc76b95e7a124719358d",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineScaleSetNetworkConfigurationProperties/properties/networkSecurityGroup"
+      ]
+    },
+    {
+      "candidateId": "3b9aea60db67a9abdfe4",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VaultSecretGroup/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "a29d38006ee67af6bb33",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "490f2423f09c18de3e99",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "97bebf131334450ebe6f",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "204cc1dfd4f9acffbf8e",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ImageReference/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "723f1a6e3d708a5c5101",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "13426763e5167535ab59",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/KeyVaultKeyReference/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "59af8764c21a6f73115a",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "8c4e596b1b2e4b25cfe1",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "c66249959ef3cc4a4a52",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "74a9afc44e725cb64e5b",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/extensions/{vmExtensionName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "25c0dd4c2a992c3cf6fb",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachine/properties/extendedLocation"
+      ]
+    },
+    {
+      "candidateId": "10501b3ccc775d696398",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/availabilitySet"
+      ]
+    },
+    {
+      "candidateId": "379e0727171ff9748cfc",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/CapacityReservationProfile/properties/capacityReservationGroup"
+      ]
+    },
+    {
+      "candidateId": "653a3b4b79256c714c28",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/host"
+      ]
+    },
+    {
+      "candidateId": "3b9dc7bf6850deea6900",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/hostGroup"
+      ]
+    },
+    {
+      "candidateId": "29c83d91b5dfeca63429",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/interconnectGroup"
+      ]
+    },
+    {
+      "candidateId": "63e3107f54ee85a61a57",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/InterconnectGroupProfile/properties/subgroups/items"
+      ]
+    },
+    {
+      "candidateId": "e0af567f5736a0e567ee",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceConfigurationProperties/properties/dscpConfiguration"
+      ]
+    },
+    {
+      "candidateId": "f951203c800816ec6e5e",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/applicationGatewayBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "f913c46f5dbee057ec7a",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/applicationSecurityGroups/items"
+      ]
+    },
+    {
+      "candidateId": "a387ed3c280512fa6ab9",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/loadBalancerBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "dcf7c999f6b02f2d79ee",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachinePublicIPAddressConfigurationProperties/properties/publicIPPrefix"
+      ]
+    },
+    {
+      "candidateId": "5d3c8a0dcfd3c6995a31",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceIPConfigurationProperties/properties/subnet"
+      ]
+    },
+    {
+      "candidateId": "44621c63d937bcaff96e",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineNetworkInterfaceConfigurationProperties/properties/networkSecurityGroup"
+      ]
+    },
+    {
+      "candidateId": "78382b123e38cf03681e",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/NetworkInterfaceReference/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "5d006b37ceebd71150ef",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VaultSecretGroup/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "74377db8736188efe4b2",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/proximityPlacementGroup"
+      ]
+    },
+    {
+      "candidateId": "206f9db786697f56a267",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "0ec64d336cf742713cdc",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "b47301889950a4211fa1",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "96ef54ca26de10e8db4d",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ImageReference/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "4a4a91188d5b5b33b051",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "e001fd8b1b8874bb4065",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/KeyVaultKeyReference/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "18e721adb928a186a9d7",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/ManagedDiskParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "27e78b21e0683f2be590",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "9472374988593bf71528",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/DiskEncryptionSetParameters/allOf/0"
+      ]
+    },
+    {
+      "candidateId": "dc2693615f93e0e9312c",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/VirtualMachineProperties/properties/virtualMachineScaleSet"
+      ]
+    },
+    {
+      "candidateId": "d99cfacf78b7cab4f63f",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "compute-ComputeRP.json#/definitions/KeyVaultSecretReference/properties/sourceVault"
+      ]
+    },
+    {
+      "candidateId": "490ddcfd47ccf28e6429",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-loadBalancer.json#/definitions/Common.LoadBalancerPropertiesFormat/properties/backendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "e606388192913ae039e9",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress"
+      ]
+    },
+    {
+      "candidateId": "355ab84d0bf961344af5",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet"
+      ]
+    },
+    {
+      "candidateId": "b314e7bb157f9c79ed18",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-loadBalancer.json#/definitions/Common.LoadBalancerPropertiesFormat/properties/inboundNatRules/items"
+      ]
+    },
+    {
+      "candidateId": "1464b82297f808a72e93",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/applicationGatewayBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "c743d851c353a1ebe5ae",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/applicationSecurityGroups/items"
+      ]
+    },
+    {
+      "candidateId": "199faf6fb269f979ed53",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/loadBalancerBackendAddressPools/items"
+      ]
+    },
+    {
+      "candidateId": "2669e1338ee0103ae07a",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/loadBalancerInboundNatRules/items"
+      ]
+    },
+    {
+      "candidateId": "20ab83b7922dc7bdbe3d",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/publicIPAddress"
+      ]
+    },
+    {
+      "candidateId": "00bd36746d4b72047a55",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/subnet"
+      ]
+    },
+    {
+      "candidateId": "cab7b6e1c637fec26ace",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceIPConfigurationPropertiesFormat/properties/virtualNetworkTaps/items"
+      ]
+    },
+    {
+      "candidateId": "49e8d4ee2e10b4549bc2",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfacePropertiesFormat/properties/networkSecurityGroup"
+      ]
+    },
+    {
+      "candidateId": "6672c36b4d7380e1336c",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfacePropertiesFormat/properties/privateLinkService"
+      ]
+    },
+    {
+      "candidateId": "b53ebe4d8ccec6b3538c",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}/tapConfigurations/{tapConfigurationName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkInterfaceTapConfigurationPropertiesFormat/properties/virtualNetworkTap"
+      ]
+    },
+    {
+      "candidateId": "5189215792d9147dd756",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/ReachabilityAnalysisIntentProperties/properties/destinationResourceId"
+      ]
+    },
+    {
+      "candidateId": "8a3fde6dda8c2d4cd0b5",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/ReachabilityAnalysisIntentProperties/properties/sourceResourceId"
+      ]
+    },
+    {
+      "candidateId": "9e56a2d343bfd03273e6",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkProfiles/{networkProfileName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.IPConfigurationProfilePropertiesFormat/properties/subnet"
+      ]
+    },
+    {
+      "candidateId": "404c717c842989006030",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.NetworkSecurityGroupPropertiesFormat/properties/securityRules/items"
+      ]
+    },
+    {
+      "candidateId": "a3f25d9820ba465db98a",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.SecurityRulePropertiesFormat/properties/destinationApplicationSecurityGroups/items"
+      ]
+    },
+    {
+      "candidateId": "52db739021b18efb67e5",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.SecurityRulePropertiesFormat/properties/sourceApplicationSecurityGroups/items"
+      ]
+    },
+    {
+      "candidateId": "fb4bb6c49e538dbf9b5e",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/InternetIngressPublicIpsProperties/properties/id"
+      ]
+    },
+    {
+      "candidateId": "fe1bd1f01ff62fa1404e",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/NvaInVnetSubnetReferenceProperties/properties/id"
+      ]
+    },
+    {
+      "candidateId": "54f3e5cdd648c2cc9265",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.PrivateEndpointProperties/properties/applicationSecurityGroups/items"
+      ]
+    },
+    {
+      "candidateId": "c99cb218864b605d6d81",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.PrivateEndpointProperties/properties/subnet"
+      ]
+    },
+    {
+      "candidateId": "f331515ec121a60664e8",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.PrivateLinkServiceIpConfigurationProperties/properties/subnet"
+      ]
+    },
+    {
+      "candidateId": "a11d2be892b27f93dc99",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/publicIPAddress"
+      ]
+    },
+    {
+      "candidateId": "6bf1947978fb3c6aef23",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-loadBalancer.json#/definitions/Common.FrontendIPConfigurationPropertiesFormat/properties/subnet"
+      ]
+    },
+    {
+      "candidateId": "1c363f77e2950c0d39a2",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.PublicIPAddressPropertiesFormat/properties/natGateway"
+      ]
+    },
+    {
+      "candidateId": "e283595cbcf50674db2b",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIpPrefixName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/PublicIPPrefixPropertiesFormat/properties/natGateway"
+      ]
+    },
+    {
+      "candidateId": "be607d7f3e680749a3a1",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes/{routeName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.RouteTablePropertiesFormat/properties/routes/items"
+      ]
+    },
+    {
+      "candidateId": "b7dec3b503be76946b0d",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id"
+      ]
+    },
+    {
+      "candidateId": "a2ca9b345fb5f7432b84",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.VirtualNetworkPropertiesFormat/properties/subnets/items"
+      ]
+    },
+    {
+      "candidateId": "607e4d929d1af87503bb",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id"
+      ]
+    },
+    {
+      "candidateId": "6ed4522645e28355b84c",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.VirtualNetworkPropertiesFormat/properties/virtualNetworkPeerings/items"
+      ]
+    },
+    {
+      "candidateId": "e1683b86e6c495816a3d",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/applicationGatewayIPConfigurations/items"
+      ]
+    },
+    {
+      "candidateId": "1128f0ca27f15a7505b0",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id"
+      ]
+    },
+    {
+      "candidateId": "bf574d83b0ba0c7302dc",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/networkSecurityGroup"
+      ]
+    },
+    {
+      "candidateId": "fe8222032e54569cdc0f",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "observedObjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}",
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/routeTable"
+      ]
+    },
+    {
+      "candidateId": "3b65f6e4363d515e55ba",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.SubnetPropertiesFormat/properties/serviceEndpointPolicies/items"
+      ]
+    },
+    {
+      "candidateId": "7083ef21e00cfdc98e73",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id"
+      ]
+    },
+    {
+      "candidateId": "a79928441e28c51e05f7",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id"
+      ]
+    },
+    {
+      "candidateId": "bcd3e7151d3678ac329c",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id"
+      ]
+    },
+    {
+      "candidateId": "56c1d7cee8f1e59f3292",
+      "subjectNativeId": "ARM PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+      "observedObjectNativeId": null,
+      "status": "excluded",
+      "relationKind": null,
+      "resolvedObjectNativeIds": [],
+      "reason": "The property-level candidate does not unambiguously prove a relation between two included VM-connected native resources.",
+      "sourceLocators": [
+        "network-virtualNetwork.json#/definitions/Common.IpamPoolPrefixAllocationPool/properties/id"
+      ]
+    }
+  ]
+}
