@@ -190,9 +190,9 @@
 |---|---|
 | Python | 3.12 이상 |
 | Node.js | 22.12 이상 |
-| npm | |
-| Git | |
-| Docker·Compose | |
+| npm | 11.11.0 |
+| Git | 2.51.0.windows.1 |
+| Docker·Compose | Docker 28.3.3 / Compose 2.39.2-desktop.1 |
 
 환경 설정은 `.env.example`을 복사한 루트의 `.env`에 작성한다. LLM API를 호출하기 위해 다음 네 값을 사용할 서비스에 맞게 설정한다.
 
@@ -313,6 +313,15 @@ docker stop easydep-mysql-dev
 ```
 
 ### 5.2. 오류 발생 시 해결 방법
+
+| 증상 | 확인 방법 | 해결 방법 |
+|---|---|---|
+| 서버 실행 시 포트 점유 오류 발생 | Windows에서 `Get-NetTCPConnection -LocalPort 8100,5600 -State Listen`으로 점유 프로세스를 확인한다. | 기존 EasyDep 실행은 `powershell -ExecutionPolicy Bypass -File scripts\run-easydep.ps1 -Stop`으로 종료한 뒤 재실행한다. 별도로 실행한 프런트엔드는 해당 터미널에서 종료한다. 다른 프로그램의 프로세스는 임의로 종료하지 않는다. |
+| Docker 연결 실패 또는 접근 거부 | `docker info`를 실행해 Docker 엔진 연결을 확인한다. | Docker Desktop을 실행하고 Linux 컨테이너 모드인지 확인한다. Windows의 pipe 접근 거부는 Docker 접근 권한이 있는 계정·터미널에서 다시 확인한다. Linux에서는 현재 계정의 Docker 소켓 접근 권한을 확인한다. |
+| MySQL 연결 실패 | `docker ps -a --filter name=easydep-mysql-dev`와 `docker logs --tail 100 easydep-mysql-dev`로 상태와 로그를 확인한다. | 컨테이너가 중지됐다면 `docker start easydep-mysql-dev`로 시작한다. `.env`의 `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`도 확인한다. 기본 호스트 포트는 33060이며, 데이터 보존을 위해 DB 볼륨을 삭제하지 않는다. |
+| LLM 인증 오류·모델 오류·호출 제한 | 오류 코드와 `.env`의 `LLM_PROVIDER`, `API_KEY`, `BASE_URL`, `MODEL`을 확인한다. | 같은 제공자의 올바른 키·엔드포인트·모델명을 사용한다. 401·403은 인증 및 권한, 429는 사용량 한도, 연결 실패는 네트워크·프록시 설정을 확인한다. 설정 변경 후 서버를 재시작하며, API 키를 로그나 화면 공유에 노출하지 않는다. |
+| 첫 설치·실행이 오래 걸림 | 실행 터미널의 설치·빌드 로그를 확인한다. Windows 실행 로그는 `.easydep/dev/`에 저장된다. | 최초 실행은 Python·npm 의존성과 Docker 이미지 준비에 시간이 필요하다. 다운로드 오류가 있는지 확인한 뒤 같은 명령으로 재시도한다. 설치·빌드가 이미 완료된 경우에만 5.1절의 재사용 옵션을 사용한다. |
+| 디스크 공간 부족 | 운영체제의 여유 공간과 `docker system df`로 Docker 사용량을 확인한다. | 사용하지 않는 이미지·빌드 캐시를 확인해 필요한 항목만 정리한다. DB 볼륨과 실행 중인 앱의 이미지는 보존한다. `docker system prune --volumes` 같은 일괄 삭제 명령은 사용하지 않는다. |
 
 
 ## 6. 소개 자료 및 시연 영상
